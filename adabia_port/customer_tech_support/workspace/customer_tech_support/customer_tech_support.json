@@ -14,7 +14,7 @@
  "is_hidden": 0,
  "label": "Customer Tech Support",
  "links": [],
- "modified": "2024-09-28 18:20:35.335790",
+ "modified": "2024-09-28 21:19:56.429321",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Tech Support",
@@ -23,11 +23,7 @@
  "parent_page": "Dashboard Customer Support",
  "public": 1,
  "quick_lists": [],
- "roles": [
-  {
-   "role": "Customer Support User"
-  }
- ],
+ "roles": [],
  "sequence_id": 24.0,
  "shortcuts": [
   {
