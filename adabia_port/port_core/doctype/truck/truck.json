@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "autoname": "format:TRK-{#####}",
+ "creation": "2024-09-27 17:48:26.910942",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "truck_letters",
+  "truck_numbers",
+  "column_break_xucv",
+  "column_break_gbih"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_xucv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gbih",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "truck_letters",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Truck Letters",
+   "length": 5,
+   "reqd": 1
+  },
+  {
+   "fieldname": "truck_numbers",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Truck Numbers",
+   "length": 4,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-27 20:08:17.314304",
+ "modified_by": "Administrator",
+ "module": "Port Core",
+ "name": "Truck",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title"
+}

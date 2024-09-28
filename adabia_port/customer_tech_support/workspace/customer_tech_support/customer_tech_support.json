@@ -1,0 +1,75 @@
+{
+ "app": "adabia_port",
+ "charts": [],
+ "content": "[{\"id\":\"jdPLLFV9kj\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Add</b></span>\",\"col\":12}},{\"id\":\"cJb6JqPhsq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"qrJZMxKwWB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Machine\",\"col\":3}},{\"id\":\"zuP6g1WZiH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Truck Tail\",\"col\":3}},{\"id\":\"0hT_cJKQQY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Truck\",\"col\":3}},{\"id\":\"het7ISE_qx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Company\",\"col\":3}}]",
+ "creation": "2024-09-28 16:05:16.313641",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "support",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Customer Tech Support",
+ "links": [],
+ "modified": "2024-09-28 18:20:35.335790",
+ "modified_by": "Administrator",
+ "module": "Customer Tech Support",
+ "name": "Customer Tech Support",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Dashboard Customer Support",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Customer Support User"
+  }
+ ],
+ "sequence_id": 24.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Ticket",
+   "link_to": "Customer Support Ticket",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Machine",
+   "link_to": "Machine",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Truck Tail",
+   "link_to": "Truck Tail",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Truck",
+   "link_to": "Truck",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Company",
+   "link_to": "Company",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Customer Tech Support"
+}

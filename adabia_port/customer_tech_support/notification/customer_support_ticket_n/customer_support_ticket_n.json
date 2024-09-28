@@ -1,0 +1,35 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.priority==\"Heigh\"",
+ "creation": "2024-09-27 23:44:41.310083",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Customer Support Ticket",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "\n<h4>{{doc.priority}}</h4>",
+ "message_type": "HTML",
+ "minutes_offset": 0,
+ "modified": "2024-09-28 18:29:30.673029",
+ "modified_by": "Administrator",
+ "module": "Customer Tech Support",
+ "name": "Customer Support Ticket N",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "Administrator"
+  },
+  {
+   "receiver_by_role": "Customer Support Admin"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "Adabia Port Notifications",
+ "sender_email": "gosmartsolution.info@gmail.com",
+ "subject": "{{doc.name}}"
+}

@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:TAL-{#####}",
+ "creation": "2024-09-27 18:01:08.456357",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "tail_letters",
+  "tail_numbers",
+  "column_break_lwao",
+  "column_break_zett"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_lwao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zett",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tail_letters",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tail Letters",
+   "length": 5,
+   "reqd": 1
+  },
+  {
+   "fieldname": "tail_numbers",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tail Numbers",
+   "length": 5,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-27 20:08:44.616539",
+ "modified_by": "Administrator",
+ "module": "Port Core",
+ "name": "Truck Tail",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title"
+}
