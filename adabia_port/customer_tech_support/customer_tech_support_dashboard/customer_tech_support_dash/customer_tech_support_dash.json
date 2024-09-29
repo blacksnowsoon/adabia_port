@@ -1,7 +1,12 @@
 {
- "cards": [],
+ "cards": [
+  {
+   "card": "Number Of Tickets CST"
+  }
+ ],
  "charts": [
   {
+   "chart": "Customer Tech Support Activities",
    "width": "Half"
   }
  ],
@@ -12,7 +17,7 @@
  "idx": 0,
  "is_default": 1,
  "is_standard": 1,
- "modified": "2024-09-28 17:38:39.729555",
+ "modified": "2024-09-28 23:27:04.292018",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Tech Support Dash",
