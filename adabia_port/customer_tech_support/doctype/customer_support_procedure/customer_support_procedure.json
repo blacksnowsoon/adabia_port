@@ -1,50 +1,48 @@
 {
  "actions": [],
- "autoname": "format:PORC-{###}",
- "creation": "2024-09-27 18:14:57.443499",
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "autoname": "format:CSP-{###}",
+ "creation": "2024-10-05 00:55:13.171667",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "procedure_name",
   "ticket_event",
-  "column_break_uwrs",
-  "column_break_wrny"
+  "column_break_yqhd",
+  "column_break_enfb"
  ],
  "fields": [
   {
-   "description": "\u0646\u0648\u0639 \u0627\u0644\u0627\u062c\u0631\u0627\u0621",
    "fieldname": "procedure_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Procedure Name",
+   "label": "Procedure Name ",
    "reqd": 1,
    "unique": 1
   },
   {
+   "fieldname": "column_break_yqhd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_enfb",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "ticket_event",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Ticket Event",
    "options": "Ticket Event",
-   "reqd": 1,
-   "search_index": 1
-  },
-  {
-   "fieldname": "column_break_uwrs",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_wrny",
-   "fieldtype": "Column Break"
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 18:04:27.252179",
+ "modified": "2024-10-05 01:15:12.620004",
  "modified_by": "Administrator",
- "module": "Port Core",
- "name": "Procedure",
+ "module": "Customer Tech Support",
+ "name": "Customer Support Procedure",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -61,6 +59,18 @@
    "write": 1
   },
   {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer Support Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
    "email": 1,
    "export": 1,
    "print": 1,
@@ -71,7 +81,7 @@
   }
  ],
  "show_title_field_in_link": 1,
- "sort_field": "creation",
+ "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
  "title_field": "procedure_name"

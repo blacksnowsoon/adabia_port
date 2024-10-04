@@ -56,8 +56,8 @@
    "fieldname": "procedure_name",
    "fieldtype": "Link",
    "label": "Procedure Name",
-   "link_filters": "[[\"Procedure\", \"ticket_event\",\"=\", \"eval:doc.ticket_event\"]]",
-   "options": "Procedure",
+   "link_filters": "[[\"Customer Support Procedure\", \"ticket_event\",\"=\", \"eval:doc.ticket_event\"]]",
+   "options": "Customer Support Procedure",
    "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
@@ -130,7 +130,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 18:03:33.260891",
+ "modified": "2024-10-05 01:10:40.080872",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",
@@ -146,6 +146,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer Support Admin",
    "share": 1,
    "write": 1
   },
