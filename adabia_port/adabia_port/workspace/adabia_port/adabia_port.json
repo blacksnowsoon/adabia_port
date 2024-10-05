@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Adabia Port",
  "links": [],
- "modified": "2024-10-05 19:18:28.223706",
+ "modified": "2024-10-05 19:42:21.256893",
  "modified_by": "Administrator",
  "module": "Adabia Port",
  "name": "Adabia Port",
@@ -22,7 +22,11 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Customer Support Admin"
+  }
+ ],
  "sequence_id": 6.0,
  "shortcuts": [],
  "title": "Adabia Port"

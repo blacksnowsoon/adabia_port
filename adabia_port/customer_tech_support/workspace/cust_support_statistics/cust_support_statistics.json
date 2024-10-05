@@ -1,0 +1,33 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"V4d4pu-5dh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Cust Support Statistics </span>\",\"col\":12}}]",
+ "creation": "2024-10-05 19:37:57.024847",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "crm",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Cust Support Statistics",
+ "links": [],
+ "modified": "2024-10-05 19:39:36.364545",
+ "modified_by": "Administrator",
+ "module": "Customer Tech Support",
+ "name": "Cust Support Statistics",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Adabia Port",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Customer Support Admin"
+  }
+ ],
+ "sequence_id": 23.0,
+ "shortcuts": [],
+ "title": "Cust Support Statistics"
+}
