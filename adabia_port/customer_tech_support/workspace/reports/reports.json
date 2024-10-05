@@ -13,13 +13,13 @@
  "is_hidden": 0,
  "label": "Reports",
  "links": [],
- "modified": "2024-10-05 18:17:41.085872",
+ "modified": "2024-10-05 19:18:28.408641",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Reports",
  "number_cards": [],
  "owner": "Administrator",
- "parent_page": "Customer Tech Sup",
+ "parent_page": "Adabia Port",
  "public": 1,
  "quick_lists": [],
  "roles": [
@@ -27,7 +27,7 @@
    "role": "Customer Support Admin"
   }
  ],
- "sequence_id": 8.0,
+ "sequence_id": 7.0,
  "shortcuts": [
   {
    "color": "Grey",

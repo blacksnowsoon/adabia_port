@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Customer Tech Sup",
  "links": [],
- "modified": "2024-10-05 18:36:13.473878",
+ "modified": "2024-10-05 19:18:28.658735",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Tech Sup",
@@ -30,7 +30,7 @@
    "role": "Customer Support User"
   }
  ],
- "sequence_id": 7.0,
+ "sequence_id": 8.0,
  "shortcuts": [
   {
    "color": "Grey",
