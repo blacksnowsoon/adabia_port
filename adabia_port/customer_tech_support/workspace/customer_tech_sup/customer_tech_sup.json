@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"koAL9LylSR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Customer Tech Sup</span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"koAL9LylSR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Customer Tech Sup</span>\",\"col\":12}},{\"id\":\"hzL3Go_m9z\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"QuGkmB54Gl\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Add</b></span>\",\"col\":12}},{\"id\":\"X757m2espP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"s8ludqqccE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Company\",\"col\":3}},{\"id\":\"d-AGrfBFrq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Truck\",\"col\":3}},{\"id\":\"lY5d22MaZV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Tail\",\"col\":3}},{\"id\":\"iXutxApL9C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Machine\",\"col\":3}},{\"id\":\"43gMlmsL2e\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Procedure\",\"col\":3}},{\"id\":\"-6jGvObKvK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"cQXRKUWJ5h\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>View</b></span>\",\"col\":12}},{\"id\":\"fVcSRgOso1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets\",\"col\":3}},{\"id\":\"nNS1LAZH9X\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Companies\",\"col\":3}},{\"id\":\"ThfCusToca\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Truckes\",\"col\":3}},{\"id\":\"f_OoSHnQFJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tails\",\"col\":3}},{\"id\":\"LgU8viYTZl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Machines\",\"col\":3}},{\"id\":\"BnKSVEZmp_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Procedures\",\"col\":3}}]",
  "creation": "2024-09-29 22:19:05.759320",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Customer Tech Sup",
  "links": [],
- "modified": "2024-10-05 00:36:07.537465",
+ "modified": "2024-10-05 15:25:12.104283",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Tech Sup",
@@ -31,6 +31,103 @@
   }
  ],
  "sequence_id": 7.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Ticket",
+   "link_to": "Customer Support Ticket",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Company",
+   "link_to": "Company",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tickets",
+   "link_to": "Customer Support Ticket",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Truck",
+   "link_to": "Truck",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Companies",
+   "link_to": "Company",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Tail",
+   "link_to": "Truck Tail",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Truckes",
+   "link_to": "Truck",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Machine",
+   "link_to": "Machine",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tails",
+   "link_to": "Truck Tail",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Procedure",
+   "link_to": "Customer Support Procedure",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Machines",
+   "link_to": "Machine",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Procedures",
+   "link_to": "Customer Support Procedure",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
  "title": "Customer Tech Sup"
 }
