@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"R5G4VqI9BV\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Manu</span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"R5G4VqI9BV\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Manu</span>\",\"col\":12}},{\"id\":\"T8u2V2k5n8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Procedure\",\"col\":3}}]",
  "creation": "2024-09-30 09:35:24.507540",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Reports",
  "links": [],
- "modified": "2024-10-05 15:48:46.334815",
+ "modified": "2024-10-05 18:17:41.085872",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Reports",
@@ -28,6 +28,15 @@
   }
  ],
  "sequence_id": 8.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Procedure",
+   "link_to": "Customer Support Procedure",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
  "title": "Reports"
 }
