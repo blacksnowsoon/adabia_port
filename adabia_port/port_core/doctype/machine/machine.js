@@ -1,8 +1,17 @@
 // Copyright (c) 2024, Gharieb Kalefa and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Machine", {
-// 	refresh(frm) {
-
-// 	},
-// });
+frappe.ui.form.on('Machine', {
+	refresh(frm) {
+		// your code here
+        // 	save button
+		frm.disable_save();
+	    frm.add_custom_button('Save', () => {
+	        frm.save();
+             
+        }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
+	},
+	after_save (frm) {
+	    frappe.set_route('machine')
+	}
+})
