@@ -19,7 +19,14 @@ fixtures = [
             ]]
         }
     },
-    "Ticket Event"
+    "Ticket Event",
+    {
+        "dt": "Module Profile", "filters" : {
+            "name": ["in", [
+                "Adabia"
+            ] ]
+        }
+    }
 ]
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
