@@ -1,32 +1,33 @@
 {
  "charts": [],
- "content": "[{\"id\":\"B3U0bCDzFf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Adabia Port</span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"B3U0bCDzFf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Adabia Port</span>\",\"col\":12}},{\"id\":\"s7lOm44_AN\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Tickets\",\"col\":4}}]",
  "creation": "2024-09-29 22:16:03.530878",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "home",
+ "icon": "",
  "idx": 0,
- "indicator_color": "green",
+ "indicator_color": "",
  "is_hidden": 0,
  "label": "Adabia Port",
  "links": [],
- "modified": "2024-10-05 19:42:21.256893",
+ "modified": "2024-10-07 19:27:09.238466",
  "modified_by": "Administrator",
  "module": "Adabia Port",
  "name": "Adabia Port",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Tickets",
+   "number_card_name": "Number Of Tickets CST"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [
-  {
-   "role": "Customer Support Admin"
-  }
- ],
+ "roles": [],
  "sequence_id": 6.0,
  "shortcuts": [],
  "title": "Adabia Port"

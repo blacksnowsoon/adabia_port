@@ -13,13 +13,13 @@
  "is_hidden": 0,
  "label": "Customer Tech Sup",
  "links": [],
- "modified": "2024-10-05 19:18:28.658735",
+ "modified": "2024-10-07 19:27:09.414198",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Tech Sup",
  "number_cards": [],
  "owner": "Administrator",
- "parent_page": "Adabia Port",
+ "parent_page": "",
  "public": 1,
  "quick_lists": [],
  "roles": [
@@ -30,7 +30,7 @@
    "role": "Customer Support User"
   }
  ],
- "sequence_id": 8.0,
+ "sequence_id": 7.0,
  "shortcuts": [
   {
    "color": "Grey",

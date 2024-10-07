@@ -25,7 +25,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-05 16:18:23.528159",
+ "modified": "2024-10-07 19:33:21.863441",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Ticket Event",
@@ -68,5 +68,6 @@
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "event"
+ "title_field": "event",
+ "translated_doctype": 1
 }

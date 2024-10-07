@@ -713,5 +713,44 @@
   "name": "ou6mdu3tce",
   "source_text": "GO System",
   "translated_text": "نظام GO"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-07 19:21:40.882619",
+  "name": "gqeg34l6h1",
+  "source_text": "New Tail",
+  "translated_text": "أضافة مقطورة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-07 19:22:43.526788",
+  "name": "gr23n47u9e",
+  "source_text": "Cust Support Statistics",
+  "translated_text": "إحصائيات وتقارير"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-07 19:26:10.384622",
+  "name": "gt2ng3to9q",
+  "source_text": "Reports",
+  "translated_text": "تقارير"
  }
 ]
