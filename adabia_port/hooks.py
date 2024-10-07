@@ -159,23 +159,23 @@ fixtures = [
 # Scheduled Tasks
 # ---------------
 
-scheduler_events = {
-	"all": [
-		"adabia_port.tasks.all"
-	],
-	"daily": [
-		"adabia_port.tasks.daily"
-	],
-	"hourly": [
-		"adabia_port.tasks.hourly"
-	],
-	"weekly": [
-		"adabia_port.tasks.weekly"
-	],
-	"monthly": [
-		"adabia_port.tasks.monthly"
-	],
-}
+# scheduler_events = {
+# 	"all": [
+# 		"adabia_port.tasks.all"
+# 	],
+# 	"daily": [
+# 		"adabia_port.tasks.daily"
+# 	],
+# 	"hourly": [
+# 		"adabia_port.tasks.hourly"
+# 	],
+# 	"weekly": [
+# 		"adabia_port.tasks.weekly"
+# 	],
+# 	"monthly": [
+# 		"adabia_port.tasks.monthly"
+# 	],
+# }
 
 # Testing
 # -------
