@@ -11,7 +11,6 @@ app_license = "mit"
 # required_apps = []
 fixtures = [
     "Translation",
-    "Ticket Event",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
@@ -19,7 +18,8 @@ fixtures = [
                 "Customer Support User"
             ]]
         }
-    }
+    },
+    "Ticket Event"
 ]
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
