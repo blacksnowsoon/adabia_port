@@ -46,6 +46,7 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Opened\nPending\nClosed",
+   "permlevel": 1,
    "translatable": 1
   },
   {
@@ -130,7 +131,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-05 01:10:40.080872",
+ "modified": "2024-10-06 22:47:48.532500",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",
@@ -150,7 +151,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -158,8 +158,7 @@
    "read": 1,
    "report": 1,
    "role": "Customer Support Admin",
-   "share": 1,
-   "write": 1
+   "share": 1
   },
   {
    "create": 1,

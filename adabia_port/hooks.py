@@ -11,6 +11,7 @@ app_license = "mit"
 # required_apps = []
 fixtures = [
     "Translation",
+    "Ticket Event",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
@@ -121,7 +122,7 @@ role_home_page = {
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-notification_config = "adabia_port.notifications.get_notification_config"
+# notification_config = "adabia_port.notifications.get_notification_config"
 
 # Permissions
 # -----------
