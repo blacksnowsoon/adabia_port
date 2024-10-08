@@ -1,0 +1,13 @@
+/* custom.css */
+.workspace-shortcut {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.workspace-shortcut:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
