@@ -8,7 +8,6 @@ frappe.ui.form.on('Machine', {
 		frm.disable_save();
 	    frm.add_custom_button('Save', () => {
 	        frm.save();
-             
         }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
 	},
 	after_save (frm) {
