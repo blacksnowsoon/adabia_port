@@ -16,6 +16,7 @@
   "truck_tail",
   "column_break_iegx",
   "machine",
+  "voyage_number",
   "column_break_ooxs",
   "company",
   "amount",
@@ -91,31 +92,36 @@
    "fieldname": "truck",
    "fieldtype": "Link",
    "label": "Truck",
-   "options": "Truck"
+   "options": "Truck",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "truck_tail",
    "fieldtype": "Link",
    "label": "Truck Tail",
-   "options": "Truck Tail"
+   "options": "Truck Tail",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "machine",
    "fieldtype": "Link",
    "label": "Machine",
-   "options": "Machine"
+   "options": "Machine",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "amount",
    "fieldtype": "Float",
    "label": "Amount",
-   "precision": "2"
+   "precision": "2",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "section_break_qedm",
@@ -127,11 +133,18 @@
    "label": "Notes",
    "read_only_depends_on": "eval:doc.status=='Closed';",
    "reqd": 1
+  },
+  {
+   "fieldname": "voyage_number",
+   "fieldtype": "Data",
+   "label": "Voyage Number",
+   "non_negative": 1,
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-07 20:52:43.266575",
+ "modified": "2024-10-08 18:28:14.015088",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",
