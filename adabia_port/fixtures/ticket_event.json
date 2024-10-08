@@ -30,16 +30,16 @@
  {
   "docstatus": 0,
   "doctype": "Ticket Event",
-  "event": "To Truck",
-  "modified": "2024-09-27 19:11:10.436914",
-  "name": "EV-10"
+  "event": "SPS System",
+  "modified": "2024-09-28 11:06:18.449143",
+  "name": "EV-06"
  },
  {
   "docstatus": 0,
   "doctype": "Ticket Event",
-  "event": "SPS System",
-  "modified": "2024-09-28 11:06:18.449143",
-  "name": "EV-06"
+  "event": "To Truck",
+  "modified": "2024-09-27 19:11:10.436914",
+  "name": "EV-10"
  },
  {
   "docstatus": 0,

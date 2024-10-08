@@ -1,13 +1,12 @@
 /* custom.css */
-.workspace-shortcut {
-    background-color: #f0f0f0;
+.widget.shortcut-widget-box{
     border-radius: 8px;
     padding: 10px;
     margin: 5px;
-    text-align: center;
+    border: 1px solid rgb(136, 134, 134);
 }
 
-.workspace-shortcut:hover {
+/* .workspace-shortcut:hover {
     background-color: #e0e0e0;
     cursor: pointer;
-}
+} */
