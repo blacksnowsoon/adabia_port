@@ -1,0 +1,38 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-09-28 18:15:32.846611",
+  "name": "Cust-Sup-Admin",
+  "role_profile": "Cust-Sup-Admin",
+  "roles": [
+   {
+    "parent": "Cust-Sup-Admin",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer Support Admin"
+   },
+   {
+    "parent": "Cust-Sup-Admin",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer Support User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-09-27 23:37:03.213194",
+  "name": "Cust-Sup-Ticket-Man",
+  "role_profile": "Cust-Sup-Ticket-Man",
+  "roles": [
+   {
+    "parent": "Cust-Sup-Ticket-Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer Support User"
+   }
+  ]
+ }
+]

@@ -11,6 +11,7 @@ app_license = "mit"
 # required_apps = []
 fixtures = [
     "Translation",
+    "Ticket Event",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
@@ -19,7 +20,22 @@ fixtures = [
             ]]
         }
     },
-    "Ticket Event",
+    {
+        "dt":"Role Profile", "filters" : { 
+            "name":["in", [
+                "Cust-Sup-Admin",
+                "Cust-Sup-Ticket-Man"
+            ]]
+        }
+    },
+    {
+        "dt":"Custom DocPerm", "filters" : { 
+            "role":["in", [
+                "Customer Support User",
+                "Customer Support Admin"
+            ]]
+        }
+    },
     {
         "dt": "Module Profile", "filters" : {
             "name": ["in", [
@@ -31,6 +47,13 @@ fixtures = [
         "dt": "Print Format", "filters": {
             "name": ["in", [
                 "Cut-Sup-Payment-Permit"
+            ]]
+        }
+    },
+    {
+        "dt": "Letter Head", "filters": {
+            "name": ["in", [
+                "Global Header"
             ]]
         }
     }
