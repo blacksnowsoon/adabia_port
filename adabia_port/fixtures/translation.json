@@ -999,5 +999,57 @@
   "name": "egki3uvido",
   "source_text": "Looks like you haven't received any notifications",
   "translated_text": "يبدو انك لم تستلم اي اشعارات بعد"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-09 13:50:50.307013",
+  "name": "vg37893k5b",
+  "source_text": "Number of Open Ticket",
+  "translated_text": "المهام المفتوحة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-09 13:51:20.419620",
+  "name": "vgckd38da9",
+  "source_text": "Number of Pending Tickets",
+  "translated_text": "المهام المعقلة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-09 14:03:58.946106",
+  "name": "vnpl9ocq7h",
+  "source_text": "Tickets Activities By User",
+  "translated_text": "انشطة المستخدمين"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-09 14:04:31.456280",
+  "name": "vo3qksh9b4",
+  "source_text": "Activities Track",
+  "translated_text": "النشاط العام"
  }
 ]

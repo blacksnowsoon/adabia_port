@@ -1,7 +1,7 @@
 [
  {
   "align": "Center",
-  "content": "<div style=\"text-align: center;\">\n<img src=\"/files/DocHeaderfc74d4.jpg\" alt=\"Global Header\" style=\"width: 100%; height:70px;\">\n</div>",
+  "content": "\n\t\t\t<div style=\"text-align: center;\">\n\t\t\t\t<img src=\"/files/DocHeaderfc74d4.jpg\" alt=\"Global Header\" width=\"700\" style=\"width: 700px;\">\n\t\t\t</div>\n\t\t",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Letter Head",
@@ -18,7 +18,7 @@
   "image_width": 700.0,
   "is_default": 1,
   "letter_head_name": "Global Header",
-  "modified": "2024-09-28 14:53:11.437700",
+  "modified": "2024-10-09 11:18:24.544274",
   "name": "Global Header",
   "source": "HTML"
  }
