@@ -47,7 +47,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-05 15:47:15.925931",
+ "modified": "2024-10-10 00:15:35.963137",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Truck Tail",
@@ -90,7 +90,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
