@@ -3,7 +3,7 @@
     border-radius: 8px;
     padding: 10px;
     margin: 5px;
-    border: 1px solid rgb(136, 134, 134);
+    outline: 1px solid rgba(134, 134, 134, 0.8);
 }
 
 /* .workspace-shortcut:hover {

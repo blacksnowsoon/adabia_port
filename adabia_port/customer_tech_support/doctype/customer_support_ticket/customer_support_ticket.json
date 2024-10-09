@@ -142,9 +142,9 @@
    "read_only_depends_on": "eval:doc.status=='Closed';"
   }
  ],
- "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-08 18:28:14.015088",
+ "make_attachments_public": 1,
+ "modified": "2024-10-09 16:43:22.381295",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",
