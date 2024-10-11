@@ -2,13 +2,6 @@
  {
   "docstatus": 0,
   "doctype": "Ticket Event",
-  "event": "To Ship",
-  "modified": "2024-10-05 01:06:08.428613",
-  "name": "EV-21"
- },
- {
-  "docstatus": 0,
-  "doctype": "Ticket Event",
   "event": "Port Management",
   "modified": "2024-10-05 01:06:42.500571",
   "name": "EV-22"
@@ -19,6 +12,13 @@
   "event": "GO System",
   "modified": "2024-10-05 01:06:25.599985",
   "name": "EV-15"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Ticket Event",
+  "event": "To Ship",
+  "modified": "2024-10-05 01:06:08.428613",
+  "name": "EV-21"
  },
  {
   "docstatus": 0,

@@ -2,6 +2,21 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
+  "modified": "2024-10-12 00:42:05.146882",
+  "name": "Increase-Import-Manifest-Group",
+  "role_profile": "Increase-Import-Manifest-Group",
+  "roles": [
+   {
+    "parent": "Increase-Import-Manifest-Group",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Increase Import Manifest Correspondence"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
   "modified": "2024-09-28 18:15:32.846611",
   "name": "Cust-Sup-Admin",
   "role_profile": "Cust-Sup-Admin",

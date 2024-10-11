@@ -24,7 +24,8 @@ fixtures = [
         "dt":"Role Profile", "filters" : { 
             "name":["in", [
                 "Cust-Sup-Admin",
-                "Cust-Sup-Ticket-Man"
+                "Cust-Sup-Ticket-Man",
+                "Increase-Import-Manifest-Group"
             ]]
         }
     },
@@ -32,7 +33,9 @@ fixtures = [
         "dt":"Custom DocPerm", "filters" : { 
             "role":["in", [
                 "Customer Support User",
-                "Customer Support Admin"
+                "Customer Support Admin",
+                "Increase Import Manifest Correspondence"
+
             ]]
         }
     },
