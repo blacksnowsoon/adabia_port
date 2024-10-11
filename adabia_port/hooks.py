@@ -16,7 +16,8 @@ fixtures = [
         "dt":"Role", "filters" : { 
             "name":["in", [
                 "Customer Support Admin",
-                "Customer Support User"
+                "Customer Support User",
+                "Increase Import Manifest Correspondence"
             ]]
         }
     },
