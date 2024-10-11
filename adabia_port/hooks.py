@@ -56,6 +56,13 @@ fixtures = [
                 "Global Header"
             ]]
         }
+    },
+    {
+        "dt": "Email Template", "filters" : {
+            "name": ["in", [
+                "Adabia New User Account"
+            ]]
+        }
     }
 ]
 # Each item in the list will be shown as an app in the apps page
