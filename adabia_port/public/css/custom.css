@@ -6,7 +6,12 @@
     outline: 1px solid rgba(134, 134, 134, 0.8);
 }
 
-/* .workspace-shortcut:hover {
-    background-color: #e0e0e0;
-    cursor: pointer;
-} */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+  }

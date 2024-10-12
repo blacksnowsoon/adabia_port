@@ -85,7 +85,7 @@ fixtures = [
 
 # include js, css files in header of desk.html
 app_include_css = "/assets/adabia_port/css/custom.css"
-# app_include_js = "/assets/adabia_port/js/adabia_port.js"
+app_include_js = "/assets/adabia_port/js/custom.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/adabia_port/css/adabia_port.css"
