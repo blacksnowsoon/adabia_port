@@ -76,7 +76,7 @@ fixtures = [
 # 		"logo": "/assets/adabia_port/logo.png",
 # 		"title": "Adabia Port",
 # 		"route": "/adabia_port",
-# 		"has_permission": "adabia_port.api.permission.has_app_permission"
+# 		# "has_permission": "adabia_port.api.permission.has_app_permission"
 # 	}
 # ]
 
