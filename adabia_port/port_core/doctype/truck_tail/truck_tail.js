@@ -17,11 +17,11 @@ frappe.ui.form.on("Truck Tail", {
 	        frappe.throw('Error in Tail letters');
 	    } else {
 	        const plat_char = [...letters].filter(l => l !== ' ');
-    	    frm.set_value('truck_letters', plat_char.join(" "));
+    	    frm.set_value('tail_letters', plat_char.join(" "));
 	    }
 	    frm.set_value('title', `${frm.doc.tail_letters} / ${frm.doc.tail_numbers}`);
 	},
 	after_save(frm) {
-	    frappe.set_route('truck');
+	    frappe.set_route('truck-tail');
 	}
 });
