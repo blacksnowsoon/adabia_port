@@ -3,7 +3,6 @@
 
 frappe.ui.form.on('Company', {
 	refresh(frm) {
-        // your code here
 		frm.disable_save();
 	    frm.add_custom_button('Save', () => {
             frm.save();

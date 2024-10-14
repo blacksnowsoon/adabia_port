@@ -10,7 +10,7 @@ frappe.ui.form.on('Customer Support Ticket', {
         }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
 		toggleDetails(frm)
 	},
-	ticket_event (frm) {
+	ticket_event(frm) {
 	   // clear the procedure field after updating the event field
 	    frm.set_value('procedure_name', '');
 		toggleDetails(frm)
