@@ -5,10 +5,16 @@
     margin: 5px;
     outline: 1px solid rgba(134, 134, 134, 0.8);
 }
-
+.page-container {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
 .footer-content {
     text-align: center;
-    padding: 10px;
-    background-color: #f8f9fa;
     border-top: 1px solid #e9ecef;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
   }
