@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class SPSProcedure(Document):
+class ModuleChildTable(Document):
 	pass

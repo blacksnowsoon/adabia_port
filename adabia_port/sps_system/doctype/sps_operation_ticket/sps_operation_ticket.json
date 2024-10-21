@@ -1,18 +1,21 @@
 {
  "actions": [],
- "autoname": "format:OPT-{####}-{YYYY-MM}",
+ "allow_events_in_timeline": 1,
+ "autoname": "format:OPT-{####}-{MM}-{YYYY}",
  "creation": "2024-10-13 10:39:52.839352",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "details_tab",
-  "task_type",
-  "module_name",
-  "column_break_cedk",
+  "section_break_riko",
   "status",
+  "task_type",
   "use_editor",
-  "upload_file",
-  "column_break_fqxy",
+  "column_break_cedk",
+  "approvals",
+  "column_break_vvsm",
+  "section_break_otxs",
+  "modules",
   "section_break_zprv",
   "title",
   "column_break_jvpa",
@@ -26,15 +29,17 @@
   "requirements",
   "section_description",
   "description",
-  "preview",
+  "section_break_qnxz",
   "pdf"
  ],
  "fields": [
   {
+   "default": "New Request",
    "fieldname": "task_type",
    "fieldtype": "Select",
    "label": "Task Type",
-   "options": "New Request\nBug"
+   "options": "New Request\nBug",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_cedk",
@@ -44,18 +49,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nProgress\nCompleted"
-  },
-  {
-   "fieldname": "module_name",
-   "fieldtype": "Link",
-   "label": "Module Name",
-   "options": "SPS Module",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_fqxy",
-   "fieldtype": "Column Break"
+   "options": "Open\nIn Progress\nCompleted"
   },
   {
    "fieldname": "description",
@@ -76,9 +70,9 @@
   },
   {
    "fieldname": "details",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Details",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.task_type != 'Bug'"
   },
   {
    "fieldname": "column_break_jvpa",
@@ -87,8 +81,7 @@
   {
    "fieldname": "requestor",
    "fieldtype": "Data",
-   "label": "Requestor",
-   "reqd": 1
+   "label": "Requestor"
   },
   {
    "fieldname": "scopes",
@@ -125,22 +118,9 @@
    "label": "Case Description"
   },
   {
-   "depends_on": "eval:!doc.use_editor",
-   "fieldname": "upload_file",
-   "fieldtype": "Attach",
-   "label": "Upload File",
-   "length": 1,
-   "options": ".pdf"
-  },
-  {
    "fieldname": "details_tab",
    "fieldtype": "Tab Break",
    "label": "Details"
-  },
-  {
-   "fieldname": "preview",
-   "fieldtype": "Tab Break",
-   "label": "Preview"
   },
   {
    "fieldname": "pdf",
@@ -159,12 +139,43 @@
    "fieldtype": "Tab Break",
    "label": "Editor",
    "show_on_timeline": 1
+  },
+  {
+   "fieldname": "section_break_qnxz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "modules",
+   "fieldtype": "Table MultiSelect",
+   "label": "Modules",
+   "options": "Module Child Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_otxs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vvsm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approvals",
+   "fieldtype": "JSON",
+   "hidden": 1,
+   "label": "Approvals",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_riko",
+   "fieldtype": "Section Break",
+   "read_only_depends_on": "eval:doc.status==\"In Review\""
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2024-10-14 10:40:53.983026",
+ "modified": "2024-10-21 21:42:42.964550",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Ticket",
@@ -182,9 +193,58 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer Support Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer Support User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SPS Responsible Group",
+   "share": 1,
+   "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Red",
+   "title": "Open"
+  },
+  {
+   "color": "Blue",
+   "title": "In Review"
+  },
+  {
+   "color": "Green",
+   "title": "In Progress"
+  },
+  {
+   "color": "Gray",
+   "title": "Completed"
+  }
+ ],
+ "title_field": "title",
  "track_changes": 1
 }

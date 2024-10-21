@@ -15,8 +15,6 @@ frappe.ui.form.on('Customer Support Ticket', {
 	    frm.set_value('procedure_name', '');
 		toggleDetails(frm)
 	   
-	},
-	onload (frm) {
 	}
 })
 
@@ -37,3 +35,5 @@ const toggleDetails = (frm) => {
 		 }
 	 });
 }
+
+

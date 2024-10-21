@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestSPSProcedure(FrappeTestCase):
+class TestTruckVisit(FrappeTestCase):
 	pass

@@ -6,12 +6,13 @@ app_email = "blacksnow.soon@gmail.com"
 app_license = "mit"
 
 # Apps
-# ------------------
+# --------------------------------------------------------------------------
 
 # required_apps = []
 fixtures = [
     "Translation",
     "Ticket Event",
+    
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
@@ -48,23 +49,16 @@ fixtures = [
         }
     },
     {
-        "dt": "Print Format", "filters": {
-            "name": ["in", [
-                "Cut-Sup-Payment-Permit"
-            ]]
-        }
-    },
-    {
-        "dt": "Letter Head", "filters": {
-            "name": ["in", [
-                "Global Header"
-            ]]
-        }
-    },
-    {
         "dt": "Email Template", "filters" : {
             "name": ["in", [
                 "Adabia New User Account"
+            ]]
+        }
+    },
+    {
+        "dt": "Print Format", "filters" : {
+            "name": ["in", [
+                "SPS CR Temp"
             ]]
         }
     }
@@ -76,7 +70,7 @@ fixtures = [
 # 		"logo": "/assets/adabia_port/logo.png",
 # 		"title": "Adabia Port",
 # 		"route": "/adabia_port",
-# 		# "has_permission": "adabia_port.api.permission.has_app_permission"
+# 	    "has_permission": "adabia_port.api.permission.has_app_permission"
 # 	}
 # ]
 
@@ -86,6 +80,7 @@ fixtures = [
 # include js, css files in header of desk.html
 app_include_css = "/assets/adabia_port/css/custom.css"
 app_include_js = "/assets/adabia_port/js/custom.js"
+app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/adabia_port/css/adabia_port.css"
@@ -203,6 +198,11 @@ app_include_js = "/assets/adabia_port/js/custom.js"
 # 		"on_trash": "method"
 # 	}
 # }
+# doc_events = {
+#     "File": {
+#         "before_save": "adabia_port.utils.validate_duplicate_attachment"
+#     }
+# }
 
 # Scheduled Tasks
 # ---------------
@@ -233,9 +233,11 @@ app_include_js = "/assets/adabia_port/js/custom.js"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "adabia_port.event.get_events"
-# }
+override_whitelisted_methods = {
+    # "frappe.utils.pdf.get_pdf": "adabia_port.utils.get_pdf"
+	# "frappe.desk.doctype.event.event.get_events": "adabia_port.event.get_events"
+    # 'frappe.client.save': 'adabia_port.adabia_port.doctype.sps_operation_ticket.sps_operation_ticket.validate_duplicate_attachment'
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

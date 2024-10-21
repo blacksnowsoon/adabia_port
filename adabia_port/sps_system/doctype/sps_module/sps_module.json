@@ -7,7 +7,10 @@
  "engine": "InnoDB",
  "field_order": [
   "module_name",
-  "column_break_crnl"
+  "responsible",
+  "column_break_crnl",
+  "name_of_responsible",
+  "job_title"
  ],
  "fields": [
   {
@@ -20,11 +23,32 @@
   {
    "fieldname": "column_break_crnl",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "responsible.full_name",
+   "fieldname": "name_of_responsible",
+   "fieldtype": "Data",
+   "label": "Name Of Responsible",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "responsible.job_title",
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "label": "Job Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Responsible",
+   "options": "User",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-13 12:12:34.436481",
+ "modified": "2024-10-20 20:45:18.980620",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Module",
@@ -42,6 +66,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SPS Responsible Group",
+   "share": 1
   }
  ],
  "quick_entry": 1,

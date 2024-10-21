@@ -1,4 +1,11 @@
 /* custom.css */
+@font-face {
+    font-family: 'cairo';
+    src: url('/assets/adabia_port/fonts/Cairo-Regular.ttf');
+}
+body {
+    font-family: 'cairo', Arial, Helvetica, sans-serif;
+}
 .widget.shortcut-widget-box{
     border-radius: 8px;
     padding: 10px;
@@ -17,4 +24,11 @@
     bottom: 0;
     width: 100%;
     z-index: 999;
+  }
+  .pdf {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+@-moz-document url-prefix() {
+    fieldset { display: table-cell; }
   }
