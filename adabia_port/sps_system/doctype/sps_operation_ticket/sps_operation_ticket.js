@@ -99,17 +99,7 @@ function frm_status_change(frm) {
 			
 		},
 		in_progress: () => {
-			const cur_usr = frappe.session.user;
-			if (cur_usr === 'Administrator' || cur_usr === frm.doc.owner) {
-				frm.fields.forEach(function(field) {
-					console.log(field.df.fieldname)
-					if (field.df.fieldname !== 'status') {
-						frm.set_df_property(field.df.fieldname, 'read_only', 1);
-					}
-				});
-			} else {
-				toggle_frm(frm, 1);
-			}
+			
 		},
 		completed: () => {
 			

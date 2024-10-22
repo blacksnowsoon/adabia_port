@@ -17,6 +17,51 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
+  "modified": "2024-10-20 20:42:23.698134",
+  "name": "SPS CR Res-Profile",
+  "role_profile": "SPS CR Res-Profile",
+  "roles": [
+   {
+    "parent": "SPS CR Res-Profile",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "SPS Responsible Group"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-10-22 19:27:23.613464",
+  "name": "SPS-OP-Admin",
+  "role_profile": "SPS-OP-Admin",
+  "roles": [
+   {
+    "parent": "SPS-OP-Admin",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "SPS OP Admin"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-10-22 19:24:30.180368",
+  "name": "SPS-OP-Man",
+  "role_profile": "SPS-OP-Man",
+  "roles": [
+   {
+    "parent": "SPS-OP-Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "SPS OP User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
   "modified": "2024-10-19 01:40:30.865920",
   "name": "Cust-Sup-Admin",
   "role_profile": "Cust-Sup-Admin",

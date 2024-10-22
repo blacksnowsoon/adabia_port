@@ -18,7 +18,10 @@ fixtures = [
             "name":["in", [
                 "Customer Support Admin",
                 "Customer Support User",
-                "Increase Import Manifest Correspondence"
+                "Increase Import Manifest Correspondence",
+                "SPS OP Admin",
+                "SPS OP User",
+                "SPS Responsible Group"
             ]]
         }
     },
@@ -27,7 +30,10 @@ fixtures = [
             "name":["in", [
                 "Cust-Sup-Admin",
                 "Cust-Sup-Ticket-Man",
-                "Increase-Import-Manifest-Group"
+                "Increase-Import-Manifest-Group",
+                "SPS-OP-Admin",
+                "SPS-OP-Man",
+                "SPS CR Res-Profile"
             ]]
         }
     },
@@ -36,7 +42,10 @@ fixtures = [
             "role":["in", [
                 "Customer Support User",
                 "Customer Support Admin",
-                "Increase Import Manifest Correspondence"
+                "Increase Import Manifest Correspondence",
+                "SPS OP User",
+                "SPS Responsible Group",
+                "SPS OP Admin"
 
             ]]
         }
@@ -44,7 +53,9 @@ fixtures = [
     {
         "dt": "Module Profile", "filters" : {
             "name": ["in", [
-                "Adabia"
+                "Adabia",
+                "CUST SUPP M",
+                "SPS Operation M"
             ] ]
         }
     },
@@ -58,7 +69,18 @@ fixtures = [
     {
         "dt": "Print Format", "filters" : {
             "name": ["in", [
-                "SPS CR Temp"
+                "SPS CR Temp",
+                "SPS CR Temp",
+                "Custom SPS CR Print Format"
+            ]]
+        }
+    },
+    {
+        "dt": "Report", "filters" : {
+            "name": ["in", [
+                "Open New Request",
+                "Bugs In Progress",
+                "New Requests In Progress"
             ]]
         }
     }
@@ -183,9 +205,10 @@ app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
+override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+    # "User": "adabia_port.utils.CustomUser"
+}
 
 # Document Events
 # ---------------

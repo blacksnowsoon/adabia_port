@@ -1,0 +1,185 @@
+[
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false],[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Bug\",false]],\"fields\":[[\"name\",\"SPS Operation Ticket\"],[\"docstatus\",\"SPS Operation Ticket\"],[\"title\",\"SPS Operation Ticket\"],[\"status\",\"SPS Operation Ticket\"],[\"task_type\",\"SPS Operation Ticket\"],[\"requestor\",\"SPS Operation Ticket\"]],\"order_by\":\"`tabSPS Operation Ticket`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"name\":120,\"title\":120,\"status\":120,\"task_type\":120,\"requestor\":120},\"group_by\":null}",
+  "letter_head": "ISFP Header",
+  "modified": "2024-10-23 01:00:04.825229",
+  "module": "SPS System",
+  "name": "Open New Request",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    ticket.title,\r\n    ticket.status,\r\n    ticket.task_type,\r\n    ticket.name,\r\n    ticket.requestor,\r\n    GROUP_CONCAT(modules.module_name) AS modules\r\n    \r\nFROM\r\n    `tabSPS Operation Ticket` AS ticket\r\nLEFT JOIN\r\n    `tabModule Child Table` AS modulesTab on ticket.name = modulesTab.parent\r\nLEFT JOIN\r\n    `tabSPS Module` AS modules on modulesTab.module = modules.name \r\nWHERE\r\n    ticket.status = 'Open'\r\nGROUP BY ticket.name\r\n    ;",
+  "ref_doctype": "SPS Operation Ticket",
+  "reference_report": null,
+  "report_name": "Open New Request",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Open New Request",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Open New Request",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS Responsible Group"
+   },
+   {
+    "parent": "Open New Request",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP User"
+   },
+   {
+    "parent": "Open New Request",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP Admin"
+   },
+   {
+    "parent": "Open New Request",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP Admin"
+   },
+   {
+    "parent": "Open New Request",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false],[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Bug\",false]],\"fields\":[[\"name\",\"SPS Operation Ticket\"],[\"docstatus\",\"SPS Operation Ticket\"],[\"title\",\"SPS Operation Ticket\"],[\"status\",\"SPS Operation Ticket\"],[\"task_type\",\"SPS Operation Ticket\"],[\"requestor\",\"SPS Operation Ticket\"]],\"order_by\":\"`tabSPS Operation Ticket`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"name\":120,\"title\":120,\"status\":120,\"task_type\":120,\"requestor\":120},\"group_by\":null}",
+  "letter_head": "ISFP Header",
+  "modified": "2024-10-23 00:59:21.157690",
+  "module": "SPS System",
+  "name": "Bugs In Progress",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    ticket.title,\r\n    ticket.status,\r\n    ticket.task_type,\r\n    ticket.name,\r\n    ticket.requestor,\r\n    GROUP_CONCAT(modules.module_name) AS modules\r\n    \r\nFROM\r\n    `tabSPS Operation Ticket` AS ticket\r\nLEFT JOIN\r\n    `tabModule Child Table` AS modulesTab on ticket.name = modulesTab.parent\r\nLEFT JOIN\r\n    `tabSPS Module` AS modules on modulesTab.module = modules.name \r\nWHERE\r\n    ticket.status = 'In Progress' AND ticket.task_type = 'Bug'\r\nGROUP BY ticket.name\r\n    ;",
+  "ref_doctype": "SPS Operation Ticket",
+  "reference_report": null,
+  "report_name": "Bugs In Progress",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Bugs In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Bugs In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS Responsible Group"
+   },
+   {
+    "parent": "Bugs In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP User"
+   },
+   {
+    "parent": "Bugs In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP Admin"
+   },
+   {
+    "parent": "Bugs In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP Admin"
+   },
+   {
+    "parent": "Bugs In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 1,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false],[\"SPS Operation Ticket\",\"task_type\",\"=\",\"New Request\",false]],\"fields\":[[\"name\",\"SPS Operation Ticket\"],[\"title\",\"SPS Operation Ticket\"],[\"status\",\"SPS Operation Ticket\"],[\"task_type\",\"SPS Operation Ticket\"],[\"requestor\",\"SPS Operation Ticket\"],[\"owner\",\"SPS Operation Ticket\"],[\"module\",\"Module Child Table\"]],\"order_by\":\"`tabSPS Operation Ticket`.`modified` desc\",\"add_totals_row\":true,\"page_length\":20,\"column_widths\":{\"name\":120,\"title\":120,\"status\":120,\"task_type\":120,\"requestor\":120,\"owner\":120,\"Module Child Table:module\":120},\"group_by\":null}",
+  "letter_head": "ISFP Header",
+  "modified": "2024-10-23 00:58:31.327706",
+  "module": "SPS System",
+  "name": "New Requests In Progress",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    ticket.title,\r\n    ticket.status,\r\n    ticket.task_type,\r\n    ticket.name,\r\n    ticket.requestor,\r\n    GROUP_CONCAT(modules.module_name) AS modules\r\n    \r\nFROM\r\n    `tabSPS Operation Ticket` AS ticket\r\nLEFT JOIN\r\n    `tabModule Child Table` AS modulesTab on ticket.name = modulesTab.parent\r\nLEFT JOIN\r\n    `tabSPS Module` AS modules on modulesTab.module = modules.name \r\nWHERE\r\n    ticket.status = 'In Progress' AND ticket.task_type = 'New Request'\r\nGROUP BY ticket.name\r\n    ;\r\n    ",
+  "ref_doctype": "SPS Operation Ticket",
+  "reference_report": null,
+  "report_name": "New Requests In Progress",
+  "report_script": "",
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "New Requests In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "New Requests In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS Responsible Group"
+   },
+   {
+    "parent": "New Requests In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP User"
+   },
+   {
+    "parent": "New Requests In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP Admin"
+   },
+   {
+    "parent": "New Requests In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP Admin"
+   },
+   {
+    "parent": "New Requests In Progress",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP User"
+   }
+  ],
+  "timeout": 0
+ }
+]

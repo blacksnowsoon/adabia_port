@@ -48,7 +48,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-20 20:45:18.980620",
+ "modified": "2024-10-22 14:07:47.165538",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Module",
@@ -75,6 +75,29 @@
    "report": 1,
    "role": "SPS Responsible Group",
    "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SPS OP User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SPS OP Admin",
+   "share": 1,
+   "write": 1
   }
  ],
  "quick_entry": 1,

@@ -1064,5 +1064,83 @@
   "name": "49ndejrrm7",
   "source_text": "Procedure Name",
   "translated_text": "الاجراء / المخالفة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-22 19:34:56.358426",
+  "name": "shtcfipe86",
+  "source_text": "SPS Operation",
+  "translated_text": "الدعم الفني للتطبيقاتSPS"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-22 19:37:16.807739",
+  "name": "sjr0o1ftsd",
+  "source_text": "In Progress",
+  "translated_text": "قيد التنفيذ"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-22 19:38:03.838151",
+  "name": "sk9mnqi8cc",
+  "source_text": "Use Editor",
+  "translated_text": "استخدم المحرر"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-22 19:38:43.275747",
+  "name": "skm0g987q5",
+  "source_text": "Modules",
+  "translated_text": "الانظمة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-22 19:40:33.938636",
+  "name": "sloj021ntj",
+  "source_text": "Title",
+  "translated_text": "الاسم / المعرف"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-22 19:42:07.743708",
+  "name": "smltvmig75",
+  "source_text": "Requestor",
+  "translated_text": "مقدم الطلب"
  }
 ]
