@@ -83,7 +83,14 @@ fixtures = [
                 "New Requests In Progress"
             ]]
         }
-    }
+    },
+    {
+        "dt":"DocType", "filters" : { 
+            "name":["in", [
+                "User",
+            ]]
+        }
+    },
 ]
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
