@@ -12,7 +12,6 @@ app_license = "mit"
 fixtures = [
     "Translation",
     "Ticket Event",
-    
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
@@ -88,6 +87,20 @@ fixtures = [
         "dt":"DocType", "filters" : { 
             "name":["in", [
                 "User",
+            ]]
+        }
+    },
+    {
+        "dt":"Dashboard Chart", "filters" : { 
+            "name":["in", [
+                "SPS OP Ticket Chart",
+            ]]
+        }
+    },
+    {
+        "dt":"Workspace", "filters" : { 
+            "name":["in", [
+                "SPS Operation",
             ]]
         }
     },

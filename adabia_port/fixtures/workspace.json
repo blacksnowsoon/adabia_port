@@ -1,0 +1,78 @@
+[
+ {
+  "charts": [
+   {
+    "chart_name": "SPS OP Ticket Chart",
+    "label": "SPS OP Activities",
+    "parent": "SPS Operation",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   }
+  ],
+  "content": "[{\"id\":\"BDYKL6A0hp\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Operation</span>\",\"col\":12}},{\"id\":\"npYzsdBnl-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"bJGwf6_BIN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"List View\",\"col\":3}},{\"id\":\"XRGicCQgxq\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Yy6BsHbuvS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Charts</b></span>\",\"col\":12}},{\"id\":\"1gxTiGau4L\",\"type\":\"chart\",\"data\":{\"chart_name\":\"SPS OP Activities\",\"col\":6}},{\"id\":\"16vx6K_7D9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests In Progress\",\"col\":6}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "getting-started",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "SPS Operation",
+  "links": [],
+  "modified": "2024-10-23 01:04:35.770756",
+  "module": null,
+  "name": "SPS Operation",
+  "number_cards": [],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [
+   {
+    "document_type": "SPS Operation Ticket",
+    "label": "New Requests In Progress",
+    "parent": "SPS Operation",
+    "parentfield": "quick_lists",
+    "parenttype": "Workspace",
+    "quick_list_filter": "[[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false],[\"SPS Operation Ticket\",\"task_type\",\"=\",\"New Request\",false]]"
+   }
+  ],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 23.0,
+  "shortcuts": [
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "List View",
+    "link_to": "SPS Operation Ticket",
+    "parent": "SPS Operation",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "New",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "New Ticket",
+    "link_to": "SPS Operation Ticket",
+    "parent": "SPS Operation",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "SPS Operation"
+ }
+]
