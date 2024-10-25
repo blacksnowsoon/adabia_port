@@ -6,12 +6,22 @@
 body {
     font-family: 'cairo', Arial, Helvetica, sans-serif;
 }
-.widget.shortcut-widget-box{
+.widget.quick-list-widget-box, .widget.shortcut-widget-box {
     border-radius: 8px;
     padding: 10px;
     margin: 5px;
     outline: 1px solid rgba(134, 134, 134, 0.8);
 }
+/* .ce-block__content:has(.ce-header) {
+    outline: 1px solid rgba(134, 134, 134, 0.8);
+}
+.widget-head {
+    padding: 2px;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(134, 134, 134, 0.8);
+    background-color: #ffbc38;
+    color: rgb(20, 20, 20);
+} */
 .page-container {
     margin-bottom: 30px;
     padding-bottom: 50px;

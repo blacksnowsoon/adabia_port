@@ -10,7 +10,7 @@ frappe.ui.form.on("SPS Operation Ticket", {
 			case "In Progress":
 				frm_status_change(frm).in_progress();
 				break;
-			case "completed":
+			case "Completed":
 				frm_status_change(frm).completed();
 				break;
 			default:
@@ -63,6 +63,14 @@ frappe.ui.form.on("SPS Operation Ticket", {
 			const removed_modules = approvals.filter(approval => modules_list.some(m => m.module === approval.name));
 			set_json_field_value(frm, 'approvals', removed_modules);
 		}
+	},
+	befor_save(frm) {
+		if (frm.doc.completed_in !== "") {
+			const can_save = doc.doc.in_progress < frm.doc.completed_in;
+			if (!can_save) {
+				frappe.throw('In Progress must be less than Completed In');
+			}
+		}
 	}
 });
 
@@ -93,15 +101,15 @@ function set_json_field_value(frm, fieldname, value) {
 }
 // composion of frm status to handle the approvals 
 function frm_status_change(frm) {
-	const approvals = frm.doc.approvals || [];
 	return {
 		open: () => {
 			
 		},
 		in_progress: () => {
-			
+			apply_edit_for_ad(frm)
 		},
 		completed: () => {
+			apply_edit_for_ad(frm)
 			
 		}
 	}
@@ -111,7 +119,15 @@ function frm_status_change(frm) {
 // append save button
 function save_btn(frm) {
 	frm.add_custom_button('Save', () => {
-		frm.save();
+		const status = frm.doc.status;
+		if (status == "In Progress") {
+			frappe.warn(`Are You Sure You Want To Save This Ticket In Progress ?`,
+				`This will Start Count Duration Since !`, () => {
+					frm.save();
+				}, "Confirm", "Cancel")
+		} else {
+			frm.save();
+		}
 	}).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
 }
 // toggle the fields in the form
@@ -119,4 +135,17 @@ function toggle_frm(frm, value) {
 	frm.fields.forEach(function(field) {
 		frm.set_df_property(field.df.fieldname, 'read_only', value);
 	});
+}
+
+function apply_edit_for_ad(frm) {
+	const is_ad = frappe.user_roles.includes('SPS OP Admin');
+			if(is_ad) {
+				if (frm.doc.in_progress_since) {
+					frm.set_df_property('in_progress_since', 'read_only', 0);	
+				}
+				if (frm.doc.completed_in) {
+					frm.set_df_property('completed_in', 'read_only', 0);
+				}
+				frm.set_df_property('status', 'read_only', 0);
+			}
 }

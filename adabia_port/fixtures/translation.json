@@ -1142,5 +1142,18 @@
   "name": "smltvmig75",
   "source_text": "Requestor",
   "translated_text": "مقدم الطلب"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-10-25 23:44:10.797086",
+  "name": "g6t7bcp41r",
+  "source_text": "HH",
+  "translated_text": "س"
  }
 ]

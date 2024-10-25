@@ -68,15 +68,15 @@ fixtures = [
     {
         "dt": "Print Format", "filters" : {
             "name": ["in", [
-                "SPS CR Temp",
-                "SPS CR Temp",
-                "Custom SPS CR Print Format"
+                "SPS CR Builder Temp",
+                "Custom SPS CR Print Custom Format"
             ]]
         }
     },
     {
         "dt": "Report", "filters" : {
             "name": ["in", [
+                "SPS Modules Activities Report",
                 "Open New Request",
                 "Bugs In Progress",
                 "New Requests In Progress"
@@ -100,7 +100,7 @@ fixtures = [
     {
         "dt":"Workspace", "filters" : { 
             "name":["in", [
-                "SPS Operation",
+                "SPS OP Space",
             ]]
         }
     },
