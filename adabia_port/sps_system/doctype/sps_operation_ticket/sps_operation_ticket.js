@@ -21,18 +21,18 @@ frappe.ui.form.on("SPS Operation Ticket", {
 		save_btn(frm)
 	},
 	task_type(frm) {
-		const task_type = frm.doc.task_type;
-		if (task_type == "Bug") {
-			frm.set_value('status', 'In Progress');
-			frm.set_df_property('status', 'read_only', 1);
-		} else {
-			frm.set_df_property('status', 'read_only', 0);
-			if (frm.is_new()) {
-				frm.set_value('status', 'Open');
-			} else {
-				frm.reload_doc();
-			}
-		}
+		// const task_type = frm.doc.task_type;
+		// if (task_type == "Bug") {
+		// 	frm.set_value('status', 'In Progress');
+		// 	frm.set_df_property('status', 'read_only', 1);
+		// } else {
+		// 	frm.set_df_property('status', 'read_only', 0);
+		// 	if (frm.is_new()) {
+		// 		frm.set_value('status', 'Open');
+		// 	} else {
+		// 		frm.reload_doc();
+		// 	}
+		// }
 	},
 	modules(frm) {
 		// handle the approvels list without the managers

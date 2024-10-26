@@ -147,7 +147,7 @@ app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "adabia_port/public/icons.svg"
+# app_include_icons = "adabia_port/public/icons/puzzle.svg"
 
 # Home Pages
 # ----------

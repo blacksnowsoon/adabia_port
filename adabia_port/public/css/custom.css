@@ -12,16 +12,7 @@ body {
     margin: 5px;
     outline: 1px solid rgba(134, 134, 134, 0.8);
 }
-/* .ce-block__content:has(.ce-header) {
-    outline: 1px solid rgba(134, 134, 134, 0.8);
-}
-.widget-head {
-    padding: 2px;
-    border-radius: 5px;
-    border-bottom: 1px solid rgba(134, 134, 134, 0.8);
-    background-color: #ffbc38;
-    color: rgb(20, 20, 20);
-} */
+
 .page-container {
     margin-bottom: 30px;
     padding-bottom: 50px;
@@ -35,10 +26,6 @@ body {
     width: 100%;
     z-index: 999;
   }
-  .pdf {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-}
 @-moz-document url-prefix() {
     fieldset { display: table-cell; }
   }
