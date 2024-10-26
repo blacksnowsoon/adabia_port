@@ -230,5 +230,54 @@
    }
   ],
   "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "ISFP Header",
+  "modified": "2024-10-23 12:19:38.402454",
+  "module": "SPS System",
+  "name": "Modules Activities",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    modulesTab.parent,\r\n    modules.module_name,\r\n    modulesTab.module,\r\n    COUNT(modules.module_name)\r\n   \r\n    \r\nFROM\r\n    `tabModule Child Table` AS modulesTab\r\nLEFT JOIN\r\n    `tabSPS Module` AS modules on modules.name = modulesTab.module\r\nGROUP BY modules.module_name\r\n    ;",
+  "ref_doctype": "SPS Module",
+  "reference_report": null,
+  "report_name": "Modules Activities",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Modules Activities",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Modules Activities",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS Responsible Group"
+   },
+   {
+    "parent": "Modules Activities",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP User"
+   },
+   {
+    "parent": "Modules Activities",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "SPS OP Admin"
+   }
+  ],
+  "timeout": 0
  }
 ]

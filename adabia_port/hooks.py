@@ -79,7 +79,8 @@ fixtures = [
                 "SPS Modules Activities Report",
                 "Open New Request",
                 "Bugs In Progress",
-                "New Requests In Progress"
+                "New Requests In Progress",
+                "Modules Activities"
             ]]
         }
     },
