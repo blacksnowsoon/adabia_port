@@ -94,6 +94,7 @@ fixtures = [
         "dt":"Dashboard Chart", "filters" : { 
             "name":["in", [
                 "SPS OP Ticket Chart",
+                "Most Effected Modules in SPS"
             ]]
         }
     },
@@ -110,7 +111,7 @@ fixtures = [
                 "SPS Operation Dash",
             ]]
         }
-    },
+    }
 ]
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
