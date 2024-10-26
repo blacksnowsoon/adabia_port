@@ -1,0 +1,37 @@
+[
+ {
+  "cards": [
+   {
+    "card": "SPS OP Teckets",
+    "parent": "SPS Operation Dash",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   }
+  ],
+  "chart_options": null,
+  "charts": [
+   {
+    "chart": "SPS OP Ticket Chart",
+    "parent": "SPS Operation Dash",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Most Effected Modules in SPS",
+    "parent": "SPS Operation Dash",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   }
+  ],
+  "dashboard_name": "SPS Operation Dash",
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "is_default": 0,
+  "is_standard": 0,
+  "modified": "2024-10-26 15:03:37.600627",
+  "module": null,
+  "name": "SPS Operation Dash"
+ }
+]
