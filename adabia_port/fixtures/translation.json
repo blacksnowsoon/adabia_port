@@ -1125,10 +1125,10 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2024-10-22 19:40:33.938636",
+  "modified": "2024-10-28 00:35:46.613031",
   "name": "sloj021ntj",
   "source_text": "Title",
-  "translated_text": "الاسم / المعرف"
+  "translated_text": "العنوان / المعرف"
  },
  {
   "context": null,
@@ -1138,10 +1138,10 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2024-10-22 19:42:07.743708",
+  "modified": "2024-10-28 00:35:02.695367",
   "name": "smltvmig75",
-  "source_text": "Requestor",
-  "translated_text": "مقدم الطلب"
+  "source_text": "Requestor / BY",
+  "translated_text": "مقدم الطلب / بواسطة"
  },
  {
   "context": null,

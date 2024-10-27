@@ -18,13 +18,26 @@
   "is_public": 0,
   "is_standard": 0,
   "last_synced_on": null,
-  "modified": "2024-10-23 12:21:55.064151",
+  "modified": "2024-10-27 19:41:19.213169",
   "module": null,
   "name": "Most Effected Modules in SPS",
   "number_of_groups": 0,
   "parent_document_type": null,
   "report_name": "Modules Activities",
-  "roles": [],
+  "roles": [
+   {
+    "parent": "Most Effected Modules in SPS",
+    "parentfield": "roles",
+    "parenttype": "Dashboard Chart",
+    "role": "SPS OP Admin"
+   },
+   {
+    "parent": "Most Effected Modules in SPS",
+    "parentfield": "roles",
+    "parenttype": "Dashboard Chart",
+    "role": "SPS OP User"
+   }
+  ],
   "source": null,
   "time_interval": "Yearly",
   "timeseries": 0,
@@ -62,14 +75,27 @@
   "heatmap_year": null,
   "is_public": 0,
   "is_standard": 0,
-  "last_synced_on": "2024-10-26 20:48:38.109071",
-  "modified": "2024-10-25 14:40:02.878327",
+  "last_synced_on": "2024-10-28 00:31:42.653960",
+  "modified": "2024-10-27 19:41:00.826132",
   "module": null,
   "name": "SPS OP Ticket Chart",
   "number_of_groups": 0,
   "parent_document_type": "",
   "report_name": "",
-  "roles": [],
+  "roles": [
+   {
+    "parent": "SPS OP Ticket Chart",
+    "parentfield": "roles",
+    "parenttype": "Dashboard Chart",
+    "role": "SPS OP Admin"
+   },
+   {
+    "parent": "SPS OP Ticket Chart",
+    "parentfield": "roles",
+    "parenttype": "Dashboard Chart",
+    "role": "SPS OP User"
+   }
+  ],
   "source": "",
   "time_interval": "Yearly",
   "timeseries": 0,
