@@ -4,6 +4,7 @@ app_publisher = "Gharieb Kalefa"
 app_description = "Tracking business in departments of the adabia port"
 app_email = "blacksnow.soon@gmail.com"
 app_license = "mit"
+app_version = "0.1.0"
 
 # Apps
 # --------------------------------------------------------------------------
