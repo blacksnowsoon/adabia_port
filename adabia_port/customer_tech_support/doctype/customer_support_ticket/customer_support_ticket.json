@@ -12,14 +12,20 @@
   "status",
   "priority",
   "column_break_fovk",
-  "section_break_details",
+  "section_break_truck",
+  "truck_col",
   "truck",
-  "truck_tail",
-  "column_break_iegx",
   "machine",
+  "column_break_peww",
+  "truck_tail",
+  "section_break_ship",
+  "ship_col",
   "voyage_number",
-  "column_break_ooxs",
+  "column_break_pkea",
+  "ship",
+  "section_break_company",
   "company",
+  "column_break_ooxs",
   "amount",
   "section_break_qedm",
   "notes"
@@ -73,18 +79,6 @@
    "options": "Normal\nHeigh",
    "read_only_depends_on": "eval:doc.status=='Closed';",
    "translatable": 1
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "section_break_details",
-   "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "Details",
-   "read_only_depends_on": "eval:doc.status=='Closed';"
-  },
-  {
-   "fieldname": "column_break_iegx",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_ooxs",
@@ -143,11 +137,53 @@
    "label": "Voyage Number",
    "non_negative": 1,
    "read_only_depends_on": "eval:doc.status=='Closed';"
+  },
+  {
+   "fieldname": "ship",
+   "fieldtype": "Link",
+   "label": "Ship Name",
+   "options": "Ship"
+  },
+  {
+   "fieldname": "truck_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ship_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_peww",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pkea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ship",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Ship"
+  },
+  {
+   "fieldname": "section_break_company",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Company",
+   "show_on_timeline": 1
+  },
+  {
+   "fieldname": "section_break_truck",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Truck",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   }
  ],
  "links": [],
  "make_attachments_public": 1,
- "modified": "2024-11-04 13:09:25.547977",
+ "modified": "2024-11-05 00:16:52.360902",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",

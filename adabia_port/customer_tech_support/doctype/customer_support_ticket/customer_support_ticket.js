@@ -12,6 +12,9 @@ frappe.ui.form.on('Customer Support Ticket', {
 	    frm.set_value('procedure_name', '');
 		toggleDetails(frm)
 	   
+	},
+	procedure_name(frm){
+		console.log(frm.doc.procedure_name)
 	}
 })
 
@@ -22,14 +25,21 @@ const toggleDetails = (frm) => {
 	 frappe.db.get_value('Ticket Event', ev_value, 'event').then((r)=> {
 		 
 		 const data = r.message.event;
+		  if (data.includes('Truck')) {
+				frm.set_df_property('section_break_truck', 'hidden', 0);
+				frm.set_df_property('section_break_company', 'hidden', 0);
+				frm.set_df_property('section_break_ship', 'hidden', 1);
+		  } else if (data.includes('Company') || data.includes('Ship')) {
+				frm.set_df_property('section_break_truck', 'hidden', 1);
+				frm.set_df_property('section_break_company', 'hidden', 0);
+				frm.set_df_property('section_break_ship', 'hidden', 0);
+		  }else {
+				frm.set_df_property('section_break_truck', 'hidden', 1);
+				frm.set_df_property('section_break_company', 'hidden', 1);
+				frm.set_df_property('section_break_ship', 'hidden', 1);
+		  }
 		  
-		 if (data.includes('Truck') || data.includes('Company') || data.includes('Ship')) {
-			 
-			 frm.set_df_property('section_break_details', 'hidden', 0);
-		 } else {
-
-			  frm.set_df_property('section_break_details', 'hidden', 1);
-		 }
+		
 	 });
 }
 
