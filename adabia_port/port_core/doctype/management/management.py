@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Printer(Document):
+class Management(Document):
 	pass

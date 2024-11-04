@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestPrinter(FrappeTestCase):
+class TestPortLocationMapCode(FrappeTestCase):
 	pass

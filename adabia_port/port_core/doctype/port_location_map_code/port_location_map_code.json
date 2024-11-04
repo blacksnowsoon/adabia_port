@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "autoname": "format:LOC-{code}",
+ "creation": "2024-11-04 09:45:40.076342",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "location",
+  "code"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-04 11:34:31.282920",
+ "modified_by": "Administrator",
+ "module": "Port Core",
+ "name": "Port Location Map Code",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "location",
+ "track_changes": 1
+}
