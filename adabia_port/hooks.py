@@ -287,6 +287,9 @@ override_doctype_class = {
 # ------------------------------
 #
 override_whitelisted_methods = {
+    "frappe.utils.get_printer_status": "adabia_port.utils.get_printer_status",
+    "frappe.utils.get_document": "adabia_port.utils.get_document",
+    "frappe.utils.get_list": "adabia_port.utils.get_list",
     # "frappe.utils.pdf.get_pdf": "adabia_port.utils.get_pdf"
 	# "frappe.desk.doctype.event.event.get_events": "adabia_port.event.get_events"
     # 'frappe.client.save': 'adabia_port.adabia_port.doctype.sps_operation_ticket.sps_operation_ticket.validate_duplicate_attachment'
