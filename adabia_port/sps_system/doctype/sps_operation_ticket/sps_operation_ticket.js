@@ -28,7 +28,7 @@ frappe.ui.form.on("SPS Operation Ticket", {
 		// get the modules list from field
 		const modules_list = frm.doc.modules;
 		// check if there are any approvals
-		const approvals = (frm.doc.approvals) ? JSON.parse(frm.doc.approvals) :  [];
+		const approvals = (frm.doc.approvals) ? parse_json_value(frm.doc.approvals) :  [];
 		// get the diifrence between the list of modules and the approvals list to check if any changes happend
 		const filterd_list = modules_list.filter(m => !approvals.some(approval => approval.name == m.module));
 		// in case new modules are added
@@ -84,10 +84,7 @@ function fetchValues({doctype, filters, fieldname}) {
 		});
 	});
 }
-// set json field value
-function set_json_field_value(frm, fieldname, value) {
-	frm.set_value(fieldname,JSON.stringify(value));
-}
+
 // composion of frm status to handle the approvals 
 function frm_status_change(frm) {
 	return {
