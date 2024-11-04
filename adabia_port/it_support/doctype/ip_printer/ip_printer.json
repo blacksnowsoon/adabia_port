@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "autoname": "format:PNT-{##}",
+ "creation": "2024-10-29 19:19:56.740251",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ip_address",
+  "check_ip",
+  "column_break_gbtj",
+  "location",
+  "column_break_zvov",
+  "section_break_oxme",
+  "ip_preview"
+ ],
+ "fields": [
+  {
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IP Address",
+   "length": 15,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_gbtj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_oxme",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ip_preview",
+   "fieldtype": "HTML",
+   "is_virtual": 1,
+   "label": "IP Preview"
+  },
+  {
+   "fieldname": "column_break_zvov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "check_ip",
+   "fieldtype": "Button",
+   "is_virtual": 1,
+   "label": "Check IP"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Location",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-30 09:33:28.750257",
+ "modified_by": "Administrator",
+ "module": "IT Support",
+ "name": "IP Printer",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

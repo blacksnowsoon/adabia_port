@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "format:SW-{##}",
+ "creation": "2024-11-01 14:19:13.328125",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "software_name",
+  "version",
+  "has_license",
+  "description",
+  "column_break_pkrc"
+ ],
+ "fields": [
+  {
+   "fieldname": "software_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Software Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_license",
+   "fieldtype": "Check",
+   "label": "Has License?"
+  },
+  {
+   "fieldname": "column_break_pkrc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-01 14:24:42.838508",
+ "modified_by": "Administrator",
+ "module": "IT Support",
+ "name": "Additional Software",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "software_name"
+}

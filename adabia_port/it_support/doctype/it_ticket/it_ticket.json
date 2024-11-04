@@ -1,0 +1,215 @@
+{
+ "actions": [],
+ "autoname": "format:IT-TKT-{MM}-{YY}-{#####}",
+ "creation": "2024-11-01 21:28:07.942219",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "open_at",
+  "status",
+  "column_break_mfrm",
+  "closed_at",
+  "priority",
+  "column_break_okbe",
+  "duration",
+  "assign_to",
+  "column_break_fsoe",
+  "section_break_tzsg",
+  "employee",
+  "issues",
+  "column_break_kuky",
+  "devices",
+  "general_info_section",
+  "user_info",
+  "column_break_zteq",
+  "devices_info",
+  "section_break_pofq",
+  "t_data",
+  "ticket_details_section",
+  "description",
+  "solved_remotely",
+  "what_implemented"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nClosed"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kuky",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mfrm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Normal\nHigh"
+  },
+  {
+   "fieldname": "column_break_okbe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tzsg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fsoe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ticket_details_section",
+   "fieldtype": "Section Break",
+   "label": "Ticket Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "solved_remotely",
+   "fieldtype": "Check",
+   "label": "Solved Remotely",
+   "read_only_depends_on": "eval:doc.status=='Closed'"
+  },
+  {
+   "fieldname": "what_implemented",
+   "fieldtype": "Text Editor",
+   "label": "What Implemented",
+   "mandatory_depends_on": "eval:doc.status=='Closed'",
+   "read_only_depends_on": "eval:doc.status=='Closed'"
+  },
+  {
+   "fieldname": "open_at",
+   "fieldtype": "Datetime",
+   "label": "Open At",
+   "permlevel": 1
+  },
+  {
+   "description": "Best Duration 15 m",
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "closed_at",
+   "fieldtype": "Datetime",
+   "label": "Closed",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "issues",
+   "fieldtype": "Table MultiSelect",
+   "label": "Issues",
+   "options": "Tech Issue Child Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "devices",
+   "fieldtype": "Table MultiSelect",
+   "label": "Devices",
+   "link_filters": "[[\"Device\", \"employee\",\"=\", \"eval:doc.employee\"]]",
+   "options": "Device Child Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "general_info_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "user_info",
+   "fieldtype": "HTML",
+   "label": "User Info",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_zteq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "devices_info",
+   "fieldtype": "HTML",
+   "label": "Devices Info",
+   "search_index": 1
+  },
+  {
+   "fieldname": "assign_to",
+   "fieldtype": "Link",
+   "label": "Assign To",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_pofq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "t_data",
+   "fieldtype": "JSON",
+   "label": "T Data"
+  }
+ ],
+ "links": [],
+ "modified": "2024-11-03 23:55:18.430354",
+ "modified_by": "Administrator",
+ "module": "IT Support",
+ "name": "IT Ticket",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Red",
+   "title": "Open"
+  },
+  {
+   "color": "Blue",
+   "title": "Closed"
+  }
+ ],
+ "track_changes": 1
+}
