@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "creation": "2024-11-01 20:41:22.275886",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -14,13 +13,14 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Folder Name",
-   "options": "Shared Folder"
+   "options": "Shared Folder",
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-11-02 14:02:17.129593",
+ "modified": "2024-11-04 19:43:58.665548",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Shared Folder Child Table",

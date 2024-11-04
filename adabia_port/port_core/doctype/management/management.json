@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "allow_import": 1,
  "autoname": "format:M-{###}",
  "creation": "2024-11-01 11:13:40.990362",
  "doctype": "DocType",
@@ -21,7 +21,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-01 11:18:41.048029",
+ "modified": "2024-11-04 19:20:58.511515",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Management",
@@ -37,6 +37,28 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk User",
    "share": 1,
    "write": 1
   }

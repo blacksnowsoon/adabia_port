@@ -47,6 +47,36 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
+  "modified": "2024-11-04 18:11:29.431427",
+  "name": "Help Desk Man",
+  "role_profile": "Help Desk Man",
+  "roles": [
+   {
+    "parent": "Help Desk Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Help Desk User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-11-04 22:32:07.951418",
+  "name": "IT System Admin Profile",
+  "role_profile": "IT System Admin Profile",
+  "roles": [
+   {
+    "parent": "IT System Admin Profile",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "IT System Admin"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
   "modified": "2024-10-22 19:24:30.180368",
   "name": "SPS-OP-Man",
   "role_profile": "SPS-OP-Man",
@@ -56,33 +86,6 @@
     "parentfield": "roles",
     "parenttype": "Role Profile",
     "role": "SPS OP User"
-   }
-  ]
- },
- {
-  "docstatus": 0,
-  "doctype": "Role Profile",
-  "modified": "2024-10-19 01:40:30.865920",
-  "name": "Cust-Sup-Admin",
-  "role_profile": "Cust-Sup-Admin",
-  "roles": [
-   {
-    "parent": "Cust-Sup-Admin",
-    "parentfield": "roles",
-    "parenttype": "Role Profile",
-    "role": "Customer Support Admin"
-   },
-   {
-    "parent": "Cust-Sup-Admin",
-    "parentfield": "roles",
-    "parenttype": "Role Profile",
-    "role": "Customer Support User"
-   },
-   {
-    "parent": "Cust-Sup-Admin",
-    "parentfield": "roles",
-    "parenttype": "Role Profile",
-    "role": "SPS Responsible Group"
    }
   ]
  },
@@ -104,6 +107,21 @@
     "parentfield": "roles",
     "parenttype": "Role Profile",
     "role": "SPS Responsible Group"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-11-04 21:21:04.180218",
+  "name": "Cust-Sup-Admin",
+  "role_profile": "Cust-Sup-Admin",
+  "roles": [
+   {
+    "parent": "Cust-Sup-Admin",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Help Desk Admin"
    }
   ]
  }

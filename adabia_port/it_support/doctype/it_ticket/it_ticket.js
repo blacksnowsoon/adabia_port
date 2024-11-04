@@ -5,6 +5,8 @@ const ticket_info = {}
 frappe.ui.form.on("IT Ticket", {
 	refresh(frm) {
 		save_btn(frm)
+		frm.fields_dict.user_info.wrapper.innerHTML = "";
+		frm.fields_dict.devices_info.wrapper.innerHTML = "";
 		if(!frm.is_new() && frm.doc.t_data) {
 			const { user_info, devices_info } = parse_json_value(frm.doc.t_data)
 			render_html(frm, user_info, 'user_info', true)
@@ -27,11 +29,9 @@ frappe.ui.form.on("IT Ticket", {
 	},
 	devices(frm) {
 		const cur_devices = frm.fields_dict.devices.value
-		
 		const devices_names = cur_devices.map(device => device.device)
 		
 		if (cur_devices.length === 0) {
-			console.log('empty')
 			frm.set_value('devices', [])
 			frm.fields_dict.devices_info.wrapper.innerHTML = "";
 		} else {
@@ -64,19 +64,21 @@ function setup_employee_info(frm, employee) {
 }
 
 function setup_devices_info(frm, devices_names=[]) {
+	
 	frm.fields_dict.devices_info.wrapper.appendChild(spenner());
 	Promise.all([fetchDevicesData(devices_names)])
 		.then(([data]) => {
-			console.log(data)
 			frm.fields_dict.devices_info.wrapper.innerHTML = "";
 			const devices_info = data.map(element => {
-				const { device_name, device_domain_name, ip_address, group_policy } = element
+				const { device_type, device_name, device_domain_name, ip_address, group_policy, location_code } = element
 				return [
 					{key: 'Device Name', value: device_name},
+					{key: 'Device Type', value: device_type},
 					{key: 'Device Domain Name', value: device_domain_name},
 					{key: 'IP Address', value: ip_address},
 					{key: 'Group Policy', value: group_policy},
 					{key: 'Have Network Connection', value: ip_address ? 'Yes' : 'No'},
+					{key: 'Location', value: location_code},
 					{key: '', value: ''}
 				]
 			});
@@ -85,8 +87,6 @@ function setup_devices_info(frm, devices_names=[]) {
 			
 		})
 }
-
-
 
 async function fetchEmpData(name) {
 	const emp = await fetchDoc({ doctype: 'Employee', name: name })
@@ -98,7 +98,26 @@ async function fetchEmpData(name) {
 }
 
 async function fetchDevicesData(names) {
-	const devices = await fetchList({ doctype: 'Device', fields: ['device_name','device_domain_name', 'ip_address', 'group_policy', 'have_network_connection'], filters: { name: ['in', names] } });
-	return devices
+	const user_roles = frappe.user_roles
+	console.log(user_roles)
+	const devices = await fetchList({ doctype: 'Device', fields: ['device_type','device_name','device_domain_name', 'ip_address', 'group_policy', 'have_network_connection', 'location_code'], filters: { name: ['in', names] } })
+	const location_code = await fetchList({ doctype: 'Port Location Map Code', fields: ['location', 'name'], filters: { name: ['in', devices.map(device => device.location_code)] } })
+	const device_type =  await fetchList({ doctype: 'Device Type', fields: ['device_type', 'name'], filters: { name: ['in', devices.map(device => device.device_type)] } });
+	const group_policy = user_roles.includes('IT System Admin') ? await fetchList({ doctype: 'Group Policy', fields: ['group_name', 'name'], filters: { name: ['in', devices.map(device => device.group_policy)] } }) : [];
+	return devices.map(device => {
+		const { device_name, device_domain_name, ip_address } = device
+		return {
+			device_name: device_name,
+			device_domain_name: device_domain_name,
+			ip_address: ip_address,
+			device_type: device_type && device_type.find(type => type.name === device.device_type).device_type,
+			group_policy: !!group_policy ? null :group_policy.find(group => group.name === device.group_policy).group_name,
+			location_code: !!location_code ? null : location_code.find(location => location.name === device.location_code).location
+		}
+	})
+}
+
+function clear_field(frm, field) {	
+	frm.set_value(field, null);
 }
 	

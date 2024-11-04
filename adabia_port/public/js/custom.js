@@ -101,7 +101,7 @@ function generat_2_col_rows(rows) {
   const table = document.createElement('table');
   table.classList.add('table');
   const tbody = document.createElement('tbody');
-  rows.forEach(row => tbody.appendChild(generat_row(row)));
+  rows.forEach(row => !!row.value ?  tbody.appendChild(generat_row(row)): null );
   table.appendChild(tbody);
   return table
 }

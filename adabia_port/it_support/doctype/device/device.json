@@ -114,7 +114,8 @@
    "fieldtype": "Link",
    "label": "Group Policy",
    "link_filters": "[[\"Group Policy\", \"is_user_group\",\"=\", \"0\"]]",
-   "options": "Group Policy"
+   "options": "Group Policy",
+   "permlevel": 1
   },
   {
    "fieldname": "column_break_wwvf",
@@ -132,7 +133,7 @@
   }
  ],
  "links": [],
- "modified": "2024-11-04 10:51:22.085573",
+ "modified": "2024-11-04 22:14:28.917624",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Device",
@@ -148,6 +149,53 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
    "share": 1,
    "write": 1
   }

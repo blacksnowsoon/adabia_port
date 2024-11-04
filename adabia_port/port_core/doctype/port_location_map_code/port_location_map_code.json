@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:LOC-{code}",
  "creation": "2024-11-04 09:45:40.076342",
  "doctype": "DocType",
@@ -26,7 +27,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-04 11:34:31.282920",
+ "modified": "2024-11-04 19:21:15.106005",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Port Location Map Code",
@@ -42,6 +43,28 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk User",
    "share": 1,
    "write": 1
   }

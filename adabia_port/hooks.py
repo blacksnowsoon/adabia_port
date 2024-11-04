@@ -21,7 +21,10 @@ fixtures = [
                 "Increase Import Manifest Correspondence",
                 "SPS OP Admin",
                 "SPS OP User",
-                "SPS Responsible Group"
+                "SPS Responsible Group",
+                "IT System Admin",
+                "Help Desk Admin",
+                "Help Desk User"
             ]]
         }
     },
@@ -33,7 +36,10 @@ fixtures = [
                 "Increase-Import-Manifest-Group",
                 "SPS-OP-Admin",
                 "SPS-OP-Man",
-                "SPS CR Res-Profile"
+                "SPS CR Res-Profile",
+                "Help Desk Admin Profile",
+                "Help Desk Man",
+                "IT System Admin Profile"
             ]]
         }
     },
@@ -45,7 +51,10 @@ fixtures = [
                 "Increase Import Manifest Correspondence",
                 "SPS OP User",
                 "SPS Responsible Group",
-                "SPS OP Admin"
+                "SPS OP Admin",
+                "IT System Admin",
+                "Help Desk Admin",
+                "Help Desk User"
 
             ]]
         }
@@ -104,6 +113,7 @@ fixtures = [
         "dt":"Workspace", "filters" : { 
             "name":["in", [
                 "SPS OP Space",
+                "Infra - IT"
             ]]
         }
     },

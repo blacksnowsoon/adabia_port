@@ -42,7 +42,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-03 10:50:29.674946",
+ "modified": "2024-11-04 19:09:40.408172",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Group Policy",
@@ -58,6 +58,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
    "share": 1,
    "write": 1
   }

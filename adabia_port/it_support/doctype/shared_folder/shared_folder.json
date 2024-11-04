@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:SHRD-{##}",
  "creation": "2024-11-01 20:33:53.355080",
  "doctype": "DocType",
@@ -31,7 +32,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-01 20:49:42.744868",
+ "modified": "2024-11-04 19:41:28.959970",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Shared Folder",
@@ -49,6 +50,29 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk User",
+   "share": 1,
+   "write": 1
   }
  ],
  "quick_entry": 1,
@@ -56,5 +80,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "folder_name"
+ "title_field": "folder_name",
+ "track_changes": 1
 }

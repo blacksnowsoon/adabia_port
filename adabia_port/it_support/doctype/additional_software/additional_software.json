@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:SW-{##}",
  "creation": "2024-11-01 14:19:13.328125",
  "doctype": "DocType",
@@ -21,11 +22,13 @@
    "unique": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "version",
    "fieldtype": "Data",
    "label": "Version"
   },
   {
+   "allow_in_quick_entry": 1,
    "default": "0",
    "fieldname": "has_license",
    "fieldtype": "Check",
@@ -43,7 +46,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-01 14:24:42.838508",
+ "modified": "2024-11-04 19:22:41.457758",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Additional Software",
@@ -61,11 +64,36 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk User",
+   "share": 1,
+   "write": 1
   }
  ],
+ "quick_entry": 1,
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "software_name"
+ "title_field": "software_name",
+ "track_changes": 1
 }

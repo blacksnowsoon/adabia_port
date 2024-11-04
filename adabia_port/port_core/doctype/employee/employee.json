@@ -8,8 +8,8 @@
   "have_internet_access",
   "emp_name",
   "management",
-  "group_policy",
   "additional_software",
+  "job_title",
   "column_break_qmfm",
   "disabled",
   "user_name",
@@ -18,7 +18,8 @@
   "shared_folders",
   "section_break_glym",
   "notes",
-  "column_break_kfgm"
+  "column_break_kfgm",
+  "group_policy"
  ],
  "fields": [
   {
@@ -26,7 +27,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Emp Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "management",
@@ -53,7 +55,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "User Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "additional_software",
@@ -104,11 +107,18 @@
    "fieldtype": "Link",
    "label": "Group Policy",
    "link_filters": "[[\"Group Policy\", \"is_user_group\",\"=\", \"1\"]]",
-   "options": "Group Policy"
+   "options": "Group Policy",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Link",
+   "label": "Job Title",
+   "options": "Job Title"
   }
  ],
  "links": [],
- "modified": "2024-11-04 09:43:11.363400",
+ "modified": "2024-11-04 22:51:11.825621",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Employee",
@@ -124,6 +134,51 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
    "share": 1,
    "write": 1
   }

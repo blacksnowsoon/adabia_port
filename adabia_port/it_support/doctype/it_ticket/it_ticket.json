@@ -99,20 +99,23 @@
    "fieldname": "open_at",
    "fieldtype": "Datetime",
    "label": "Open At",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only_depends_on": "eval:doc.status=='Closed'"
   },
   {
    "description": "Best Duration 15 m",
    "fieldname": "duration",
    "fieldtype": "Duration",
    "label": "Duration",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only_depends_on": "eval:doc.status=='Closed'"
   },
   {
    "fieldname": "closed_at",
    "fieldtype": "Datetime",
    "label": "Closed",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only_depends_on": "eval:doc.status=='Closed'"
   },
   {
    "fieldname": "issues",
@@ -158,7 +161,8 @@
   },
   {
    "fieldname": "section_break_pofq",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "hidden": 1
   },
   {
    "fieldname": "t_data",
@@ -167,7 +171,7 @@
   }
  ],
  "links": [],
- "modified": "2024-11-03 23:55:18.430354",
+ "modified": "2024-11-04 22:36:39.193337",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "IT Ticket",
@@ -195,6 +199,64 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
    "share": 1,
    "write": 1
   }

@@ -25,6 +25,7 @@ body {
     bottom: 0;
     width: 100%;
     z-index: 999;
+    margin-top: 30px;
   }
 @-moz-document url-prefix() {
     fieldset { display: table-cell; }
