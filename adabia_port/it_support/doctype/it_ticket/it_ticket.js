@@ -48,10 +48,9 @@ function setup_employee_info(frm, employee) {
 	frm.fields_dict.user_info.wrapper.appendChild(spenner());
 	Promise.all([fetchEmpData(employee)])
 		.then(([data]) => {
-			const { emp, depart, additional_software, shared_folders, group } = data
+			const { emp, depart, additional_software, shared_folders } = data
 			const requiredRows = [
 				{key: 'User Name', value: emp.user_name},
-				{key: 'Group', value: group.group_name},
 				{key: 'Have Internet', value: emp.have_internet_access ? 'Yes' : 'No'},
 				{key: 'Department', value: depart.depart_name},
 				{key: 'Additional Software', value: additional_software.map(software => software.software_name).join(', ')},
@@ -70,13 +69,12 @@ function setup_devices_info(frm, devices_names=[]) {
 		.then(([data]) => {
 			frm.fields_dict.devices_info.wrapper.innerHTML = "";
 			const devices_info = data.map(element => {
-				const { device_type, device_name, device_domain_name, ip_address, group_policy, location_code } = element
+				const { device_type, device_name, device_domain_name, ip_address, location_code } = element
 				return [
 					{key: 'Device Name', value: device_name},
 					{key: 'Device Type', value: device_type},
 					{key: 'Device Domain Name', value: device_domain_name},
 					{key: 'IP Address', value: ip_address},
-					{key: 'Group Policy', value: group_policy},
 					{key: 'Have Network Connection', value: ip_address ? 'Yes' : 'No'},
 					{key: 'Location', value: location_code},
 					{key: '', value: ''}
@@ -91,19 +89,17 @@ function setup_devices_info(frm, devices_names=[]) {
 async function fetchEmpData(name) {
 	const emp = await fetchDoc({ doctype: 'Employee', name: name })
 	const depart = await fetchDoc({ doctype: 'Department', name: emp.depart_name });
-	const group = await fetchDoc({ doctype: 'Group Policy', name: emp.group_policy });
 	const additional_software = await Promise.all(emp.additional_software.map(({ additional_software }) => fetchDoc({ doctype: 'Additional Software', name: additional_software })));
 	const shared_folders = await Promise.all(emp.shared_folders.map(({ folder_name }) => fetchDoc({ doctype: 'Shared Folder', name: folder_name })));
-	return { emp, depart, additional_software, shared_folders, group };
+	return { emp, depart, additional_software, shared_folders };
 }
 
 async function fetchDevicesData(names) {
-	const user_roles = frappe.user_roles
-	console.log(user_roles)
+	
 	const devices = await fetchList({ doctype: 'Device', fields: ['device_type','device_name','device_domain_name', 'ip_address', 'group_policy', 'have_network_connection', 'location_code'], filters: { name: ['in', names] } })
 	const location_code = await fetchList({ doctype: 'Port Location Map Code', fields: ['location', 'name'], filters: { name: ['in', devices.map(device => device.location_code)] } })
 	const device_type =  await fetchList({ doctype: 'Device Type', fields: ['device_type', 'name'], filters: { name: ['in', devices.map(device => device.device_type)] } });
-	const group_policy = user_roles.includes('IT System Admin') ? await fetchList({ doctype: 'Group Policy', fields: ['group_name', 'name'], filters: { name: ['in', devices.map(device => device.group_policy)] } }) : [];
+	
 	return devices.map(device => {
 		const { device_name, device_domain_name, ip_address } = device
 		return {
@@ -111,8 +107,7 @@ async function fetchDevicesData(names) {
 			device_domain_name: device_domain_name,
 			ip_address: ip_address,
 			device_type: device_type && device_type.find(type => type.name === device.device_type).device_type,
-			group_policy: !!group_policy ? null :group_policy.find(group => group.name === device.group_policy).group_name,
-			location_code: !!location_code ? null : location_code.find(location => location.name === device.location_code).location
+			location_code: !!location_code ? location_code.find(location => location.name === device.location_code).location : null
 		}
 	})
 }

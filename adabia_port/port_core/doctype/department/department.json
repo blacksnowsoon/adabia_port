@@ -35,7 +35,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-04 19:22:59.035219",
+ "modified": "2024-11-05 19:47:24.587501",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Department",
@@ -73,8 +73,16 @@
    "read": 1,
    "report": 1,
    "role": "Help Desk User",
-   "share": 1,
-   "write": 1
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
+   "share": 1
   }
  ],
  "quick_entry": 1,
