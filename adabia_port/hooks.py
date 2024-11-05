@@ -37,7 +37,7 @@ fixtures = [
                 "SPS-OP-Admin",
                 "SPS-OP-Man",
                 "SPS CR Res-Profile",
-                "Help Desk Admin Profile",
+                "Help Desk Admin",
                 "Help Desk Man",
                 "IT System Admin Profile"
             ]]
