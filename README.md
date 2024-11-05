@@ -2,6 +2,12 @@
 
 Tracking business in departments of the adabia port
 
+- Module Port core exsist By Default with all branches holds the core doctype of the app.
+
+The branch (test_br) includes 2 Modules 
+- Customer --> Tech Support Customer Technical Support Ticket.
+- SPS System --> SPS Opreation Support Ticket.
+
 ### Installation
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:

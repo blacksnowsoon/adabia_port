@@ -1,0 +1,55 @@
+{
+ "charts": [
+  {
+   "chart_name": "Tickets Activities By User",
+   "label": "Tickets Activities By User"
+  },
+  {
+   "chart_name": "Tickets Activities Track",
+   "label": "Activities Track"
+  }
+ ],
+ "content": "[{\"id\":\"B0-CaTMp43\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h2\\\">Charts</span>\",\"col\":12}},{\"id\":\"LDe5vgYjnG\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tickets Activities By User\",\"col\":6}},{\"id\":\"MLvjNF1Bm-\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Activities Track\",\"col\":6}},{\"id\":\"mqioRXKy5b\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b></b></span><span class=\\\"h2\\\">Statistics</span><span class=\\\"h3\\\"></span>\",\"col\":12}},{\"id\":\"NmlNUmq91t\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Tickets\",\"col\":4}},{\"id\":\"nHU3GkN8oj\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Pending Tickets\",\"col\":4}},{\"id\":\"MsnOOAS-8r\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Number of Open Ticket\",\"col\":4}}]",
+ "creation": "2024-10-05 19:37:57.024847",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "crm",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Cust Support Statistics",
+ "links": [],
+ "modified": "2024-11-01 20:31:01.235755",
+ "modified_by": "Administrator",
+ "module": "Customer Tech Support",
+ "name": "Cust Support Statistics",
+ "number_cards": [
+  {
+   "label": "Tickets",
+   "number_card_name": "Number Of Tickets CST"
+  },
+  {
+   "label": "Number of Pending Tickets",
+   "number_card_name": "Number of Pending Tickets"
+  },
+  {
+   "label": "Number of Open Ticket",
+   "number_card_name": "Number of Open Ticket"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "Customer Tech Sup",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Customer Support Admin"
+  }
+ ],
+ "sequence_id": 5.0,
+ "shortcuts": [],
+ "title": "Cust Support Statistics"
+}

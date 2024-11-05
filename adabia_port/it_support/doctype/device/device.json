@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "autoname": "format:D-SN/{serial_no}",
+ "creation": "2024-11-01 13:33:42.170698",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "have_network_connection",
+  "device_type",
+  "model",
+  "employee",
+  "column_break_accd",
+  "disabled",
+  "brand",
+  "serial_no",
+  "device_name",
+  "section_break_qehd",
+  "device_domain_name",
+  "group_policy",
+  "column_break_wwvf",
+  "ip_address",
+  "section_break_zdjg",
+  "description",
+  "column_break_hjst",
+  "location_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "device_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Device Type",
+   "options": "Device Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_accd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Brand",
+   "options": "Brand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_zdjg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "device_name",
+   "fieldtype": "Data",
+   "label": "Device Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "default": "0",
+   "fieldname": "have_network_connection",
+   "fieldtype": "Check",
+   "label": "Have Network Connection?"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled?"
+  },
+  {
+   "depends_on": "eval:doc.have_network_connection",
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address",
+   "unique": 1
+  },
+  {
+   "depends_on": "eval:doc.have_network_connection",
+   "fieldname": "device_domain_name",
+   "fieldtype": "Data",
+   "label": "Device Domain Name"
+  },
+  {
+   "depends_on": "eval:doc.have_network_connection",
+   "fieldname": "section_break_qehd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "group_policy",
+   "fieldtype": "Link",
+   "label": "Group Policy",
+   "link_filters": "[[\"Group Policy\", \"is_user_group\",\"=\", \"0\"]]",
+   "options": "Group Policy",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_wwvf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hjst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location_code",
+   "fieldtype": "Link",
+   "label": "Location Code",
+   "options": "Port Location Map Code"
+  }
+ ],
+ "links": [],
+ "modified": "2024-11-05 19:49:32.884365",
+ "modified_by": "Administrator",
+ "module": "IT Support",
+ "name": "Device",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "device_name",
+ "track_changes": 1
+}

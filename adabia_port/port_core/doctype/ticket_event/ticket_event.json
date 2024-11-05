@@ -25,7 +25,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 18:06:12.699778",
+ "modified": "2024-10-07 19:33:21.863441",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Ticket Event",
@@ -52,6 +52,15 @@
    "report": 1,
    "role": "Customer Support User",
    "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer Support Admin",
+   "share": 1
   }
  ],
  "quick_entry": 1,
@@ -59,5 +68,6 @@
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "event"
+ "title_field": "event",
+ "translated_doctype": 1
 }

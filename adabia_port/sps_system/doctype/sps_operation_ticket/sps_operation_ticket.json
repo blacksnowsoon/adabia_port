@@ -1,0 +1,357 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "autoname": "format:OPT-{####}-{MM}-{YYYY}",
+ "creation": "2024-10-13 10:39:52.839352",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "section_break_riko",
+  "status",
+  "task_type",
+  "use_editor",
+  "column_break_cedk",
+  "approvals",
+  "column_break_vvsm",
+  "fetched_modules",
+  "complete_data_section",
+  "patch_num",
+  "in_progress_since",
+  "column_break_ksei",
+  "developed_by",
+  "completed_in",
+  "column_break_vbxw",
+  "tested_by",
+  "duration_time",
+  "section_break_otxs",
+  "modules",
+  "column_break_xgbe",
+  "in",
+  "is_repeated",
+  "section_break_zprv",
+  "title",
+  "column_break_jvpa",
+  "requestor",
+  "section_details",
+  "details",
+  "ed_tab",
+  "section_scopes",
+  "scopes",
+  "section_requirements",
+  "requirements",
+  "section_description",
+  "description",
+  "section_break_qnxz",
+  "pdf"
+ ],
+ "fields": [
+  {
+   "default": "New Request",
+   "fieldname": "task_type",
+   "fieldtype": "Select",
+   "label": "Task Type",
+   "options": "New Request\nBug",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cedk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Progress\nCompleted"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description",
+   "mandatory_depends_on": "doc.use_editor==1"
+  },
+  {
+   "fieldname": "section_break_zprv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Text Editor",
+   "label": "Details",
+   "mandatory_depends_on": "eval:doc.task_type != 'Bug'"
+  },
+  {
+   "fieldname": "column_break_jvpa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "requestor",
+   "fieldtype": "Data",
+   "label": "Requestor / BY",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scopes",
+   "fieldtype": "Text Editor",
+   "label": "Scopes",
+   "mandatory_depends_on": "doc.use_editor==1"
+  },
+  {
+   "fieldname": "requirements",
+   "fieldtype": "Text Editor",
+   "label": "Requirements "
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_scopes",
+   "fieldtype": "Section Break",
+   "label": "Scopes"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_requirements",
+   "fieldtype": "Section Break",
+   "label": "Requirements"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_description",
+   "fieldtype": "Section Break",
+   "label": "Case Description"
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "pdf",
+   "fieldtype": "HTML",
+   "label": "PDF"
+  },
+  {
+   "default": "0",
+   "fieldname": "use_editor",
+   "fieldtype": "Check",
+   "label": "Use Editor"
+  },
+  {
+   "depends_on": "eval:doc.use_editor",
+   "fieldname": "ed_tab",
+   "fieldtype": "Tab Break",
+   "label": "Editor",
+   "show_on_timeline": 1
+  },
+  {
+   "fieldname": "section_break_qnxz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "modules",
+   "fieldtype": "Table MultiSelect",
+   "label": "Modules",
+   "options": "Module Child Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_otxs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vvsm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approvals",
+   "fieldtype": "JSON",
+   "hidden": 1,
+   "label": "Approvals",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_riko",
+   "fieldtype": "Section Break",
+   "read_only_depends_on": "eval:doc.status==\"In Review\""
+  },
+  {
+   "fieldname": "fetched_modules",
+   "fieldtype": "Data",
+   "label": "Fetched Modules",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patch_num",
+   "fieldtype": "Data",
+   "label": "Patch Num",
+   "mandatory_depends_on": "eval:doc.status=='Completed'"
+  },
+  {
+   "fieldname": "column_break_ksei",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "developed_by",
+   "fieldtype": "Data",
+   "label": "Developed By",
+   "mandatory_depends_on": "eval:doc.status=='Completed'"
+  },
+  {
+   "fieldname": "column_break_vbxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status=='Completed'",
+   "fieldname": "complete_data_section",
+   "fieldtype": "Section Break",
+   "label": "Complete Data"
+  },
+  {
+   "fieldname": "in_progress_since",
+   "fieldtype": "Datetime",
+   "label": "In Progress Since",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_in",
+   "fieldtype": "Datetime",
+   "label": "Completed In",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tested_by",
+   "fieldtype": "Data",
+   "label": "Tested By"
+  },
+  {
+   "fieldname": "duration_time",
+   "fieldtype": "Duration",
+   "is_virtual": 1,
+   "label": "Duration Time"
+  },
+  {
+   "fieldname": "column_break_xgbe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.task_type=='Bug'",
+   "fieldname": "in",
+   "fieldtype": "Select",
+   "label": "In",
+   "options": "\nData Input\nData Output\nReport Data\nReport Design\nUI"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.task_type=='Bug'",
+   "fieldname": "is_repeated",
+   "fieldtype": "Check",
+   "label": "Is Repeated?"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "modified": "2024-11-05 19:53:18.939739",
+ "modified_by": "Administrator",
+ "module": "SPS System",
+ "name": "SPS Operation Ticket",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SPS Responsible Group",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SPS OP Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SPS OP User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SPS OP Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Red",
+   "title": "Open"
+  },
+  {
+   "color": "Blue",
+   "title": "In Review"
+  },
+  {
+   "color": "Green",
+   "title": "In Progress"
+  },
+  {
+   "color": "Gray",
+   "title": "Completed"
+  }
+ ],
+ "title_field": "title",
+ "track_changes": 1
+}

@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "autoname": "format:GP-{###}",
+ "creation": "2024-11-03 10:25:25.610532",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "is_user_group",
+  "group_name",
+  "column_break_dmgw",
+  "section_break_dbws",
+  "description"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "is_user_group",
+   "fieldtype": "Check",
+   "label": "Is User Group"
+  },
+  {
+   "fieldname": "group_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Group Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dmgw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dbws",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-04 19:09:40.408172",
+ "modified_by": "Administrator",
+ "module": "IT Support",
+ "name": "Group Policy",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "group_name",
+ "track_changes": 1
+}

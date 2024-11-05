@@ -2,6 +2,7 @@
  "actions": [],
  "autoname": "format:TKT-{######}",
  "creation": "2024-09-27 18:31:59.797296",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -11,13 +12,20 @@
   "status",
   "priority",
   "column_break_fovk",
-  "section_break_details",
+  "section_break_truck",
+  "truck_col",
   "truck",
-  "truck_tail",
-  "column_break_iegx",
   "machine",
-  "column_break_ooxs",
+  "column_break_peww",
+  "truck_tail",
+  "section_break_ship",
+  "ship_col",
+  "voyage_number",
+  "column_break_pkea",
+  "ship",
+  "section_break_company",
   "company",
+  "column_break_ooxs",
   "amount",
   "section_break_qedm",
   "notes"
@@ -46,6 +54,7 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Opened\nPending\nClosed",
+   "permlevel": 1,
    "translatable": 1
   },
   {
@@ -56,9 +65,10 @@
    "fieldname": "procedure_name",
    "fieldtype": "Link",
    "label": "Procedure Name",
-   "link_filters": "[[\"Procedure\", \"ticket_event\",\"=\", \"eval:doc.ticket_event\"]]",
-   "options": "Procedure",
-   "read_only_depends_on": "eval:doc.status=='Closed';"
+   "link_filters": "[[\"Customer Support Procedure\", \"ticket_event\",\"=\", \"eval:doc.ticket_event\"]]",
+   "options": "Customer Support Procedure",
+   "read_only_depends_on": "eval:doc.status=='Closed';",
+   "reqd": 1
   },
   {
    "fieldname": "priority",
@@ -71,18 +81,6 @@
    "translatable": 1
   },
   {
-   "collapsible": 1,
-   "fieldname": "section_break_details",
-   "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "Details",
-   "read_only_depends_on": "eval:doc.status=='Closed';"
-  },
-  {
-   "fieldname": "column_break_iegx",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_ooxs",
    "fieldtype": "Column Break"
   },
@@ -90,31 +88,37 @@
    "fieldname": "truck",
    "fieldtype": "Link",
    "label": "Truck",
-   "options": "Truck"
+   "options": "Truck",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "truck_tail",
    "fieldtype": "Link",
    "label": "Truck Tail",
-   "options": "Truck Tail"
+   "options": "Truck Tail",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "machine",
    "fieldtype": "Link",
    "label": "Machine",
-   "options": "Machine"
+   "options": "Machine",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "amount",
    "fieldtype": "Float",
    "label": "Amount",
-   "precision": "2"
+   "precision": "2",
+   "print_hide_if_no_value": 1,
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "section_break_qedm",
@@ -126,11 +130,60 @@
    "label": "Notes",
    "read_only_depends_on": "eval:doc.status=='Closed';",
    "reqd": 1
+  },
+  {
+   "fieldname": "voyage_number",
+   "fieldtype": "Data",
+   "label": "Voyage Number",
+   "non_negative": 1,
+   "read_only_depends_on": "eval:doc.status=='Closed';"
+  },
+  {
+   "fieldname": "ship",
+   "fieldtype": "Link",
+   "label": "Ship Name",
+   "options": "Ship"
+  },
+  {
+   "fieldname": "truck_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ship_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_peww",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pkea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ship",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Ship"
+  },
+  {
+   "fieldname": "section_break_company",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Company",
+   "show_on_timeline": 1
+  },
+  {
+   "fieldname": "section_break_truck",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Truck",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   }
  ],
- "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 18:03:33.260891",
+ "make_attachments_public": 1,
+ "modified": "2024-11-05 19:51:01.748905",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",
@@ -146,8 +199,20 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
    "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer Support Admin",
+   "select": 1,
+   "share": 1
   },
   {
    "create": 1,
@@ -159,9 +224,22 @@
    "role": "Customer Support User",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer Support Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
   }
  ],
- "sort_field": "creation",
+ "show_title_field_in_link": 1,
+ "sort_field": "status",
  "sort_order": "DESC",
  "states": [
   {
@@ -176,5 +254,7 @@
    "color": "Gray",
    "title": "Closed"
   }
- ]
+ ],
+ "title_field": "procedure_name",
+ "track_changes": 1
 }

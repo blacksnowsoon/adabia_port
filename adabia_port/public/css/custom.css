@@ -1,0 +1,35 @@
+/* custom.css */
+@font-face {
+    font-family: 'cairo';
+    src: url('/assets/adabia_port/fonts/Cairo-Regular.ttf');
+}
+body {
+    font-family: 'cairo', Arial, Helvetica, sans-serif;
+}
+.widget.quick-list-widget-box, .widget.shortcut-widget-box {
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    outline: 1px solid rgba(134, 134, 134, 0.8);
+}
+.ce-block__content div[shortcut_name="New Ticket"] .widget.shortcut-widget-box {
+    background-color: #ffc938;
+    color:black;
+}
+.page-container {
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+}
+.footer-content {
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    margin-top: 30px;
+  }
+@-moz-document url-prefix() {
+    fieldset { display: table-cell; }
+  }

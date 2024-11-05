@@ -4,12 +4,127 @@ app_publisher = "Gharieb Kalefa"
 app_description = "Tracking business in departments of the adabia port"
 app_email = "blacksnow.soon@gmail.com"
 app_license = "mit"
+app_version = "0.1.0"
 
 # Apps
-# ------------------
+# --------------------------------------------------------------------------
 
 # required_apps = []
+fixtures = [
+    "Translation",
+    "Ticket Event",
+    {
+        "dt":"Role", "filters" : { 
+            "name":["in", [
+                "Customer Support Admin",
+                "Customer Support User",
+                "Increase Import Manifest Correspondence",
+                "SPS OP Admin",
+                "SPS OP User",
+                "SPS Responsible Group",
+                "IT System Admin",
+                "Help Desk Admin",
+                "Help Desk User"
+            ]]
+        }
+    },
+    {
+        "dt":"Role Profile", "filters" : { 
+            "name":["in", [
+                "Cust-Sup-Admin",
+                "Cust-Sup-Ticket-Man",
+                "Increase-Import-Manifest-Group",
+                "SPS-OP-Admin",
+                "SPS-OP-Man",
+                "SPS CR Res-Profile",
+                "Help Desk Admin Profile",
+                "Help Desk Man",
+                "IT System Admin Profile"
+            ]]
+        }
+    },
+    {
+        "dt":"Custom DocPerm", "filters" : { 
+            "role":["in", [
+                "Customer Support User",
+                "Customer Support Admin",
+                "Increase Import Manifest Correspondence",
+                "SPS OP User",
+                "SPS Responsible Group",
+                "SPS OP Admin",
+                "IT System Admin",
+                "Help Desk Admin",
+                "Help Desk User"
 
+            ]]
+        }
+    },
+    {
+        "dt": "Module Profile", "filters" : {
+            "name": ["in", [
+                "Adabia",
+                "CUST SUPP M",
+                "SPS Operation M"
+            ] ]
+        }
+    },
+    {
+        "dt": "Email Template", "filters" : {
+            "name": ["in", [
+                "Adabia New User Account"
+            ]]
+        }
+    },
+    {
+        "dt": "Print Format", "filters" : {
+            "name": ["in", [
+                "SPS CR Builder Temp",
+                "Custom SPS CR Print Custom Format"
+            ]]
+        }
+    },
+    {
+        "dt": "Report", "filters" : {
+            "name": ["in", [
+                "SPS Modules Activities Report",
+                "Open New Request",
+                "Bugs In Progress",
+                "New Requests In Progress",
+                "Modules Activities"
+            ]]
+        }
+    },
+    {
+        "dt":"DocType", "filters" : { 
+            "name":["in", [
+                "User",
+            ]]
+        }
+    },
+    {
+        "dt":"Dashboard Chart", "filters" : { 
+            "name":["in", [
+                "SPS OP Ticket Chart",
+                "Most Effected Modules in SPS"
+            ]]
+        }
+    },
+    {
+        "dt":"Workspace", "filters" : { 
+            "name":["in", [
+                "SPS OP Space",
+                "Infra - IT"
+            ]]
+        }
+    },
+    {
+        "dt":"Dashboard", "filters" : { 
+            "name":["in", [
+                "SPS Operation Dash",
+            ]]
+        }
+    }
+]
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{
@@ -17,7 +132,7 @@ app_license = "mit"
 # 		"logo": "/assets/adabia_port/logo.png",
 # 		"title": "Adabia Port",
 # 		"route": "/adabia_port",
-# 		"has_permission": "adabia_port.api.permission.has_app_permission"
+# 	    "has_permission": "adabia_port.api.permission.has_app_permission"
 # 	}
 # ]
 
@@ -25,8 +140,9 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/adabia_port/css/adabia_port.css"
-# app_include_js = "/assets/adabia_port/js/adabia_port.js"
+app_include_css = "/assets/adabia_port/css/custom.css"
+app_include_js = "/assets/adabia_port/js/custom.js"
+app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/adabia_port/css/adabia_port.css"
@@ -51,7 +167,7 @@ app_license = "mit"
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "adabia_port/public/icons.svg"
+# app_include_icons = "adabia_port/public/icons/puzzle.svg"
 
 # Home Pages
 # ----------
@@ -75,8 +191,8 @@ app_license = "mit"
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": "adabia_port.utils.jinja_methods",
-# 	"filters": "adabia_port.utils.jinja_filters"
+	# "methods": "adabia_port.utils.jinja_methods",
+	# "filters": "adabia_port.utils.jinja_filters"
 # }
 
 # Installation
@@ -129,9 +245,10 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
+override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+    # "User": "adabia_port.utils.CustomUser"
+}
 
 # Document Events
 # ---------------
@@ -143,6 +260,11 @@ app_license = "mit"
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 # 	}
+# }
+# doc_events = {
+#     "File": {
+#         "before_save": "adabia_port.utils.validate_duplicate_attachment"
+#     }
 # }
 
 # Scheduled Tasks
@@ -174,9 +296,14 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "adabia_port.event.get_events"
-# }
+override_whitelisted_methods = {
+    "frappe.utils.get_printer_status": "adabia_port.utils.get_printer_status",
+    "frappe.utils.get_document": "adabia_port.utils.get_document",
+    "frappe.utils.get_list": "adabia_port.utils.get_list",
+    # "frappe.utils.pdf.get_pdf": "adabia_port.utils.get_pdf"
+	# "frappe.desk.doctype.event.event.get_events": "adabia_port.event.get_events"
+    # 'frappe.client.save': 'adabia_port.adabia_port.doctype.sps_operation_ticket.sps_operation_ticket.validate_duplicate_attachment'
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
