@@ -20,9 +20,6 @@ frappe.ui.form.on("SPS Operation Ticket", {
 		}
 		save_btn(frm)
 	},
-	task_type(frm) {
-		
-	},
 	modules(frm) {
 		// handle the approvels list without the managers
 		// get the modules list from field
@@ -55,7 +52,7 @@ frappe.ui.form.on("SPS Operation Ticket", {
 	},
 	befor_save(frm) {
 		if (frm.doc.completed_in !== "") {
-			const can_save = doc.doc.in_progress < frm.doc.completed_in;
+			const can_save = frm.doc.in_progress_since < frm.doc.completed_in;
 			if (!can_save) {
 				frappe.throw('In Progress must be less than Completed In');
 			}
@@ -106,9 +103,10 @@ function frm_status_change(frm) {
 function save_btn(frm) {
 	frm.add_custom_button('Save', () => {
 		const status = frm.doc.status;
-		if (status == "In Progress") {
+		const in_progress_since = frm.doc.in_progress_since;
+		if (status == "In Progress" && in_progress_since) {
 			frappe.warn(`Are You Sure You Want To Save This Ticket In Progress ?`,
-				`This will Start Count Duration Since !`, () => {
+				`This will Start Count Duration Time !`, () => {
 					frm.save();
 				}, "Confirm", "Cancel")
 		} else {
