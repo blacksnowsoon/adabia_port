@@ -95,13 +95,6 @@ fixtures = [
         }
     },
     {
-        "dt":"DocType", "filters" : { 
-            "name":["in", [
-                "User",
-            ]]
-        }
-    },
-    {
         "dt":"Dashboard Chart", "filters" : { 
             "name":["in", [
                 "SPS OP Ticket Chart",
