@@ -133,7 +133,7 @@
   }
  ],
  "links": [],
- "modified": "2024-11-05 12:09:40.171634",
+ "modified": "2024-11-05 19:49:32.884365",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Device",
@@ -149,11 +149,11 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -204,5 +204,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "device_name"
+ "title_field": "device_name",
+ "track_changes": 1
 }

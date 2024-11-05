@@ -161,7 +161,7 @@
  "icon": "fa fa-check",
  "idx": 2,
  "links": [],
- "modified": "2024-11-04 19:18:26.662607",
+ "modified": "2024-11-05 19:51:32.815709",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "ToDo",
@@ -187,6 +187,7 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   }

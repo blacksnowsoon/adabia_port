@@ -183,7 +183,7 @@
  ],
  "links": [],
  "make_attachments_public": 1,
- "modified": "2024-11-05 00:16:52.360902",
+ "modified": "2024-11-05 19:51:01.748905",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",
@@ -199,6 +199,7 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   },
@@ -210,6 +211,7 @@
    "read": 1,
    "report": 1,
    "role": "Customer Support Admin",
+   "select": 1,
    "share": 1
   },
   {
@@ -231,6 +233,7 @@
    "read": 1,
    "report": 1,
    "role": "Customer Support Admin",
+   "select": 1,
    "share": 1,
    "write": 1
   }

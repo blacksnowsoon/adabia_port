@@ -5,6 +5,7 @@ import frappe
 from frappe.model.document import Document
 
 
+
 class ITTicket(Document):
 	def before_save(self) :
 		if self.status == "Open" and self.open_at == None:
@@ -17,19 +18,21 @@ class ITTicket(Document):
 	def after_insert(self):
 		user = frappe.db.get_value("User", self.assign_to, "full_name")
 		doc = frappe.new_doc('ToDo')
-		doc.insert({
-			"reference_type": "IT Ticket",
-			"reference_name": self.name,
-			"allocated_to": self.assign_to,
-			"assigned_by": frappe.session.user,
-			"assigned_by_full_name": user,
-			"status": "Open",
-			"priority": "Medium",
-			"date": frappe.utils.now(),
-			"description": f"IT Support Ticket {self.name} has been created.",
-		})
-		# frappe.sendmail(
-		# 	recipients=[self.assign_to],
-		# 	subject="IT Support Ticket",
-		# 	message=f"IT Support Ticket {self.ticket_id} has been created.",
-		# )
+		doc.reference_type = "IT Ticket"
+		doc.reference_name =  self.name
+		doc.allocated_to =  self.assign_to
+		doc.assigned_by =  frappe.session.user
+		doc.assigned_by_full_name =  user
+		doc.status =  "Open"
+		doc.priority =  "Medium"
+		doc.date =  frappe.utils.now()
+		doc.description =  f"IT Support Ticket {self.name} has been created."
+		doc.insert(doc)
+		emp = frappe.db.get_value('Employee', self.employee, 'emp_name')
+		
+		frappe.sendmail(
+			recipients=[self.assign_to],
+			subject="IT Ticket",
+			message=f"IT Ticket {self.name} has been created. for an Issue at {emp}",
+		)
+		frappe.msgprint(f"an Email sent to {self.assign_to}")
