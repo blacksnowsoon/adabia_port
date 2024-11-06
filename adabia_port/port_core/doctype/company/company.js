@@ -1,6 +1,11 @@
 // Copyright (c) 2024, Gharieb Kalefa and contributors
 // For license information, please see license.txt
 
+<<<<<<< HEAD
+frappe.ui.form.on("Company", {
+	
+});
+=======
 frappe.ui.form.on('Company', {
 	refresh(frm) {
 		frm.disable_save();
@@ -12,3 +17,4 @@ frappe.ui.form.on('Company', {
 	    frappe.set_route('company')
 	}
 })
+>>>>>>> 5ae9972710af5b0dd4344f06c36b5662bc1f202a
