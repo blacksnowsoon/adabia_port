@@ -47,8 +47,10 @@
   {
    "fieldname": "printer",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Printer",
-   "options": "Device"
+   "options": "Device",
+   "unique": 1
   },
   {
    "fieldname": "printer_location",
@@ -69,7 +71,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-13 23:25:03.267747",
+ "modified": "2024-11-13 23:36:42.868802",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "IP Printer",

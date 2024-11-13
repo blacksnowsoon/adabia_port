@@ -2,8 +2,6 @@
 // For license information, please see license.txt
 
 
-// [["Device", "have_network_connection","=", "1", "AND", "ip_address", "!=", ""]]
-
 
 frappe.ui.form.on("IP Printer", {
     onload(frm) {
@@ -23,9 +21,8 @@ frappe.ui.form.on("IP Printer", {
 	refresh(frm) {
         save_btn(frm)
         const ip = frm.doc.ip_address;
-        if(!ip) {
+        if(ip) {
             frm.fields_dict.ip_preview.wrapper.innerHTML = "";
-        } else {
             fetchPrinterStatus(frm);
         }
 	},
