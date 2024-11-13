@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "format:M-{###}",
  "creation": "2024-10-13 10:08:53.138737",
  "doctype": "DocType",
@@ -8,9 +7,9 @@
  "field_order": [
   "module_name",
   "responsible",
+  "job_title",
   "column_break_crnl",
-  "name_of_responsible",
-  "job_title"
+  "job_title_code"
  ],
  "fields": [
   {
@@ -25,14 +24,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "responsible.full_name",
-   "fieldname": "name_of_responsible",
-   "fieldtype": "Data",
-   "label": "Name Of Responsible",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "responsible.job_title",
+   "fetch_from": "job_title_code.job_title",
    "fieldname": "job_title",
    "fieldtype": "Data",
    "label": "Job Title",
@@ -42,13 +34,21 @@
    "fieldname": "responsible",
    "fieldtype": "Link",
    "label": "Responsible",
-   "options": "User",
+   "options": "Employee",
    "reqd": 1
+  },
+  {
+   "fetch_from": "responsible.job_title",
+   "fieldname": "job_title_code",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Job Title Code",
+   "options": "Job Title"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-22 14:07:47.165538",
+ "modified": "2024-11-13 20:08:05.835477",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Module",

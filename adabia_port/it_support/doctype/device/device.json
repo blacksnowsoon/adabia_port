@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:D-SN/{serial_no}",
+ "autoname": "format:DV-{model}-{###}",
  "creation": "2024-11-01 13:33:42.170698",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -22,7 +22,8 @@
   "section_break_zdjg",
   "description",
   "column_break_hjst",
-  "location_code"
+  "location_code",
+  "location_description"
  ],
  "fields": [
   {
@@ -128,12 +129,19 @@
   {
    "fieldname": "location_code",
    "fieldtype": "Link",
-   "label": "Location Code",
+   "label": "Location Description",
    "options": "Port Location Map Code"
+  },
+  {
+   "fetch_from": "location_code.code",
+   "fieldname": "location_description",
+   "fieldtype": "Data",
+   "label": "Location Code",
+   "read_only": 1
   }
  ],
  "links": [],
- "modified": "2024-11-05 19:49:32.884365",
+ "modified": "2024-11-13 22:18:28.666247",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Device",

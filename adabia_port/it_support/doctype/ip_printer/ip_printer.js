@@ -2,9 +2,24 @@
 // For license information, please see license.txt
 
 
+// [["Device", "have_network_connection","=", "1", "AND", "ip_address", "!=", ""]]
 
 
 frappe.ui.form.on("IP Printer", {
+    onload(frm) {
+        frm.set_query('printer', function() {
+            return {
+                filters: [
+                    ['ip_address', '!=', ''],
+                    ['have_network_connection', '=', '1'],
+                    ['disabled', '=', '0'],
+                    ['location_code', '!=', ''],
+                    ['device_name', 'like', '%Printer%']
+
+                ]
+            }
+        })
+    },
 	refresh(frm) {
         save_btn(frm)
         const ip = frm.doc.ip_address;
@@ -17,38 +32,30 @@ frappe.ui.form.on("IP Printer", {
     check_ip(frm) {
         fetchPrinterStatus(frm);
         
+    },
+    printer(frm) {
+        const printer = frm.doc.printer
+        if (!printer) {
+            frm.fields_dict.ip_preview.wrapper.innerHTML = "";
+        } else {
+            fetchPrinterStatus(frm)
+        }
+    },
+    location_code(frm) {
+        
+        const p_location = frm.doc.location_code 
+        fetchValues({
+            doctype: 'Port Location Map Code', 
+            filters:{ name: 'LOC-'+ p_location}, 
+            fields: ['location']
+        }).then(res => {
+            frm.set_value({
+                printer_location: res?.location
+            })
+                
+        });
     }
 });
-
-
-function loadPrinterServerPage(frm){
-    const ip = frm.doc.ip_address;
-        if (!ip){
-            frappe.show_alert({
-                message:__('Hi, Please Insert IP Address'),
-                indicator:'red'
-            }, 5);
-            return
-        } else if (!ip.match(ipRegex)) {
-            frappe.show_alert({
-                message:__(`It's not an IP Address`),
-                indicator:'red'
-            }, 5);
-            return
-        }
-        frm.fields_dict.ip_preview.wrapper.innerHTML = "";
-        const df = document.createElement('iframe');
-        const src = `http://${ip}`;
-        df.src = src;
-        df.width = '100%';
-        df.height = 400;
-        // df.style.display = 'none';
-        frm.fields_dict.ip_preview.wrapper.appendChild(df);
-        const iframe = frm.fields_dict.ip_preview.$wrapper.find('iframe')[0]
-        const doc = iframe.contentDocument || iframe.contentWindow.document;
-        console.log(doc.getElementsByTagName("H3")[0]);
-
-}
 
 // fetch printer status
 function fetchPrinterStatus(frm) {

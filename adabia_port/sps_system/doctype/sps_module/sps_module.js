@@ -4,9 +4,7 @@
 
 frappe.ui.form.on("SPS Module", {
 	refresh(frm) {
-		frm.disable_save();
-			frm.add_custom_button('Save', () => {
-			frm.save();
-		}).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
+		// save_btn in public/custom.js
+		save_btn(frm);
 	},
 });

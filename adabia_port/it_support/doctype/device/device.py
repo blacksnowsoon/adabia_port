@@ -8,4 +8,5 @@ from frappe.model.document import Document
 class Device(Document):
 	def before_save(self):
 		brand = frappe.db.get_value("Brand", self.brand, ["brand_name"])
-		self.device_name = f"{brand}-{self.model} /SN. {self.serial_no}"
+		device_type = frappe.db.get_value("Device Type", self.device_type, ["device_type"])	
+		self.device_name = f"{device_type}-{brand}-{self.model} /SN. {self.serial_no}"

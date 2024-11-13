@@ -4,10 +4,11 @@
 
 frappe.ui.form.on("SPS Operation Ticket", {
 	refresh(frm) {
-		frm.disable_save();
+		save_btn(frm)
 		const status = frm.doc.status;
 		switch (status) {
 			case "In Progress":
+				toggle_frm(frm, 1);
 				frm_status_change(frm).in_progress();
 				break;
 			case "Completed":
@@ -18,7 +19,7 @@ frappe.ui.form.on("SPS Operation Ticket", {
 				frm_status_change(frm).open();
 				break;
 		}
-		save_btn(frm)
+		
 	},
 	modules(frm) {
 		// handle the approvels list without the managers
@@ -30,14 +31,15 @@ frappe.ui.form.on("SPS Operation Ticket", {
 		const filterd_list = modules_list.filter(m => !approvals.some(approval => approval.name == m.module));
 		// in case new modules are added
 		if (filterd_list.length > 0) {
-			Promise.all(filterd_list.map( m => fetchValues({doctype: 'SPS Module', filters: {"name":m.module}, fieldname: ['module_name', 'name', 'responsible', 'name_of_responsible', 'job_title']})))
+			Promise.all(filterd_list.map( m => 
+				fetchValues({doctype: 'SPS Module', 
+					filters: {"name":m.module}, fieldname: ['module_name', 'name', 'responsible',  'job_title']})))
 			.then((values) => {
 				const append_approval = values.map(v => {
 					return {
 						module_name: v.module_name,
 						name: v.name,
 						responsible: v.responsible,
-						name_of_responsible: v.name_of_responsible,
 						job_title: v.job_title,
 						status: 'Pending'
 					}
@@ -86,7 +88,7 @@ function fetchValues({doctype, filters, fieldname}) {
 function frm_status_change(frm) {
 	return {
 		open: () => {
-			
+			toggle_frm(frm, 0)
 		},
 		in_progress: () => {
 			apply_edit_for_ad(frm)
@@ -101,16 +103,18 @@ function frm_status_change(frm) {
 
 // append save button
 function save_btn(frm) {
+	frm.disable_save()
 	frm.add_custom_button('Save', () => {
 		const status = frm.doc.status;
 		const in_progress_since = frm.doc.in_progress_since;
-		if (status == "In Progress" && in_progress_since) {
+		if (status == "In Progress" && !in_progress_since) {
 			frappe.warn(`Are You Sure You Want To Save This Ticket In Progress ?`,
 				`This will Start Count Duration Time !`, () => {
 					frm.save();
 				}, "Confirm", "Cancel")
 		} else {
 			frm.save();
+			
 		}
 	}).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
 }
