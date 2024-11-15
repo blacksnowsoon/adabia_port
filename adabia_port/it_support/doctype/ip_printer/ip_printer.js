@@ -10,7 +10,6 @@ frappe.ui.form.on("IP Printer", {
                 filters: [
                     ['ip_address', '!=', ''],
                     ['have_network_connection', '=', '1'],
-                    ['disabled', '=', '0'],
                     ['location_code', '!=', ''],
                     ['device_name', 'like', '%Printer%']
 

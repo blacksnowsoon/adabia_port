@@ -3,6 +3,9 @@
 
 const ticket_info = {}
 frappe.ui.form.on("IT Ticket", {
+	onload(frm) {
+		
+	},
 	refresh(frm) {
 		save_btn(frm)
 		frm.fields_dict.user_info.wrapper.innerHTML = "";
@@ -23,6 +26,14 @@ frappe.ui.form.on("IT Ticket", {
 			frm.fields_dict.devices_info.wrapper.innerHTML = "";
 			frm.set_value('devices', [])
 		} else {
+			frm.set_query('devices', function() {
+				return {
+					filters: [
+						['employee', '!=', ''],
+						['employee', '=', employee]
+					]
+				}
+			})
 			setup_employee_info(frm, employee)
 		}
 		

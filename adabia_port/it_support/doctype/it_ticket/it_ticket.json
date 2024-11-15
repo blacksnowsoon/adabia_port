@@ -128,7 +128,7 @@
    "fieldname": "devices",
    "fieldtype": "Table MultiSelect",
    "label": "Devices",
-   "link_filters": "[[\"Device\", \"employee\",\"=\", \"eval:doc.employee\"]]",
+   "link_filters": "[\n    [\"Device\", \"employee\", \"=\", \"eval:doc.employee\"]\n    \n]",
    "options": "Device Child Table",
    "reqd": 1
   },
@@ -171,7 +171,7 @@
   }
  ],
  "links": [],
- "modified": "2024-11-05 20:53:48.373217",
+ "modified": "2024-11-15 20:58:58.943432",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "IT Ticket",
