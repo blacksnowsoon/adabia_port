@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"B3U0bCDzFf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Adabia Port</span>\",\"col\":12}},{\"id\":\"s7lOm44_AN\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Tickets\",\"col\":4}}]",
+ "content": "[{\"id\":\"B3U0bCDzFf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Adabia Port Data</span>\",\"col\":12}},{\"id\":\"M27PmFPs6Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements\",\"col\":3}},{\"id\":\"tTlaGDULMd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Departments\",\"col\":3}},{\"id\":\"zylnt3p5Ur\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees\",\"col\":3}},{\"id\":\"EWIESSu1Aw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices\",\"col\":3}},{\"id\":\"DPmZLUOOxI\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
  "creation": "2024-09-29 22:16:03.530878",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,22 +13,50 @@
  "is_hidden": 0,
  "label": "Adabia Port",
  "links": [],
- "modified": "2024-11-01 20:30:59.915488",
+ "modified": "2024-11-17 17:33:34.036005",
  "modified_by": "Administrator",
  "module": "Adabia Port",
  "name": "Adabia Port",
- "number_cards": [
-  {
-   "label": "Tickets",
-   "number_card_name": "Number Of Tickets CST"
-  }
- ],
+ "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
  "roles": [],
  "sequence_id": 1.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Devices",
+   "link_to": "Device",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Managements",
+   "link_to": "Management",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Departments",
+   "link_to": "Department",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employees",
+   "link_to": "Employee",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
  "title": "Adabia Port"
 }

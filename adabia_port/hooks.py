@@ -97,7 +97,9 @@ fixtures = [
         "dt":"Dashboard Chart", "filters" : { 
             "name":["in", [
                 "SPS OP Ticket Chart",
-                "Most Effected Modules in SPS"
+                "Most Effected Modules in SPS",
+                "Tickets Activities By User",
+                "Tickets Activities Track"
             ]]
         }
     },
@@ -105,7 +107,9 @@ fixtures = [
         "dt":"Workspace", "filters" : { 
             "name":["in", [
                 "SPS OP Space",
-                "Infra - IT"
+                "Infra - IT",
+                "Adabia Port"
+
             ]]
         }
     },
@@ -113,6 +117,7 @@ fixtures = [
         "dt":"Dashboard", "filters" : { 
             "name":["in", [
                 "SPS Operation Dash",
+                "Customer Sup Dash"
             ]]
         }
     }
