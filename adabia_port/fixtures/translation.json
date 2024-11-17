@@ -1792,5 +1792,44 @@
   "name": "pkftim7dhc",
   "source_text": "Ship Name",
   "translated_text": "اسم السفينة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-11-17 18:02:53.543863",
+  "name": "9h67o5jfor",
+  "source_text": "Excel",
+  "translated_text": "Excel"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-11-17 18:04:40.212479",
+  "name": "9i7ih2ub6g",
+  "source_text": "Select Mandatory",
+  "translated_text": "الحقول الالزامية فقط"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-11-17 18:07:01.037970",
+  "name": "9itqbv7ijh",
+  "source_text": "Edit",
+  "translated_text": "تحرير"
  }
 ]

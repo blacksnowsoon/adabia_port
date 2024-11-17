@@ -1,5 +1,47 @@
 [
  {
+  "cards": [],
+  "chart_options": null,
+  "charts": [
+   {
+    "chart": null,
+    "parent": "Customer Sup Dash",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Tickets Activities Track",
+    "parent": "Customer Sup Dash",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Cust Tech Sup Procedure Activities",
+    "parent": "Customer Sup Dash",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Tickets Activities By User",
+    "parent": "Customer Sup Dash",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   }
+  ],
+  "dashboard_name": "Customer Sup Dash",
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "is_default": 0,
+  "is_standard": 0,
+  "modified": "2024-11-17 17:37:46.801569",
+  "module": null,
+  "name": "Customer Sup Dash"
+ },
+ {
   "cards": [
    {
     "card": "SPS OP Teckets",
