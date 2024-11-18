@@ -8,12 +8,14 @@
   "have_network_connection",
   "device_type",
   "model",
+  "product_year",
   "employee",
   "column_break_accd",
   "disabled",
   "brand",
   "serial_no",
   "device_name",
+  "in_service_since",
   "section_break_qehd",
   "device_domain_name",
   "group_policy",
@@ -138,10 +140,21 @@
    "fieldtype": "Data",
    "label": "Location Code",
    "read_only": 1
+  },
+  {
+   "fieldname": "product_year",
+   "fieldtype": "Int",
+   "label": "Product Year",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "in_service_since",
+   "fieldtype": "Date",
+   "label": "In Service Since"
   }
  ],
  "links": [],
- "modified": "2024-11-13 22:18:28.666247",
+ "modified": "2024-11-18 09:28:53.486164",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Device",
