@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"B3U0bCDzFf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Adabia Port Data</span>\",\"col\":12}},{\"id\":\"M27PmFPs6Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements\",\"col\":3}},{\"id\":\"tTlaGDULMd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Departments\",\"col\":3}},{\"id\":\"zylnt3p5Ur\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees\",\"col\":3}},{\"id\":\"EWIESSu1Aw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices\",\"col\":3}},{\"id\":\"DPmZLUOOxI\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "content": "[{\"id\":\"EjIGtHWkyu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Go To Dashboard\",\"col\":3}},{\"id\":\"B3U0bCDzFf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Adabia Port Data</span>\",\"col\":12}},{\"id\":\"M27PmFPs6Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements\",\"col\":3}},{\"id\":\"tTlaGDULMd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Departments\",\"col\":3}},{\"id\":\"zylnt3p5Ur\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees\",\"col\":3}},{\"id\":\"EWIESSu1Aw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices\",\"col\":3}},{\"id\":\"j-bFbay1lR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements In Pie\",\"col\":3}},{\"id\":\"DPmZLUOOxI\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
  "creation": "2024-09-29 22:16:03.530878",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Adabia Port",
  "links": [],
- "modified": "2024-11-17 17:33:34.036005",
+ "modified": "2024-11-18 21:52:07.369121",
  "modified_by": "Administrator",
  "module": "Adabia Port",
  "name": "Adabia Port",
@@ -25,6 +25,20 @@
  "roles": [],
  "sequence_id": 1.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Go To Dashboard",
+   "link_to": "Adabia Port",
+   "type": "Dashboard"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Managements In Pie",
+   "link_to": "Departments In Managements",
+   "type": "Report"
+  },
   {
    "color": "Grey",
    "doc_view": "List",

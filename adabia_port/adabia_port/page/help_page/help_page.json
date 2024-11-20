@@ -1,0 +1,20 @@
+{
+ "content": null,
+ "creation": "2024-11-18 19:18:27.024753",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "Question",
+ "idx": 0,
+ "modified": "2024-11-18 22:21:55.416228",
+ "modified_by": "Administrator",
+ "module": "Adabia Port",
+ "name": "help-page",
+ "owner": "Administrator",
+ "page_name": "help-page",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "FAQ"
+}

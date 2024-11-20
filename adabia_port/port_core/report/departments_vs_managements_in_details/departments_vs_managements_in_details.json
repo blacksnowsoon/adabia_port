@@ -1,0 +1,30 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-11-19 10:51:20.211960",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Global Header",
+ "letterhead": null,
+ "modified": "2024-11-19 21:01:23.177771",
+ "modified_by": "Administrator",
+ "module": "Port Core",
+ "name": "Departments Vs Managements in Details",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "",
+ "ref_doctype": "Department",
+ "report_name": "Departments Vs Managements in Details",
+ "report_script": " result = [result]\r\n",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}
