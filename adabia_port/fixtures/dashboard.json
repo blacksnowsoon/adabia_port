@@ -35,6 +35,55 @@
   "name": "Customer Sup Dash"
  },
  {
+  "cards": [],
+  "chart_options": null,
+  "charts": [
+   {
+    "chart": null,
+    "parent": "IT-Dashboard",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Management List",
+    "parent": "IT-Dashboard",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   }
+  ],
+  "dashboard_name": "IT-Dashboard",
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "is_default": 0,
+  "is_standard": 0,
+  "modified": "2024-11-20 09:54:24.915381",
+  "module": null,
+  "name": "IT-Dashboard"
+ },
+ {
+  "cards": [],
+  "chart_options": null,
+  "charts": [
+   {
+    "chart": "Departments Vs Managements",
+    "parent": "Adabia Port",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Full"
+   }
+  ],
+  "dashboard_name": "Adabia Port",
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "is_default": 0,
+  "is_standard": 0,
+  "modified": "2024-11-20 09:49:36.946245",
+  "module": null,
+  "name": "Adabia Port"
+ },
+ {
   "cards": [
    {
     "card": "SPS OP Teckets",

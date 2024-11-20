@@ -89,7 +89,8 @@ fixtures = [
                 "Open New Request",
                 "Bugs In Progress",
                 "New Requests In Progress",
-                "Modules Activities"
+                "Modules Activities",
+                "Departments Vs Managements in Details"
             ]]
         }
     },
@@ -99,7 +100,11 @@ fixtures = [
                 "SPS OP Ticket Chart",
                 "Most Effected Modules in SPS",
                 "Tickets Activities By User",
-                "Tickets Activities Track"
+                "Tickets Activities Track",
+                "Management List",
+                "Departments Vs Managements",
+                "Departments In Pie",
+                "Departments In Managements"
             ]]
         }
     },
@@ -108,7 +113,9 @@ fixtures = [
             "name":["in", [
                 "SPS OP Space",
                 "Infra - IT",
-                "Adabia Port"
+                "Adabia Port",
+                "Cust Support Statistics",
+                "Customer Tech Sup",
 
             ]]
         }
@@ -117,7 +124,9 @@ fixtures = [
         "dt":"Dashboard", "filters" : { 
             "name":["in", [
                 "SPS Operation Dash",
-                "Customer Sup Dash"
+                "Customer Sup Dash",
+                "IT-Dashboard",
+                "Adabia Port"
             ]]
         }
     }
