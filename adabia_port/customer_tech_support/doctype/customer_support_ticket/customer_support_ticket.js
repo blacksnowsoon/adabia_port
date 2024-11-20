@@ -14,14 +14,14 @@ frappe.ui.form.on('Customer Support Ticket', {
 	   
 	},
 	procedure_name(frm){
-		console.log(frm.doc.procedure_name)
+		
 	}
 })
 
 const toggleDetails = (frm) => {
 	 // hide unused section
 	 const ev_value = frm.doc.ticket_event;
-	 console.log(ev_value)
+	
 	 if (!ev_value) return
 	 frappe.db.get_value('Ticket Event', ev_value, 'event').then((r)=> {
 		 

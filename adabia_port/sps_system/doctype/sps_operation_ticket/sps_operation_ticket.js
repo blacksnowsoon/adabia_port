@@ -59,6 +59,12 @@ frappe.ui.form.on("SPS Operation Ticket", {
 				frappe.throw('In Progress must be less than Completed In');
 			}
 		}
+	},
+	status(frm) {
+		const status = frm.doc.status
+		if (status === "Completed") {
+			toggle_frm(frm, 0);
+		}
 	}
 });
 
@@ -127,6 +133,7 @@ function toggle_frm(frm, value) {
 
 function apply_edit_for_ad(frm) {
 	const is_ad = frappe.user_roles.includes('SPS OP Admin');
+	
 			if(is_ad) {
 				if (frm.doc.in_progress_since) {
 					frm.set_df_property('in_progress_since', 'read_only', 0);	
@@ -135,5 +142,7 @@ function apply_edit_for_ad(frm) {
 					frm.set_df_property('completed_in', 'read_only', 0);
 				}
 				frm.set_df_property('status', 'read_only', 0);
+			} else {
+				toggle_frm(frm, 1);
 			}
 }

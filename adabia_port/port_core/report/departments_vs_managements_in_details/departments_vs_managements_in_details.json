@@ -6,11 +6,11 @@
  "docstatus": 0,
  "doctype": "Report",
  "filters": [],
- "idx": 0,
+ "idx": 1,
  "is_standard": "Yes",
  "letter_head": "Global Header",
  "letterhead": null,
- "modified": "2024-11-19 21:01:23.177771",
+ "modified": "2024-11-20 13:40:42.755892",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Departments Vs Managements in Details",
@@ -24,6 +24,15 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Customer Support Admin"
+  },
+  {
+   "role": "Help Desk Admin"
+  },
+  {
+   "role": "IT System Admin"
   }
  ],
  "timeout": 0
