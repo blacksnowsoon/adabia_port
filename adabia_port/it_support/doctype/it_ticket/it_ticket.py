@@ -33,8 +33,7 @@ class ITTicket(Document):
 		emp = frappe.db.get_value('Employee', self.employee, 'emp_name')
 		devices_names = frappe.db.get_list('Device Child Table', fields=['parent'], filters={'parent': self.name})
 		devices = frappe.db.get_list('Device', fields=['location_code', 'name'], filters={'name': ['in', devices_names]})
-		for dev in devices:
-			frappe.error_log(dev)
+		
 			
 		# frappe.sendmail(
 		# 	recipients=[self.assign_to],

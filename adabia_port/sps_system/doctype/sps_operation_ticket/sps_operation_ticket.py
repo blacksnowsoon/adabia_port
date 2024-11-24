@@ -8,13 +8,13 @@ from frappe.model.document import Document
 
 class SPSOperationTicket(Document):
 	def before_save(self):
-		check_in_progress = frappe.db.get_value("SPS Operation Ticket", self.name, "in_progress_since")
-		if check_in_progress == None:	
+		is_in_progress = frappe.db.get_value("SPS Operation Ticket", self.name, "in_progress_since")
+		if is_in_progress == None:	
 			if self.status == "In Progress":
 					self.in_progress_since = frappe.utils.now() 
 		
-		check_completed = frappe.db.get_value("SPS Operation Ticket", self.name, "completed_in")
-		if check_completed == None:
+		is_completed = frappe.db.get_value("SPS Operation Ticket", self.name, "completed_in")
+		if is_completed == None:
 			if self.status == "Completed":
 					self.completed_in = frappe.utils.now()
 	@property

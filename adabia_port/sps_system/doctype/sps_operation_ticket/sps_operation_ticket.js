@@ -6,19 +6,7 @@ frappe.ui.form.on("SPS Operation Ticket", {
 	refresh(frm) {
 		save_btn(frm)
 		const status = frm.doc.status;
-		switch (status) {
-			case "In Progress":
-				frm_status_change(frm).in_progress();
-				break;
-			case "Completed":
-				frm_status_change(frm).completed();
-				break;
-			default:
-				// 
-				frm_status_change(frm).open();
-				break;
-		}
-		
+		frm_status_change(frm)
 	},
 	modules(frm) {
 		// handle the approvels list without the managers
@@ -51,22 +39,40 @@ frappe.ui.form.on("SPS Operation Ticket", {
 			set_json_field_value(frm, 'approvals', removed_modules);
 		}
 	},
-	befor_save(frm) {
-		if (frm.doc.completed_in !== "") {
-			const can_save = frm.doc.in_progress_since < frm.doc.completed_in;
-			if (!can_save) {
-				frappe.throw('In Progress must be less than Completed In');
-			}
+	before_save(frm) {
+		console.log(!frm.doc.in_progress_since)
+		if (!frm.doc.in_progress_since && frm.doc.status === "Completed") {
+			frappe.show_alert({
+				message: __(`You Must Save The Ticket In Progress Mode First`),
+				indicator: 'red'
+			})
+			frappe.throw('You Must Save The Ticket In Progress Mode First')
+			// cancel form
+			
 		}
+		
 	},
 	status(frm) {
-		const status = frm.doc.status
-		if (status === "Completed") {
-			toggle_frm(frm, 0);
-		}
+		frm_status_change(frm)
 	}
 });
 
+// composion of frm status to handle the approvals 
+function frm_status_change(frm) {
+	const status = frm.doc.status
+	if (status === 'Open') {
+		toggle_frm(frm, 0)
+	} else if (status === "In Progress") {
+		toggle_frm(frm, 1)
+		frappe.show_alert({
+			message: __(`In Progress Since ${frm.doc.in_progress_since}`),
+			indicator: 'green'
+		}, 5);
+	} else {
+		toggle_frm(frm, 0)
+	}
+	
+}
 
 // fetch values from doctype
 function fetchValues({doctype, filters, fieldname}) {
@@ -89,59 +95,12 @@ function fetchValues({doctype, filters, fieldname}) {
 	});
 }
 
-// composion of frm status to handle the approvals 
-function frm_status_change(frm) {
-	return {
-		open: () => {
-			toggle_frm(frm, 0)
-		},
-		in_progress: () => {
-			apply_edit_for_ad(frm)
-		},
-		completed: () => {
-			apply_edit_for_ad(frm)
-			
-		}
-	}
-	
-}
 
-// append save button
-function save_btn(frm) {
-	frm.disable_save()
-	frm.add_custom_button('Save', () => {
-		const status = frm.doc.status;
-		const in_progress_since = frm.doc.in_progress_since;
-		if (status == "In Progress" && !in_progress_since) {
-			frappe.warn(`Are You Sure You Want To Save This Ticket In Progress ?`,
-				`This will Start Count Duration Time !`, () => {
-					frm.save();
-				}, "Confirm", "Cancel")
-		} else {
-			frm.save();
-		}
-	}).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
-}
+
 // toggle the fields in the form
-function toggle_frm(frm, value) {
+function toggle_frm(frm, disable) {
 	frm.fields.forEach(function(field) {
-		if(field.df.fieldname === "status" && frm.doc.status !== "In Progress") return
-		frm.set_df_property(field.df.fieldname, 'read_only', value);
+		if (field.df["fieldname"] === 'status') return
+		frm.set_df_property(field.df["fieldname"], 'read_only', disable);
 	});
-}
-
-function apply_edit_for_ad(frm) {
-	const is_ad = frappe.user_roles.includes('SPS OP Admin');
-	
-		if(is_ad) {
-			if (frm.doc.in_progress_since) {
-				frm.set_df_property('in_progress_since', 'read_only', 0);	
-			}
-			if (frm.doc.completed_in) {
-				frm.set_df_property('completed_in', 'read_only', 0);
-			}
-			frm.set_df_property('status', 'read_only', 0);
-		} else {
-			toggle_frm(frm, 1);
-		}
 }

@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Adabia Port",
  "links": [],
- "modified": "2024-11-22 19:44:09.199014",
+ "modified": "2024-11-24 19:55:10.337664",
  "modified_by": "Administrator",
  "module": "Adabia Port",
  "name": "Adabia Port",
@@ -22,7 +22,20 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Help Desk Admin"
+  },
+  {
+   "role": "SPS OP Admin"
+  },
+  {
+   "role": "IT System Admin"
+  },
+  {
+   "role": "SPS OP Admin"
+  }
+ ],
  "sequence_id": 1.0,
  "shortcuts": [
   {
