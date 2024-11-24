@@ -125,6 +125,7 @@ function save_btn(frm) {
 // toggle the fields in the form
 function toggle_frm(frm, value) {
 	frm.fields.forEach(function(field) {
+		if(field.df.fieldname === "status" && frm.doc.status !== "In Progress") return
 		frm.set_df_property(field.df.fieldname, 'read_only', value);
 	});
 }
