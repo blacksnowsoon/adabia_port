@@ -8,7 +8,6 @@ frappe.ui.form.on("SPS Operation Ticket", {
 		const status = frm.doc.status;
 		switch (status) {
 			case "In Progress":
-				toggle_frm(frm, 1);
 				frm_status_change(frm).in_progress();
 				break;
 			case "Completed":
