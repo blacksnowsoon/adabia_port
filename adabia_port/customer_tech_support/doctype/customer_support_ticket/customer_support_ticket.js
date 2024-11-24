@@ -11,7 +11,6 @@ frappe.ui.form.on('Customer Support Ticket', {
 	   // clear the procedure field after updating the event field
 	    frm.set_value('procedure_name', '');
 		toggleDetails(frm)
-	   
 	},
 	procedure_name(frm){
 		
@@ -22,10 +21,9 @@ const toggleDetails = (frm) => {
 	 // hide unused section
 	 const ev_value = frm.doc.ticket_event;
 	
-	 if (!ev_value) return
-	 frappe.db.get_value('Ticket Event', ev_value, 'event').then((r)=> {
-		 
-		 const data = r.message.event;
+	if (!ev_value) return
+	frappe.db.get_value('Ticket Event', ev_value, 'event').then((r)=> {
+		const data = r.message.event;
 		  if (data.includes('Truck')) {
 				frm.set_df_property('section_break_truck', 'hidden', 0);
 				frm.set_df_property('section_break_company', 'hidden', 0);

@@ -8,8 +8,8 @@
   "have_internet_access",
   "emp_name",
   "management",
-  "additional_software",
   "job_title",
+  "shift",
   "column_break_qmfm",
   "disabled",
   "user_name",
@@ -57,14 +57,6 @@
    "label": "User Name",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "additional_software",
-   "fieldtype": "Table MultiSelect",
-   "label": "Additional Software",
-   "options": "Additional Soft Child Table",
-   "reqd": 1,
-   "search_index": 1
   },
   {
    "fieldname": "section_break_glym",
@@ -115,10 +107,16 @@
    "fieldtype": "Link",
    "label": "Job Title",
    "options": "Job Title"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Diurnal\nRotation"
   }
  ],
  "links": [],
- "modified": "2024-11-05 19:48:20.948695",
+ "modified": "2024-11-23 13:11:59.265673",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Employee",

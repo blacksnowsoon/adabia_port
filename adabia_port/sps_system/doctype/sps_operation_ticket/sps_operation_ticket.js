@@ -120,7 +120,6 @@ function save_btn(frm) {
 				}, "Confirm", "Cancel")
 		} else {
 			frm.save();
-			
 		}
 	}).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
 }
@@ -134,15 +133,15 @@ function toggle_frm(frm, value) {
 function apply_edit_for_ad(frm) {
 	const is_ad = frappe.user_roles.includes('SPS OP Admin');
 	
-			if(is_ad) {
-				if (frm.doc.in_progress_since) {
-					frm.set_df_property('in_progress_since', 'read_only', 0);	
-				}
-				if (frm.doc.completed_in) {
-					frm.set_df_property('completed_in', 'read_only', 0);
-				}
-				frm.set_df_property('status', 'read_only', 0);
-			} else {
-				toggle_frm(frm, 1);
+		if(is_ad) {
+			if (frm.doc.in_progress_since) {
+				frm.set_df_property('in_progress_since', 'read_only', 0);	
 			}
+			if (frm.doc.completed_in) {
+				frm.set_df_property('completed_in', 'read_only', 0);
+			}
+			frm.set_df_property('status', 'read_only', 0);
+		} else {
+			toggle_frm(frm, 1);
+		}
 }

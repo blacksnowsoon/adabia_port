@@ -27,7 +27,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-13 22:51:49.401924",
+ "modified": "2024-11-22 20:36:31.750178",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Port Location Map Code",
@@ -82,7 +82,6 @@
   }
  ],
  "quick_entry": 1,
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

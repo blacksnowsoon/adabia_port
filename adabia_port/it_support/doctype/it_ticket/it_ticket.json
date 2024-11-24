@@ -11,17 +11,16 @@
   "closed_at",
   "priority",
   "column_break_okbe",
-  "duration",
   "assign_to",
   "column_break_fsoe",
+  "duration",
   "section_break_tzsg",
   "employee",
-  "devices",
+  "emp_devices",
   "column_break_kuky",
   "issues",
-  "general_info_section",
   "user_info",
-  "column_break_zteq",
+  "general_info_section",
   "devices_info",
   "section_break_pofq",
   "t_data",
@@ -42,8 +41,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Employee",
-   "options": "Employee",
-   "reqd": 1
+   "options": "Employee"
   },
   {
    "fieldname": "column_break_kuky",
@@ -98,6 +96,7 @@
   {
    "fieldname": "open_at",
    "fieldtype": "Datetime",
+   "hidden": 1,
    "label": "Open At",
    "permlevel": 1,
    "read_only_depends_on": "eval:doc.status=='Closed'"
@@ -108,11 +107,13 @@
    "fieldtype": "Duration",
    "label": "Duration",
    "permlevel": 1,
+   "read_only": 1,
    "read_only_depends_on": "eval:doc.status=='Closed'"
   },
   {
    "fieldname": "closed_at",
    "fieldtype": "Datetime",
+   "hidden": 1,
    "label": "Closed",
    "permlevel": 1,
    "read_only_depends_on": "eval:doc.status=='Closed'"
@@ -125,14 +126,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "devices",
-   "fieldtype": "Table MultiSelect",
-   "label": "Devices",
-   "link_filters": "[\n    [\"Device\", \"employee\", \"=\", \"eval:doc.employee\"]\n    \n]",
-   "options": "Device Child Table",
-   "reqd": 1
-  },
-  {
    "fieldname": "general_info_section",
    "fieldtype": "Section Break"
   },
@@ -141,10 +134,6 @@
    "fieldtype": "HTML",
    "label": "User Info",
    "search_index": 1
-  },
-  {
-   "fieldname": "column_break_zteq",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "devices_info",
@@ -168,10 +157,16 @@
    "fieldname": "t_data",
    "fieldtype": "JSON",
    "label": "T Data"
+  },
+  {
+   "fieldname": "emp_devices",
+   "fieldtype": "Table MultiSelect",
+   "label": "Devices",
+   "options": "Device Child Table"
   }
  ],
  "links": [],
- "modified": "2024-11-15 20:58:58.943432",
+ "modified": "2024-11-23 19:34:13.528731",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "IT Ticket",

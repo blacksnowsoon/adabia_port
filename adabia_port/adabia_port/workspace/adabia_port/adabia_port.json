@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"EjIGtHWkyu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Go To Dashboard\",\"col\":3}},{\"id\":\"B3U0bCDzFf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Adabia Port Data</span>\",\"col\":12}},{\"id\":\"M27PmFPs6Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements\",\"col\":3}},{\"id\":\"tTlaGDULMd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Departments\",\"col\":3}},{\"id\":\"zylnt3p5Ur\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees\",\"col\":3}},{\"id\":\"EWIESSu1Aw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices\",\"col\":3}},{\"id\":\"j-bFbay1lR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements In Pie\",\"col\":3}},{\"id\":\"DPmZLUOOxI\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "content": "[{\"id\":\"EjIGtHWkyu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Go To Dashboard\",\"col\":3}},{\"id\":\"B3U0bCDzFf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Adabia Port Data Structure</span>\",\"col\":12}},{\"id\":\"M27PmFPs6Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements\",\"col\":3}},{\"id\":\"tTlaGDULMd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Departments\",\"col\":3}},{\"id\":\"zylnt3p5Ur\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees\",\"col\":3}},{\"id\":\"EWIESSu1Aw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices\",\"col\":3}},{\"id\":\"zAUT_ZGERR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Titles\",\"col\":3}},{\"id\":\"BmVJQS0i5n\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets Event\",\"col\":3}},{\"id\":\"_stQv-R1Xd\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Uv38LIygVf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Adabia Port Business Data</b></span>\",\"col\":12}},{\"id\":\"Go1_f3MBwN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Companies\",\"col\":3}},{\"id\":\"Z8EIg6FnNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trucks\",\"col\":3}},{\"id\":\"74x_GRp1vs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trucks Tail\",\"col\":3}},{\"id\":\"k1WauYV6yh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Machines\",\"col\":3}},{\"id\":\"DPmZLUOOxI\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
  "creation": "2024-09-29 22:16:03.530878",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Adabia Port",
  "links": [],
- "modified": "2024-11-18 21:52:07.369121",
+ "modified": "2024-11-22 19:44:09.199014",
  "modified_by": "Administrator",
  "module": "Adabia Port",
  "name": "Adabia Port",
@@ -35,13 +35,6 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Managements In Pie",
-   "link_to": "Departments In Managements",
-   "type": "Report"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
    "label": "Devices",
    "link_to": "Device",
    "stats_filter": "[]",
@@ -58,6 +51,14 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Job Titles",
+   "link_to": "Job Title",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Departments",
    "link_to": "Department",
    "stats_filter": "[]",
@@ -66,8 +67,48 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Tickets Event",
+   "link_to": "Ticket Event",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Employees",
    "link_to": "Employee",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Companies",
+   "link_to": "Company",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Trucks",
+   "link_to": "Truck",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Trucks Tail",
+   "link_to": "Truck Tail",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Machines",
+   "link_to": "Machine",
    "stats_filter": "[]",
    "type": "DocType"
   }

@@ -13,8 +13,9 @@ frappe.query_reports["Departments Vs Managements in Details"] = {
 		return value
 	},
 	"onload": function(report) {
-		report.page.add_inner_button(__("Print"), function() {
-			window.print();
-		});
+		// report.page.add_inner_button(__("Print"), function() {
+		// 	let w = window.open(frappe.urllib.get_full_url(`/api/method/frappe.utils.print_format.download_pdf?doctype=Your DocType&name=${report.get_filter_value('name')}&format=0&no_letterhead=0`)); 
+		// 	if (!w) { frappe.msgprint(__('Please enable pop-ups')); }
+		// });
 	}
 };

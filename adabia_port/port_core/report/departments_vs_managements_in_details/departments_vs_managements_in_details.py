@@ -7,7 +7,6 @@ import frappe
 def execute(filters=None):
 	columns = [
 		{"label": "Management Name", "fieldname": "management_name", "fieldtype": "Data", "width": 200},
-		# {"label": "Departments", "fieldname": "department", "fieldtype": "Data", "width": 200},
 		{"label": "Number of Departments", "fieldname": "count", "fieldtype": "Int", "width": 200},
 	]
 	departments = frappe.get_all("Department", fields=["depart_name as department","management.management_name", "count(*) as count"], group_by="management" ,order_by="count ASC")

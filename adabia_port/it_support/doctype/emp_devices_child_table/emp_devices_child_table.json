@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-22 20:18:24.361652",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "emp"
+ ],
+ "fields": [
+  {
+   "fieldname": "emp",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Emp",
+   "options": "Employee"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-22 20:19:47.911206",
+ "modified_by": "Administrator",
+ "module": "IT Support",
+ "name": "Emp Devices Child Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

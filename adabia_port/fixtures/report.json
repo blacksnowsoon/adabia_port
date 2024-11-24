@@ -232,6 +232,43 @@
   "timeout": 0
  },
  {
+  "add_total_row": 1,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": "ISFP Header",
+  "modified": "2024-11-23 19:39:23.241894",
+  "module": "Customer Tech Support",
+  "name": "Users Activities in Customer Tech Support",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Customer Support Ticket",
+  "reference_report": null,
+  "report_name": "Users Activities in Customer Tech Support",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Users Activities in Customer Tech Support",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Users Activities in Customer Tech Support",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Customer Support Admin"
+   }
+  ],
+  "timeout": 0
+ },
+ {
   "add_total_row": 0,
   "columns": [],
   "disabled": 0,
@@ -242,7 +279,7 @@
   "javascript": null,
   "json": null,
   "letter_head": "Global Header",
-  "modified": "2024-11-19 21:01:23.177771",
+  "modified": "2024-11-20 13:40:42.755892",
   "module": "Port Core",
   "name": "Departments Vs Managements in Details",
   "prepared_report": 0,
@@ -258,6 +295,24 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "System Manager"
+   },
+   {
+    "parent": "Departments Vs Managements in Details",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Customer Support Admin"
+   },
+   {
+    "parent": "Departments Vs Managements in Details",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Help Desk Admin"
+   },
+   {
+    "parent": "Departments Vs Managements in Details",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "IT System Admin"
    }
   ],
   "timeout": 0

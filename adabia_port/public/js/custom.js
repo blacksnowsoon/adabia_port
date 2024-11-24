@@ -49,7 +49,7 @@ function fetchValues({doctype='', filters={}, fields=[]}) {
 				if (r.message) {
 					resolve(r.message);
 				} else {
-					reject(`No value found for ${userId}`);
+					reject(`No value found for ${doctype}`);
 				}
 			}
 		});
@@ -96,15 +96,47 @@ function fetchList({doctype='', filters={}, fields=[]}) {
     });
   });
 }
+// fetch all ignore permissions
+function fetchAll({doctype='', filters={}, fields=[]}) {
+  return new Promise((resolve, reject) => {
+    frappe.call({
+      method: 'adabia_port.utils.get_all',
+      args: {
+        doctype: doctype,
+        fields: fields,
+        filters: filters
+      },
+      callback: function(r) {
+        if (r.message) {
+          resolve(r.message);
+        } else {
+          reject(`No value found in ${doctype}`);
+        }
+      }
+    });
+  });
+}
+// -----------------------------------------------------------------------------
+// append html code to it's field if cba (clean before append) will clean the wrapper
+function render_html(frm, data, field, cba) {
+	cba ? frm.fields_dict[field].wrapper.innerHTML = "" : null
+  frm.fields_dict[field].wrapper.classList.add('grid');
+  
+  // generate the table
+	frm.fields_dict[field].wrapper.appendChild(generat_2_col_rows(data));
+}
 // generate table data row
 function generat_2_col_rows(rows) {
   const table = document.createElement('table');
   table.classList.add('table');
+  table.classList.add('table-bordered');
+  
   const tbody = document.createElement('tbody');
   rows.forEach(row => !!row.value ?  tbody.appendChild(generat_row(row)): null );
   table.appendChild(tbody);
   return table
 }
+
 function generat_row({key, value}) {
 	const row = document.createElement('tr');
 	const keyLabel = document.createElement('td');
@@ -135,8 +167,8 @@ function parse_json_value(value) {
   return JSON.parse(value)
 }
 
-// append html code to it's field if cba (clean before append) will clean the wrapper
-function render_html(frm, data, field, cba) {
-	cba ? frm.fields_dict[field].wrapper.innerHTML = "" : null
-	frm.fields_dict[field].wrapper.appendChild(generat_2_col_rows(data));
+
+
+function clean_wrapper_innerHTML(frm, fields=[]) {
+  fields.forEach(field => frm.fields_dict[field].wrapper.innerHTML = "")
 }

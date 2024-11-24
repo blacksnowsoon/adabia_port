@@ -46,5 +46,10 @@ def get_document(doctype, name):
 
 @frappe.whitelist()
 def get_list(doctype='', fields=[], filters={}):
-    doc_list = frappe.get_list(doctype, fields=fields, filters=filters)
+    doc_list = frappe.db.get_list(doctype,  fields=fields, filters=filters)
     return doc_list
+
+
+@frappe.whitelist()
+def get_all(doctype='', fields=[], filters={}):
+    return frappe.get_all(doctype, fields=fields, filters=filters)

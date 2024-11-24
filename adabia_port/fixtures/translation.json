@@ -1831,5 +1831,31 @@
   "name": "9itqbv7ijh",
   "source_text": "Edit",
   "translated_text": "تحرير"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-11-23 12:22:37.259338",
+  "name": "1ga57ocuqa",
+  "source_text": "Diurnal",
+  "translated_text": "نهاري"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-11-23 12:23:30.922072",
+  "name": "1gqtd7dat8",
+  "source_text": "Rotation",
+  "translated_text": "مناوبة"
  }
 ]
