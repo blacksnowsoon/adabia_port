@@ -35,10 +35,10 @@ class ITTicket(Document):
 		devices = frappe.db.get_list('Device', fields=['location_code', 'name'], filters={'name': ['in', devices_names]})
 		
 			
-		# frappe.sendmail(
-		# 	recipients=[self.assign_to],
-		# 	subject=f"IT Taske {self.name}",
-		# 	message=f"IT Ticket {self.name} has been created. for an Issue at {emp}",
-		# )
+		frappe.sendmail(
+			recipients=[self.assign_to],
+			subject=f"IT Taske {self.name}",
+			message=f"IT Ticket {self.name} has been created. for an Issue at {emp}",
+		)
 		frappe.msgprint(f"an Email sent to {self.assign_to}")
 		
