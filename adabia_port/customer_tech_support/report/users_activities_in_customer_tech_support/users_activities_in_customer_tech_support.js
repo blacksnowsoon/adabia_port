@@ -7,13 +7,13 @@ frappe.query_reports["Users Activities in Customer Tech Support"] = {
 			"fieldname": "from_date",
 			"label": __("From Date"),
 			"fieldtype": "Date",
-			"reqd": 1
+			"reqd": 0
 		},
 		{
 			"fieldname": "to_date",
 			"label": __("To Date"),
 			"fieldtype": "Date",
-			"reqd": 1
+			"reqd": 0
 		},
 		{
 			"fieldname": "owner",

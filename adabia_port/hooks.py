@@ -90,8 +90,7 @@ fixtures = [
                 "Bugs In Progress",
                 "New Requests In Progress",
                 "Modules Activities",
-                "Departments Vs Managements in Details",
-                "Users Activities in Customer Tech Support"
+                "Departments Vs Managements in Details"
             ]]
         }
     },

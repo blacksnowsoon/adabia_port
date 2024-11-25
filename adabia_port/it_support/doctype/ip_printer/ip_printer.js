@@ -63,7 +63,7 @@ function fetchPrinterStatus(frm) {
     spenner.setAttribute('role', 'status');
     spenner.setAttribute('aria-hidden', 'true');
     frm.fields_dict.ip_preview.wrapper.appendChild(spenner);
-    const ipParams = frm.doc.ip_address;
+    const ip_address = frm.doc.ip_address;
     const titles = [
         'System Description', 'Device Model', 
         'System Name', 'Device Name',
@@ -86,12 +86,12 @@ function fetchPrinterStatus(frm) {
         '1.3.6.1.2.1.43.10.2.1.4.1.1',
         
         ];
-        const oidParams = oids.join(',');
+        const oid_str = oids.join(',');
     frappe.call({
         method: 'adabia_port.utils.get_printer_status',
         args: {
-            ip_address: ipParams,
-            oids: oidParams
+            ip_address: ip_address,
+            oids: oid_str
         },
         callback: function(response) {
             const { message } = response;

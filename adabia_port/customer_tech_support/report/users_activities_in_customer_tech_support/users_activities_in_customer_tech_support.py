@@ -12,26 +12,32 @@ def execute(filters=None):
 	columns = [
 		{'label': "User Name", 'fieldname': 'owner', 'fieldtype': 'Data', 'width': 200},
 		{'label': 'Procedure Name', 'fieldname': 'procedure_name', 'fieldtype': 'Data', 'width': 200},
-		{'label': 'Notes', 'fieldname': 'notes', 'fieldtype': 'Data', 'width': 300},
+		{'label': 'Notes', 'fieldname': 'notes', 'fieldtype': 'Data', 'width': 350},
 		{'label': 'Creation Date', 'fieldname': 'creation', 'fieldtype': 'Date', 'width': 200},
-		
 	]
 	data = []
 	records=[]
 	chart_data = DataObject(labels=[], values=[])
+	chart = None
 	if filters:
 		from_date = filters.get('from_date')
 		to_date = filters.get('to_date')
 		user = filters.get('owner')
-		
-		# if all 3 critirea is included
-		if(from_date and to_date and user):
+		# if only from_date
+		if(from_date and not to_date and not user):
+			records = frappe.get_all('Customer Support Ticket', fields=['owner', 'procedure_name.procedure_name', 'notes', 'creation'], filters={"creation": ['>=', from_date]}, order_by='creation DESC')
+		# if only to_date
+		elif(not from_date and to_date and not user):
+			records = frappe.get_all('Customer Support Ticket', fields=['owner', 'procedure_name.procedure_name', 'notes', 'creation'], filters={"creation": ['<=', to_date]}, order_by='creation DESC')
+		# if only user
+		elif(not from_date and not to_date and user):
+			records = frappe.get_all('Customer Support Ticket', fields=['owner', 'procedure_name.procedure_name', 'notes', 'creation'], filters={"owner": user}, order_by='creation DESC')
+		# if all 3 cretirea is included
+		elif(from_date and to_date and user):
 			records = frappe.get_all('Customer Support Ticket', fields=['owner', 'procedure_name.procedure_name', 'notes', 'creation'], filters={"creation": ['between', [from_date, to_date]], "owner": user}, order_by='creation DESC')
-		# if only from_date and to_date critirea is included
+		# if only from_date and to_date cretirea is included
 		elif(from_date and to_date and not user):
 			records = frappe.get_all('Customer Support Ticket', fields=['owner', 'procedure_name.procedure_name', 'notes', 'creation'], filters={"creation": ['between', [from_date, to_date]]}, order_by='creation DESC')
-	else :
-		records = frappe.get_all('Customer Support Ticket', fields=['owner', 'procedure_name.procedure_name', 'notes', 'creation'], order_by='creation DESC')
 	
 	for record in records:
 		user = frappe.get_value('User', record.owner, 'full_name')
@@ -40,9 +46,10 @@ def execute(filters=None):
 			chart_data.values.append(len([re for re in records if re.creation.strftime("%m-%d") == record.creation.strftime("%m-%d")]))
 		
 		data.append([user, record.procedure_name, record.notes, record.creation])
-	if(len(chart_data.labels) > 0):
+		
+	if(len(chart_data.labels) > 0 and len(chart_data.labels) <= 31):
 		chart = get_chart(chart_data)
-	elif(len(chart_data.labels) == 0 or len(chart_data.labels) > 32):
+	elif(len(chart_data.labels) >= 31):
 		chart = None
 
 	total = len(records)
@@ -53,8 +60,8 @@ def execute(filters=None):
 			"datatype": "Data",
 			"fieldname": "total"
 			}]
-	
 	return columns, data, None, chart, report_summary
+	
 
 
 def get_chart(data):
