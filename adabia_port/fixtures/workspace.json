@@ -12,7 +12,7 @@
   "is_hidden": 0,
   "label": "Adabia Port",
   "links": [],
-  "modified": "2024-11-22 19:44:09.199014",
+  "modified": "2024-11-24 19:55:10.337664",
   "module": "Adabia Port",
   "name": "Adabia Port",
   "number_cards": [],
@@ -20,7 +20,32 @@
   "public": 1,
   "quick_lists": [],
   "restrict_to_domain": null,
-  "roles": [],
+  "roles": [
+   {
+    "parent": "Adabia Port",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "Help Desk Admin"
+   },
+   {
+    "parent": "Adabia Port",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "SPS OP Admin"
+   },
+   {
+    "parent": "Adabia Port",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "IT System Admin"
+   },
+   {
+    "parent": "Adabia Port",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "SPS OP Admin"
+   }
+  ],
   "sequence_id": 1.0,
   "shortcuts": [
    {

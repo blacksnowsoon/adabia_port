@@ -42,7 +42,7 @@ def execute(filters=None):
 		data.append([user, record.procedure_name, record.notes, record.creation])
 	if(len(chart_data.labels) > 0):
 		chart = get_chart(chart_data)
-	elif(len(chart_data.labels) == 0 or len(chart_data.labels) > 31):
+	elif(len(chart_data.labels) == 0 or len(chart_data.labels) > 32):
 		chart = None
 
 	total = len(records)
