@@ -4,7 +4,7 @@
 import frappe
 from collections import namedtuple
 from datetime import timedelta, datetime
-from frappe.utils import getdate
+from frappe.utils import getdate, date_diff
 
 
 DataObject = namedtuple('DataObject', ['labels', 'values'])
@@ -38,8 +38,13 @@ def execute(filters=None):
 		if (record.creation.strftime("%m-%d") not in chart_data.labels):
 			chart_data.labels.append(record.creation.strftime("%m-%d"))
 			chart_data.values.append(len([re for re in records if re.creation.strftime("%m-%d") == record.creation.strftime("%m-%d")]))
+		
 		data.append([user, record.procedure_name, record.notes, record.creation])
-	chart = get_chart(chart_data)
+	if(len(chart_data.labels) > 0):
+		chart = get_chart(chart_data)
+	elif(len(chart_data.labels) == 0 or len(chart_data.labels) > 31):
+		chart = None
+
 	total = len(records)
 	report_summary = [{
 			"value": total,
