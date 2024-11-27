@@ -35,16 +35,14 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Management",
-   "options": "Management",
-   "reqd": 1
+   "options": "Management"
   },
   {
    "fieldname": "depart_name",
    "fieldtype": "Link",
    "label": "Depart Name",
    "link_filters": "[[\"Department\", \"management\",\"=\", \"eval:doc.management\"]]\n",
-   "options": "Department",
-   "reqd": 1
+   "options": "Department"
   },
   {
    "fieldname": "column_break_qmfm",
@@ -55,7 +53,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "User Name",
-   "reqd": 1,
    "unique": 1
   },
   {
@@ -116,7 +113,7 @@
   }
  ],
  "links": [],
- "modified": "2024-11-23 13:11:59.265673",
+ "modified": "2024-11-27 11:43:37.372163",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Employee",
