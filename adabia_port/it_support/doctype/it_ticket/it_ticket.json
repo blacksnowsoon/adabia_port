@@ -107,8 +107,7 @@
    "fieldtype": "Duration",
    "label": "Duration",
    "permlevel": 1,
-   "read_only": 1,
-   "read_only_depends_on": "eval:doc.status=='Closed'"
+   "read_only": 1
   },
   {
    "fieldname": "closed_at",
@@ -150,23 +149,24 @@
   },
   {
    "fieldname": "section_break_pofq",
-   "fieldtype": "Section Break",
-   "hidden": 1
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "t_data",
    "fieldtype": "JSON",
-   "label": "T Data"
+   "label": "T Data",
+   "print_hide": 1
   },
   {
    "fieldname": "emp_devices",
    "fieldtype": "Table MultiSelect",
    "label": "Devices",
+   "mandatory_depends_on": "eval:doc.employee",
    "options": "Device Child Table"
   }
  ],
  "links": [],
- "modified": "2024-11-23 19:34:13.528731",
+ "modified": "2024-11-29 20:01:43.541758",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "IT Ticket",

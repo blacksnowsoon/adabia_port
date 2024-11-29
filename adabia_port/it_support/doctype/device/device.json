@@ -19,6 +19,8 @@
   "serial_no",
   "product_year",
   "in_service_since",
+  "os",
+  "os_notes",
   "section_break_qehd",
   "device_domain_name",
   "group_policy",
@@ -168,10 +170,23 @@
    "fieldtype": "Table MultiSelect",
    "label": "Additional Software",
    "options": "Additional Soft Child Table"
+  },
+  {
+   "fieldname": "os",
+   "fieldtype": "Link",
+   "label": "OS",
+   "options": "OS"
+  },
+  {
+   "fetch_from": "os.description",
+   "fieldname": "os_notes",
+   "fieldtype": "Data",
+   "label": "OS Notes",
+   "read_only": 1
   }
  ],
  "links": [],
- "modified": "2024-11-23 12:49:19.296072",
+ "modified": "2024-11-29 20:22:00.613936",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Device",

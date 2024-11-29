@@ -11,9 +11,6 @@ frappe.ui.form.on('Customer Support Ticket', {
 	   // clear the procedure field after updating the event field
 	    frm.set_value('procedure_name', '');
 		toggleDetails(frm)
-	},
-	procedure_name(frm){
-		
 	}
 })
 

@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
+import json
 from frappe.model.document import Document
 
 
@@ -14,31 +15,31 @@ class ITTicket(Document):
 			self.closed_at = frappe.utils.now()
 		if self.open_at and self.closed_at:
 			self.duration = frappe.utils.time_diff_in_seconds(self.closed_at, self.open_at)
-
-	# def after_insert(self):
-	# 	user = frappe.db.get_value("User", self.assign_to, "full_name")
-	# 	doc = frappe.new_doc('ToDo')
-	# 	doc.reference_type = "IT Ticket"
-	# 	doc.reference_name =  self.name
-	# 	doc.allocated_to =  self.assign_to
-	# 	doc.assigned_by =  frappe.session.user
-	# 	doc.assigned_by_full_name =  user
-	# 	doc.status =  "Open"
-	# 	doc.priority =  "Medium"
-	# 	doc.date =  frappe.utils.now()
-	# 	doc.description =  f"IT Support Ticket {self.name} has been created."
-	# 	doc.insert(doc)
 	
 	def after_insert(self) :
-		emp = frappe.db.get_value('Employee', self.employee, 'emp_name')
-		devices_names = frappe.db.get_list('Device Child Table', fields=['parent'], filters={'parent': self.name})
-		devices = frappe.db.get_list('Device', fields=['location_code', 'name'], filters={'name': ['in', devices_names]})
 		
-			
+		t_data = None if self.t_data is None else json.loads(self.t_data)
+		email_message = f"A New IT Ticket {self.name} has been created. For "
+		if t_data != None :
+			user = t_data['user_info']
+			if user :
+				department = [item for item in user if item['key'] == 'Department']
+				emp = frappe.db.get_value('Employee', self.employee, 'emp_name')
+				email_message = email_message +  f"  {emp} at {department[0]['value']} "
+				
+				devices_info = t_data['devices_info']
+				if devices_info :
+					for device in devices_info :
+						
+						data = [item for item in device if item['key'] == 'Device Name' or item['key'] == 'Location']
+						device_name = data[0]['value']
+						locaction = data[1]['value']
+						email_message = email_message + f" in {device_name} at {locaction}, "
+		
 		frappe.sendmail(
 			recipients=[self.assign_to],
 			subject=f"IT Taske {self.name}",
-			message=f"IT Ticket {self.name} has been created. for an Issue at {emp}",
+			message= email_message + self.description,
 		)
 		frappe.msgprint(f"an Email sent to {self.assign_to}")
 		

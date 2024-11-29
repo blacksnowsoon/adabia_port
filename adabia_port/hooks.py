@@ -270,6 +270,9 @@ override_doctype_class = {
 # doc_events = {
 #     "File": {
 #         "before_save": "adabia_port.utils.validate_duplicate_attachment"
+#     },
+#     "Customer Support Ticket": { 
+#         "on_update": "adabia_port.utils.award_energy_points"
 #     }
 # }
 

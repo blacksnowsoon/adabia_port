@@ -53,3 +53,25 @@ def get_list(doctype='', fields=[], filters={}):
 @frappe.whitelist()
 def get_all(doctype='', fields=[], filters={}):
     return frappe.get_all(doctype, fields=fields, filters=filters)
+
+def award_energy_points(doc, method):
+    if doc.status == 'Pending':
+        # Award energy points
+        points = 1  # Define the number of points
+        reason = "Completed a Pending Ticket"
+        recipients = [doc.modified_by]
+
+        # Award points to the employee
+        for recipient in recipients:
+            for recipient in recipients: 
+                energy_point_log = frappe.new_doc("Energy Point Log") 
+                energy_point_log.update({ 
+                    "reference_doctype": doc.doctype, 
+                    "reference_name": doc.name, 
+                    "points": points, 
+                    "reason": reason, 
+                    "user": recipient, 
+                    "type": "Auto", 
+                    })
+                energy_point_log.insert(ignore_permissions=True)
+        frappe.db.commit()
