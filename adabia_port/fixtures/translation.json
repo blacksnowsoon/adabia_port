@@ -1857,5 +1857,44 @@
   "name": "1gqtd7dat8",
   "source_text": "Rotation",
   "translated_text": "مناوبة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-11-29 22:47:32.656061",
+  "name": "b3vqme41js",
+  "source_text": "Revert Points",
+  "translated_text": "استرجاع نقاط المستخدمين"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-11-29 22:48:36.069540",
+  "name": "b5j864m12q",
+  "source_text": "Operating System",
+  "translated_text": "أنظمة التشغيل"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-11-29 22:49:41.028190",
+  "name": "b67i8hnl4i",
+  "source_text": "OS",
+  "translated_text": "نظام التشغيل"
  }
 ]

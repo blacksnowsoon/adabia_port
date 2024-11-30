@@ -287,43 +287,6 @@
   "docstatus": 0,
   "doctype": "Report",
   "filters": [],
-  "is_standard": "Yes",
-  "javascript": null,
-  "json": null,
-  "letter_head": "ISFP Header",
-  "modified": "2024-11-24 23:21:35.427034",
-  "module": "Customer Tech Support",
-  "name": "Users Activities in Customer Tech Support",
-  "prepared_report": 0,
-  "query": null,
-  "ref_doctype": "Customer Support Ticket",
-  "reference_report": null,
-  "report_name": "Users Activities in Customer Tech Support",
-  "report_script": null,
-  "report_type": "Script Report",
-  "roles": [
-   {
-    "parent": "Users Activities in Customer Tech Support",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "System Manager"
-   },
-   {
-    "parent": "Users Activities in Customer Tech Support",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Customer Support Admin"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "columns": [],
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
   "is_standard": "No",
   "javascript": null,
   "json": null,
