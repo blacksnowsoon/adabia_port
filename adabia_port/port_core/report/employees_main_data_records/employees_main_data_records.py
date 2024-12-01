@@ -124,7 +124,7 @@ def get_chart(management, departments):
 			"datasets": [{"name": "Employee", "values": [m['count_employee'] for m in management]}, {"name": "Departments", "values": [m['departs'] for m in management]}]
 		},
 		"type": "bar",
-		"colors": [ "#74ba8b", "#87CEEB",   "#65ff00", "#d200ff", "#FF00FF", "#7d7d7d", "#5d5d5d"]
+		"colors": [ "#74ba8b", "#0289f7",   "#65ff00", "#d200ff", "#FF00FF", "#7d7d7d", "#5d5d5d"]
 	}
 
 # "#ffd600", "#8F00FF",
