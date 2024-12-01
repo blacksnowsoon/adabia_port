@@ -18,6 +18,7 @@
  "prepared_report": 0,
  "ref_doctype": "Employee",
  "report_name": "Employees Main Data Records",
+ "report_script": " result = [result]\r\n",
  "report_type": "Script Report",
  "roles": [
   {

@@ -28,7 +28,7 @@ def execute(filters=None):
 			"label": "Management", 
 			"fieldname": "management", 
 			"fieldtype": "link", 
-			"width": 150
+			"width": 200
 		},
 		{
 			"label": "Department", 
@@ -67,7 +67,7 @@ def execute(filters=None):
 			"width": 200
 		},
 	]
-	employees = frappe.get_all("Employee", fields=["hr_code", "emp_name", "user_name", "management.management_name", "depart_name.depart_name", "job_title.job_title", "have_internet_access", "shift", "notes", "name"], order_by="emp_name ASC" )
+	employees = frappe.get_all("Employee", fields=["hr_code", "emp_name", "user_name", "management", "depart_name.depart_name", "job_title.job_title", "have_internet_access", "shift", "notes", "name"], order_by="emp_name ASC" )
 	for emp in employees:
 		emp["have_internet_access"] = "Yes" if emp["have_internet_access"] == 1 else "No"
 		emp["shift"] = "نهاري" if emp["shift"] == "Diurnal"  else  "مناوبة" if emp["shift"] == "Rotation" else ""
@@ -75,5 +75,56 @@ def execute(filters=None):
 		emp["shared_folders"] = ", ".join([folder["folder_name"] for folder in shared_folders])
 	
 	data= employees
-	chart = None
-	return columns, data, None, chart, None
+	managements = frappe.get_all("Employee", fields=["management.management_name","management","count(*) as count_employee"],  filters = {"management": ["!=", ""]}, group_by="management")
+	departments = frappe.get_all("Employee", fields=["depart_name.depart_name",  "count(*) as count_depart"],  filters = {"depart_name": ["!=", ""]}, group_by="depart_name")
+	job_titles = frappe.get_all("Employee", fields=["count(*)"],  filters = {"job_title": ["!=", ""]}, group_by="job_title")
+	
+	num_of_departs = frappe.get_all("Department", fields=["management.management_name", "count(*) as count_depart"], filters={"depart_name": ["in", [d["depart_name"] for d in departments]]}, group_by="management")
+	
+	for m in managements :
+		m['departs'] = [d["count_depart"] for d in num_of_departs if d["management_name"] == m["management_name"]][0]
+	
+	report_summary = [{
+			"value": len(employees),
+			"indicator": "Green",
+			"label": "Employees ",
+			"datatype": "Data",
+			"fieldname": "total_employees"
+			},
+			{
+			"value": len(managements),
+			"indicator": "Red",
+			"label": "Managements",
+			"datatype": "Data",
+			"fieldname": "total_managements"
+			},
+			{
+			"value": len(departments),
+			"indicator": "Blue",
+			"label": "Departments",
+			"datatype": "Data",
+			"fieldname": "total_departments"
+			},
+			{
+			"value": len(job_titles),
+			"indicator": "Orange",
+			"label": "Job Title",
+			"datatype": "Data",
+			"fieldname": "total_job_title"
+			}
+		]
+	chart = get_chart(managements, num_of_departs)
+	return columns, data, None, chart, report_summary
+
+
+def get_chart(management, departments):
+	return {
+		"data": {
+			"labels": [m['management_name'] for m in management],
+			"datasets": [{"name": "Employee", "values": [m['count_employee'] for m in management]}, {"name": "Departments", "values": [m['departs'] for m in management]}]
+		},
+		"type": "bar",
+		"colors": [ "#74ba8b", "#87CEEB",   "#65ff00", "#d200ff", "#FF00FF", "#7d7d7d", "#5d5d5d"]
+	}
+
+# "#ffd600", "#8F00FF",
