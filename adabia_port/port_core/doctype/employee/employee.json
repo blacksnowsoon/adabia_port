@@ -33,13 +33,15 @@
   {
    "fieldname": "management",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_filter": 1,
+   "in_standard_filter": 1,
    "label": "Management",
    "options": "Management"
   },
   {
    "fieldname": "depart_name",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Depart Name",
    "link_filters": "[[\"Department\", \"management\",\"=\", \"eval:doc.management\"]]\n",
    "options": "Department"
@@ -83,12 +85,15 @@
    "default": "0",
    "fieldname": "have_internet_access",
    "fieldtype": "Check",
+   "in_filter": 1,
+   "in_standard_filter": 1,
    "label": "Have Internet Access?"
   },
   {
    "default": "0",
    "fieldname": "disabled",
    "fieldtype": "Check",
+   "in_filter": 1,
    "label": "Disabled?"
   },
   {
@@ -113,7 +118,7 @@
   }
  ],
  "links": [],
- "modified": "2024-11-27 11:43:37.372163",
+ "modified": "2024-12-03 16:21:11.531338",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Employee",

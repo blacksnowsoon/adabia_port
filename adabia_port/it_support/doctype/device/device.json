@@ -182,6 +182,8 @@
   {
    "fieldname": "os",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
    "label": "OS",
    "options": "OS"
   },
@@ -194,7 +196,7 @@
   }
  ],
  "links": [],
- "modified": "2024-12-03 15:59:46.349943",
+ "modified": "2024-12-03 16:22:39.497377",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Device",
