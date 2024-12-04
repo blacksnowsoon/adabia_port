@@ -5,15 +5,15 @@
 
 frappe.ui.form.on("IP Printer", {
     onload(frm) {
-        frm.set_query('printer', function() {
-            return {
-                filters: [
-                    ['have_network_connection', '=', '1'],
-                    ['ip_address', '!=', ''],
-                    ['location_code', '!=', ''],
-                    ['device_name', 'like', '%Printer%']
-                ]
+        fetchList({
+            doctype: 'Device Type', 
+            fields: ['name', 'device_type'],
+            filters: {
+                device_type: ['like', '%Printer%']
             }
+        }).then(res => {
+            
+            set_printer_field_filter(frm, res.map(d => d.name))
         })
     },
 	refresh(frm) {
@@ -35,20 +35,6 @@ frappe.ui.form.on("IP Printer", {
         } else {
             fetchPrinterStatus(frm)
         }
-    },
-    location_code(frm) {
-        
-        const p_location = frm.doc.location_code 
-        fetchValues({
-            doctype: 'Port Location Map Code', 
-            filters:{ name: 'LOC-'+ p_location}, 
-            fields: ['location']
-        }).then(res => {
-            frm.set_value({
-                printer_location: res?.location
-            })
-                
-        });
     }
 });
 
@@ -142,4 +128,18 @@ function fetchPrinterStatus(frm) {
             frm.fields_dict.ip_preview.wrapper.appendChild(h3);
         }
     });
+}
+
+
+function set_printer_field_filter(frm, device_type) {
+    frm.set_query('printer', function() {
+        return {
+            filters: [
+                ['have_network_connection', '=', '1'],
+                ['ip_address', '!=', ''],
+                ['location_code', '!=', ''],
+                ['device_type', 'in', device_type]
+            ]
+        }
+    })
 }
