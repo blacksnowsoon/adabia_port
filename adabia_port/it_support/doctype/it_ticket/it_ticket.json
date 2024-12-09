@@ -5,10 +5,14 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_break_hjkf",
   "open_at",
+  "column_break_hrpi",
+  "closed_at",
+  "column_break_kreg",
+  "section_break_zkgb",
   "status",
   "column_break_mfrm",
-  "closed_at",
   "priority",
   "column_break_okbe",
   "assign_to",
@@ -149,7 +153,8 @@
   },
   {
    "fieldname": "section_break_pofq",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "hidden": 1
   },
   {
    "fieldname": "t_data",
@@ -163,10 +168,27 @@
    "label": "Devices",
    "mandatory_depends_on": "eval:doc.employee",
    "options": "Device Child Table"
+  },
+  {
+   "fieldname": "section_break_hjkf",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "column_break_hrpi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kreg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zkgb",
+   "fieldtype": "Section Break"
   }
  ],
  "links": [],
- "modified": "2024-11-29 20:01:43.541758",
+ "modified": "2024-12-09 20:07:05.358395",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "IT Ticket",

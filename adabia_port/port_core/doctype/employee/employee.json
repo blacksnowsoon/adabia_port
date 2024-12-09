@@ -14,6 +14,7 @@
   "disabled",
   "user_name",
   "depart_name",
+  "department_name_in_eng",
   "hr_code",
   "shared_folders",
   "section_break_glym",
@@ -115,10 +116,17 @@
    "fieldtype": "Select",
    "label": "Shift",
    "options": "Diurnal\nRotation"
+  },
+  {
+   "fetch_from": "depart_name.name_in_eng",
+   "fieldname": "department_name_in_eng",
+   "fieldtype": "Data",
+   "label": "Department Name in Eng",
+   "read_only": 1
   }
  ],
  "links": [],
- "modified": "2024-12-03 16:21:11.531338",
+ "modified": "2024-12-09 20:10:05.821265",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Employee",
