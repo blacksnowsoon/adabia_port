@@ -36,61 +36,19 @@
   {
    "fieldname": "name_in_eng",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Name in Eng"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-09 20:08:41.503920",
+ "modified": "2024-12-09 20:13:02.640304",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Department",
  "naming_rule": "Expression",
  "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Help Desk Admin",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Help Desk User",
-   "share": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "IT System Admin",
-   "share": 1
-  }
- ],
+ "permissions": [],
  "quick_entry": 1,
  "show_title_field_in_link": 1,
  "sort_field": "modified",
