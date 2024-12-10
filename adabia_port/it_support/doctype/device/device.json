@@ -107,7 +107,7 @@
    "depends_on": "eval:doc.have_network_connection",
    "fieldname": "device_domain_name",
    "fieldtype": "Data",
-   "label": "Device Domain Name"
+   "label": "Device Name"
   },
   {
    "depends_on": "eval:doc.have_network_connection",
@@ -196,7 +196,7 @@
   }
  ],
  "links": [],
- "modified": "2024-12-03 16:22:39.497377",
+ "modified": "2024-12-10 11:26:41.261442",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Device",
