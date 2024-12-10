@@ -15,7 +15,7 @@ class ITTicket(Document):
 			self.closed_at = frappe.utils.now()
 		if self.open_at and self.closed_at:
 			self.duration = frappe.utils.time_diff_in_seconds(self.closed_at, self.open_at)
-		if self.assign_to != self.get_db_value("assign_to") and self.status == "Open":
+		if self.assign_to != self.get_db_value("assign_to") or self.description != self.get_db_value("description") and self.status == "Open":
 			self.send_mail(self.assign_to, f"Reopened IT Ticket {self.name} and assigned to you")
 	def after_insert(self) :
 		t_data = None if self.t_data is None else json.loads(self.t_data)

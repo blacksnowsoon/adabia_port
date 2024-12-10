@@ -16,7 +16,9 @@ frappe.ui.form.on("IT Ticket", {
 			render_html(frm, user_info, 'user_info', true)
 			devices_info.forEach(device => render_html(frm, device, 'devices_info', false))
 		}
-		
+		if (!frm.is_new() && frm.doc.status === 'Closed') {
+			toggle_frm(frm, 1)
+		}
 	},
 	employee: async(frm) => {
 		const employeeId = frm.doc.employee
@@ -103,7 +105,6 @@ async function fetchEmpData(name) {
 	return { emp, depart, shared_folders };
 }
 
-
 async function get_devices_data(names) {
 	const devices = await fetchList({ doctype: 'Device', fields: ['device_type.device_type','device_name','device_domain_name', 'ip_address', 'group_policy', 'have_network_connection', 'location_code', 'location_code.location', 'description'], filters: { name: ['in', names] } })
 	const software_list =  await fetchAll({ 
@@ -138,4 +139,11 @@ function filter_device_list(frm, devices_names) {
 			}
 		}
 	})
+}
+
+function toggle_frm(frm, disable) {
+	frm.fields.forEach(function(field) {
+		if (field.df["fieldname"] === 'status') return
+		frm.set_df_property(field.df["fieldname"], 'read_only', disable);
+	});
 }

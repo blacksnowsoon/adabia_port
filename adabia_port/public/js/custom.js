@@ -96,6 +96,7 @@ function fetchList({doctype='', filters={}, fields=[]}) {
     });
   });
 }
+
 // fetch all ignore permissions
 function fetchAll({doctype='', filters={}, fields=[]}) {
   return new Promise((resolve, reject) => {
@@ -166,8 +167,6 @@ function set_json_field_value(frm, fieldname, value) {
 function parse_json_value(value) {
   return JSON.parse(value)
 }
-
-
 
 function clean_wrapper_innerHTML(frm, fields=[]) {
   fields.forEach(field => frm.fields_dict[field].wrapper.innerHTML = "")
