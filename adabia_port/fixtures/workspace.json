@@ -1019,7 +1019,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-12-10 12:28:35.110809",
+  "modified": "2024-12-11 13:53:21.941130",
   "module": null,
   "name": "Infra - IT",
   "number_cards": [],
@@ -1036,7 +1036,26 @@
    }
   ],
   "restrict_to_domain": null,
-  "roles": [],
+  "roles": [
+   {
+    "parent": "Infra - IT",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "IT System Admin"
+   },
+   {
+    "parent": "Infra - IT",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "Help Desk Admin"
+   },
+   {
+    "parent": "Infra - IT",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "Help Desk User"
+   }
+  ],
   "sequence_id": 3.0,
   "shortcuts": [
    {
