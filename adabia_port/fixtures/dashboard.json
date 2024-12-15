@@ -56,34 +56,6 @@
   "name": "Adabia Port"
  },
  {
-  "cards": [],
-  "chart_options": null,
-  "charts": [
-   {
-    "chart": null,
-    "parent": "IT-Dashboard",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Management List",
-    "parent": "IT-Dashboard",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   }
-  ],
-  "dashboard_name": "IT-Dashboard",
-  "docstatus": 0,
-  "doctype": "Dashboard",
-  "is_default": 0,
-  "is_standard": 0,
-  "modified": "2024-11-20 09:54:24.915381",
-  "module": null,
-  "name": "IT-Dashboard"
- },
- {
   "cards": [
    {
     "card": "SPS OP Teckets",
@@ -117,5 +89,26 @@
   "modified": "2024-10-26 15:03:37.600627",
   "module": null,
   "name": "SPS Operation Dash"
+ },
+ {
+  "cards": [],
+  "chart_options": null,
+  "charts": [
+   {
+    "chart": "Management List",
+    "parent": "IT-Dashboard",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   }
+  ],
+  "dashboard_name": "IT-Dashboard",
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "is_default": 0,
+  "is_standard": 0,
+  "modified": "2024-12-14 16:32:40.039970",
+  "module": null,
+  "name": "IT-Dashboard"
  }
 ]

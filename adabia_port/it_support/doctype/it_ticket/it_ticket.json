@@ -18,20 +18,23 @@
   "assign_to",
   "column_break_fsoe",
   "duration",
+  "section_break_wggi",
+  "ticket_event",
+  "company",
+  "column_break_jzxe",
+  "issues",
   "section_break_tzsg",
   "employee",
-  "emp_devices",
-  "column_break_kuky",
-  "issues",
   "user_info",
-  "general_info_section",
+  "column_break_kuky",
+  "emp_devices",
   "devices_info",
-  "section_break_pofq",
-  "t_data",
   "ticket_details_section",
   "description",
   "solved_remotely",
-  "what_implemented"
+  "what_implemented",
+  "section_break_pofq",
+  "t_data"
  ],
  "fields": [
   {
@@ -81,7 +84,7 @@
   {
    "fieldname": "description",
    "fieldtype": "Small Text",
-   "label": "Description"
+   "label": "Issue Description"
   },
   {
    "default": "0",
@@ -127,10 +130,6 @@
    "label": "Issues",
    "options": "Tech Issue Child Table",
    "reqd": 1
-  },
-  {
-   "fieldname": "general_info_section",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "user_info",
@@ -185,10 +184,32 @@
   {
    "fieldname": "section_break_zkgb",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_wggi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "EV-22",
+   "fieldname": "ticket_event",
+   "fieldtype": "Link",
+   "label": "Ticket Event",
+   "options": "Ticket Event"
+  },
+  {
+   "fieldname": "column_break_jzxe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Company",
+   "options": "Company"
   }
  ],
  "links": [],
- "modified": "2024-12-09 20:07:05.358395",
+ "modified": "2024-12-14 16:50:20.566208",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "IT Ticket",

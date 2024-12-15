@@ -49,6 +49,17 @@ frappe.ui.form.on("IT Ticket", {
 			setup_devices_info(frm, devices_names)
 		}
 	},
+	ticket_event: async(frm)=> {
+		const ticket_event = await fetchDoc({doctype: "Ticket Event", name: frm.doc.ticket_event})
+		
+		if (ticket_event.event === "To Company") {
+			frm.set_df_property('company', 'hidden', 0)
+			frm.set_df_property('section_break_tzsg', 'hidden', 1)
+		} else {
+			frm.set_df_property('company', 'hidden', 1)
+			frm.set_df_property('section_break_tzsg', 'hidden', 0)
+		}
+	}
 });
 
 
