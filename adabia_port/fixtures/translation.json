@@ -1896,5 +1896,18 @@
   "name": "b67i8hnl4i",
   "source_text": "OS",
   "translated_text": "نظام التشغيل"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-12-19 12:03:52.122007",
+  "name": "emqhajntvp",
+  "source_text": "Switch To Desk",
+  "translated_text": "التحويل الي النظام"
  }
 ]

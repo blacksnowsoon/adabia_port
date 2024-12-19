@@ -15,8 +15,8 @@ class ITTicket(Document):
 			self.closed_at = frappe.utils.now()
 		if self.open_at and self.closed_at:
 			self.duration = frappe.utils.time_diff_in_seconds(self.closed_at, self.open_at)
-		if self.assign_to != self.get_db_value("assign_to") or self.description != self.get_db_value("description") and self.status == "Open":
-			self.send_mail(self.assign_to, f"Reopened IT Ticket {self.name} and assigned to you")
+		
+	
 	def after_insert(self) :
 		t_data = None if self.t_data is None else json.loads(self.t_data)
 		email_message = f"A New IT Ticket {self.name} has been created. For "
@@ -36,11 +36,33 @@ class ITTicket(Document):
 					email_message = email_message + f" in {device_name} at {locaction}, "
 		send_to = self.assign_to
 		self.send_mail(send_to, email_message)
-			
+
+	def on_change(self) :
+			if (self.status == "Open") :
+				self.send_mail(self.assign_to, f"Reopened IT Ticket {self.name} and assigned to you")
+	
+	
+	
 	def send_mail(self, send_to, email_message):
+		isAdmin = self.check_user_role('Help Desk Admin')
+		# frappe.errprint(isAdmin)
+
 		frappe.sendmail(
 			recipients=[send_to],
 			subject=f"IT Taske {self.name}",
 			message= email_message + "\n <br>" + self.description,
 		)
 		frappe.msgprint(f"an Email sent to {send_to}")
+		if ( not isAdmin) :
+			recipients= [item['email'] for item in frappe.db.get_all('User', filters={'role_profile_name':['in', ['IT Admin Level 0', 'IT System Admin Profile']]}, fields=['email'])]  
+			# frappe.errprint(recipients)
+			frappe.sendmail(
+				recipients=recipients,
+				subject=f"IT Taske {self.name}",
+				message= email_message + "\n <br>" + self.description,
+			)
+			# frappe.msgprint(f"an Email sent to {send_to}")
+	
+	def check_user_role(self, role_name): 
+		user_roles = frappe.get_roles(frappe.user) 
+		return role_name in user_roles

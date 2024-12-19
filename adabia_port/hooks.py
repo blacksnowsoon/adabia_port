@@ -132,15 +132,15 @@ fixtures = [
     }
 ]
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "adabia_port",
-# 		"logo": "/assets/adabia_port/logo.png",
-# 		"title": "Adabia Port",
-# 		"route": "/adabia_port",
-# 	    "has_permission": "adabia_port.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "adabia_port",
+		"logo": "/assets/adabia_port/logo.png",
+		"title": "Adabia Port",
+		"route": "/",
+	    # "has_permission": "adabia_port.api.permission.has_app_permission"
+	}
+]
 
 # Includes in <head>
 # ------------------
@@ -180,6 +180,7 @@ app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
 
 # application home page (will override Website Settings)
 # home_page = "login"
+home_page = "home"
 
 # website user home page (by Role)
 # role_home_page = {

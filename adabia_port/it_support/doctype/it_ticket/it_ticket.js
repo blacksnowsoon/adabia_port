@@ -20,6 +20,13 @@ frappe.ui.form.on("IT Ticket", {
 			toggle_frm(frm, 1)
 		}
 	},
+	status (frm) {
+		if (!frm.is_new() && frm.doc.status === 'Open') {
+			toggle_frm(frm, 0)
+		} else {
+			toggle_frm(frm, 1)
+		}
+	},
 	employee: async(frm) => {
 		const employeeId = frm.doc.employee
 		if(employeeId === stash) return
