@@ -71,7 +71,7 @@ h3 {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('/files/Bar-Chart.png');
+    background-image: url('/assets/adabia_port/images/Bar-Chart.png');
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
