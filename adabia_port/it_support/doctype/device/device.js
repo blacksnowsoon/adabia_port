@@ -10,5 +10,11 @@ frappe.ui.form.on("Device", {
 		const d_model = frm.doc.model
 		const d_sn = frm.doc.serial_no
 		frm.set_value('device_name', `${d_brand}-${d_model}/SN.${d_sn}`)
+	},
+	disabled(frm) {
+		const isDisabled = frm.doc.disabled
+		if (!isDisabled) {
+			frm.set_value('disable_cause', '')
+		}
 	}
 });

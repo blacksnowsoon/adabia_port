@@ -9,6 +9,7 @@
   "device_name",
   "column_break_druu",
   "disabled",
+  "disable_cause",
   "section_break_nrjj",
   "device_type",
   "model",
@@ -193,10 +194,18 @@
    "fieldtype": "Data",
    "label": "OS Notes",
    "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.disabled",
+   "fieldname": "disable_cause",
+   "fieldtype": "Select",
+   "label": "Disable Cause",
+   "mandatory_depends_on": "eval:doc.disabled",
+   "options": "\nSpare\nJunk\nForm Repair"
   }
  ],
  "links": [],
- "modified": "2024-12-10 11:26:41.261442",
+ "modified": "2024-12-20 13:57:02.733103",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Device",

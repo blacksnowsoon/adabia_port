@@ -67,7 +67,7 @@ def execute(filters=None):
 			"width": 200
 		},
 	]
-	employees = frappe.get_all("Employee", fields=["hr_code", "emp_name", "user_name", "management.management_name", "depart_name.depart_name", "job_title.job_title", "have_internet_access", "shift", "notes", "name"], order_by="emp_name ASC" )
+	employees = frappe.get_all("Employee", fields=["hr_code", "emp_name", "user_name", "management.management_name as management_name", "depart_name.depart_name as depart_name", "job_title.job_title", "have_internet_access", "shift", "notes", "name"], order_by="emp_name ASC" )
 	for emp in employees:
 		emp["management"] = emp["management_name"]
 		emp["have_internet_access"] = "Yes" if emp["have_internet_access"] == 1 else "No"

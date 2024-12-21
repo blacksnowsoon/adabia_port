@@ -1,0 +1,217 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("Adabia Port") }}{% endblock %}
+
+{% block page_content %}
+  <!-- Hero -->
+  <section class="section ele-layout hero-container">
+    <video autoplay loop muted class="video">
+      <source src='/files/hero-video-low.mp4' type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- In Numbers -->
+  <section class="section" id="in-numbers">
+    <h2 class="sec-title" >إحصائيات2024 </h2>
+    <div class="container h-75 shadow d-flex flex-column justify-content-around align-items-around ">
+      <div class="row ">
+        <!-- <div class="col-xs-6 col-md-6"></div> -->
+        <div class="col-xs-6 col-md-6">
+          <div class="d-flex align-items-center flex-column justify-content-center shadow py-3 rounded" >
+            <p class="m-0 font-weight-bold">over</p>
+            <h4 class="text-center m-0" id="ships">
+              
+            </h4>
+            <h6 class="m-0 text-center">زيارة سفينة</h6>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <div class="d-flex align-items-center flex-column justify-content-center shadow py-3 rounded" >
+            <p class="m-0 font-weight-bold">over</p>
+            <h4 class="text-center m-0" id="trucks">
+              182000
+            </h4>
+            <h6 class="m-0 text-center">زيارة شاحنة</h6>
+          </div>
+        </div>
+        <!-- <div class="col-xs-6 col-md-6"></div> -->
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <div class="d-flex align-items-center flex-column justify-content-center shadow py-3 rounded" >
+            <p class="m-0 font-weight-bold">over</p>
+            <h4 class="text-center m-0" id="containers">
+              35000
+            </h4>
+            <h6 class="m-0">حاوية</h6>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <div class="d-flex align-items-center flex-column justify-content-center shadow py-3 rounded" >
+            <p class="m-0 font-weight-bold">over</p>
+            <h4 class="text-center m-0" id="dry-bulk">
+              235000
+            </h4>
+            <h6 class="m-0 text-center">طن صب جاف </h6>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <div class="d-flex align-items-center flex-column justify-content-center  shadow py-3" >
+            <p class="m-0 font-weight-bold">over</p>
+            <h4 class="text-center m-0" id="wet-bulk">
+               385000
+            </h4>
+            <h6 class="m-0 text-center">طن زيوت وكيماويات</h6>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 ">
+          <div class="d-flex align-items-center flex-column justify-content-center  shadow py-3" >
+            <p class="m-0 font-weight-bold">over</p>
+            <h4 class="text-center m-0" id="animals">
+               140000
+            </h4>
+            <h6 class="m-0">رأس ماشية</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services" >
+    <h2 class="sec-title ">الخدمات المقدمة</h2>
+    <div class="container h-75 shadow d-flex flex-column align-items-center ">
+      <div class="w-100 pt-4">
+        <h4 class="text-center m-0">
+          التعامل مع البضائع بما في ذلك الشحن والتفريغ والتخزين والتخليص الجمركي والشحن للأنواع التالية من البضائع 
+        </h4>
+        <ul class="operation-list collect" id="operation-list">
+          <li >الحاويات</li>
+          <li>البضائع العامة</li>
+          <li>البضائع الثقيلة والمهيئات</li>
+          <li>الزيوت والمواد الكيميائية</li>
+          <li>الصب الجاف</li>
+          <li>الصب السائل</li>
+          <li>الماشية الحية</li>
+          <li>إمداد السفن بما في ذلك التزويد بالوقود والمياه العذبة والإمدادات</li>
+          <li>مزارع خزانات النفط والمواد الكيميائية</li>
+          <li>رفع مخلفات السفن</li>
+        </ul>
+
+      </div>
+      <div class="w-100 p-4" >
+        <h4 class="text-center mt-3"> السعة التخزينية</h4>
+        <div class="row ">
+          <div class="col-xs-6 col-md-5 text-center shadow p-2">
+            <p class="m-0 font-weight-bold"> 260900 طن<sup>3</sup></p>
+            <p class="m-0 font-weight-bold">المستودعات / صهاريج تخزين</p>
+            
+          </div>
+          <div class="col-xs-2 col-md-2"></div>
+
+          <div class="col-xs-6 col-md-5 text-center shadow p-2">
+            <p class="font-weight-bold">
+              منطقة تخزين مغلقة: 63000 م².<br> 
+              منطقة تخزين مفتوحة: 63000 م².
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Futuer Projects -->
+  <section class="section" id="futuer-projects">
+    <h2 class="sec-title">الأرصفة</h2>
+    <div class="container ele-layout h-75 d-flex flex-column align-items-center">
+      <img src="/files/Al-Adabiya-Berths.png" class="w-100 h-100" alt="Al-Adabiya-Berths">
+    </div>
+    
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="board-members" >
+    <h2 class="sec-title">أعضاء مجلس الإدارة</h2>
+    <div class="container ">
+      <div class="row d-flex justify-content-around">
+        <div class="rounded shadow text-center p-2" style="width: 10rem;">
+          <div class=" ">
+            <img class="rounded-circle " style="width: 100px; height: 100px; object-fit: cover; "  src="/files/user6-128x128.jpg" alt="Al-Adabiya-Berths"/>
+            <p class="card-text font-weight-bold m-0">مدير الميناء</p>
+            <p class="card-text font-weight-bold m-0">قبطان / جمال الحلو</p>
+            
+          </div>
+        </div>
+        <div class="rounded shadow text-center p-2" style="width: 10rem;">
+          <div class=" ">
+            <img class="rounded-circle " style="width: 100px; height: 100px; object-fit: cover; "  src="/files/user2-160x160.jpg" alt="Al-Adabiya-Berths"/>
+            <p class="card-text font-weight-bold m-0">نائب مدير الميناء</p>
+            <p class="card-text font-weight-bold m-0">قبطان / محمد </p>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-around mt-5">
+        <div class="rounded shadow text-center p-2" style="width: 10rem;">
+          <div class=" ">
+            <img class="rounded-circle " style="width: 100px; height: 100px; object-fit: cover; "  src="/files/user1-128x128.jpg" alt="Al-Adabiya-Berths"/>
+            <p class="card-text font-weight-bold m-0">مدير الإدارة الهندسية</p>
+            <p class="card-text font-weight-bold m-0">م/ أحمد عاطف</p>
+          </div>
+        </div>
+        <div class="rounded shadow text-center p-2" style="width: 10rem;">
+          <div class=" ">
+            <img class="rounded-circle " style="width: 100px; height: 100px; object-fit: cover; "  src="/files/avatar2.png" alt="Al-Adabiya-Berths"/>
+            <p class="card-text font-weight-bold m-0">مدير الشئون القانونية</p>
+            <p class="card-text font-weight-bold m-0"></p>
+          </div>
+        </div>
+        <div class="rounded shadow text-center p-2" style="width: 10rem;">
+          <div class=" ">
+            <img class="rounded-circle " style="width: 100px; height: 100px; object-fit: cover; "  src="/files/user8-128x128.jpg" alt="Al-Adabiya-Berths"/>
+            <p class="card-text font-weight-bold m-0">مسئول الإدارة الإلكترونية</p>
+            <p class="card-text font-weight-bold m-0">أ/ أحمد مصطفي</p>
+          </div>
+        </div>
+        <div class="rounded shadow text-center p-2" style="width: 10rem;">
+          <div class=" ">
+            <img class="rounded-circle " style="width: 100px; height: 100px; object-fit: cover; "  src="/files/avatar5.png" alt="Al-Adabiya-Berths"/>
+            <p class="card-text font-weight-bold m-0">مسئول التراخيص</p>
+            <p class="card-text font-weight-bold m-0"> </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- Layout -->
+  <section class="section ele-layout" id="layout">
+    <h2 class="sec-title ">الخرائط</h2>
+    <div class="container ">
+      <div class="row  p-0">
+        <div class="col-xs-12 col-md-6" >
+          <div class="">
+            <img class="" style="height: 180px; width: 100%;" src="/files/Road-Network-Connections-Al-Adabiya-port-768x412.jpg" alt="adabiya-port-design-sczone" />
+          </div>
+          <p class="m-0 text-right font-weight-bold">يتصل الميناء مباشرة بالطريق الوطني M65 الذي يربط الشمال بالجنوب بطريق M75 و M55 المؤدي مباشرة إلى القاهرة. المسافة الإجمالية للقاهرة حوالي 160 كم.</p>
+        </div>
+        <div class="col-xs-12 col-md-6" >
+          <img class="" style="height: 180px; width: 100%;" src="/files/Adabiya-Port-–-Railway-Connections-768x413.jpg" alt="adabiya-port-design-sczone" />
+          <p class="m-0 text-right font-weight-bold">يوجد خطان للسكك الحديدية يربطان الميناء – أحدهما يؤدي إلى أرصفة عسكرية والآخر يؤدي إلى ميناء الشحن.</p>
+        </div>
+        
+      </div>
+      <div class="row  p-0">
+        <div class="col-xs-12 col-md-6" >
+          <img class="" src="/files/adabiya-port-design-sczone.jpg" alt="adabiya-port-design-sczone" />
+        </div>
+        <div class="col-xs-12 col-md-6 align-content-center" >
+          <p class="text-right font-weight-bold ">8 أرصفة بـ 1465 م طول إجمالي العمق يتراوح من 9 الي 14 مساحة الميناء 1،140،000 م2  قادرة على استقبال سفن البضائع الجافة حتى 60.000 طن.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}
