@@ -41,7 +41,7 @@ frappe.ui.form.on("SPS Operation Ticket", {
 	},
 	before_save(frm) {
 		console.log(!frm.doc.in_progress_since)
-		if (!frm.doc.in_progress_since && frm.doc.status === "Completed") {
+		if (!frm.doc.in_progress_since && frm.doc.status === "Closed") {
 			frappe.show_alert({
 				message: __(`You Must Save The Ticket In Progress Mode First`),
 				indicator: 'red'

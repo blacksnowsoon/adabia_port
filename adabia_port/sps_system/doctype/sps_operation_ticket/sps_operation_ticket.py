@@ -15,7 +15,7 @@ class SPSOperationTicket(Document):
 		
 		is_completed = frappe.db.get_value("SPS Operation Ticket", self.name, "completed_in")
 		if is_completed == None:
-			if self.status == "Completed":
+			if self.status == "Closed":
 					self.completed_in = frappe.utils.now()
 	@property
 	def duration_time(self):

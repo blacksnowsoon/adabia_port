@@ -95,7 +95,6 @@ function setup_devices_info(frm, devices_names=[]) {
 		.then(([data]) => {
 			frm.fields_dict.devices_info.wrapper.innerHTML = "";
 			const devices_info = data.map(element => {
-				
 				const { device_name, device_domain_name, ip_address, device_type, location_code, location, description, additional_software } = element
 				return [
 					{key: 'Device Name', value: device_name},

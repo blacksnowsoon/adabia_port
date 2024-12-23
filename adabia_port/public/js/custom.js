@@ -18,7 +18,17 @@ footer.innerHTML = footer_content;
 function save_btn(frm) {
   frm.disable_save();
   frm.add_custom_button('Save', () => {
+    const status = frm.doc.status;
+    console.log(status === 'Closed' , frm.is_new())
+    if (status === 'Closed' && frm.is_new()) {
+      frappe.show_alert({
+        title: 'Save Error',
+        message: 'You can not save a new record when the status is Closed',
+        indicator: 'red'
+      })
+    } else {
       frm.save();
+    }
     }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
 }
 // spenner
