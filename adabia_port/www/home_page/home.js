@@ -6,19 +6,14 @@
     main.classList.remove('my-4');
 
     
-    // document.addEventListener('DOMContentLoaded', () => {
-    
-
-
-    //     createCounter('ships', 1, 152, 100);
-    //     createCounter('containers', 350, 35000, 100);
-    //     createCounter('trucks', 1000, 182000, 100);
-    //     createCounter('dry-bulk', 1000, 235000, 100);
-    //     createCounter('animals', 1000, 140000, 100);
-    //     createCounter('wet-bulk', 1500, 385000, 100);
-    
-
-    // });
+    document.addEventListener('DOMContentLoaded', () => {
+        createCounter('ships', 3, 152, 100);
+        createCounter('containers', 500, 35000, 100);
+        createCounter('trucks', 1000, 182000, 80);
+        createCounter('dry-bulk', 2000, 235000, 80);
+        createCounter('animals', 1000, 140000, 80);
+        createCounter('wet-bulk', 2500, 385000, 80);
+    });
 
     function createCounter(elementId, incrementValue, maxValue, interval) { 
         let counter = 0; 

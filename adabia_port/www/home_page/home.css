@@ -4,15 +4,37 @@
     font-family: 'cairo';
     src: url('/assets/adabia_port/fonts/Cairo-Regular.ttf');
 }
+
 body {
     font-family: 'cairo', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    /* position: relative; */
+}
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #78cffd;
+    scale: 0 1;
+    transform-origin: left;
+    z-index: 1000;
+    animation: scroll-progress linear;
+    animation-timeline: scroll();
+}
+@keyframes scroll-progress {
+    to{
+        scale: 1 1;
+    }
 }
 body section{
     text-align: right;
+   
     
 }
+
+
 h3 {
     margin-top: 1rem;
 }
@@ -22,11 +44,6 @@ h3 {
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(74, 75, 77, 0.3);
     z-index: 1001;
-}
-.video { 
-    width: 100%;
-    height: 100%;  
-    
 }
 .ele-layout {
     position: relative;
@@ -41,10 +58,30 @@ h3 {
     position:relative;
     isolation: isolate;
     overflow: hidden;
+    
+}
+@media(prefers-reduced-motion: no-preference) {
+    section:not(.hero-area) {
+        position:relative;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
+    }
+    @keyframes fade-in {
+        from {
+            scale: .4;
+            opacity: 0;
+        }
+        to {
+            scale: 1;
+            opacity: 1;
+        }
+        
+    }
 }
 
+
 .sec-title {
-    padding-block: .5rem;
     text-align: center;
     padding-inline: 1rem;
     position: relative;
@@ -57,66 +94,14 @@ h3 {
     height: 100%;
     background-color: #0a0057;
 }
-/* Hero */
 
-.hero-video {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index:-1;
-    /* object-fit: scale-down; */
-}
-.hero-container {
-    position:relative;
-    font-family: 'arial';
-    isolation: isolate;
-}
 
-/* in-numbers */
-#in-numbers .container {
-    position: relative;
-}
-#in-numbers .container::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('/assets/adabia_port/images/Bar-Chart.png');
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: .3;
-    z-index: -1;
-}
 
 /* Service Provided */
-.operation-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-}
 
-.operation-list li {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid;
-    border-radius: 5px;
-    
-}
 .services {
     position: relative;
 }
-.services .train {
-    position: absolute;
-    height: 30%;
-    bottom: 0;
-    right: -5%;
-    z-index: -1;
-}
-
 .sec .back-effect-bg {
     position: absolute;
     top: 0;
@@ -124,21 +109,7 @@ h3 {
     z-index: -1;
     transform: rotate(180deg);
 }
-.s-t-1 {
-    position: relative;
-}
-.s-t-1 img{
-    width: 100%;
-    height: 278px;
-}
-.s-t-1 h3 {
-    margin: 0;
-    text-align: right;
-    position: absolute;
-    color: aliceblue;
-    right: 0;
-    bottom: 0;
-}
+
 .s-t-3 {
     position: relative;
     border-radius: 10px;
@@ -148,6 +119,7 @@ h3 {
     height: 278px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    
 }
 .s-t-3 h3 {
     margin: 0;
@@ -177,16 +149,6 @@ h3 {
     overflow: hidden;
     
 }
-/* .hero-area::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(252, 252, 252, 0.8); 
-    z-index: -1;
-} */
 
 .row-h {
     height: 80vh!important;
@@ -205,8 +167,7 @@ h3 {
     flex-direction: column;
     transform: translateY(-50%);
   }
-  
-  .slider_section .carousel-indicators li {
+.slider_section .carousel-indicators li {
     width: 15px;
     height: 15px;
     background-color: #78cffd;
@@ -216,8 +177,24 @@ h3 {
     opacity: 1;
     border-radius: 100%;
     transition: background-color 0.6s;
-  }
-  
-  .slider_section .carousel-indicators .active {
-    background-color: #0a0057;
-  }
+}
+.slider_section .carousel-indicators .active {
+background-color: #0a0057;
+}
+/* about */
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    /* background: rgb(116, 141, 181);  */
+    z-index: -1;
+}
+.header-bg {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    z-index: -1;
+}
