@@ -180,7 +180,7 @@ app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
 
 # application home page (will override Website Settings)
 # home_page = "login"
-home_page = "/home_page/home"
+home_page = "/home_page/"
 
 # website user home page (by Role)
 # role_home_page = {

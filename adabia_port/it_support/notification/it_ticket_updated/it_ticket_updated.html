@@ -1,0 +1,81 @@
+<div style="margin: 2rem; padding:1rem; ">
+    <h5>IT Ticket Number: {{ doc.name }}</h5>
+    <h5 class="text-right">تم تعديل بيانات التذكرة</h5>
+    <table style="outline: 1px solid gray; width: 100%; padding: 1rem; box-shadow: 3px 3px 6px 0px rgb(42, 42, 42);" class="table table-bordered bg-white">
+        <!-- Assign To -->
+        <tr>
+            {% if assign_to %}
+                <td><strong>Assigned To</strong></td>
+                <td>{{ assign_to }}</td>
+            {% endif %}
+        </tr>
+        <!-- Priority -->
+        <tr>
+            {% if doc.priority %}
+                <td><strong>Periority</strong></td>
+                <td>{{ doc.priority | default('Normal Priority') }}</td>
+            {% endif %}
+        </tr>
+        <!-- Employee -->
+        <tr>
+            {% if emp_name %}
+                <td><strong>To Employee</strong></td>
+                <td>{{ emp_name | default('Unknown Employee') }}</td>
+            {% endif %}
+        </tr>
+        <!-- Department -->
+        <tr>
+            {% if department %}
+                <td><strong>Department</strong></td>
+                <td>{{ department | default('Unknown Department') }}</td>
+            {% endif %}
+        </tr>
+        <!-- Locations -->
+        <tr>
+            {% if locations %}
+                <td><strong>Locations</strong></td>
+                <td>
+                    {% for location in locations %}
+                        {{ location | default('Unknown Location') }} 
+                        <br>
+                    {% endfor %}
+                </td>
+            {% endif %}
+        </tr>
+        <!-- Devices -->
+        <tr>
+            {% if devices %}
+                <td><strong>Devices</strong></td>
+                 <td>
+                    {% for device in devices %}
+                        {{ device | default('Unknown Device') }}
+                        <br>
+                    {% endfor %}
+                    
+                </td>
+            {% endif %}
+        </tr>
+        <!-- Issues -->
+        <tr>
+            {% if issues %}
+            <td><strong>Issue About</strong></td>
+            <td>
+                {% for issue in issues %}
+                    {{ issue | default('Unknown Issue') }} 
+                    <br>
+                {% endfor %}
+            </td>
+            {% endif %}
+        </tr>
+        <!-- Description -->
+        <tr>
+            {% if doc.description %}
+            <td><strong>Description</strong></td>
+            <td>{{ doc.description | default('No Issue Description Provided') }}</td>
+            {% endif %}
+        </tr>
+    </table>
+    <p class="text-center">Please Take Your Action & Close the Ticket</p>
+    <p class="text-center"><small>Thank You</small></p>
+    </section>
+</div>

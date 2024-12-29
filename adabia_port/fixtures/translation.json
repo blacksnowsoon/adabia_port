@@ -1909,5 +1909,31 @@
   "name": "emqhajntvp",
   "source_text": "Switch To Desk",
   "translated_text": "التحويل الي النظام"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-12-26 21:27:02.945202",
+  "name": "hj2610ohih",
+  "source_text": "My Device",
+  "translated_text": "من الجهاز"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2024-12-29 23:53:18.493576",
+  "name": "3c0hj15ov5",
+  "source_text": "Reviews",
+  "translated_text": "المراجعات"
  }
 ]

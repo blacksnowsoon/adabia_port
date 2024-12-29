@@ -14,12 +14,11 @@ const footer_content =
   </div>`;
 footer.innerHTML = footer_content;
 // ----------------------------------------------------------------------------------------
-// change the look of save button
+// change save button and don't save a new record when the status is Closed
 function save_btn(frm) {
   frm.disable_save();
   frm.add_custom_button('Save', () => {
     const status = frm.doc.status;
-    console.log(status === 'Closed' , frm.is_new())
     if (status === 'Closed' && frm.is_new()) {
       frappe.show_alert({
         title: 'Save Error',
@@ -45,7 +44,7 @@ function spenner(){
   container.appendChild(spenner);
 	return container
 }
-// fetch values
+// fetch one value
 function fetchValues({doctype='', filters={}, fields=[]}) {
 	return new Promise((resolve, reject) => {
 		frappe.call({

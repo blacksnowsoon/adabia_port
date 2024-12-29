@@ -1,0 +1,26 @@
+<section class="notification" style="margin: 2rem; padding: 1rem; direction: rtl;">
+    <h3 class="text-right">مرحبا</h3>
+    <h4 class="text-right">{{_(" اشعار زيادة الكمية في منفيست الواردات")}}</h4>
+    <div class="content" style=" padding: 1rem;">
+        <table class="table table-bordered text-right">
+            {% if doc.voyage_number %}
+            <tr>
+                <td><strong>{{_("رقم الرحلة :")}}</strong></td>
+                <td>{{doc.voyage_number}}</td>            
+            </tr>
+            {% endif %}
+            {% if ship %}
+            <tr>
+                <td><strong>{{_("اسم السفن :")}}</strong></td>
+                <td>{{ship}}</td>
+            </tr>
+            {% endif %}
+            {% if doc.notes %}
+            <tr>
+                <td><strong>{{_("ملاحظات :")}}</strong></td>
+                <td>{{doc.notes}}</td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+</section>
