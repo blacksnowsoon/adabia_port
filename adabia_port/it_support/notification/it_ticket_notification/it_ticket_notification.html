@@ -1,6 +1,9 @@
 
-<div style="margin: 2rem; ">
-    <h5>IT Ticket Number: {{ doc.name }}</h5>
+<div style="margin: 2rem;">
+    <h5 class="text-center">IT Ticket Number: {{ doc.name }}</h5>
+    {% if modified %}
+        <h5 class="text-center">تم تعديل بيانات التذكرة</h5>
+    {% endif %}
     <table style="outline: 1px solid gray; width: 100%; padding: 1rem;  box-shadow: 3px 3px 6px 0px rgb(42, 42, 42);" class="table table-bordered bg-white">
         <!-- Assign To -->
         <tr>
@@ -55,6 +58,13 @@
                 </td>
             {% endif %}
         </tr>
+        <!-- company -->
+         <tr>
+            {% if company %}
+                <td><strong>To Company</strong></td>
+                <td>{{ company | default('Unknown Company') }}</td>
+            {% endif %}
+         </tr>
         <!-- Issues -->
         <tr>
             {% if issues %}
@@ -75,8 +85,8 @@
             {% endif %}
         </tr>
     </table>
-    <p class="text-center">Please Take Your Action & Close the Ticket</p>
-    <p class="text-center"><small>Thank You</small></p>
+    <p class="text-center text-red">Please Take Your Action & Close the Ticket</p>
+    <p class="text-center text-blue"><small>Thank You</small></p>
     </section>
 </div>
 

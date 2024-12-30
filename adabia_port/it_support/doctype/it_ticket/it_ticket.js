@@ -12,7 +12,6 @@ frappe.ui.form.on("IT Ticket", {
 		clean_wrapper_innerHTML(frm, ['user_info', 'devices_info'])
 		// render the html from the stored json data
 		if(!frm.is_new() && frm.doc.t_data) {
-			console.log(parse_json_value(frm.doc.t_data))
 			const { user_info, devices_info } = parse_json_value(frm.doc.t_data)
 			render_html(frm, user_info, 'user_info', true)
 			devices_info.forEach(device => render_html(frm, device, 'devices_info', false))

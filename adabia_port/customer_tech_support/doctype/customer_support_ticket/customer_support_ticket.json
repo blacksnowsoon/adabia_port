@@ -27,6 +27,7 @@
   "company",
   "column_break_ooxs",
   "amount",
+  "receipt_number",
   "section_break_qedm",
   "notes"
  ],
@@ -179,11 +180,16 @@
    "hidden": 1,
    "label": "Truck",
    "read_only_depends_on": "eval:doc.status=='Closed';"
+  },
+  {
+   "fieldname": "receipt_number",
+   "fieldtype": "Data",
+   "label": "Receipt Number"
   }
  ],
  "links": [],
  "make_attachments_public": 1,
- "modified": "2024-11-29 21:36:30.853838",
+ "modified": "2024-12-30 20:29:37.477750",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",
