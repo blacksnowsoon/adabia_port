@@ -62,8 +62,6 @@ fixtures = [
         "dt": "Module Profile", "filters" : {
             "name": ["in", [
                 "Adabia",
-                "CUST SUPP M",
-                "SPS Operation M"
             ] ]
         }
     },
@@ -137,7 +135,7 @@ add_to_apps_screen = [
 		"name": "adabia_port",
 		"logo": "/assets/adabia_port/logo.png",
 		"title": "Adabia Port",
-		"route": "/app",
+		"route": "/",
 	    # "has_permission": "adabia_port.api.permission.has_app_permission"
 	}
 ]
