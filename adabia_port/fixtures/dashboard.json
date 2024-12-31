@@ -39,7 +39,7 @@
   "chart_options": null,
   "charts": [
    {
-    "chart": "Departments Vs Managements",
+    "chart": "Employees and Managements",
     "parent": "Adabia Port",
     "parentfield": "charts",
     "parenttype": "Dashboard",
@@ -51,7 +51,7 @@
   "doctype": "Dashboard",
   "is_default": 0,
   "is_standard": 0,
-  "modified": "2024-11-20 09:49:36.946245",
+  "modified": "2024-12-30 21:22:53.720210",
   "module": null,
   "name": "Adabia Port"
  },
@@ -95,7 +95,7 @@
   "chart_options": null,
   "charts": [
    {
-    "chart": "Management List",
+    "chart": "Tickets Activity",
     "parent": "IT-Dashboard",
     "parentfield": "charts",
     "parenttype": "Dashboard",
@@ -106,9 +106,9 @@
   "docstatus": 0,
   "doctype": "Dashboard",
   "is_default": 0,
-  "is_standard": 0,
-  "modified": "2024-12-14 16:32:40.039970",
-  "module": null,
+  "is_standard": 1,
+  "modified": "2024-12-30 20:40:49.222751",
+  "module": "IT Support",
   "name": "IT-Dashboard"
  }
 ]

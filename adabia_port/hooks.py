@@ -81,6 +81,13 @@ fixtures = [
         }
     },
     {
+        "dt": "Letter Head", "filters": {
+            "name": ["in", [
+                "IT Letter Head",
+            ]]
+        }
+    },
+    {
         "dt": "Report", "filters" : {
             "name": ["in", [
                 "SPS Modules Activities Report",
@@ -100,9 +107,8 @@ fixtures = [
                 "Tickets Activities By User",
                 "Tickets Activities Track",
                 "Management List",
-                "Departments Vs Managements",
-                "Departments In Pie",
-                "Departments In Managements"
+                "Tickets Activity",
+                "Employees and Managements"
             ]]
         }
     },
