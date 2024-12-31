@@ -7,7 +7,7 @@ frappe.ui.form.on("IT Ticket", {
 	onload(frm) {
 		filter_device_list(frm)
 	},
-	refresh(frm) {
+	 refresh: async(frm) =>{
 		save_btn(frm)
 		clean_wrapper_innerHTML(frm, ['user_info', 'devices_info'])
 		// render the html from the stored json data
@@ -18,6 +18,9 @@ frappe.ui.form.on("IT Ticket", {
 		}
 		if (!frm.is_new() && frm.doc.status === 'Closed') {
 			toggle_frm(frm, 1)
+		}
+		if (!frm.is_new()) {
+			await toggle_company_section(frm)
 		}
 	},
 	status (frm) {
@@ -57,18 +60,20 @@ frappe.ui.form.on("IT Ticket", {
 		}
 	},
 	ticket_event: async(frm)=> {
-		const ticket_event = await fetchDoc({doctype: "Ticket Event", name: frm.doc.ticket_event})
-		
-		if (ticket_event.event === "To Company") {
-			frm.set_df_property('company', 'hidden', 0)
-			frm.set_df_property('section_break_tzsg', 'hidden', 1)
-		} else {
-			frm.set_df_property('company', 'hidden', 1)
-			frm.set_df_property('section_break_tzsg', 'hidden', 0)
-		}
+		await toggle_company_section(frm)
 	}
 });
 
+async function toggle_company_section(frm) {
+	const ticket_event = await fetchDoc({doctype: "Ticket Event", name: frm.doc.ticket_event})
+	if (ticket_event.event === "To Company") {
+		frm.set_df_property('company', 'hidden', 0)
+		frm.set_df_property('section_break_tzsg', 'hidden', 1)
+	} else {
+		frm.set_df_property('company', 'hidden', 1)
+		frm.set_df_property('section_break_tzsg', 'hidden', 0)
+	}
+}
 
 function setup_employee_info(frm, employee) {
 	frm.fields_dict.user_info.wrapper.appendChild(spenner());
