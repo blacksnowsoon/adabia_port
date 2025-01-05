@@ -1935,5 +1935,18 @@
   "name": "3c0hj15ov5",
   "source_text": "Reviews",
   "translated_text": "المراجعات"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-05 10:01:46.439437",
+  "name": "cn18lgb6uf",
+  "source_text": "Receipt Number",
+  "translated_text": "رقم الايصال"
  }
 ]

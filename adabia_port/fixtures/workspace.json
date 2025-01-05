@@ -12,7 +12,7 @@
   "is_hidden": 0,
   "label": "Adabia Port",
   "links": [],
-  "modified": "2024-11-24 19:55:10.337664",
+  "modified": "2025-01-02 14:16:52.067655",
   "module": "Adabia Port",
   "name": "Adabia Port",
   "number_cards": [],
@@ -240,7 +240,7 @@
   "is_hidden": 0,
   "label": "Customer Tech Sup",
   "links": [],
-  "modified": "2024-11-01 20:31:00.738172",
+  "modified": "2025-01-02 14:16:53.522517",
   "module": "Customer Tech Support",
   "name": "Customer Tech Sup",
   "number_cards": [],
@@ -262,7 +262,7 @@
     "role": "Customer Support User"
    }
   ],
-  "sequence_id": 4.0,
+  "sequence_id": 5.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -471,7 +471,7 @@
   "is_hidden": 0,
   "label": "Cust Support Statistics",
   "links": [],
-  "modified": "2024-12-30 21:28:07.561195",
+  "modified": "2025-01-02 14:16:54.067821",
   "module": "Customer Tech Support",
   "name": "Cust Support Statistics",
   "number_cards": [
@@ -509,7 +509,7 @@
     "role": "Customer Support Admin"
    }
   ],
-  "sequence_id": 5.0,
+  "sequence_id": 6.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -575,7 +575,7 @@
   "is_hidden": 0,
   "label": "SPS OP Space",
   "links": [],
-  "modified": "2024-11-25 20:06:55.760458",
+  "modified": "2025-01-02 14:16:52.462882",
   "module": null,
   "name": "SPS OP Space",
   "number_cards": [],
@@ -1019,7 +1019,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-12-21 20:34:41.799867",
+  "modified": "2025-01-02 14:16:53.026304",
   "module": null,
   "name": "Infra - IT",
   "number_cards": [],
@@ -1056,7 +1056,7 @@
     "role": "Help Desk User"
    }
   ],
-  "sequence_id": 3.0,
+  "sequence_id": 4.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -1380,5 +1380,64 @@
    }
   ],
   "title": "Infra - IT"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"NA4MGEpR1o\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Charging and Discharging\",\"col\":3}},{\"id\":\"latQtP1i9M\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ship Visits\",\"col\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "upload-lg",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Charging and DisCharging",
+  "links": [],
+  "modified": "2025-01-05 09:55:40.182141",
+  "module": null,
+  "name": "Charging and DisCharging",
+  "number_cards": [],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 3.0,
+  "shortcuts": [
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Charging and Discharging",
+    "link_to": "Charging and Discharging Ticket",
+    "parent": "Charging and DisCharging",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Ship Visits",
+    "link_to": "Ship Visit",
+    "parent": "Charging and DisCharging",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "Charging and DisCharging"
  }
 ]

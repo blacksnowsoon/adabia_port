@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "autoname": "format:{customs_declaration_no}-L-{line_no}",
+ "creation": "2024-12-31 19:15:16.345663",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_fird",
+  "operation_type",
+  "operation_handler",
+  "customs_declaration_no",
+  "line_no",
+  "company",
+  "column_break_fype",
+  "goods_type",
+  "quantity",
+  "weight",
+  "handled_weight",
+  "packing_type",
+  "operation_rate"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_fird",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "operation_type",
+   "fieldtype": "Select",
+   "label": "Operation Type",
+   "options": "Charge\nDischarge"
+  },
+  {
+   "fieldname": "customs_declaration_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customs Declaration No.",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "line_no",
+   "fieldtype": "Int",
+   "label": "Line No.",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fype",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "goods_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Goods Type",
+   "options": "Goods",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity",
+   "non_negative": 1,
+   "precision": "1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight",
+   "non_negative": 1,
+   "precision": "3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "packing_type",
+   "fieldtype": "Link",
+   "label": "Packing Type",
+   "options": "Packing Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "operation_rate",
+   "fieldtype": "Float",
+   "label": "Operation Rate",
+   "precision": "1"
+  },
+  {
+   "fieldname": "operation_handler",
+   "fieldtype": "Select",
+   "label": "Operation Handler",
+   "options": "Direct\nStorage"
+  },
+  {
+   "fieldname": "handled_weight",
+   "fieldtype": "Float",
+   "label": "Handled Weight"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-03 20:32:37.229317",
+ "modified_by": "Administrator",
+ "module": "Charging and Discharging",
+ "name": "Customs Declarations",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

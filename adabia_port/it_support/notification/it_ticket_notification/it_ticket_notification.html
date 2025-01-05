@@ -1,9 +1,11 @@
 
 <div style="margin: 2rem;">
     <h5 class="text-center">IT Ticket Number: {{ doc.name }}</h5>
-    {% if modified %}
-        <h5 class="text-center">تم تعديل بيانات التذكرة</h5>
-    {% endif %}
+    <h6 class="text-center">Created At : {{ doc.creation }}</h6>
+        {% if modified %}
+            <h5 class="text-center">تم تعديل بيانات التذكرة</h5>
+            <h6 class="text-center">Modified At : {{ doc.modified }}</h6>
+        {% endif %}
     <table style="outline: 1px solid gray; width: 100%; padding: 1rem;  box-shadow: 3px 3px 6px 0px rgb(42, 42, 42);" class="table table-bordered bg-white">
         <!-- Assign To -->
         <tr>
@@ -80,8 +82,14 @@
         <!-- Description -->
         <tr>
             {% if doc.description %}
-            <td><strong>Description</strong></td>
-            <td>{{ doc.description | default('No Issue Description Provided') }}</td>
+                <td><strong>Description</strong></td>
+                <td>{{ doc.description | default('No Issue Description Provided') }}</td>
+            {% endif %}
+        </tr>
+        <tr>
+            {% if doc.what_implemented %}
+                <td><strong>What Implemented</strong></td>
+                <td>{{ doc.what_implemented | default('No Issue Description Provided') }}</td>
             {% endif %}
         </tr>
     </table>

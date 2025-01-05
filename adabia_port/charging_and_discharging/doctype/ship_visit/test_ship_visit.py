@@ -1,4 +1,4 @@
-# Copyright (c) 2024, Gharieb Kalefa and Contributors
+# Copyright (c) 2025, Gharieb Kalefa and Contributors
 # See license.txt
 
 # import frappe

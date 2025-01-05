@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:visit_id",
+ "creation": "2025-01-01 12:54:49.331763",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "visit_info_section",
+  "visit_id",
+  "operations_type",
+  "customs_declarations",
+  "column_break_rfam",
+  "visit_data",
+  "column_break_vlyx",
+  "shipment_data",
+  "section_break_customs_declaration_info",
+  "declarations_data",
+  "registry_section",
+  "operations_registry"
+ ],
+ "fields": [
+  {
+   "fieldname": "visit_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Visit ID",
+   "options": "Ship Visit",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_rfam",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visit_info_section",
+   "fieldtype": "Section Break",
+   "label": "Visit Info"
+  },
+  {
+   "fieldname": "column_break_vlyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visit_data",
+   "fieldtype": "HTML",
+   "label": "Visit Data"
+  },
+  {
+   "fieldname": "shipment_data",
+   "fieldtype": "HTML",
+   "label": "Shipment Data"
+  },
+  {
+   "fieldname": "declarations_data",
+   "fieldtype": "HTML",
+   "label": "Declarations Data"
+  },
+  {
+   "fieldname": "registry_section",
+   "fieldtype": "Section Break",
+   "label": "Registry"
+  },
+  {
+   "fieldname": "operations_registry",
+   "fieldtype": "Table",
+   "label": "Operations Registry",
+   "options": "Charging Operation Registry"
+  },
+  {
+   "fieldname": "section_break_customs_declaration_info",
+   "fieldtype": "Section Break",
+   "label": "Customs Declaration Info"
+  },
+  {
+   "depends_on": "eval:doc.visit_id",
+   "fieldname": "operations_type",
+   "fieldtype": "Select",
+   "label": "Operations Type",
+   "options": "\nCharge\nDischarge"
+  },
+  {
+   "depends_on": "eval:doc.operations_type",
+   "fieldname": "customs_declarations",
+   "fieldtype": "Select",
+   "label": "Customs Declarations"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-04 22:30:55.784986",
+ "modified_by": "Administrator",
+ "module": "Charging and Discharging",
+ "name": "Charging and Discharging Ticket",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Charging User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

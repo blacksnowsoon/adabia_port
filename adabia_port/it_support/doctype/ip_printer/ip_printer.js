@@ -12,7 +12,6 @@ frappe.ui.form.on("IP Printer", {
                 device_type: ['like', '%Printer%']
             }
         }).then(res => {
-            
             set_printer_field_filter(frm, res.map(d => d.name))
         })
     },

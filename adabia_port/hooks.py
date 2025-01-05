@@ -24,7 +24,8 @@ fixtures = [
                 "SPS Responsible Group",
                 "IT System Admin",
                 "Help Desk Admin",
-                "Help Desk User"
+                "Help Desk User",
+                "Charging User"
             ]]
         }
     },
@@ -38,7 +39,8 @@ fixtures = [
                 "SPS-OP-Man",
                 "SPS CR Res-Profile",
                 "Help Desk Man",
-                "IT System Admin Profile"
+                "IT System Admin Profile",
+                "Charging Discharging User"
             ]]
         }
     },
@@ -53,7 +55,8 @@ fixtures = [
                 "SPS OP Admin",
                 "IT System Admin",
                 "Help Desk Admin",
-                "Help Desk User"
+                "Help Desk User",
+                "Charging User"
 
             ]]
         }
@@ -120,6 +123,7 @@ fixtures = [
                 "Adabia Port",
                 "Cust Support Statistics",
                 "Customer Tech Sup",
+                "Charging and DisCharging"
 
             ]]
         }

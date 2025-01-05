@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestUnloadingTicket(FrappeTestCase):
+class TestGoodsUnit(FrappeTestCase):
 	pass

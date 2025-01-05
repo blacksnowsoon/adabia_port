@@ -19,7 +19,7 @@ frappe.ui.form.on("SPS Operation Ticket", {
 		// in case new modules are added
 		if (filterd_list.length > 0) {
 			Promise.all(filterd_list.map( m => 
-				fetchValues({doctype: 'SPS Module', 
+				fetchValue({doctype: 'SPS Module', 
 					filters: {"name":m.module}, fieldname: ['module_name', 'name', 'responsible',  'job_title']})))
 			.then((values) => {
 				const append_approval = values.map(v => {
@@ -75,7 +75,7 @@ function frm_status_change(frm) {
 }
 
 // fetch values from doctype
-function fetchValues({doctype, filters, fieldname}) {
+function fetchValue({doctype, filters, fieldname}) {
 	return new Promise((resolve, reject) => {
 		frappe.call({
 			method: 'frappe.client.get_value',

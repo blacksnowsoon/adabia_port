@@ -45,7 +45,7 @@ function spenner(){
 	return container
 }
 // fetch one value
-function fetchValues({doctype='', filters={}, fields=[]}) {
+function fetchValue({doctype='', filters={}, fields=[]}) {
 	return new Promise((resolve, reject) => {
 		frappe.call({
 			method: 'frappe.client.get_value',
@@ -66,7 +66,7 @@ function fetchValues({doctype='', filters={}, fields=[]}) {
 }
 
 // fetch Doc
-function fetchDoc({doctype='', name='', filters={}}) {
+function fetchDoc({doctype='', name=''}) {
   return new Promise((resolve, reject) => {
     frappe.call({
       method: 'adabia_port.utils.get_document',

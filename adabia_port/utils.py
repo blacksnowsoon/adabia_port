@@ -38,7 +38,6 @@ def get_printer_status(ip_address, oids):
     result = asyncio.run(fetch_status(ip_address, oid_list))
     return result
 
-
 @frappe.whitelist()
 def get_document(doctype, name):
     doc = frappe.get_doc(doctype, name)
@@ -49,10 +48,11 @@ def get_list(doctype='', fields=[], filters={}):
     doc_list = frappe.db.get_list(doctype,  fields=fields, filters=filters)
     return doc_list
 
-
 @frappe.whitelist()
 def get_all(doctype='', fields=[], filters={}):
     return frappe.get_all(doctype, fields=fields, filters=filters)
+
+
 
 def award_energy_points(doc, method):
     if doc.status == 'Pending':
