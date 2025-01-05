@@ -13,6 +13,7 @@ app_version = "0.1.0"
 fixtures = [
     "Translation",
     "Ticket Event",
+    "Goods",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [

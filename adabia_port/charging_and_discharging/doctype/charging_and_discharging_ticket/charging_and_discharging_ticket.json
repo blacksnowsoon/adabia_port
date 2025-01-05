@@ -16,8 +16,11 @@
   "shipment_data",
   "section_break_customs_declaration_info",
   "declarations_data",
+  "column_break_aahk",
+  "declarations_registry",
   "registry_section",
-  "operations_registry"
+  "charging_operations_registry",
+  "discharging_operations_registry"
  ],
  "fields": [
   {
@@ -63,12 +66,6 @@
    "label": "Registry"
   },
   {
-   "fieldname": "operations_registry",
-   "fieldtype": "Table",
-   "label": "Operations Registry",
-   "options": "Charging Operation Registry"
-  },
-  {
    "fieldname": "section_break_customs_declaration_info",
    "fieldtype": "Section Break",
    "label": "Customs Declaration Info"
@@ -84,12 +81,36 @@
    "depends_on": "eval:doc.operations_type",
    "fieldname": "customs_declarations",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Customs Declarations"
+  },
+  {
+   "depends_on": "eval:doc.operations_type === 'Charge'",
+   "fieldname": "charging_operations_registry",
+   "fieldtype": "Table",
+   "label": "Charging Operations Registry",
+   "options": "Charging Operation Registry"
+  },
+  {
+   "depends_on": "eval:doc.operations_type === 'Discharge'",
+   "fieldname": "discharging_operations_registry",
+   "fieldtype": "Table",
+   "label": "Discharging Operations Registry",
+   "options": "Discharging Operation Registry"
+  },
+  {
+   "fieldname": "column_break_aahk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "declarations_registry",
+   "fieldtype": "HTML",
+   "label": "Declarations Registry"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-04 22:30:55.784986",
+ "modified": "2025-01-06 00:17:49.173917",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",

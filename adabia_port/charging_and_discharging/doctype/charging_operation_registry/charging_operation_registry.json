@@ -7,18 +7,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "customs_declarations_no",
+  "customs_declaration_no",
   "started_at",
   "ended_at",
   "weight",
   "quantity"
  ],
  "fields": [
-  {
-   "fieldname": "customs_declarations_no",
-   "fieldtype": "Data",
-   "label": "Customs Declarations No"
-  },
   {
    "fieldname": "started_at",
    "fieldtype": "Datetime",
@@ -47,12 +42,18 @@
    "non_negative": 1,
    "precision": "2",
    "reqd": 1
+  },
+  {
+   "fieldname": "customs_declaration_no",
+   "fieldtype": "Data",
+   "label": "Customs Declaration No",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-04 23:26:17.886770",
+ "modified": "2025-01-05 13:57:40.032852",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging Operation Registry",

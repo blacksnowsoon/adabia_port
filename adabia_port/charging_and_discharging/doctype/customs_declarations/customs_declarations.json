@@ -9,6 +9,7 @@
   "section_break_fird",
   "operation_type",
   "operation_handler",
+  "yard_name",
   "customs_declaration_no",
   "line_no",
   "company",
@@ -106,13 +107,22 @@
   {
    "fieldname": "handled_weight",
    "fieldtype": "Float",
-   "label": "Handled Weight"
+   "label": "Handled Weight",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.operation_handler ==='Storage'",
+   "fieldname": "yard_name",
+   "fieldtype": "Link",
+   "label": "Yard Name",
+   "mandatory_depends_on": "eval:doc.operation_handler ==='Storage'",
+   "options": "Yard Storage"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-03 20:32:37.229317",
+ "modified": "2025-01-05 14:02:40.873749",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Customs Declarations",
