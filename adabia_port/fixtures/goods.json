@@ -1,0 +1,6986 @@
+[
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "( بخور / زيوت ) ومواد عطرية غير خطرة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.228865",
+  "name": "GD-2828"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "(بويات مائية) ومحضرات مماثله ليست خطر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.366437",
+  "name": "GD-2829"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "(زيت عباد شمس  - زيت ذره - زيت صويا ) صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.414468",
+  "name": "GD-2830"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "(زيت نخيل - زيت اولين) صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.453300",
+  "name": "GD-2831"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "(كارادول / كرادول)  CARADOL SP AA",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.487767",
+  "name": "GD-2832"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "(ملغي)MATCHES WAX VESTA",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.531721",
+  "name": "GD-2833"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "AMMONIUM PER CHLORAT (C.5)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.585968",
+  "name": "GD-2834"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "BUTOXY  GLYCOL ETHER - بوتكسى جليكول ايثر معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.621633",
+  "name": "GD-2835"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "BUTOXY GLYCOL ETHER - بوتكسى جليكول ايثر صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.664174",
+  "name": "GD-2836"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "BUTYL CELLOSOLVE (بوتيل سيلوسولف) C.3",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.699817",
+  "name": "GD-2837"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C 2هيكسا فلوريد سلفات (هيكسا فلوريد الكبريت)SULPHUR HEXAFLUORIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.732406",
+  "name": "GD-2838"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 -  XYLENE زيلين / اكسلين (ميكسيد-MIXED)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.764232",
+  "name": "GD-2839"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3  خلات الأيثيل -ايثيل اسيتات ETHYL ACETATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.796737",
+  "name": "GD-2840"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 ايثانول كحوللى  ETHANOL ALCOHOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.822454",
+  "name": "GD-2841"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 ايثلين ديكلوريد ETHYLENE DICHLORID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.857503",
+  "name": "GD-2842"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 ايثيلين جليكول(مونو ايثيل اسيتات) ETHYLENE GLYCOL MONO E.A",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.893317",
+  "name": "GD-2843"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 بروبانول (BRO BH)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.922609",
+  "name": "GD-2844"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 بنزن - بنزول  BENZENE - BENZOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.957187",
+  "name": "GD-2845"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 بنزين - كومين  BENZENE - CUMENG",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:17.986211",
+  "name": "GD-2846"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 بوتيل اسيتات BUTYL ACETATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.012911",
+  "name": "GD-2847"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 بوتيل أكريلات BUTYL ACRYLATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.047412",
+  "name": "GD-2848"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 بيوتيل اكريلات   BUTYL ACRYLATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.119259",
+  "name": "GD-2849"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 ثنائي ايثيل هيكسانول 2ETHYL HEXANOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.176536",
+  "name": "GD-2850"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 داى ايزو ايثيل / ديثيل  فاثيلات ( DIDP )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.230204",
+  "name": "GD-2851"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 داى ايزو نونايل فاثيلات ( DINP )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.257630",
+  "name": "GD-2852"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 ستايرين مونيمر (خطر) STYRENE MONOMER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.296943",
+  "name": "GD-2853"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 فينيل اسيتات / مونومر  VINYL ACETATE / MONOMER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.354101",
+  "name": "GD-2854"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 مثيل ايثيل كيتون METHYL ETHYL KETONE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.388054",
+  "name": "GD-2855"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 ميثانول  METHANOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.424489",
+  "name": "GD-2856"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3 ن - بوتانول N-BUTANOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.475233",
+  "name": "GD-2857"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3( بوتيل جليكول BUTYL GLYCOL)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.519973",
+  "name": "GD-2858"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.3ايثيلين جليكول (مونو ايثيل ايثير)ETHYLENE GLYCOL MONO E.E",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.563055",
+  "name": "GD-2859"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.4 اكسيد الحديد IRON OXIDE (صب غير نظيف)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.605244",
+  "name": "GD-2860"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.6 تولين (TOLUENE)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.636211",
+  "name": "GD-2861"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.8 استيك اسيد (حمض خليك)  ACETIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.663388",
+  "name": "GD-2862"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C.9 مونو اثلين جليكول MEG",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.692318",
+  "name": "GD-2863"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C3  اسكيد (110)  ESCAID110",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.722562",
+  "name": "GD-2864"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "C3ميثيل ميثاكريلات  METHYL METHACRYLATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.771919",
+  "name": "GD-2865"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "CALCIUM  AMMONIUM NITRATE- كالسيوم امونيوم نترات صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.807181",
+  "name": "GD-2866"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "CASTABLE مواد عازله حراريه",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.840135",
+  "name": "GD-2867"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "CLA 3 مذيبات عضوية (ايثانول ايثيل جليكول)ETHOXY ETHANOL.E.GLYCOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.893263",
+  "name": "GD-2868"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "CLA 4 مستحضرات للتجميل أو الزينه والعنايه بالبشره (مكياج) MAKEUP",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.942622",
+  "name": "GD-2869"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  العاب نارية متنوعة  FIRE WORKS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.982780",
+  "name": "GD-2870"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  بارود CORD DETONATING FLEXIBLE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.019474",
+  "name": "GD-2871"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  بارود صيد لادخانى  POWDER SMOKELESS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.047674",
+  "name": "GD-2872"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  ذخائر و مواد متفجرة مختلفة AMMUNITION",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.083942",
+  "name": "GD-2873"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  صواريخ(class1 (MISSILES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.121809",
+  "name": "GD-2874"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  فتيل (خيط) انفجارى  IGNITERS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.157230",
+  "name": "GD-2875"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  نترو سليلوز جاف  NITRO CELLULOSE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.206557",
+  "name": "GD-2876"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  نترو سليلوز سائل  NITRO CELLULOSE LIQUID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.245612",
+  "name": "GD-2877"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى اثيلين جليكول داى نيتريت DIETHYLENE GLYCOL DI NITRATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.277839",
+  "name": "GD-2878"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ارجون مضغوط   ARGON COMPRESSED",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.306414",
+  "name": "GD-2879"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اكسجين  OXYGEN",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.355879",
+  "name": "GD-2880"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اكسيد نتروجين   NITROGEN PEROXIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.404257",
+  "name": "GD-2881"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اكسيد نيتريك    NITRIC OXIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.439104",
+  "name": "GD-2882"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايروسول AYROSOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.478127",
+  "name": "GD-2883"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بروبلين غاز   PROPYLENE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.511397",
+  "name": "GD-2884"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بورون تراي فلورايد BORON TRI FLUORIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.555297",
+  "name": "GD-2885"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " تترا ميثلين   TETRA METHYLENE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.619874",
+  "name": "GD-2886"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى مثيل ايثر    DI METHYL ETHER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.758060",
+  "name": "GD-2887"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز اكسيد الكربون CARBON DIOXIDE GAS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.867859",
+  "name": "GD-2888"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز الامونيا / غاز النشادر  AMMONIUM ANHYDROUS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.926743",
+  "name": "GD-2889"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز التبريد (فريون)  REFRIGERANT GAS R 152 A",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.955341",
+  "name": "GD-2890"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز الكلور (كلورين) CHLORINE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:19.990771",
+  "name": "GD-2891"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز النيون المضغوط  NEON COMPRESSED",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.042354",
+  "name": "GD-2892"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز الهيليوم  HELIUM REFRI GAS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.071308",
+  "name": "GD-2893"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز اول اكسيد الكربون CARBON OXIDE GAS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.119963",
+  "name": "GD-2894"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز ثانى اكسيد الكبريت SULPHUR DIOXIDE GAS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.161566",
+  "name": "GD-2895"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز ثانى اكسيد الكربون  RARE GASES MIXTURE CO MPRESSED",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.206238",
+  "name": "GD-2896"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز طبيعي مضغوط NATURAL COPRESSED GASES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.255855",
+  "name": "GD-2897"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غاز فريون DI FLUORO ETHANE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.287108",
+  "name": "GD-2898"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غازات بترولية (ولاعات) PETROLEUM GASES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.380254",
+  "name": "GD-2899"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غازات بتروليه  PETROLIUM GASES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.422962",
+  "name": "GD-2900"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " غازات مضغوطه اخف من الهواء COAL GAS COMPRESSED",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.461106",
+  "name": "GD-2901"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " مزيلات عرق (سبراي) FRAGRANCES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.558927",
+  "name": "GD-2902"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ميثان X الارجون MITHAN AND ARGON",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.662257",
+  "name": "GD-2903"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ميثيل بروميد  METHYL BROMIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.704051",
+  "name": "GD-2904"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " نيتروجين مضغوط NITROGEN COMPRESSED",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.736904",
+  "name": "GD-2905"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " هواء مضغوط AIR COMPRESSED",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.781542",
+  "name": "GD-2906"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " هيدروجين مضغوط HYDROGEN COMPRESSED",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.821250",
+  "name": "GD-2907"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "   مونو بروبلين جليكول  MONO PROPYLENE GLYCOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.887868",
+  "name": "GD-2908"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " (ميثيل أيثيل كيتون) - بوتانون",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.928064",
+  "name": "GD-2909"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " احبار طباعة معبأة PRINTING INK FLAMMABLE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.964266",
+  "name": "GD-2910"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اسيتون  ACETONE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:20.995758",
+  "name": "GD-2911"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اكريلونيتريل ACRYLO NITRILE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.046937",
+  "name": "GD-2912"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اوكتادين  OCTADIENE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.104521",
+  "name": "GD-2913"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اوكتانون   OCTANONE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.167180",
+  "name": "GD-2914"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايثلين جليكول (داى ايثيل ايثر) E.G.DI ETHYL ETHER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.205061",
+  "name": "GD-2915"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايثيل اسيتون  ACETYL  ACETONE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.245014",
+  "name": "GD-2916"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايثيل هيكسانول  ETHYL HEXANOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.292115",
+  "name": "GD-2917"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايزو بروبانول  ISO PROPANOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.337695",
+  "name": "GD-2918"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايزو بروبيل كحوللي ISO PROPYL ALCOHOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.364050",
+  "name": "GD-2919"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايزو بوتانول ISO BUTANOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.469243",
+  "name": "GD-2920"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايزو بوتيل استات  ISO BUTYL ACETATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.516082",
+  "name": "GD-2921"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بتومين سائل BITUMEN",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.545363",
+  "name": "GD-2922"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " برافين عادى PARAFFIN",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.587279",
+  "name": "GD-2923"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " برافين كلوريد PROPHYLIOENE DI CHLORIDS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.630561",
+  "name": "GD-2924"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بروبايل ايثر    PROPYL ETHER PH",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.661296",
+  "name": "GD-2925"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بوتانول BUTANOLS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.703096",
+  "name": "GD-2926"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بولى فنيل اسيتات POLY VINYL ACETATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.730047",
+  "name": "GD-2927"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بوليستر ريزن (بولي ايثيرات - بوليول)  POLYESTER RESIN",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.758850",
+  "name": "GD-2928"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بويات  PAINTS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.794817",
+  "name": "GD-2929"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بينتانول  PENTANOLS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.835297",
+  "name": "GD-2930"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بينزول BENZOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.889879",
+  "name": "GD-2931"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " تنر ( مزيلات و مذيبات الطلاء )   TINNER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.939915",
+  "name": "GD-2932"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " تولينين  TULENENE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:21.978348",
+  "name": "GD-2933"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " خام البترول  BETROL OIL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.014067",
+  "name": "GD-2934"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى اثيل امين DI ETHYL AMINE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.045991",
+  "name": "GD-2935"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى اوكتايل DI ACETYL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.098155",
+  "name": "GD-2936"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى بوتيل ايثر   DI BUTYL ETHER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.129452",
+  "name": "GD-2937"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى فينيل ايثر DI VINYL ETHER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.171892",
+  "name": "GD-2938"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " دهانات دوكو DOCO",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.218413",
+  "name": "GD-2939"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " راتنجات   PESIN SOLUTIO FLAMMABLE / LATEX",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.267617",
+  "name": "GD-2940"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " زيوت (مهملات) بتروليه  PETROLEUM CRUDE OIL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.300228",
+  "name": "GD-2941"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " سولفن نفتا  SOLVENT NAPHTA",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.509764",
+  "name": "GD-2942"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " سيلو سلوف ( سولفو) SOLVO",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.696050",
+  "name": "GD-2943"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " عطور   PERFUMERY",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.744391",
+  "name": "GD-2944"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " فورمالدهايد محلول  FORMALDEHYDE SOLUTION",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.767179",
+  "name": "GD-2945"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " فورمالين محلول FORMALIN SOLUTION",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.821965",
+  "name": "GD-2946"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " فيوفا-10   VEOVA10",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.864084",
+  "name": "GD-2947"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كحول الميثيل - كحول نقي METHYL ALCOHOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.897537",
+  "name": "GD-2948"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كلوريد الاسيتايل  ACETYL CHLORIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.934784",
+  "name": "GD-2949"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كيماويات لاحبار الطباعة سائلة  PRINTING INK LIQUD",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.964001",
+  "name": "GD-2950"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " مستحضرات تجميل / سبراى    COSMETICS - SPIRY",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.995472",
+  "name": "GD-2951"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " مواد لاصقة GUM GLOO",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.022349",
+  "name": "GD-2952"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " مواد لاصقة تحتوى على مزيبات عضوية ADHESIVES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.050687",
+  "name": "GD-2953"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ميثايل ايثلين جليكول MEG",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.071874",
+  "name": "GD-2954"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ميثيل اسيتات METHYL ACETATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.109693",
+  "name": "GD-2955"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ميثيل ايزو بوتيل كيتون  METHYL ISO BUTYL KETONE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.140780",
+  "name": "GD-2956"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ميثيل تيشري بوتيل ايثر METHYL TETIR BUTYL ETHER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.177168",
+  "name": "GD-2957"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ميزوكسي بروبانول METHOXY PROPANOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.239309",
+  "name": "GD-2958"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " نفتا    NAPHTHA",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.266123",
+  "name": "GD-2959"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " هيدروكربونات  HYDRO CARBONS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.294979",
+  "name": "GD-2960"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " هيدروليك باور  HYDRAULIC POWER OIL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.325498",
+  "name": "GD-2961"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " هيكسا مثلين  HEXA METHYLENE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.354842",
+  "name": "GD-2962"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " هيكسانس  HEXANES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.378145",
+  "name": "GD-2963"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " وايت سبرايت  WHITE SPIRIT",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.409454",
+  "name": "GD-2964"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ورنيش - بولش VARNISH - POLSH",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.439614",
+  "name": "GD-2965"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " يوريا فورمالدهايد  FORMALDEHYDE UREA SOLUTION",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.469755",
+  "name": "GD-2966"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " - الومنيوم بودر ALUMINMUM PODER - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.523356",
+  "name": "GD-2967"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  الومنيوم سيليكون بودر ALUMINIUM SILICON POWDER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.610355",
+  "name": "GD-2968"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  الومنيوم فوسفيد ALUMINIUM PHOSPHIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.641530",
+  "name": "GD-2969"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  ايزود كريون امين AZODI CARBON AMINE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.688579",
+  "name": "GD-2970"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " - حديد بودر  IRON POWDER - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.745475",
+  "name": "GD-2971"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  خام الالومنيوم  ALOMINIUM POWDER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.777033",
+  "name": "GD-2972"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " - زنك بودر  ZING POWDER - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.812358",
+  "name": "GD-2973"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  قطن خام COTTON",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.839544",
+  "name": "GD-2974"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " - كبريت اصفر YELLOW SULPHUR - صب غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.876266",
+  "name": "GD-2975"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " - كبريت بودر - زراعي  SULPHUR POWDER - صب غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.905335",
+  "name": "GD-2976"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " - كبريت محبب  GRANULAR SULPHUR - صب غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.943556",
+  "name": "GD-2977"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  كبريت معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:23.976982",
+  "name": "GD-2978"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  كربوكس ميثيل السليلوز CARBOX",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.006851",
+  "name": "GD-2979"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  منجنيز ريستات MANGANESE RSSINATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.029389",
+  "name": "GD-2980"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " الكربون الاسود  CARBON BLACK",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.059243",
+  "name": "GD-2981"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بطاريات كونتج صوديوم BATTERIES CONTANINING SODIUM",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.094282",
+  "name": "GD-2982"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " تراب صب (قشور) نحاس مركز CPPPER CONCENTRATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.127427",
+  "name": "GD-2983"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " جوت جاف JUTE DRY",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.155203",
+  "name": "GD-2984"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حديد خام ( مقولب على الساخن - مكتل - مكور - بلت) DRI (صب)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.184378",
+  "name": "GD-2985"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " زغب قطن مبلل  COTTON  WASTA",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.210622",
+  "name": "GD-2986"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " زغب قطن مجفف  DRY COTTON  WASTA",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.252822",
+  "name": "GD-2987"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " طفلة بترولية ( ناتج من تكريرالبترول ) خطر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.276601",
+  "name": "GD-2988"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " فيرو سيليكون  FERRO SILICON",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.309261",
+  "name": "GD-2989"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " قطن جاف DRY COTTON",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.343295",
+  "name": "GD-2990"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " قطن مبلل COTTON WET",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.376074",
+  "name": "GD-2991"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كبريت ثقاب MATCHES SAFETY",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.411757",
+  "name": "GD-2992"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كبريت مولتين SULPHUR MOLTEN",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.453619",
+  "name": "GD-2993"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " يوريا فورمالدهايد FORMALDEHYDE UREA",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.536289",
+  "name": "GD-2994"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اكسيد ديكومايل    DICOMIYL PEROXIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.563369",
+  "name": "GD-2995"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اكسيد زنك جاف  ZIG OXDI SOLID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.606009",
+  "name": "GD-2996"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " باريوم كلوريت BARIUM CHLORATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.629784",
+  "name": "GD-2997"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بوتاسيوم برمنجينات POTASSIUM PERMANGANTE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.663399",
+  "name": "GD-2998"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بيروكسيد كالسيوم    CALCIUM PEROXIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.689895",
+  "name": "GD-2999"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض الكلوريك (كلور سائل)  CHLORIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.724612",
+  "name": "GD-3000"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى كلورو ايزوسينوريك اسيد DI CHLORO ISO CYANURIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:24.799040",
+  "name": "GD-3001"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " صوديوم بروميت  SODIUM BROMATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.073800",
+  "name": "GD-3002"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " صوديوم نترات SODIUM NITRITE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.105957",
+  "name": "GD-3003"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كالسيوم هايبو كلورايت  CALCIUM HYPO CHLORITE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.132322",
+  "name": "GD-3004"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " منجنيز نترات MANGANESE NITRATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.180432",
+  "name": "GD-3005"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " نترات الالومنيوم   ALUMINIUM NITRATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.233727",
+  "name": "GD-3006"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " نترات باريوم   BARIUM NITRATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.271689",
+  "name": "GD-3007"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " نترات كالسيوم   CALCIUM NITRATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.303438",
+  "name": "GD-3008"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " نترات نشادر (نترات امونيوم) AMMONIUM NITRAT",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.334061",
+  "name": "GD-3009"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " هايدروكسيد باريوم   BARIUM PEROXIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.376914",
+  "name": "GD-3010"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " يوريا هيدروجين  UREA HYDROGEN",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.410802",
+  "name": "GD-3011"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  اصباغ  PIGMENT DYES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.445272",
+  "name": "GD-3012"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  فينول  PHENOL SOLID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.474585",
+  "name": "GD-3013"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  مبيدات حشرية سائلة  PESTICIDE FLAMMABLE LIQUED",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.508127",
+  "name": "GD-3014"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "  مبيدات حشرية صلبة PESTICIDE SOLID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.540600",
+  "name": "GD-3015"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ارسنك اسيد ARSENIC ACID SOLID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.573432",
+  "name": "GD-3016"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " باريوم كيمباود BARIUM COMPOUND",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.611877",
+  "name": "GD-3017"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بنزايل كلوريد  BENZYL CHLORIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.665575",
+  "name": "GD-3018"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بينزو نتريل BENZO NITRILE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.694921",
+  "name": "GD-3019"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حديد كريوتايل  CIRYOTAL IRON",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.723150",
+  "name": "GD-3020"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى امينو داى فنيل ميثان  DI AMINO DI PHENYL METHANE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.757139",
+  "name": "GD-3021"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى ايثيل سلفات  DI ETHYL SULPHATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.787834",
+  "name": "GD-3022"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " سيانيد باريوم   BARIUM CYANIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.822458",
+  "name": "GD-3023"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " فورفوريل كحوللي   ALCOHOL PHORFORYL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.848824",
+  "name": "GD-3024"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كربومانت   CARBMANTE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:25.970074",
+  "name": "GD-3025"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " مبيدات حشرية  PESTICIDE GASES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.087307",
+  "name": "GD-3026"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " نفتالين مكور (بلي)  NAPHTALENE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.163514",
+  "name": "GD-3027"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " نفتالين مولتين NAPHTALENE MOLTEN",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.205979",
+  "name": "GD-3028"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " أحماض خطرة أخرى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.245975",
+  "name": "GD-3029"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " استيك اكسيد  ACETIC OXIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.275740",
+  "name": "GD-3030"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اسيد بوتيل فوسفات ACID BUTYL PHOSPHATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.307129",
+  "name": "GD-3031"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اكتك اسيد جليكال ACETIC ACID GLACIAL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.337514",
+  "name": "GD-3032"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " امونيوم هيدورجين  AMMONIUM HYDROGEN",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.359831",
+  "name": "GD-3033"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايتايل اوكسيد ACETYL OXIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.386414",
+  "name": "GD-3034"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايثيل / اسيتايل بروميد  ACETYL BROMIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.405155",
+  "name": "GD-3035"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بطاريات جافه   DRY BATTERIES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.445883",
+  "name": "GD-3036"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بطاريات مع محلول حمضي BATTERIES WITH ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.472791",
+  "name": "GD-3037"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض ارثوفوسفوريك   ORTHOPHOSPHORIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.494628",
+  "name": "GD-3038"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض الفورميك  FORMIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.519428",
+  "name": "GD-3039"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض الفوسفوريك PHOSPHORIC ACED",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.589260",
+  "name": "GD-3040"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض النيتريك  NITIRIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.611609",
+  "name": "GD-3041"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض الهيدروكلوريك  HYDRO CHLORIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.640924",
+  "name": "GD-3042"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض سلفوميك  SULPHAMIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.687264",
+  "name": "GD-3043"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض فلورو سلفونك    FLUORO SULPHONIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.708291",
+  "name": "GD-3044"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض فلورو فوسفوريك   FLUORO PHOSPHORIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.729932",
+  "name": "GD-3045"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض كبريتيك مخفف SULPHURIC ACID WITH",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.758253",
+  "name": "GD-3046"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " حامض كبريتيك مركز  SULPHURIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.779442",
+  "name": "GD-3047"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى اوكثيل فينول DI ODECYL PHENOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.803329",
+  "name": "GD-3048"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى ايزو اوكتيل اسيد فوسفيت DI ISO OCTYL ACID PHOSPHATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.821969",
+  "name": "GD-3049"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " داى سلفوريك اسيد DI SULPHURIC ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.865994",
+  "name": "GD-3050"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " سولفايد امونيوم (AMMONIUM SULPHIDE)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.904802",
+  "name": "GD-3051"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " صودا آش / بوتاس سائل (CAUSTIC POTASH LIQUID)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.927546",
+  "name": "GD-3052"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " صودا كاوية CAUSITIC SODA SOLUTIO",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.966334",
+  "name": "GD-3053"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " صودا كاوية قشورCAUSITIC SODA SOLID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:26.992979",
+  "name": "GD-3054"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " صوديوم سلفيد SODIUM SULPHIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.028586",
+  "name": "GD-3055"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " فريك كلوريد  FERRIC CHLORIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.054145",
+  "name": "GD-3056"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كلوريد الحديد IRON CHLORIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.102992",
+  "name": "GD-3058"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كلوريد الكبريت SULPHUR CHLORIDES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.126879",
+  "name": "GD-3059"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كلوريد حديد غير مهدرج IRON CHLORIDE ANHYDROUS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.146404",
+  "name": "GD-3060"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كوروسيف اسيد سائل  CORROSIVE LIQUID ACID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.174139",
+  "name": "GD-3061"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كوروسيف اسيد مجمد (اساسي)   CORROSIVE SOLID BASIC",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.195105",
+  "name": "GD-3062"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كيماويات احماض متنوعه اخرى CHEM & ACIDS",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.220180",
+  "name": "GD-3063"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " محلول امونيا  AMMONIA FOLUTIOU",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.255634",
+  "name": "GD-3064"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " هيدروكسيد صوديوم SODIUM HYDROXIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.276957",
+  "name": "GD-3065"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " أدوات قارب نجاة LIFE SAVING APPLINCES",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.298446",
+  "name": "GD-3066"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " اكسيد الكربون الجاف CARBON DIOXIDE DRY SOLID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.330579",
+  "name": "GD-3067"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " انسوفلت ابيض  BSBESTOS WHITE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.364035",
+  "name": "GD-3068"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " انسوفلت ازرق (اسبيستوس ازرق)    ASBESTOS BLUE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.388684",
+  "name": "GD-3069"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " ايزو اوكتانول   ISO OCETNOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.410967",
+  "name": "GD-3070"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " بولسترين اكسبندل (EPVC) POLYESTER EXPANDALE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.431503",
+  "name": "GD-3071"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "CLASS3 خلات البوتيل العادى - بوتيل اسيتات ORDINARY BUTYL ACETATE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.454645",
+  "name": "GD-3072"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "DIDP_دي اي دي بي ملوث بحري",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.492100",
+  "name": "GD-3073"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "DVD",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.510273",
+  "name": "GD-3074"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "FILTER  ( فلاتر - مرشحات )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.534364",
+  "name": "GD-3075"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "MAGNESIUM OXIDE  - اكسيد الماغنسيوم معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.558904",
+  "name": "GD-3076"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "MANGANESE SULPHATE - منجنيز سلفات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.589022",
+  "name": "GD-3077"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "METHYL METHACRYLATE(C3)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.618708",
+  "name": "GD-3078"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "MONO  ETHANOL  AMINE(مونو ايثانول امين) ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.656314",
+  "name": "GD-3079"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "MONOAMMONIUM PHOSPHATE - مونو امونيوم فوسفات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.696243",
+  "name": "GD-3080"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "POLYOL - بول يول",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.746557",
+  "name": "GD-3081"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "PVC بلاستيك (مجروش / شيتات / رولات)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.809872",
+  "name": "GD-3082"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "RAFFINATE (رافينيت ) C.3",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.867451",
+  "name": "GD-3083"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "TETRA NITRATE(C1)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.913116",
+  "name": "GD-3084"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ابراج اتصالات و مستلزمات اتصالات  - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.950839",
+  "name": "GD-3085"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اتوبيسات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.993543",
+  "name": "GD-3086"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اثيل استات - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.047433",
+  "name": "GD-3087"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اثيلين منجنيز MANGANESE ETHYLENE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.095088",
+  "name": "GD-3088"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اجزاء للاستعمال - اساسا مع محركات -مولدات كهربائية- مجموعات توليد كهرباء ومغيرات -ريش",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.127204",
+  "name": "GD-3089"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اجهزة (كهربائية وادوات)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.157519",
+  "name": "GD-3090"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "احذية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.226149",
+  "name": "GD-3091"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "احماض دهنية (تدخل فى صناعة الزيوت) صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.271795",
+  "name": "GD-3092"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اخشاب في صورتها الطبيعية غير مصنعة ( جزوع شجر )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.317470",
+  "name": "GD-3093"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ادوات رياضية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.343945",
+  "name": "GD-3094"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ادوات و مشغولات و مصنوعات و وصلات ومسامير من حديد و اي معدن اخر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.373749",
+  "name": "GD-3095"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ادوات ومنتجات من مطاط",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.394266",
+  "name": "GD-3096"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ارز صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.428270",
+  "name": "GD-3097"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ارز معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.456390",
+  "name": "GD-3098"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اسفلت",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.480355",
+  "name": "GD-3099"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اسلاك مجدولة - كابلات - امراس من نحاس غير معزولة للكهرباء",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.509352",
+  "name": "GD-3100"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اسمنت ابيض / كلينكر أبيض (معبأ)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.529746",
+  "name": "GD-3101"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اسمنت ابيض صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.554801",
+  "name": "GD-3102"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اسمنت بورتلاند (عادة) معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.634830",
+  "name": "GD-3103"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اسمنت بورتلاند عادي / كلينكر صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.674290",
+  "name": "GD-3104"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اسمنت مجهز (مونة) معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.730125",
+  "name": "GD-3105"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اسمنت مجهز مونة صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.831086",
+  "name": "GD-3106"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اسياخ حديد ( حديد تسليح أملس - مشرشر - أطوال - حديد سلك )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.857810",
+  "name": "GD-3107"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اسيتات مونومر ( غير مصنف )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.892636",
+  "name": "GD-3108"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اضافات خرسانيه",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.922692",
+  "name": "GD-3109"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اطارات ( كاوتش للسيارات و المعدات المتحركة )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.954245",
+  "name": "GD-3110"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اطارات صور",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.974198",
+  "name": "GD-3111"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اطارات وقواعد واكسسورات تاور",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.994125",
+  "name": "GD-3112"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اعشاب طبيعية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.017947",
+  "name": "GD-3113"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اغطية ومفروشات و مراتب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.050214",
+  "name": "GD-3114"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "افلام تصوير ( مواد فوتوجرافيا )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.079329",
+  "name": "GD-3115"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اقراص والواح الومنيوم",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.122735",
+  "name": "GD-3116"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اكريلونيتريل (ملغي) ACRELONOTREL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.195142",
+  "name": "GD-3117"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اكسسوار صحى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.246196",
+  "name": "GD-3118"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اكسيد تيتانيوم صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.306038",
+  "name": "GD-3119"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اكسيد تيتانيوم معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.342599",
+  "name": "GD-3120"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اكسيد حديد اصفر - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.388403",
+  "name": "GD-3121"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اكسيد زنك سائل (ملغي) OXIDI ZING LIQUID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.453733",
+  "name": "GD-3122"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "الات و اجهزة لحضانة و تفريغ و تربية طيور الدواجن",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.494170",
+  "name": "GD-3123"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "المشتقات المنترنة للاثيرات السيكلانية أو السيكلينية أو السيكلوتيربينية .",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.551191",
+  "name": "GD-3124"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "المنجنيز",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.605685",
+  "name": "GD-3125"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "الومنيا في حالتها السائلة (معبأة)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.637155",
+  "name": "GD-3126"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "امتعة شخصية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.669884",
+  "name": "GD-3127"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "امونيوم سلفات ( صب ) - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.720569",
+  "name": "GD-3128"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ايثلين جليكول (اسيتات)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.759160",
+  "name": "GD-3129"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ايثلين جليكول /مونو (MEG)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.820864",
+  "name": "GD-3130"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ايرون اور - حديد (صب)غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.937714",
+  "name": "GD-3131"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أبقار",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:29.972512",
+  "name": "GD-3132"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أثاث و موبليات ومصنوعات خشبية متنوعة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.015101",
+  "name": "GD-3133"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أجهزه منزليه ( غسالات - وبوتاجازات - سخانات - تليفزيونات )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.078727",
+  "name": "GD-3134"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أحجار كريمة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.119718",
+  "name": "GD-3135"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أدوات بلاستيك",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.159301",
+  "name": "GD-3136"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أدوات صحية و سباكة ومستلزماتها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.200810",
+  "name": "GD-3137"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أدوات مائدة زجاجية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.242021",
+  "name": "GD-3138"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أدوات منزليه ( أواني - اكواب - صواني )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.286421",
+  "name": "GD-3139"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أدوات نظافة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.335113",
+  "name": "GD-3140"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أدوات و أواني و مصنعات من فخار أو صلصال",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.368810",
+  "name": "GD-3141"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أدوية بشرية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.404026",
+  "name": "GD-3142"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أدوية بيطرية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.454020",
+  "name": "GD-3143"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أسمدة متنوعة معبأة ( ليست خطر )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.519979",
+  "name": "GD-3144"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أغنام",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.562477",
+  "name": "GD-3145"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أفلام P.V.C",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.617743",
+  "name": "GD-3146"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أقمشة و ملابس و منسوجات من القطن",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.658013",
+  "name": "GD-3147"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أقمشة و ملابس و منسوجات من بوليستر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.709593",
+  "name": "GD-3148"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أقمشة و منسوجات متنوعة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.730197",
+  "name": "GD-3149"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أكســــيد الحـــديـــــد - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:30.826403",
+  "name": "GD-3150"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ألات شحذ وصقل وشغل المعادن و الخامات( جلاية رخام )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.037369",
+  "name": "GD-3151"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ألعاب و دمى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.126358",
+  "name": "GD-3152"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أوناش  - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.177726",
+  "name": "GD-3153"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "باريوم بودر BARIUM POWDER - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.308942",
+  "name": "GD-3154"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "باريوم سلفات - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.368485",
+  "name": "GD-3155"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بتومين",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.410790",
+  "name": "GD-3156"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بذرة الشلجم",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.525772",
+  "name": "GD-3157"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بذرة فول صويا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.593463",
+  "name": "GD-3158"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بذور تقاوي ( حب بطيخ - بذور برسيم - بذور زراعية خرى )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.660375",
+  "name": "GD-3159"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "براميل فوارغ - صناديق فارغة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.689672",
+  "name": "GD-3160"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "برتقال",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.717526",
+  "name": "GD-3161"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بروبلين جليكول(غير مصنف خطر)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.740870",
+  "name": "GD-3162"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بروبين (بروبيلين) غير مشبع",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.770142",
+  "name": "GD-3163"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بروفليت -PYROPHYLLITE صب جاف (غير نظيف)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.796303",
+  "name": "GD-3164"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بصل",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.823711",
+  "name": "GD-3165"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بضائع عامة متنوعة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.857444",
+  "name": "GD-3166"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بطاريات حامضية   ACID BATTERY  - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.889083",
+  "name": "GD-3167"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بطاريات للسيارات و المعدات بأنواعها ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.916897",
+  "name": "GD-3168"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بطاريات موبايل",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.942320",
+  "name": "GD-3169"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بطاطا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:31.976776",
+  "name": "GD-3170"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بطاطس",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.001202",
+  "name": "GD-3171"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بطاطس شيبسي مختلفة الأنواع",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.035372",
+  "name": "GD-3172"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بلاستيك مجروش",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.081010",
+  "name": "GD-3173"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بلوكات كربون",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.112492",
+  "name": "GD-3174"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بن",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.134676",
+  "name": "GD-3175"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بودرة تلك",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.156229",
+  "name": "GD-3176"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بوكسيت صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.185072",
+  "name": "GD-3177"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بوكســيت معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.206037",
+  "name": "GD-3178"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بولى فنيل كلوريد  (ملغي) POLY VINYL CHLORIDE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.225512",
+  "name": "GD-3179"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بولى فوسفات معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.249858",
+  "name": "GD-3180"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بولى فينيل الكلورايد",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.274434",
+  "name": "GD-3181"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بولي ايثلين",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.304205",
+  "name": "GD-3182"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بولي ايثلين جليكول",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.326468",
+  "name": "GD-3183"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بولي بروبلين",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.352160",
+  "name": "GD-3184"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بوليمرات ايثان الفنيل (بولي فينيل)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.383547",
+  "name": "GD-3185"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بويات مائية (ليست خطر)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.404602",
+  "name": "GD-3186"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بيض",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.425953",
+  "name": "GD-3187"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بيكربونات صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.452783",
+  "name": "GD-3188"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بيكربونات صوديوم صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.477798",
+  "name": "GD-3189"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بيكربونات صوديوم معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.506002",
+  "name": "GD-3190"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بيكربونات معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.526638",
+  "name": "GD-3191"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "تانكات - صهاريج",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.548366",
+  "name": "GD-3192"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "تاور",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.570480",
+  "name": "GD-3193"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "تبغ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.599687",
+  "name": "GD-3194"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "تحف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.623049",
+  "name": "GD-3195"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ترابيع رخام",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.646476",
+  "name": "GD-3196"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "تراي ايثلين جليكول  E.G.TRI",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.664322",
+  "name": "GD-3197"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "تراي ايثلين جليكول (معبأ) E.G.TRI",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.713310",
+  "name": "GD-3198"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ترمس",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.763028",
+  "name": "GD-3199"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "تفاح",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.803853",
+  "name": "GD-3200"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "تمر ( بلح )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.824372",
+  "name": "GD-3201"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "تولين داي ايزو سيانات  (C6)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.845441",
+  "name": "GD-3202"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ثلاجات ومبردات واجزائها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.869071",
+  "name": "GD-3203"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ثوم",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.887062",
+  "name": "GD-3204"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جاموس",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.911778",
+  "name": "GD-3205"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جبس صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.932893",
+  "name": "GD-3206"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جبس معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.956076",
+  "name": "GD-3207"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جبن",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.976655",
+  "name": "GD-3208"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جرارات / قلابات متنوعة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.008258",
+  "name": "GD-3209"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جرانيت",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.029854",
+  "name": "GD-3210"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جسور و اجزاء جسور من حديد او صلب - كوبري مفكك",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.049210",
+  "name": "GD-3211"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جلسرين",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.073501",
+  "name": "GD-3212"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جلود و مصنوعات جلدية متنوعه (شنط/محافظ)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.095881",
+  "name": "GD-3213"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جمال",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.183657",
+  "name": "GD-3214"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جير ( جير مطفي ) معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.201036",
+  "name": "GD-3215"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جير مطفي صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.237183",
+  "name": "GD-3216"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "جيراك ( شيشة / أرجيلة ) و مستلزماتها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.254505",
+  "name": "GD-3217"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حاصلات منوعه ( فريك )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.272921",
+  "name": "GD-3218"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حافظات ورق",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.523967",
+  "name": "GD-3219"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حاويات 20 قدم فارغة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.611343",
+  "name": "GD-3220"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حاويات 40 قدم فارغة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.653311",
+  "name": "GD-3221"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حاويات مبرده 20 قدم فارغة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.695052",
+  "name": "GD-3222"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حاويات مبرده 40 قدم فارغة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.736417",
+  "name": "GD-3223"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حب هريس  صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.787813",
+  "name": "GD-3224"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حب هريس معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.837140",
+  "name": "GD-3225"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حبال سيزال",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.866404",
+  "name": "GD-3226"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حبة البركة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.919716",
+  "name": "GD-3227"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حبوب متنوعة مجروشة ( كسب )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.944696",
+  "name": "GD-3228"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد بلت - بارات - مكتلات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.971055",
+  "name": "GD-3229"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد بودر - رماد و تراب (صب) - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.024621",
+  "name": "GD-3230"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد تسليح لفف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.087482",
+  "name": "GD-3231"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد خردة صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.153650",
+  "name": "GD-3232"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد زهر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.254092",
+  "name": "GD-3233"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد صاج مسحوب على البارد",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.539539",
+  "name": "GD-3234"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد صلب ( شرائط - الواح - لفف )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.635810",
+  "name": "GD-3235"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد مجلفن / صاج مجلفن",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.729119",
+  "name": "GD-3236"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد مقولب على الساخن (HBI) صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.770902",
+  "name": "GD-3237"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد(شرائح - صفيح - لفف - صاج - الواح_رلبطة- مصنع- كويل)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.811411",
+  "name": "GD-3238"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حصير",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.847307",
+  "name": "GD-3239"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حفارات بترولية-معدات حفر مختلفة/مستلزمات وقطع غيار حفارات-طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.888179",
+  "name": "GD-3240"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حفاضات نسائية / أطفال (بامبرز / كادلز)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.011772",
+  "name": "GD-3241"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حقائب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.126459",
+  "name": "GD-3242"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حلاوة طحينية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.630225",
+  "name": "GD-3243"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حلوى ومقرمشات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.667404",
+  "name": "GD-3244"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حمص",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.690615",
+  "name": "GD-3245"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حمض تيرفيثاليك واملاحه - معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.721583",
+  "name": "GD-3246"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خام برايت  PERAIT  .... (ملغي)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.763278",
+  "name": "GD-3247"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خامات متنوعة ( كالسيت - حجر كبس - تراب نحاس )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.785211",
+  "name": "GD-3248"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خبث الحديد - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.843275",
+  "name": "GD-3249"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب أبلاكاج",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.875957",
+  "name": "GD-3250"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب أبيض(عجينة خشب)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.913733",
+  "name": "GD-3251"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب أرو",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.943236",
+  "name": "GD-3252"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب باركيه",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:35.972133",
+  "name": "GD-3253"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب بياض",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.022761",
+  "name": "GD-3254"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب زان",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.074796",
+  "name": "GD-3255"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب سويدي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.101626",
+  "name": "GD-3256"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب عروق ( فلنكات )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.137843",
+  "name": "GD-3257"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب قشرة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.187105",
+  "name": "GD-3258"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب كونتر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.207245",
+  "name": "GD-3259"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب ماهوجنى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.228578",
+  "name": "GD-3260"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خشب منشور",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.256955",
+  "name": "GD-3261"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خضروات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.286860",
+  "name": "GD-3262"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خطوط انتاج مفككة / مستلزمات مصانع  - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.307363",
+  "name": "GD-3263"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خلاطات ( معدات خلط خرسانة / أسفلت و مستلزماتها ) - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.329022",
+  "name": "GD-3264"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خميرة ورق / محسنات ورق",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.357397",
+  "name": "GD-3265"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خيوط (غزل )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.390995",
+  "name": "GD-3266"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "خيول",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.410143",
+  "name": "GD-3267"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "داى امونيوم فوسفات - صب غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.437082",
+  "name": "GD-3268"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "داى اوكتيل فاثيلات (DOP)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.502726",
+  "name": "GD-3269"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "داى ايثيل هيكسفيل فاثيلات ( DEHP )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.594159",
+  "name": "GD-3270"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "داى ايزو ديثيل فاثيلات (DI ISO DP)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.706416",
+  "name": "GD-3271"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "داى ايزونونايل فيساليت ( IPA - DINP ) - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.791555",
+  "name": "GD-3272"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "داى ايزونيل فيثاليت - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.943566",
+  "name": "GD-3273"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "داي امونيا فوسفات DAP - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:36.973021",
+  "name": "GD-3274"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "داي ايثلين جليكول ( DI E.G )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.001584",
+  "name": "GD-3275"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "داي إثيلين جليكول ( DI E.G )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.029814",
+  "name": "GD-3276"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "دبابات - و معدات حربية أخرى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.057127",
+  "name": "GD-3277"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "دراجات بخارية (موتوسيكل - تروسيكل)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.091292",
+  "name": "GD-3278"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "دراجات هوائية (عجل - سبق)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.121865",
+  "name": "GD-3279"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "دراسات  - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.149959",
+  "name": "GD-3280"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "دعامات عريضة من حديد او صلب اشكال خاصة - ملحومة - مثقبة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.178719",
+  "name": "GD-3281"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "دقيق معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.201480",
+  "name": "GD-3282"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "دواجن",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.238124",
+  "name": "GD-3283"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "دولوميت ( زلط سن ) صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.257294",
+  "name": "GD-3284"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "دولوميت ( زلط سن ) معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.280122",
+  "name": "GD-3285"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ذرة صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.305766",
+  "name": "GD-3286"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ذره معبأه",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.337916",
+  "name": "GD-3287"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "رخام",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.360404",
+  "name": "GD-3288"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "رده ( نخالة قمح ) معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.383966",
+  "name": "GD-3289"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "رصاص",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.408541",
+  "name": "GD-3290"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "رقائق الومنيوم- فويل",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.444306",
+  "name": "GD-3291"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "رمال - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.558795",
+  "name": "GD-3292"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "رمان بلى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.612572",
+  "name": "GD-3293"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "رمل زجاجى ( سيليكا ) معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.643156",
+  "name": "GD-3294"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "رولات ورق متنوعة ( ورق كاشير / ورق تغليف )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.678716",
+  "name": "GD-3295"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زبدة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.707541",
+  "name": "GD-3296"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زجاج ( مرايات - عدسات )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.735840",
+  "name": "GD-3297"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زجاج دوائى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.763707",
+  "name": "GD-3298"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زجاج سيارات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.783911",
+  "name": "GD-3299"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زجاج مسطح  / زجاج فوارغ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.800869",
+  "name": "GD-3300"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زجاجات و عبوات واغطية زجاجات من بلاستيك",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.821778",
+  "name": "GD-3301"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زراع قلاب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.843573",
+  "name": "GD-3302"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زغب بذور القطن",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.871677",
+  "name": "GD-3303"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زنك صخري خام - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.903447",
+  "name": "GD-3304"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زنك معبأ غير مصنف - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.926264",
+  "name": "GD-3305"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت اولين صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.957948",
+  "name": "GD-3306"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت اولين معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:37.984966",
+  "name": "GD-3307"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت بذرة قطن صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.010214",
+  "name": "GD-3308"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت بذرة كتان صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.035658",
+  "name": "GD-3309"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت جوز هند صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.079259",
+  "name": "GD-3310"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت جوز هند معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.101974",
+  "name": "GD-3311"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت ذره صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.122367",
+  "name": "GD-3312"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت زيتون معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.141967",
+  "name": "GD-3313"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت ستارين  صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.169523",
+  "name": "GD-3314"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت ستيرين صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.190766",
+  "name": "GD-3315"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت صابون صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.210160",
+  "name": "GD-3316"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت صابون معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.229746",
+  "name": "GD-3317"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت صويا صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.248556",
+  "name": "GD-3318"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت عباد الشمس معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.271623",
+  "name": "GD-3319"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت نخيل صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.293644",
+  "name": "GD-3320"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت نخيل معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.314374",
+  "name": "GD-3321"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت نوى (نوى نخيل - نوى سترين ) صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.334677",
+  "name": "GD-3322"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت نوى (نوى نخيل -نوى ستيرين ) معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.354153",
+  "name": "GD-3323"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت نوى اولين صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.378444",
+  "name": "GD-3324"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت نوى سترين صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.402318",
+  "name": "GD-3325"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت نوى ستيرين صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.424254",
+  "name": "GD-3326"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت نوى ستيرين معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.443270",
+  "name": "GD-3327"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيت نوى نخيل صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.462181",
+  "name": "GD-3328"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيتون",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.486821",
+  "name": "GD-3329"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيوت صناعية (لاستخدامات الصناعة والمعدات والمحركات) سائلة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.512496",
+  "name": "GD-3330"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيوت طعام نباتية صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.535631",
+  "name": "GD-3331"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيوت طعام نباتية معبأة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.568611",
+  "name": "GD-3332"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيوت متنوعة سائلة صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.596883",
+  "name": "GD-3333"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيوت و شحوم صناعية ( لاستخدامات الصناعة و المحركات ) معبأة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.617261",
+  "name": "GD-3334"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيوت و شحوم صناعية (لاستخدامات الصناعة والمعدات والمحركات) سائلة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.638632",
+  "name": "GD-3335"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ساعات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.662364",
+  "name": "GD-3336"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سبيكات سيليكون",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.691156",
+  "name": "GD-3337"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ستائر حديد - نسج معدنية  - سياجات شبكية - الواح شبكية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.811533",
+  "name": "GD-3338"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ستيرين مونومر St.Mon",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.857345",
+  "name": "GD-3339"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سجائر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.922572",
+  "name": "GD-3340"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سرير وتروللى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.982535",
+  "name": "GD-3341"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سكر صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.041515",
+  "name": "GD-3342"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سكر معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.096285",
+  "name": "GD-3343"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سلفات امونيوم ( معبأ )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.136009",
+  "name": "GD-3344"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سلفات بوتاسيوم صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.173429",
+  "name": "GD-3345"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سلفات بوتاسيوم معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.208492",
+  "name": "GD-3346"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سلك رباط",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.248753",
+  "name": "GD-3347"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سلك مجلفن",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.297648",
+  "name": "GD-3348"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سلك مسحوب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.351516",
+  "name": "GD-3349"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سماد عضوى صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.391870",
+  "name": "GD-3350"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سماد عضوى معبا (يوريا - سوبر فوسفات)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.410078",
+  "name": "GD-3351"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سماد يوريا معبأ - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.442506",
+  "name": "GD-3352"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سمسم صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.466509",
+  "name": "GD-3353"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سمسم معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.484991",
+  "name": "GD-3354"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سمك",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.504876",
+  "name": "GD-3355"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سمن نباتى معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.534083",
+  "name": "GD-3356"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سوبر فوسفات ثلاثى - صب غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.555613",
+  "name": "GD-3357"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيارات خاصة (ملاكي/تاكسي/ليموزين)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.584606",
+  "name": "GD-3358"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيارات نقل ثقيل (مقطورة - اتوبيس - جرار - وحدات متحركة)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.605673",
+  "name": "GD-3359"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيارات نقل متوسطة ربع/نصف نقل (بيك أب) - ميني باص - ميكروباص",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.631873",
+  "name": "GD-3360"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيراميك",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.661864",
+  "name": "GD-3361"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيلاج ذرة / علف حيوانى معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.702916",
+  "name": "GD-3362"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيلكون",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.743835",
+  "name": "GD-3363"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيليكا (رمل زجاجي) صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.774225",
+  "name": "GD-3364"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيليكات صوديوم",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.878107",
+  "name": "GD-3365"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيليكات صوديوم معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.901957",
+  "name": "GD-3366"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيليكون بودر  SILICON POWDER",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.928284",
+  "name": "GD-3367"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيليولويد    CELLULOID",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.958778",
+  "name": "GD-3368"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "سيليولويد سكراب CELLULOID SCRAP",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:39.981309",
+  "name": "GD-3369"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شاكوش طحن",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.006076",
+  "name": "GD-3370"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شامبوهات و مستحضرات عناية بالبشره ( ليست خطر )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.026239",
+  "name": "GD-3371"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شاي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.053169",
+  "name": "GD-3372"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شبكة ري بمستلزماتها / أدوات زراعية متنوعة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.104869",
+  "name": "GD-3373"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شحوم براميل",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.136996",
+  "name": "GD-3374"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شحوم نباتية وحيوانية صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.168733",
+  "name": "GD-3375"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شرابات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.194675",
+  "name": "GD-3376"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شعير",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.225146",
+  "name": "GD-3377"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شعير صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.252151",
+  "name": "GD-3378"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شكائر منسوجة من بلاستيك",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.279540",
+  "name": "GD-3379"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شمر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.301247",
+  "name": "GD-3380"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "شيكولاته",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.325677",
+  "name": "GD-3381"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صابون بمختلف أنواعه",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.356006",
+  "name": "GD-3382"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صلب ( بلت - بارات - مكتلات )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.375940",
+  "name": "GD-3383"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صمغ (مواد لاصقة غير مصنفة خطر)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.397316",
+  "name": "GD-3384"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صوديوم املاح    SODIUM",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.419662",
+  "name": "GD-3385"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صوديوم تراى صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.446481",
+  "name": "GD-3386"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صوديوم تراى معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.476038",
+  "name": "GD-3387"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صوديوم سلفات صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.500643",
+  "name": "GD-3388"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صوديوم سلفات معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.521640",
+  "name": "GD-3389"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صوديوم فوسفات معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.545197",
+  "name": "GD-3390"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صوديوم نفتالين سولفونات (  SODIUM NAPHTHALENE SULPHONATE ( C6",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.580883",
+  "name": "GD-3391"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "صوف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.601274",
+  "name": "GD-3392"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "طائرات و مستلزماتها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.623703",
+  "name": "GD-3393"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "طفلة بترولية ( ناتج من تكريرالبترول )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.643169",
+  "name": "GD-3394"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "طقم توزيع زجاجي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.669538",
+  "name": "GD-3395"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "طلمبات و مضخات متنوعة الاستخدام",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.691618",
+  "name": "GD-3396"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "طماطم / صلصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.715177",
+  "name": "GD-3397"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "طوب حرارى صب - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.734389",
+  "name": "GD-3398"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "طوب حرارى معبا و طينه حرارايه",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.756953",
+  "name": "GD-3399"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "طين اسوانى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.780607",
+  "name": "GD-3400"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عبوات تغليف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.803336",
+  "name": "GD-3401"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عجول",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.827586",
+  "name": "GD-3402"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عدس صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.849571",
+  "name": "GD-3403"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عدس معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.885907",
+  "name": "GD-3404"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عربات مقطورة غير ذاتية الحركة ( كارافان )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.910923",
+  "name": "GD-3405"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عرقسوس",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.933004",
+  "name": "GD-3406"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عسل نحل طبيعى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.953330",
+  "name": "GD-3407"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عصائر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.978000",
+  "name": "GD-3408"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "علب صفيح فارغة - أغطية من صفيح",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:40.998489",
+  "name": "GD-3409"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "علب لئعبئة المواد الغازية(علب كنز)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.018914",
+  "name": "GD-3410"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "علف حيواني صب (علف بنجر)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.040279",
+  "name": "GD-3411"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عملات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.060936",
+  "name": "GD-3412"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عنب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.098216",
+  "name": "GD-3413"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "عوارم كهنة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.118527",
+  "name": "GD-3414"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "غبارسيليكا معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.140660",
+  "name": "GD-3415"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "غلايات ولوازمها-مولدات ( حرارية - كهربية )وأجزائها/مهيئات - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.163408",
+  "name": "GD-3416"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فاصوليا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.186155",
+  "name": "GD-3417"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فحم بترولى معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.206385",
+  "name": "GD-3418"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فحم حجري صب / بترولى صب MHB    في الشحن و التفريغ  بدون خطورة في التخزين(C.4)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.230029",
+  "name": "GD-3419"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فحم كوك (معبأ) غير مصنف خطر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.252288",
+  "name": "GD-3420"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فحم مكلسن (صب.ج)غير نظيفC.4  MHB  في الشحن و التفريغ بدون خطورة في التخزين",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.270605",
+  "name": "GD-3421"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فحم نباتى معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.292863",
+  "name": "GD-3422"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فحم(صب.ج)غير نظيف C.4 في الشحن و التفريغ  بدون خطورة في التخزين",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.315528",
+  "name": "GD-3423"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فراء",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.336834",
+  "name": "GD-3424"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فراوله",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.358556",
+  "name": "GD-3425"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فراؤل -FARAOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.377858",
+  "name": "GD-3426"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فلاتر( سيارات - مياه )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.402640",
+  "name": "GD-3427"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فلفل اسود",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.420228",
+  "name": "GD-3428"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فلورسبار ( خامات تدخل في صناعة الاسمنت و الحديد ) معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.438057",
+  "name": "GD-3429"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فلورسبار (خامات تدخل فى صناعة الاسمنت والحديد) صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.458534",
+  "name": "GD-3430"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فوسفات صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.480974",
+  "name": "GD-3431"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فوسفات صب - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.509459",
+  "name": "GD-3432"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فوسفات صخري صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.528106",
+  "name": "GD-3433"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فوسفات معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.548268",
+  "name": "GD-3434"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فول  ( صويا - حصى - كسر ) صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.579965",
+  "name": "GD-3435"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فول حصى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.608819",
+  "name": "GD-3436"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فول صويا معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.629854",
+  "name": "GD-3437"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فول معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.655336",
+  "name": "GD-3438"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فيبر جلس",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.678743",
+  "name": "GD-3439"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فيرو سيلكو منجنيز صب جاف غير نظيف -FERO SILICO MANGANESE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.708573",
+  "name": "GD-3440"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فيرو سيلكو منجنيز معبأ - FERO SILICO MANGANESE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.729819",
+  "name": "GD-3441"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "فيرو منجنيز",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.757964",
+  "name": "GD-3442"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قشور أكاسيد حديد صب (غير مصنف) - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.782351",
+  "name": "GD-3443"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قصب سكر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.807670",
+  "name": "GD-3444"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قضبان اخرى من حديد او من صلب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.877995",
+  "name": "GD-3445"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قضبان سكك حديدية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.896081",
+  "name": "GD-3446"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قطارات ومكوناتها (عربات قطار)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:41.959012",
+  "name": "GD-3447"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قطع أثرية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.015374",
+  "name": "GD-3448"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قطع غيار متنوعة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.038311",
+  "name": "GD-3449"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قطع غيار معدات / سيارات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.063394",
+  "name": "GD-3450"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قلوب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.118442",
+  "name": "GD-3451"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قمح صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.159029",
+  "name": "GD-3452"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "قواعد - اكسسورات - مستلزمات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.195290",
+  "name": "GD-3453"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كابلات كهربائية معزولة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.228876",
+  "name": "GD-3454"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كارادول ... (ملغي)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.261753",
+  "name": "GD-3455"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كاراكات  - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.292332",
+  "name": "GD-3456"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كاكاو",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.313822",
+  "name": "GD-3457"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كالسيت",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.341150",
+  "name": "GD-3458"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كالسيوم بروميد معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.366714",
+  "name": "GD-3459"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كبد",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.394504",
+  "name": "GD-3460"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كبريت صب (غير مصنف) - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.418346",
+  "name": "GD-3461"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كبريتات أمونيوم (معبأ)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.467350",
+  "name": "GD-3462"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كبريتات صوديوم",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.492927",
+  "name": "GD-3463"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كبريتات نحاس معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.516953",
+  "name": "GD-3464"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كتب وكتيبات ومطبوعات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.539524",
+  "name": "GD-3465"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كراوية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.560505",
+  "name": "GD-3466"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كربونات كالسيوم صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.597220",
+  "name": "GD-3467"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كربونات كالسيوم معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.620167",
+  "name": "GD-3468"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كرتونة تغليف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.651575",
+  "name": "GD-3469"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كركديه",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.674441",
+  "name": "GD-3470"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كسب فول صويا معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.702328",
+  "name": "GD-3471"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كسبرة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.724852",
+  "name": "GD-3472"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كلاوى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.756930",
+  "name": "GD-3473"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كلفر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.787886",
+  "name": "GD-3474"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كلوريد بوتاسيوم صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.808461",
+  "name": "GD-3475"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كلوريد بوتاسيوم معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.831345",
+  "name": "GD-3476"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كلوريد صوديوم صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.855211",
+  "name": "GD-3477"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كلوريد صوديوم معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.873130",
+  "name": "GD-3478"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كلوريد كالسيوم معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.895967",
+  "name": "GD-3479"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كلينكر - اسمنت مكتل غير مطحون (صب) - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.918625",
+  "name": "GD-3480"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كلينكر - اسمنت مكتل غير مطحون (معبأ)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.945830",
+  "name": "GD-3481"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كمر متوازى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:42.972695",
+  "name": "GD-3482"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كمون",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.012727",
+  "name": "GD-3483"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كوالين",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.035869",
+  "name": "GD-3484"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كولين - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.068659",
+  "name": "GD-3485"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كيماويات أخرى (مخاليط مواد عطريه)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.107093",
+  "name": "GD-3486"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "لب - فول سوداني - مكسرات متنوعة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.148656",
+  "name": "GD-3487"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "لبن جاف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.169658",
+  "name": "GD-3488"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "لحوم",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.188319",
+  "name": "GD-3489"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "لدائن وحبيبات من بلاستيك ( تدخل في الصناعات المختلفة )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.210135",
+  "name": "GD-3490"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "لفف حديد صاج مسحوب على الساخن (HRC)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.230447",
+  "name": "GD-3491"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "لفف حديد على البارد",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.258848",
+  "name": "GD-3492"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "لفف نحاس",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.279283",
+  "name": "GD-3493"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "لوادر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.301086",
+  "name": "GD-3494"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "لوازم مواسير او انابيب (وصلات - اكواع ) من حديد او صلب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.318935",
+  "name": "GD-3495"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "لوف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.360321",
+  "name": "GD-3496"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ليمون",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.442400",
+  "name": "GD-3497"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ماكينات / معدات صناعية و مستلزماتها - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.510759",
+  "name": "GD-3498"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ماكينات بلاستيك-الات لشغل المطاط او لصنع منتجات من هذه المواد",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.542767",
+  "name": "GD-3499"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ماكينات بلاستيك ومشتملاتها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.801029",
+  "name": "GD-3500"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ماكينات تعبئة و تغليف و مستلزماتها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.846924",
+  "name": "GD-3501"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ماكينات لكبس و صناعة الورق",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.926906",
+  "name": "GD-3502"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ماكينات نجارة و تصنيع أثاث وملحقاتها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:43.977889",
+  "name": "GD-3503"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ماكينات نسيجية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.015081",
+  "name": "GD-3504"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ماكينات نقدية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.072656",
+  "name": "GD-3505"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ماكينات و مستلزمات مطاعم متنوعة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.103148",
+  "name": "GD-3506"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ماكينة تصوير- ماكينه طباعه",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.139681",
+  "name": "GD-3507"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مبيدات للقوارض والفطريات والأعشاب الضاره  INSTENCT PESTICIDE - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.216018",
+  "name": "GD-3508"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مثلجات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.276322",
+  "name": "GD-3509"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مجوهرات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.346187",
+  "name": "GD-3510"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "محولات و لوحات كهربائية ومستلزماتهم - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.741032",
+  "name": "GD-3511"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مخ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.785872",
+  "name": "GD-3512"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مخلفات زراعية ليست خطر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.819772",
+  "name": "GD-3513"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مخللات مشكلة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.846696",
+  "name": "GD-3514"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مربى و هلام فواكه و جيلاتين",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.886250",
+  "name": "GD-3515"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مساحيق تستخدم فى صناعة السيراميك صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.926111",
+  "name": "GD-3516"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مساحيق تستخدم فى صناعة السيراميك ومستلزمات البناء معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:44.948467",
+  "name": "GD-3517"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مساحيق دهانات غير خطر",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.043762",
+  "name": "GD-3518"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مستلزمات طباعة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.161855",
+  "name": "GD-3519"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مستلزمات فنادق",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.218184",
+  "name": "GD-3520"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مستلزمات ماكينة لحام",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.246936",
+  "name": "GD-3521"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مستلزمات مكتبية / اثاث مكتبي (خشبي - معدني)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.297431",
+  "name": "GD-3522"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مستلزمات و مهمات طبية ( قطن طبي - شاش طبي - خطوط دم )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.329988",
+  "name": "GD-3523"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مشروبات غازية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.362005",
+  "name": "GD-3524"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مشروبات كحولية  - ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.391111",
+  "name": "GD-3525"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مصابيح كهربائية / كشافات و أدوات إنارة مختلفة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.439373",
+  "name": "GD-3526"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مصاعد كهربائية / دعامات مصاعد و أجزائها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.474873",
+  "name": "GD-3527"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مصنعات و إكسسوارات من زجاج",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.505610",
+  "name": "GD-3528"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مصنوعات من خشب ( شيش - شباك - ألواح فرومايكا - خشب مضغوط )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.526546",
+  "name": "GD-3529"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مطاط طبيعي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.552054",
+  "name": "GD-3530"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "معالج حرارى ومشتملاتة ( أفران ) - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.578435",
+  "name": "GD-3531"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "معجون اسنان",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.606200",
+  "name": "GD-3532"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "معدات تكسير ( كسارات ) - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.627339",
+  "name": "GD-3533"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "معدات مشاريع / كرفانات - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.651331",
+  "name": "GD-3534"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "معدات ومولدات ومهيئات/ قطع غيار للمصانع و المشاريع  - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.671230",
+  "name": "GD-3535"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "معسل",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.698874",
+  "name": "GD-3536"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "معلبات اغذية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.718708",
+  "name": "GD-3537"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مغاطس استحمام (بانيوهات) من حديد صب و ان كانت مطلبة بالمينا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.739403",
+  "name": "GD-3538"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مكرونه مختلفة الأنواع",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.762376",
+  "name": "GD-3539"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مكسبات طعم و رائحة  ( مواد تدخل في الصناعات الغذائية )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.788596",
+  "name": "GD-3540"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مكسرات",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.816441",
+  "name": "GD-3541"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مكعب خرسانى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.835057",
+  "name": "GD-3542"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مكيفات هواء و مراوح و ماكينات ضغط هواء و مستلزماتها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.854581",
+  "name": "GD-3543"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ملابس",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.880618",
+  "name": "GD-3544"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ملح طعام صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:45.918901",
+  "name": "GD-3545"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ملح طعام معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.022615",
+  "name": "GD-3546"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.046659",
+  "name": "GD-3547"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ملغي",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.064383",
+  "name": "GD-3548"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ملوخية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.088211",
+  "name": "GD-3549"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مناديل ورق - ايزى بايند مناديل معطرة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.121502",
+  "name": "GD-3550"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "منتجات بلاستيك(خراطيم-أكياس-ريفلات- شكائر -الواح فلين-مشمع)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.156140",
+  "name": "GD-3551"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "منتجات غذائية متنوعة اخرى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.188535",
+  "name": "GD-3552"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "منتجات من حديد متنوعه",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.216160",
+  "name": "GD-3553"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "منتجات ورقية ( دوبلكس )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.244819",
+  "name": "GD-3554"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "منجنيزمجروش",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.300935",
+  "name": "GD-3555"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "منسوجات أخرى متنوعة ( أكياس تغليف بلاستيك - عبوات جامبو )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.341806",
+  "name": "GD-3556"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "منظفات صناعية و مساحيق غسيل",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.364418",
+  "name": "GD-3557"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مهمات بترولية ومعدات بترولية - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.392157",
+  "name": "GD-3558"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مهمات سلامة مهنية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.419425",
+  "name": "GD-3559"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مهمات عسكريه",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.446424",
+  "name": "GD-3560"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواد بناء جاهزة ( الواح جبس - الواح أسمنت - خرسانة حرارية) معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.500612",
+  "name": "GD-3561"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواد بناء ومستلزماتها صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.571389",
+  "name": "GD-3562"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواد تدخل فى صناعة البويات (راتنج / إضافات ألوان )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.600568",
+  "name": "GD-3563"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواد تدخل فى صناعة الزيوت (راتنج الكيدى ) سائلة صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.627313",
+  "name": "GD-3564"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواد عازلة ( الوفاين - بنتونايت - انسوفلت - بيتومين )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.649658",
+  "name": "GD-3565"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواد متنوعة تدخل في صناعة المبيدات و الأسمدة ( غير خطرة )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.670445",
+  "name": "GD-3566"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواسير  و زوايا بلاستيك ومستلزماتها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.694194",
+  "name": "GD-3567"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواسير مجوفة و هياكل و اشكال أخرى من نحاس",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.717667",
+  "name": "GD-3568"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواسير من فخار ومستلزماتها",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.752297",
+  "name": "GD-3569"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواسير و انابيب و اشكال خاصة (بروفيلات / سلندرات ) من الالومنيوم",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.778340",
+  "name": "GD-3570"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواسير و انابيب و اشكال خاصة (بروفيلات) مجوفة من الصلب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.807777",
+  "name": "GD-3571"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مواسير و انابيب و اشكال خاصة (بروفيلات/هياكل) مجوفة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.838420",
+  "name": "GD-3572"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "موكيت وسجاد",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.858817",
+  "name": "GD-3573"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مولاسيس صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.878300",
+  "name": "GD-3574"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "مياه ريدياتير",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.908665",
+  "name": "GD-3575"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ميكروباص",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.943095",
+  "name": "GD-3576"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ناصل",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:46.979927",
+  "name": "GD-3577"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ناصل كاب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.006237",
+  "name": "GD-3578"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ناقل كهرباء - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.036891",
+  "name": "GD-3579"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "نباتات و منتجات عطارة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.057956",
+  "name": "GD-3580"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "نترات يوريا مبلله (رطبه)    UREA NITRATE WETIED",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.105485",
+  "name": "GD-3582"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "نجف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.128274",
+  "name": "GD-3583"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "نحـــاس",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.154888",
+  "name": "GD-3584"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "نخالة خشب ( نشارة خشب )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.174694",
+  "name": "GD-3585"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "نشا ذره غذائى معبأ",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.200291",
+  "name": "GD-3586"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "نشادر معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.230041",
+  "name": "GD-3587"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "هب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.257479",
+  "name": "GD-3588"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "هلب بحرى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.282388",
+  "name": "GD-3589"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "هيكسا ميثيلين تترامين HEXA METHYLENE TETRAMINE",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.323846",
+  "name": "GD-3591"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "وحدات تحكم/ مستلزمات/ قطع غيار الكترونية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.346257",
+  "name": "GD-3592"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "وحدات تكثيف وتبخير - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.367159",
+  "name": "GD-3593"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ورق صنفرة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.427178",
+  "name": "GD-3596"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ورق متنوع ( فويل - سليلوز - كرافت - مقوى/ كرتون )",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.450495",
+  "name": "GD-3597"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ورق مكربن",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.522704",
+  "name": "GD-3600"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "نترات يوريا جافة   UREA NITRATE DRY",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.083777",
+  "name": "GD-3581"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "هياكل معدنية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.303146",
+  "name": "GD-3590"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " قشور صوديوم صلبة (CAUSTIC POTASH SOLID)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.078020",
+  "name": "GD-3057"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "يوريا معبا",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.587080",
+  "name": "GD-3602"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "يوسفى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.606321",
+  "name": "GD-3603"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "وحدة بحرية ( يخت/ رماث- وحدة انقاذ / قاطرة / حفار) - طرود و مهيئات ذات طبيعة خاصة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.386854",
+  "name": "GD-3594"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "يوريا صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.559942",
+  "name": "GD-3601"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ورق مشبع",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.470228",
+  "name": "GD-3598"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ورق مشبع بالزيوت PAPER UNSATURATE OIL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.491138",
+  "name": "GD-3599"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "ورق صحى",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.407877",
+  "name": "GD-3595"
+ }
+]

@@ -14,6 +14,7 @@ fixtures = [
     "Translation",
     "Ticket Event",
     "Goods",
+    "Packing Type",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [

@@ -93,7 +93,8 @@
   {
    "fieldname": "staying_duration",
    "fieldtype": "Duration",
-   "label": "Staying Duration "
+   "label": "Staying Duration ",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_ujcy",
@@ -112,7 +113,8 @@
   {
    "fieldname": "operations_duration",
    "fieldtype": "Duration",
-   "label": "Operations Duration"
+   "label": "Operations Duration",
+   "read_only": 1
   },
   {
    "depends_on": "eval:doc.operations_started_time",
@@ -161,7 +163,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-04 14:45:23.930855",
+ "modified": "2025-01-06 09:20:03.340289",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Ship Visit",

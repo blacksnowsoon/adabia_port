@@ -8,7 +8,7 @@
   "yard_name",
   "company",
   "column_break_psgo",
-  "is_enabled"
+  "is_disabled"
  ],
  "fields": [
   {
@@ -30,14 +30,14 @@
   },
   {
    "default": "0",
-   "fieldname": "is_enabled",
+   "fieldname": "is_disabled",
    "fieldtype": "Check",
-   "label": "Is Enabled?"
+   "label": "Is Disabled?"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-05 13:53:39.333093",
+ "modified": "2025-01-06 09:27:51.801676",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Yard Storage",
