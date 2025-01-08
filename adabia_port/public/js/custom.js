@@ -134,6 +134,8 @@ function render_html(frm, data, field, cba) {
   
   // generate the table
 	frm.fields_dict[field].wrapper.appendChild(generat_2_col_rows(data));
+  
+  
 }
 // generate table data row
 function generat_2_col_rows(rows) {
@@ -179,4 +181,13 @@ function parse_json_value(value) {
 
 function clean_wrapper_innerHTML(frm, fields=[]) {
   fields.forEach(field => frm.fields_dict[field].wrapper.innerHTML = "")
+}
+
+// alert messages
+function err_message( message) {
+  return frappe.msgprint({
+    title: __('Error'),
+    indicator: 'red',
+    message: __(message)
+  });
 }

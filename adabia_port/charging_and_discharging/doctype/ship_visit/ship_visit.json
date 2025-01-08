@@ -24,9 +24,9 @@
   "visit_manifest_section",
   "customs_declarations",
   "section_totals",
-  "total_manifest_weight",
+  "manifest_total_weight",
   "column_break_etfa",
-  "total_handled_weight",
+  "handled_total_weight",
   "column_break_zovy",
   "column_break_mkrx"
  ],
@@ -82,8 +82,7 @@
   {
    "fieldname": "actual_arrival_time",
    "fieldtype": "Datetime",
-   "label": "Actual Arrival Time",
-   "reqd": 1
+   "label": "Actual Arrival Time"
   },
   {
    "fieldname": "actual_leaving_time",
@@ -151,19 +150,24 @@
    "label": "Totals"
   },
   {
-   "fieldname": "total_manifest_weight",
+   "fieldname": "manifest_total_weight",
    "fieldtype": "HTML",
-   "label": "Total Manifest Weight"
+   "label": "Manifest Total Weight"
   },
   {
-   "fieldname": "total_handled_weight",
+   "fieldname": "handled_total_weight",
    "fieldtype": "HTML",
-   "label": "Total Handled Weight"
+   "label": "Handled Total Weight"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2025-01-06 09:20:03.340289",
+ "links": [
+  {
+   "link_doctype": "Charging and Discharging Ticket",
+   "link_fieldname": "visit_id"
+  }
+ ],
+ "modified": "2025-01-07 19:51:35.642866",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Ship Visit",

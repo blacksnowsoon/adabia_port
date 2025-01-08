@@ -957,15 +957,6 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": " خام البترول  BETROL OIL",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:22.014067",
-  "name": "GD-2934"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
   "goods_name": " داى اثيل امين DI ETHYL AMINE",
   "hs_code": null,
   "modified": "2024-12-31 22:21:22.045991",
@@ -6897,46 +6888,10 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": "نترات يوريا جافة   UREA NITRATE DRY",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:47.083777",
-  "name": "GD-3581"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
-  "goods_name": "هياكل معدنية",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:47.303146",
-  "name": "GD-3590"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
-  "goods_name": " قشور صوديوم صلبة (CAUSTIC POTASH SOLID)",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:27.078020",
-  "name": "GD-3057"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
   "goods_name": "يوريا معبا",
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.587080",
   "name": "GD-3602"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
-  "goods_name": "يوسفى",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:47.606321",
-  "name": "GD-3603"
  },
  {
   "class": null,
@@ -6951,10 +6906,37 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": "يوريا صب - غير نظيف",
+  "goods_name": "يوسفى",
   "hs_code": null,
-  "modified": "2024-12-31 22:21:47.559942",
-  "name": "GD-3601"
+  "modified": "2024-12-31 22:21:47.606321",
+  "name": "GD-3603"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " خام البترول  BETROL OIL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.014067",
+  "name": "GD-2934"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "هياكل معدنية",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.303146",
+  "name": "GD-3590"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "نترات يوريا جافة   UREA NITRATE DRY",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.083777",
+  "name": "GD-3581"
  },
  {
   "class": null,
@@ -6969,10 +6951,28 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
+  "goods_name": " قشور صوديوم صلبة (CAUSTIC POTASH SOLID)",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:27.078020",
+  "name": "GD-3057"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
   "goods_name": "ورق مشبع بالزيوت PAPER UNSATURATE OIL",
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.491138",
   "name": "GD-3599"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "يوريا صب - غير نظيف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:47.559942",
+  "name": "GD-3601"
  },
  {
   "class": null,

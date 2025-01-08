@@ -40,20 +40,20 @@ frappe.ui.form.on("SPS Operation Ticket", {
 		}
 	},
 	before_save(frm) {
-		console.log(!frm.doc.in_progress_since)
-		if (!frm.doc.in_progress_since && frm.doc.status === "Closed") {
-			frappe.show_alert({
-				message: __(`You Must Save The Ticket In Progress Mode First`),
-				indicator: 'red'
-			})
-			frappe.throw('You Must Save The Ticket In Progress Mode First')
-			// cancel form
-			
-		}
+		
+		
 		
 	},
 	status(frm) {
 		frm_status_change(frm)
+	},
+	validate(frm) {
+		if (!frm.doc.in_progress_since && frm.doc.status === "Closed") {
+			err_message(`يجب حفظ المهام قيد التنفيذ قبل الاغلاق`)
+			// cancel save form
+			frappe.validated = false;
+			
+		}
 	}
 });
 

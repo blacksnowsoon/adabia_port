@@ -52,7 +52,11 @@ def get_list(doctype='', fields=[], filters={}):
 def get_all(doctype='', fields=[], filters={}):
     return frappe.get_all(doctype, fields=fields, filters=filters)
 
-
+@frappe.whitelist() 
+def update_value(doctype, docname, fieldname, value): 
+    doc = frappe.get_doc(doctype, docname) 
+    doc.db_set(fieldname, value)
+    doc.save()
 
 def award_energy_points(doc, method):
     if doc.status == 'Pending':
@@ -75,3 +79,4 @@ def award_energy_points(doc, method):
                     })
                 energy_point_log.insert(ignore_permissions=True)
         frappe.db.commit()
+

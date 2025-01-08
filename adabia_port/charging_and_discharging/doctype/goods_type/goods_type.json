@@ -1,37 +1,33 @@
 {
  "actions": [],
- "autoname": "format:NU-{###}",
- "creation": "2024-12-31 18:35:51.410897",
+ "allow_rename": 1,
+ "autoname": "format:GT-{####}",
+ "creation": "2025-01-06 20:08:05.658690",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "unit_name",
-  "column_break_gjgd",
-  "column_break_czpt"
+  "goods_type",
+  "column_break_xsqv"
  ],
  "fields": [
   {
-   "fieldname": "unit_name",
+   "fieldname": "goods_type",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Unit Name",
+   "label": "Goods Type",
    "reqd": 1
   },
   {
-   "fieldname": "column_break_gjgd",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_czpt",
+   "fieldname": "column_break_xsqv",
    "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-31 18:37:16.036847",
+ "modified": "2025-01-06 20:21:18.120011",
  "modified_by": "Administrator",
- "module": "Port Core",
- "name": "Goods Unit",
+ "module": "Charging and Discharging",
+ "name": "Goods Type",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -53,5 +49,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "unit_name"
+ "title_field": "goods_type"
 }
