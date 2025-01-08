@@ -8,10 +8,12 @@
  "engine": "InnoDB",
  "field_order": [
   "customs_declaration_no",
+  "weight",
+  "quantity",
+  "column_break_chfv",
   "started_at",
   "ended_at",
-  "weight",
-  "quantity"
+  "notes"
  ],
  "fields": [
   {
@@ -48,12 +50,21 @@
    "fieldtype": "Data",
    "label": "Customs Declaration No.",
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_chfv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-06 11:43:01.922692",
+ "modified": "2025-01-08 12:29:43.835821",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging Operation Registry",

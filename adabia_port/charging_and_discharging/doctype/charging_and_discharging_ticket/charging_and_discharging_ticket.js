@@ -29,6 +29,9 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
 	refresh: async(frm) => {
     save_btn(frm) 
     $(`.form-clickable-section`).find('.grid-add-row').attr("class", "btn btn-info btn-sm grid-add-row")
+    
+    double_click_to_open_row_form(frm, 'charging_operations_registry')
+    double_click_to_open_row_form(frm, 'discharging_operations_registry')
     if (!frm.doc.__islocal) {
       await add_visit_data_tables(frm)
     } 
@@ -72,10 +75,7 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
 // Charging Child Table
 frappe.ui.form.on("Charging Operation Registry", {
   form_render(frm, cdt, cdn) {
-    $('.form-in-grid').find(".grid-move-row").hide()
-    $('.form-in-grid').find(".grid-insert-row").hide()
-    $('.form-in-grid').find(".grid-insert-row-below").hide()
-    $('.form-in-grid').find(".grid-append-row").hide()
+    set_grid_form_btns()
   },
   charging_operations_registry_add(frm, cdt, cdn) {
     const declaration = frm.doc.customs_declarations
@@ -95,10 +95,7 @@ frappe.ui.form.on("Charging Operation Registry", {
 // Discharging Child Table
 frappe.ui.form.on("Discharging Operation Registry", {
   form_render(frm, cdt, cdn) {
-    $('.form-in-grid').find(".grid-move-row").hide()
-    $('.form-in-grid').find(".grid-insert-row").hide()
-    $('.form-in-grid').find(".grid-insert-row-below").hide()
-    $('.form-in-grid').find(".grid-append-row").hide()
+    set_grid_form_btns()
   },
   discharging_operations_registry_add(frm, cdt, cdn) {
     const declaration = frm.doc.customs_declarations

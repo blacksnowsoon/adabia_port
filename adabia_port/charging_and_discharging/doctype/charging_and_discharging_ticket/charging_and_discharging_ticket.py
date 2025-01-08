@@ -9,6 +9,7 @@ class ChargingandDischargingTicket(Document):
 	def before_save(self):
 		charge = self.charging_operations_registry
 		discharge = self.discharging_operations_registry
+
 		if len(charge) > 0:
 			charging_data={}
 			
@@ -20,7 +21,6 @@ class ChargingandDischargingTicket(Document):
 				charging_data[operation.customs_declaration_no]['quantity'] = charging_data[operation.customs_declaration_no]['quantity'] + operation.quantity
 				
 				
-			
 			for (key, value) in charging_data.items():
 				doc = frappe.get_doc("Customs Declarations", key)
 				doc.handled_weight = value['weight']
@@ -37,6 +37,8 @@ class ChargingandDischargingTicket(Document):
 					#
 				discharging_data[operation.customs_declaration_no]['weight'] = discharging_data[operation.customs_declaration_no]['weight'] + operation.weight
 				discharging_data[operation.customs_declaration_no]['quantity'] = discharging_data[operation.customs_declaration_no]['quantity'] + operation.quantity
+			
+			
 			for (key, value) in discharging_data.items():
 				doc = frappe.get_doc("Customs Declarations", key)
 				doc.handled_weight = value['weight']

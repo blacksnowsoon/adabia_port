@@ -15,12 +15,11 @@ frappe.ui.form.on("Ship Visit", {
 	refresh(frm) {
     save_btn(frm)
     calculate_total_amounts(frm)
+    double_click_to_open_row_form(frm, 'customs_declarations')
     frm.fields_dict.customs_declarations.grid.wrapper.on('click', '.grid-row', function(event) {
         when_row_selected(frm, event)
     });
-    frm.fields_dict.customs_declarations.grid.wrapper.on('dblclick', '.grid-row', function(event) {
-        $(event.currentTarget).find('.btn-open-row').click()
-    });
+    
     $(`.form-clickable-section`).find('.grid-add-row').attr("class", "btn btn-info btn-sm grid-add-row")
     
 	},
@@ -122,7 +121,7 @@ function calculate_total_amounts(frm) {
 when_row_selected = (frm, event) => {
     const row = $(event.currentTarget).data('name');
     const selected_row = frm.doc.customs_declarations.find(row => row.name === row)
-    console.log(row)
+    
 }
 
 

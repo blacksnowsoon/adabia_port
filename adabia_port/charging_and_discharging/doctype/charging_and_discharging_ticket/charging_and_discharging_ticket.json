@@ -112,8 +112,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2025-01-07 16:25:58.516227",
+ "links": [
+  {
+   "link_doctype": "Ship Visit",
+   "link_fieldname": "visit_id"
+  }
+ ],
+ "modified": "2025-01-08 11:21:10.557945",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",

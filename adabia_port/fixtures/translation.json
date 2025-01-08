@@ -2100,10 +2100,10 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2025-01-06 09:07:16.449014",
+  "modified": "2025-01-08 11:16:53.310468",
   "name": "62rc1dvcc2",
   "source_text": "Weight",
-  "translated_text": "االوزن"
+  "translated_text": "الوزن"
  },
  {
   "context": null,
@@ -2559,5 +2559,109 @@
   "name": "i4903l3g6u",
   "source_text": "Piers List",
   "translated_text": "الارصفة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-08 11:13:24.380510",
+  "name": "t48b18elv2",
+  "source_text": "Goods List",
+  "translated_text": "قائمة البضائع"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-08 11:15:13.982508",
+  "name": "t5ajh3mcir",
+  "source_text": "Charging and DisCharging",
+  "translated_text": "الشحن و التفريغ"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-08 11:16:05.827758",
+  "name": "t5qq3v8r01",
+  "source_text": "Visit Info",
+  "translated_text": "بيانات الزيارة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-08 11:17:39.312976",
+  "name": "t6o18qeaje",
+  "source_text": "No.",
+  "translated_text": "م"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-08 11:18:35.273676",
+  "name": "t79gclc243",
+  "source_text": "Goods Name",
+  "translated_text": "اسم البضاعة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-08 11:19:24.540719",
+  "name": "t7otacrosl",
+  "source_text": "Handled Quantity",
+  "translated_text": "العدد المنفذ"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-08 11:23:17.109755",
+  "name": "ta1jjrfmmg",
+  "source_text": "Ship Visit",
+  "translated_text": "سجل الزيارة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-08 11:23:56.742521",
+  "name": "tadv94dar1",
+  "source_text": "PUBLIC",
+  "translated_text": "عام"
  }
 ]
