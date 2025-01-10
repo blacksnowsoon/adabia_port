@@ -139,13 +139,6 @@ fixtures = [
                 "Adabia Port"
             ]]
         }
-    },
-    {
-        "dt": "Email Account", "filters": {
-            "name":["in", [
-                "Adabia Port Notifications"
-            ]]
-        }
     }
 ]
 # Each item in the list will be shown as an app in the apps page
