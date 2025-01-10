@@ -207,7 +207,9 @@ async function populate_selected_Customs_declaration_summary(frm, selected) {
       total_quantity: selected_declaration.quantity, 
       handled_quantity: selected_declaration.handled_quantity,
       progress_name: "declarations_registry",
-      size: 'md' // sm, lg
+      size: 'md', // sm, lg
+      animate: 1,
+      is_count: selected_declaration.is_count
     }
     const table_data = {
       customs_declaration_no: selected_declaration.customs_declaration_no,
@@ -243,7 +245,8 @@ async function get_customs_declarations(frm, customs_declarations) {
         "handled_quantity",
         "weight",
         "handled_weight",
-        "operation_rate"
+        "operation_rate",
+        "is_count"
     ]
   })
   return declarations

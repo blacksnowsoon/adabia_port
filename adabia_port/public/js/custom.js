@@ -272,9 +272,9 @@ function calc_shipment_data(customs_declarations) {
 }
 
 function create_charge_bar(progress_data) {
-  const { total_weight, handled_weight, total_quantity, handled_quantity, name, is_quantity, bg, progress_name, size, animate } = progress_data
+  const { total_weight, handled_weight, total_quantity, handled_quantity, name, is_count, bg, progress_name, size, animate } = progress_data
   
-
+    const is_quantity = total_weight === 0 || total_weight === 1 ? 1 : 0
     const height = size === 'md' ? 20 : size === 'sm' ? 10 : 30
     const value_now = is_quantity ? ((handled_quantity / total_quantity) * 100).toFixed(2) : ((handled_weight / total_weight) * 100).toFixed(2)
     
@@ -283,7 +283,6 @@ function create_charge_bar(progress_data) {
   
     const weight_details = $('<p>', {class: 'text-center p-0'}).text( handled_weight + " / " + total_weight + "(طن)")
     const quantity_details = $('<p>', {class: 'text-center p-0 m-0'}).text( handled_quantity + " / " + total_quantity + "(وحدة)")
-    
     
     const bar = $('<div>', {class: 'progress ', style: `height: ${height}px;`}).append(
       $('<div>', {class: `progress-bar progress-bar-striped ${bg} ${animate ? 'progress-bar-animated' : ''} `, role: 'progressbar', style: `width: ${value_now}%;`, 'aria-valuenow': value_now, 'aria-valuemin': 0, 'aria-valuemax': 100, title: progress_name}).text(`${value_now !== "NaN" ? value_now : 0}%`)

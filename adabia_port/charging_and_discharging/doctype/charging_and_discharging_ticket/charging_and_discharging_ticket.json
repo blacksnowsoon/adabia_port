@@ -18,10 +18,10 @@
   "discharge",
   "shipment_details_section",
   "charge_direct",
-  "column_break_xcih",
-  "charge_from_storage",
   "column_break_cbgk",
   "discharge_direct",
+  "column_break_xcih",
+  "charge_from_storage",
   "column_break_abeh",
   "discharge_to_storage",
   "section_break_customs_declaration_info",
@@ -131,6 +131,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "collapsible": 1,
    "depends_on": "eval:doc.visit_id",
    "fieldname": "shipment_details_section",
    "fieldtype": "Section Break",
@@ -176,7 +177,7 @@
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-10 18:08:49.172906",
+ "modified": "2025-01-10 20:06:54.363432",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",
