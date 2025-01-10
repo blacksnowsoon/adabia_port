@@ -204,3 +204,92 @@ function set_grid_form_btns(frm, field, btn_class) {
   $('.form-in-grid').find(".grid-insert-row-below").hide()
   $('.form-in-grid').find(".grid-append-row").hide()
 }
+function change_grid_add_btn(){
+  $(`.form-clickable-section`).find('.grid-add-row').attr("class", "btn btn-info btn-sm grid-add-row")
+}
+
+
+// calc the customs declarations weight and quantity
+function calc_shipment_data(customs_declarations) {
+  if (customs_declarations.length < 1) return
+  const shipment = {
+    direct_charge: {w:0,q:0},
+    handled_direct_charge: {w:0, q:0},
+    direct_discharge: {w:0,q:0},
+    handled_direct_discharge: {w:0, q:0},
+    charge_from_storage: {w:0,q:0},
+    handled_charge_from_storage: {w:0, q:0},
+    discharge_to_storage: {w:0,q:0},
+    handled_discharge_to_storage: {w:0, q:0},
+    charge: {w:0,q:0},
+    handled_charge: {w:0, q:0},
+    discharge: {w:0,q:0},
+    handled_discharge: {w:0, q:0},
+  }
+  customs_declarations.map(item => {
+    if (item.operation_handler === 'Direct' && item.operation_type === 'Charge') {
+
+      shipment.direct_charge.w = shipment.direct_charge.w + item.weight
+      shipment.direct_charge.q = shipment.direct_charge.q + item.quantity
+      shipment.handled_direct_charge.w = shipment.handled_direct_charge.w + item.handled_weight
+      shipment.handled_direct_charge.q = shipment.handled_direct_charge.q + item.handled_quantity
+  
+    } else if (item.operation_handler === 'Direct'  && item.operation_type === 'Discharge') {
+
+      shipment.direct_discharge.w = shipment.direct_discharge.w + item.weight
+      shipment.direct_discharge.q = shipment.direct_discharge.q + item.quantity
+      shipment.handled_direct_discharge.w = shipment.handled_direct_discharge.w + item.handled_weight
+      shipment.handled_direct_discharge.q = shipment.handled_direct_discharge.q + item.handled_quantity
+        
+    } else if (item.operation_type === 'Charge' && item.operation_handler === 'Storage') {
+      
+      shipment.charge_from_storage.w = shipment.charge_from_storage.w + item.weight
+      shipment.charge_from_storage.q = shipment.charge_from_storage.q + item.quantity
+      shipment.handled_charge_from_storage.w = shipment.handled_charge_from_storage.w + item.handled_weight
+      shipment.handled_charge_from_storage.q = shipment.handled_charge_from_storage.q + item.handled_quantity
+    
+    } else if (item.operation_type === 'Discharge' && item.operation_handler === 'Storage') {
+      
+      shipment.discharge_to_storage.w = shipment.discharge_to_storage.w + item.weight
+      shipment.discharge_to_storage.q = shipment.discharge_to_storage.q + item.quantity
+      shipment.handled_discharge_to_storage.w = shipment.handled_discharge_to_storage.w + item.handled_weight
+      shipment.handled_discharge_to_storage.q = shipment.handled_discharge_to_storage.q + item.handled_quantity
+    
+    }
+  })
+  // calculate the total weight and quantity of the charge
+  shipment.charge.w = shipment.direct_charge.w + shipment.charge_from_storage.w
+  shipment.charge.q = shipment.direct_charge.q + shipment.charge_from_storage.q
+  shipment.handled_charge.w = shipment.handled_direct_charge.w + shipment.handled_charge_from_storage.w
+  shipment.handled_charge.q = shipment.handled_direct_charge.q + shipment.handled_charge_from_storage.q
+  // calculate the total weight and quantity of the discharge
+  shipment.discharge.w = shipment.direct_discharge.w + shipment.discharge_to_storage.w
+  shipment.handled_discharge.w = shipment.handled_direct_discharge.w + shipment.handled_discharge_to_storage.w
+  shipment.discharge.q = shipment.direct_discharge.q + shipment.discharge_to_storage.q
+  shipment.handled_discharge.q = shipment.handled_direct_discharge.q + shipment.handled_discharge_to_storage.q
+
+  return shipment
+}
+
+function create_charge_bar(progress_data) {
+  const { total_weight, handled_weight, total_quantity, handled_quantity, name, is_quantity, bg, progress_name, size, animate } = progress_data
+  
+
+    const height = size === 'md' ? 20 : size === 'sm' ? 10 : 30
+    const value_now = is_quantity ? ((handled_quantity / total_quantity) * 100).toFixed(2) : ((handled_weight / total_weight) * 100).toFixed(2)
+    
+    const container = $('<div>', {class: 'text-center'})
+    const title = $('<h4>', {class: 'text-center m-0'}).text(name)
+  
+    const weight_details = $('<p>', {class: 'text-center p-0'}).text( handled_weight + " / " + total_weight + "(طن)")
+    const quantity_details = $('<p>', {class: 'text-center p-0 m-0'}).text( handled_quantity + " / " + total_quantity + "(وحدة)")
+    
+    
+    const bar = $('<div>', {class: 'progress ', style: `height: ${height}px;`}).append(
+      $('<div>', {class: `progress-bar progress-bar-striped ${bg} ${animate ? 'progress-bar-animated' : ''} `, role: 'progressbar', style: `width: ${value_now}%;`, 'aria-valuenow': value_now, 'aria-valuemin': 0, 'aria-valuemax': 100, title: progress_name}).text(`${value_now !== "NaN" ? value_now : 0}%`)
+    )
+    
+    $(container).append(title).append(weight_details).append(quantity_details).append(bar)
+    return container
+ 
+}

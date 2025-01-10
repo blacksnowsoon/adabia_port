@@ -2663,5 +2663,31 @@
   "name": "tadv94dar1",
   "source_text": "PUBLIC",
   "translated_text": "عام"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-10 19:34:52.506683",
+  "name": "r1iu698bpr",
+  "source_text": "Customs Declaration Info",
+  "translated_text": "بيانات الاقرار الجمركي / البوليصة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-10 19:35:40.416732",
+  "name": "r21sd8pp5k",
+  "source_text": "Shipment Details",
+  "translated_text": "تفاصيل الشحن / التفريغ"
  }
 ]

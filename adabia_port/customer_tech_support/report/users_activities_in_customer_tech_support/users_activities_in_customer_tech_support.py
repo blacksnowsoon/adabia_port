@@ -3,8 +3,7 @@
 
 import frappe
 from collections import namedtuple
-from datetime import timedelta, datetime
-from frappe.utils import getdate, date_diff
+
 
 
 DataObject = namedtuple('DataObject', ['labels', 'values'])

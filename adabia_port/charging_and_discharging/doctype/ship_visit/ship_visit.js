@@ -105,7 +105,6 @@ function calculate_total_amounts(frm) {
             handled["Handled Direct Discharge"] += d.handled_weight;
         } else if (d.operation_type === 'Charge' && d.operation_handler === 'Storage') {
             totals["Charge From Storage"] += d.weight; 
-            
             handled["Handled Charge From Storage"] += d.handled_weight;
         } else if (d.operation_type === 'Discharge' && d.operation_handler === 'Storage') {
             totals["Discharge To Storage"] += d.weight; 

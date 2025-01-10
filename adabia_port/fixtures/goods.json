@@ -6915,15 +6915,6 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": " خام البترول  BETROL OIL",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:22.014067",
-  "name": "GD-2934"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
   "goods_name": "هياكل معدنية",
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.303146",
@@ -6946,6 +6937,15 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.470228",
   "name": "GD-3598"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " خام البترول  BETROL OIL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.014067",
+  "name": "GD-2934"
  },
  {
   "class": null,
