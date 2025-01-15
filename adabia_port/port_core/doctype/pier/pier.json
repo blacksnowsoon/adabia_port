@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:Pier-{##}",
  "creation": "2024-12-30 13:19:45.975364",
  "doctype": "DocType",
@@ -33,7 +34,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-14 11:09:16.519608",
+ "modified": "2025-01-15 12:55:30.483384",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Pier",

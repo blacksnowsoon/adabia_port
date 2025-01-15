@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:YD-{###}",
  "creation": "2025-01-05 13:45:36.232665",
  "doctype": "DocType",
@@ -37,7 +38,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-14 11:07:23.250494",
+ "modified": "2025-01-15 12:55:08.361299",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Yard Storage",
