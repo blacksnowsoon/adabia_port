@@ -26,8 +26,15 @@ class ChargingandDischargingTicket(Document):
 				doc.handled_weight = value['weight']
 				doc.handled_quantity = value['quantity']
 				doc.save()	
-				
-				
+		else :
+			docs = frappe.get_all("Customs Declarations", fields=["name"], filters={"parent": self.name, "operation_type": "Charge"})
+			if len(docs) > 0 :
+				for name in docs:
+					doc = frappe.get_doc("Customs Declarations", name)
+					doc.handled_weight = 0
+					doc.handled_quantity = 0
+					doc.save()	
+
 		if len(discharge) > 0:
 			discharging_data={}
 
@@ -44,6 +51,12 @@ class ChargingandDischargingTicket(Document):
 				doc.handled_weight = value['weight']
 				doc.handled_quantity = value['quantity']
 				doc.save()
-			
-				
+		else :
+			docs = frappe.get_all("Customs Declarations", fields=["name"], filters={"parent": self.name, "operation_type": "Discharge"})
+			if len(docs) > 0 :
+				for name in docs:
+					doc = frappe.get_doc("Customs Declarations", name)
+					doc.handled_weight = 0
+					doc.handled_quantity = 0
+					doc.save()
 			

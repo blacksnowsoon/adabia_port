@@ -80,3 +80,30 @@ def award_energy_points(doc, method):
                 energy_point_log.insert(ignore_permissions=True)
         frappe.db.commit()
 
+
+@frappe.whitelist()
+def get_customs_declarations_sum(parent, operation_type, operation_handler, is_count):
+    summation = []
+    if operation_handler :
+        summation = frappe.db.sql(
+            """
+            SELECT
+                SUM(quantity) as quantity,
+                SUM(handled_quantity) as handled_quantity,
+                SUM(weight) as weight,
+                SUM(handled_weight) as handled_weight
+            FROM `tabCustoms Declarations`
+            WHERE parent = %s AND operation_type = %s AND operation_handler = %s AND is_count = %s
+            """,(parent, operation_type, operation_handler, is_count), as_dict=1)
+    else:
+        summation = frappe.db.sql(
+            """
+            SELECT
+                SUM(quantity) as quantity,
+                SUM(handled_quantity) as handled_quantity,
+                SUM(weight) as weight,
+                SUM(handled_weight) as handled_weight
+            FROM `tabCustoms Declarations`
+            WHERE parent = %s AND operation_type = %s AND is_count = %s
+            """,(parent, operation_type, is_count), as_dict=1)
+    return summation

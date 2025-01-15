@@ -13,17 +13,11 @@
   "column_break_rfam",
   "visit_data",
   "column_break_vlyx",
-  "charge",
-  "column_break_vakd",
-  "discharge",
+  "percentage_of_operations_type",
   "shipment_details_section",
-  "charge_direct",
-  "column_break_cbgk",
-  "discharge_direct",
-  "column_break_xcih",
-  "charge_from_storage",
-  "column_break_abeh",
-  "discharge_to_storage",
+  "direct_view",
+  "column_break_fswq",
+  "storage_view",
   "section_break_customs_declaration_info",
   "declarations_data",
   "column_break_aahk",
@@ -117,57 +111,30 @@
    "label": "Declarations Registry"
   },
   {
-   "fieldname": "charge",
-   "fieldtype": "HTML",
-   "label": "Charge"
-  },
-  {
-   "fieldname": "discharge",
-   "fieldtype": "HTML",
-   "label": "Discharge"
-  },
-  {
-   "fieldname": "column_break_vakd",
-   "fieldtype": "Column Break"
-  },
-  {
    "collapsible": 1,
-   "depends_on": "eval:doc.visit_id",
+   "depends_on": "eval:doc.operations_type",
    "fieldname": "shipment_details_section",
    "fieldtype": "Section Break",
    "label": "Shipment Details"
   },
   {
-   "fieldname": "charge_direct",
+   "fieldname": "percentage_of_operations_type",
    "fieldtype": "HTML",
-   "label": "Charge Direct"
+   "label": "Percentage Of Operations Type"
   },
   {
-   "fieldname": "column_break_xcih",
+   "fieldname": "column_break_fswq",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_cbgk",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "discharge_direct",
+   "fieldname": "storage_view",
    "fieldtype": "HTML",
-   "label": "Discharge Direct"
+   "label": "Storage View"
   },
   {
-   "fieldname": "column_break_abeh",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "discharge_to_storage",
+   "fieldname": "direct_view",
    "fieldtype": "HTML",
-   "label": "Discharge To Storage"
-  },
-  {
-   "fieldname": "charge_from_storage",
-   "fieldtype": "HTML",
-   "label": "Charge From Storage"
+   "label": "Direct View"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -177,7 +144,7 @@
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-10 20:06:54.363432",
+ "modified": "2025-01-14 11:05:36.426452",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",
@@ -198,13 +165,24 @@
   },
   {
    "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Logistic User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Charging User",
+   "role": "Logistic Admin",
    "share": 1,
    "write": 1
   }

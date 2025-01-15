@@ -14,6 +14,7 @@ const arabic = {
 frappe.ui.form.on("Ship Visit", {
 	refresh(frm) {
     save_btn(frm)
+    reload_btn(frm)
     calculate_total_amounts(frm)
     double_click_to_open_row_form(frm, 'customs_declarations')
     frm.fields_dict.customs_declarations.grid.wrapper.on('click', '.grid-row', function(event) {

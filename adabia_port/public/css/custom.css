@@ -34,9 +34,7 @@ body {
     fieldset { display: table-cell; }
   }
 
-  .bar-container {
-   
-  }
+  
   .charge-bar {
     position: relative;
     background-color: inherit;
