@@ -29,6 +29,7 @@ fixtures = [
                 "Help Desk User",
                 "Logistic User",
                 "Logistic Admin",
+                "Charging User"
             ]]
         }
     },
@@ -62,6 +63,7 @@ fixtures = [
                 "Help Desk User",
                 "Logistic User",
                 "Logistic Admin",
+                "Charging User"
 
             ]]
         }
