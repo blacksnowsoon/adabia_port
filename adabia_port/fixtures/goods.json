@@ -6879,15 +6879,6 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": "حاويات مبرده 40 قدم فارغة",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:33.736417",
-  "name": "GD-3223"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
   "goods_name": "يوريا معبا",
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.587080",
@@ -6910,6 +6901,15 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.606321",
   "name": "GD-3603"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حاويات مبرده 40 قدم فارغة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.736417",
+  "name": "GD-3223"
  },
  {
   "class": null,
@@ -6942,15 +6942,6 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": " خام البترول  BETROL OIL",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:22.014067",
-  "name": "GD-2934"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
   "goods_name": " قشور صوديوم صلبة (CAUSTIC POTASH SOLID)",
   "hs_code": null,
   "modified": "2024-12-31 22:21:27.078020",
@@ -6973,6 +6964,15 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.559942",
   "name": "GD-3601"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " خام البترول  BETROL OIL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.014067",
+  "name": "GD-2934"
  },
  {
   "class": null,
