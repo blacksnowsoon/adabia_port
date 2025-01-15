@@ -68,6 +68,21 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
+  "modified": "2025-01-14 11:04:43.181978",
+  "name": "Charging and Discharging Admin",
+  "role_profile": "Charging and Discharging Admin",
+  "roles": [
+   {
+    "parent": "Charging and Discharging Admin",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Logistic Admin"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
   "modified": "2024-11-04 22:32:07.951418",
   "name": "IT System Admin Profile",
   "role_profile": "IT System Admin Profile",

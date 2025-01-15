@@ -1882,18 +1882,18 @@
   "export": 1,
   "if_owner": 0,
   "import": 0,
-  "modified": "2025-01-02 22:25:41.879605",
-  "name": "b7lr1cuhf5",
+  "modified": "2025-01-14 11:13:10.739904",
+  "name": "rak4ok6ebi",
   "parent": "Ship",
   "permlevel": 0,
   "print": 0,
   "read": 1,
   "report": 0,
-  "role": "Charging User",
+  "role": "Logistic User",
   "select": 0,
   "share": 0,
   "submit": 0,
-  "write": 0
+  "write": 1
  },
  {
   "amend": 0,

@@ -27,7 +27,8 @@ fixtures = [
                 "IT System Admin",
                 "Help Desk Admin",
                 "Help Desk User",
-                "Charging User"
+                "Logistic User",
+                "Logistic Admin",
             ]]
         }
     },
@@ -42,7 +43,8 @@ fixtures = [
                 "SPS CR Res-Profile",
                 "Help Desk Man",
                 "IT System Admin Profile",
-                "Charging Discharging User"
+                "Charging Discharging User",
+                "Charging and Discharging Admin",
             ]]
         }
     },
@@ -58,7 +60,8 @@ fixtures = [
                 "IT System Admin",
                 "Help Desk Admin",
                 "Help Desk User",
-                "Charging User"
+                "Logistic User",
+                "Logistic Admin",
 
             ]]
         }
