@@ -101,6 +101,23 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
   after_save: async(frm)=> {
     reset_frm_filters(frm)
     await add_visit_data_tables(frm)
+  },
+  validate: (frm) => {
+    const operations_registry = frm.doc.operations_type === "Charge" ? frm.doc.charging_operations_registry : frm.doc.discharging_operations_registry
+    console.log('customs', operations_registry)
+    if (operations_registry) {
+      for (let i = 0; i < operations_registry.length; i++) {
+        const row = operations_registry[i]
+        if (row.started_at > row.ended_at) {
+          frappe.msgprint({
+            title: "خطأ",
+            message: `يجب ان يكون تاريخ بداية العملية اقل من تاريخ نهاية العملية` + ` في البيان رقم ${row.idx}`,
+            indicator: "red"
+          })
+          frappe.validated = false;
+        }
+      }
+    }
   }
 });
 // ----------------------- Child Tables ----------------------------------------------

@@ -15,12 +15,13 @@
    "in_list_view": 1,
    "label": "Issue Type",
    "reqd": 1,
+   "translatable": 1,
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-05 19:52:05.538434",
+ "modified": "2025-01-16 11:58:30.205039",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Tech Issue",

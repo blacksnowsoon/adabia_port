@@ -1394,7 +1394,7 @@
   "is_hidden": 0,
   "label": "Charging and DisCharging",
   "links": [],
-  "modified": "2025-01-06 18:45:28.390193",
+  "modified": "2025-01-16 11:59:09.118092",
   "module": null,
   "name": "Charging and DisCharging",
   "number_cards": [],
@@ -1402,7 +1402,20 @@
   "public": 1,
   "quick_lists": [],
   "restrict_to_domain": null,
-  "roles": [],
+  "roles": [
+   {
+    "parent": "Charging and DisCharging",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "Logistic Admin"
+   },
+   {
+    "parent": "Charging and DisCharging",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "Logistic User"
+   }
+  ],
   "sequence_id": 3.0,
   "shortcuts": [
    {

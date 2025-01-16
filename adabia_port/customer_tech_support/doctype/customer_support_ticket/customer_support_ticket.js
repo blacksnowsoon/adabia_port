@@ -33,8 +33,6 @@ const toggleDetails = (frm) => {
 				frm.set_df_property('section_break_truck', 'hidden', 1);
 				frm.set_df_property('section_break_company', 'hidden', 0);
 				frm.set_df_property('section_break_ship', 'hidden', 0);
-				frm.set_df_property('voyage_number', 'reqd', 1);
-				frm.set_df_property('ship', 'reqd', 1);
 				frm.set_df_property('company', 'reqd', 1);
 				frm.set_df_property('amount', 'reqd', 1);
 		  }else {
@@ -47,5 +45,9 @@ const toggleDetails = (frm) => {
 		
 	 });
 }
+
+// في حالة اقرار صادر يدويا يتم تعطيل الحقل الخاص برقم الطريق  والسفينة
+// frm.set_df_property('voyage_number', 'reqd', 1);
+				// frm.set_df_property('ship', 'reqd', 1);
 
 
