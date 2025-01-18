@@ -167,7 +167,7 @@
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-14 11:06:15.479220",
+ "modified": "2025-01-16 13:17:52.477195",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Ship Visit",
@@ -212,5 +212,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

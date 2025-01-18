@@ -144,7 +144,7 @@
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-14 11:05:36.426452",
+ "modified": "2025-01-16 13:19:34.631998",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",
@@ -189,5 +189,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

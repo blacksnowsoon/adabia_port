@@ -21,7 +21,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-16 11:58:30.205039",
+ "modified": "2025-01-18 23:06:38.836282",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Tech Issue",
@@ -55,7 +55,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,

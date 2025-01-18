@@ -23,7 +23,9 @@
   "section_break_fird",
   "company",
   "column_break_fype",
-  "operation_rate"
+  "operation_rate",
+  "column_break_ztbw",
+  "acutal_rate"
  ],
  "fields": [
   {
@@ -139,12 +141,23 @@
    "fieldname": "is_count",
    "fieldtype": "Check",
    "label": "Is Count"
+  },
+  {
+   "fieldname": "column_break_ztbw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "acutal_rate",
+   "fieldtype": "Float",
+   "label": "Acutal Rate",
+   "precision": "1",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-10 19:53:28.605777",
+ "modified": "2025-01-18 11:07:19.214747",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Customs Declarations",

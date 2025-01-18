@@ -72,6 +72,10 @@ fixtures = [
         "dt": "Module Profile", "filters" : {
             "name": ["in", [
                 "Adabia",
+                "IT-Support M",
+                "Charging and Discharging M",
+                "CUST SUPP M",
+                "SPS Operation M"
             ] ]
         }
     },

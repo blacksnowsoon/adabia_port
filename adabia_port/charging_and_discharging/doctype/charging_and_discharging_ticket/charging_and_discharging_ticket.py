@@ -15,11 +15,11 @@ class ChargingandDischargingTicket(Document):
 			
 			for operation in charge:
 				if operation.customs_declaration_no not in charging_data:
-					charging_data[operation.customs_declaration_no] = {'weight': 0, 'quantity': 0}
+					charging_data[operation.customs_declaration_no] = {'weight': 0, 'quantity': 0, 'duration': 0}
 					#
+				operation.duration = frappe.utils.time_diff_in_seconds(operation.ended_at, operation.started_at)
 				charging_data[operation.customs_declaration_no]['weight'] = charging_data[operation.customs_declaration_no]['weight'] + operation.weight
 				charging_data[operation.customs_declaration_no]['quantity'] = charging_data[operation.customs_declaration_no]['quantity'] + operation.quantity
-				
 				
 			for (key, value) in charging_data.items():
 				doc = frappe.get_doc("Customs Declarations", key)
@@ -33,6 +33,7 @@ class ChargingandDischargingTicket(Document):
 					doc = frappe.get_doc("Customs Declarations", name)
 					doc.handled_weight = 0
 					doc.handled_quantity = 0
+					doc.actual_rate = 0
 					doc.save()	
 
 		if len(discharge) > 0:
@@ -42,6 +43,7 @@ class ChargingandDischargingTicket(Document):
 				if operation.customs_declaration_no not in discharging_data:
 					discharging_data[operation.customs_declaration_no] = {'weight': 0, 'quantity': 0}
 					#
+				operation.duration = frappe.utils.time_diff_in_seconds(operation.ended_at, operation.started_at )
 				discharging_data[operation.customs_declaration_no]['weight'] = discharging_data[operation.customs_declaration_no]['weight'] + operation.weight
 				discharging_data[operation.customs_declaration_no]['quantity'] = discharging_data[operation.customs_declaration_no]['quantity'] + operation.quantity
 			
@@ -58,5 +60,6 @@ class ChargingandDischargingTicket(Document):
 					doc = frappe.get_doc("Customs Declarations", name)
 					doc.handled_weight = 0
 					doc.handled_quantity = 0
+					doc.actual_rate = 0
 					doc.save()
 			

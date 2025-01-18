@@ -36,6 +36,7 @@ const arabic = {
   "DischargeData": "بيانات التفريغ",
   "calculation_method": "تخصيم"
 }
+
 frappe.ui.form.on("Charging and Discharging Ticket", {
 	refresh: async(frm) => {
     // change the save btn
@@ -104,7 +105,6 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
   },
   validate: (frm) => {
     const operations_registry = frm.doc.operations_type === "Charge" ? frm.doc.charging_operations_registry : frm.doc.discharging_operations_registry
-    console.log('customs', operations_registry)
     if (operations_registry) {
       for (let i = 0; i < operations_registry.length; i++) {
         const row = operations_registry[i]
@@ -138,6 +138,14 @@ frappe.ui.form.on("Charging Operation Registry", {
   },
   charging_operations_registry_remove(frm, cdt, cdn) {
     console.log('cdn', cdn)
+  },
+  ended_at(frm, cdt, cdn){
+    console.log("frm",frm)
+    console.log("cdt",cdt)
+    console.log("cdn",cdn)
+    const row = locals[cdt][cdn]
+    // row.duration =
+    console.log(row)
   }
 });
 // Discharging Child Table
@@ -158,7 +166,10 @@ frappe.ui.form.on("Discharging Operation Registry", {
       }
       
     })
-  } 
+  },
+  ended_at(frm, cdt, cdn){
+    const row = local[cdt][cdn]
+  }
 })
 // ---------------------------------------------------------------------------------
 
