@@ -220,14 +220,15 @@ function err_message( message) {
     message: __(message)
   });
 }
-// 
+// add double click event to rows in grid table
 function double_click_to_open_row_form(frm, field) {
   frm.fields_dict[field].grid.wrapper.on('dblclick', '.grid-row', function(event) {
     $(event.currentTarget).find('.btn-open-row').click()
   });
 }
-
+// remove buttons[move, insert,inser-below, append] from row form
 function set_grid_form_btns(frm, field, btn_class) {
+  
   $('.form-in-grid').find(".grid-move-row").hide()
   $('.form-in-grid').find(".grid-insert-row").hide()
   $('.form-in-grid').find(".grid-insert-row-below").hide()

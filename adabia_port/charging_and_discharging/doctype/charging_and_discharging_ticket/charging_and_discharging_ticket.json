@@ -7,11 +7,11 @@
  "engine": "InnoDB",
  "field_order": [
   "visit_info_section",
-  "ship_name",
   "visit_id",
   "operations_type",
   "customs_declarations",
   "column_break_rfam",
+  "ship_name",
   "visit_data",
   "column_break_vlyx",
   "percentage_of_operations_type",
@@ -62,6 +62,7 @@
    "label": "Declarations Data"
   },
   {
+   "depends_on": "eval:doc.operations_type !== ''",
    "fieldname": "registry_section",
    "fieldtype": "Section Break",
    "label": "Registry"
@@ -151,7 +152,7 @@
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-19 10:36:02.404696",
+ "modified": "2025-01-19 22:32:16.067738",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",

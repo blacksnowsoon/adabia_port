@@ -16,13 +16,11 @@ def execute(filters=None):
 		{'label': 'Issues', 'fieldname': 'issue_type', 'fieldtype': 'Link', 'options': 'Tech Issue', 'width': 200},
 	]
 	
-	# 
-	if(filters):
-		from_date = filters.get('from_date')
-		to_date = filters.get('to_date')
-		employee = filters.get('employee')
-		assign_to = filters.get('assign_to')
-	
+	assign_to = filters.get('assign_to')
+	employee = filters.get('employee')
+	to_date = filters.get('to_date')
+	from_date = filters.get('from_date')
+	if(from_date):
 		query = """
 			SELECT
 				ticket.creation,
@@ -49,11 +47,11 @@ def execute(filters=None):
 			ON issues.issue_type = issue.name
 			WHERE ticket.creation >= %(from_date)s
 		"""
-		if to_date:
+		if (to_date):
 			query += " AND ticket.creation <= %(to_date)s"
-		if employee:
+		if (employee):
 			query += " AND ticket.employee = %(employee)s"
-		if assign_to:
+		if (assign_to):
 			query += " AND ticket.assign_to = %(assign_to)s"
 
 		query += """
@@ -68,7 +66,7 @@ def execute(filters=None):
 			params['employee'] = employee
 		if assign_to:
 			params['assign_to'] = assign_to
-		
-		data = frappe.db.sql(query, params, as_dict=1)
+		if(from_date):
+			data = frappe.db.sql(query, params, as_dict=1)
 	
 	return columns, data
