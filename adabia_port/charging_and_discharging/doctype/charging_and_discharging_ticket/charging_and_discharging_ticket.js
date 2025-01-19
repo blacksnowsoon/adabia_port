@@ -49,8 +49,9 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
     double_click_to_open_row_form(frm, 'discharging_operations_registry')
     // check if the form is not new 
     reset_frm_filters(frm)
-    if (!frm.is_new())
+    if (!frm.is_new()){
       await add_visit_data_tables(frm)
+    }
 	},
   visit_id: async(frm) => {
     // get visit data
@@ -195,11 +196,12 @@ async function add_visit_data_tables(frm) {
         ]
     )
     // add ship name, pires, started_time and arrival_time to an array table data
-    const visit_data = Object.entries(ship_name).map(([key, value])=> ({key: arabic[key], value}))
+    const visit_data = []
     visit_data.push({key: arabic["piers"], value: piers_data.map(pier => `${pier.pier_number}`)})
     visit_data.push({key: arabic["operations_started_time"], value: visit.operations_started_time})
     visit_data.push({key: arabic["actual_arrival_time"], value: visit.actual_arrival_time})
     // render the visit table data
+    frm.set_value("ship_name", ship_name.ship_name)
     render_html(frm, visit_data, 'visit_data', true)
     frm.set_df_property('operations_type', 'read_only', 0)
   } 
