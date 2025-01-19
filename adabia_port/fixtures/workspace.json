@@ -1,7 +1,7 @@
 [
  {
   "charts": [],
-  "content": "[{\"id\":\"EjIGtHWkyu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Go To Dashboard\",\"col\":3}},{\"id\":\"B3U0bCDzFf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Adabia Port Data Structure</span>\",\"col\":12}},{\"id\":\"M27PmFPs6Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements\",\"col\":3}},{\"id\":\"tTlaGDULMd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Departments\",\"col\":3}},{\"id\":\"zylnt3p5Ur\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees\",\"col\":3}},{\"id\":\"EWIESSu1Aw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices\",\"col\":3}},{\"id\":\"zAUT_ZGERR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Titles\",\"col\":3}},{\"id\":\"BmVJQS0i5n\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets Event\",\"col\":3}},{\"id\":\"_stQv-R1Xd\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Uv38LIygVf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Adabia Port Business Data</b></span>\",\"col\":12}},{\"id\":\"Go1_f3MBwN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Companies\",\"col\":3}},{\"id\":\"Z8EIg6FnNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trucks\",\"col\":3}},{\"id\":\"74x_GRp1vs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trucks Tail\",\"col\":3}},{\"id\":\"k1WauYV6yh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Machines\",\"col\":3}},{\"id\":\"DPmZLUOOxI\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+  "content": "[{\"id\":\"EjIGtHWkyu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Go To Dashboard\",\"col\":3}},{\"id\":\"B3U0bCDzFf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Adabia Port Data Structure</span>\",\"col\":12}},{\"id\":\"M27PmFPs6Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements\",\"col\":3}},{\"id\":\"tTlaGDULMd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Departments\",\"col\":3}},{\"id\":\"zylnt3p5Ur\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees\",\"col\":3}},{\"id\":\"EWIESSu1Aw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices\",\"col\":3}},{\"id\":\"zAUT_ZGERR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Titles\",\"col\":3}},{\"id\":\"BmVJQS0i5n\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets Event\",\"col\":3}},{\"id\":\"_stQv-R1Xd\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Uv38LIygVf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Adabia Port Business Data</b></span>\",\"col\":12}},{\"id\":\"Go1_f3MBwN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Companies\",\"col\":3}},{\"id\":\"Z8EIg6FnNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trucks\",\"col\":3}},{\"id\":\"74x_GRp1vs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trucks Tail\",\"col\":3}},{\"id\":\"k1WauYV6yh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Machines\",\"col\":3}},{\"id\":\"yCvSpd7z1L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships\",\"col\":3}},{\"id\":\"DPmZLUOOxI\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -12,7 +12,7 @@
   "is_hidden": 0,
   "label": "Adabia Port",
   "links": [],
-  "modified": "2025-01-02 14:16:52.067655",
+  "modified": "2025-01-19 10:43:26.569555",
   "module": "Adabia Port",
   "name": "Adabia Port",
   "number_cards": [],
@@ -104,6 +104,22 @@
     "kanban_board": null,
     "label": "Job Titles",
     "link_to": "Job Title",
+    "parent": "Adabia Port",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Ships",
+    "link_to": "Ship",
     "parent": "Adabia Port",
     "parentfield": "shortcuts",
     "parenttype": "Workspace",
@@ -240,7 +256,7 @@
   "is_hidden": 0,
   "label": "Customer Tech Sup",
   "links": [],
-  "modified": "2025-01-02 14:16:53.522517",
+  "modified": "2025-01-18 10:57:28.700490",
   "module": "Customer Tech Support",
   "name": "Customer Tech Sup",
   "number_cards": [],
@@ -471,7 +487,7 @@
   "is_hidden": 0,
   "label": "Cust Support Statistics",
   "links": [],
-  "modified": "2025-01-02 14:16:54.067821",
+  "modified": "2025-01-18 10:57:29.059761",
   "module": "Customer Tech Support",
   "name": "Cust Support Statistics",
   "number_cards": [
@@ -575,7 +591,7 @@
   "is_hidden": 0,
   "label": "SPS OP Space",
   "links": [],
-  "modified": "2025-01-02 14:16:52.462882",
+  "modified": "2025-01-18 10:57:28.238486",
   "module": null,
   "name": "SPS OP Space",
   "number_cards": [],
@@ -630,7 +646,7 @@
     "role": "SPS OP User"
    }
   ],
-  "sequence_id": 2.0,
+  "sequence_id": 3.0,
   "shortcuts": [
    {
     "color": "Orange",
@@ -701,7 +717,7 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"UMiO_0Q8vS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Go TO Dashboard\",\"col\":3}},{\"id\":\"_gqaz2Hx-K\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"OP62ZdgzTC\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Open Tickets\",\"col\":6}},{\"id\":\"axUCA2vzSh\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Data\",\"col\":3}},{\"id\":\"j5xa-BvuaK\",\"type\":\"card\",\"data\":{\"card_name\":\"IT Data Tabels\",\"col\":3}},{\"id\":\"H-tYiuFeTA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>View Data</b></span>\",\"col\":12}},{\"id\":\"FnGnDZKnQ9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets\",\"col\":3}},{\"id\":\"z5WCfvKQOP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices\",\"col\":3}},{\"id\":\"bEB-eUz7ae\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shared Folders\",\"col\":3}},{\"id\":\"58esH0ovID\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Network Printers\",\"col\":3}},{\"id\":\"w3oZUB4gqP\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>ADD New</b></span>\",\"col\":12}},{\"id\":\"4lNhR0c5fP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"ZDKc6D8YS2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Software\",\"col\":3}},{\"id\":\"XjbTxuKB1T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Brand\",\"col\":3}},{\"id\":\"Wbh8DoeFR9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Tech Issue\",\"col\":3}},{\"id\":\"S30ytyUrkq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New IP Printer\",\"col\":3}},{\"id\":\"CcXxxkf62b\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Employee\",\"col\":3}},{\"id\":\"8B4hRUjnGC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Device\",\"col\":3}},{\"id\":\"Q4v7OK_ZF1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Share\",\"col\":3}},{\"id\":\"fIS2jhQmXA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Department\",\"col\":3}},{\"id\":\"z0ogld38je\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Management\",\"col\":3}},{\"id\":\"KFTgF6znTc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Job Title\",\"col\":3}},{\"id\":\"B78NRoKpsN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Device Type\",\"col\":3}},{\"id\":\"umqsTz7tbY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Group Policy\",\"col\":3}},{\"id\":\"yYueT5H0lA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"O-9vE91cPS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"NrRt2vjhpo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees Basic Data\",\"col\":3}},{\"id\":\"K0x_vKdp-s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices Report\",\"col\":3}}]",
+  "content": "[{\"id\":\"UMiO_0Q8vS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Go TO Dashboard\",\"col\":3}},{\"id\":\"_gqaz2Hx-K\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"OP62ZdgzTC\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Open Tickets\",\"col\":6}},{\"id\":\"axUCA2vzSh\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Data\",\"col\":3}},{\"id\":\"j5xa-BvuaK\",\"type\":\"card\",\"data\":{\"card_name\":\"IT Data Tabels\",\"col\":3}},{\"id\":\"H-tYiuFeTA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>View Data</b></span>\",\"col\":12}},{\"id\":\"FnGnDZKnQ9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets\",\"col\":3}},{\"id\":\"z5WCfvKQOP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices\",\"col\":3}},{\"id\":\"bEB-eUz7ae\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shared Folders\",\"col\":3}},{\"id\":\"58esH0ovID\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Network Printers\",\"col\":3}},{\"id\":\"w3oZUB4gqP\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>ADD New</b></span>\",\"col\":12}},{\"id\":\"4lNhR0c5fP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"ZDKc6D8YS2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Software\",\"col\":3}},{\"id\":\"XjbTxuKB1T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Brand\",\"col\":3}},{\"id\":\"Wbh8DoeFR9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Tech Issue\",\"col\":3}},{\"id\":\"S30ytyUrkq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New IP Printer\",\"col\":3}},{\"id\":\"CcXxxkf62b\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Employee\",\"col\":3}},{\"id\":\"8B4hRUjnGC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Device\",\"col\":3}},{\"id\":\"Q4v7OK_ZF1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Share\",\"col\":3}},{\"id\":\"fIS2jhQmXA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Department\",\"col\":3}},{\"id\":\"z0ogld38je\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Management\",\"col\":3}},{\"id\":\"KFTgF6znTc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Job Title\",\"col\":3}},{\"id\":\"B78NRoKpsN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Device Type\",\"col\":3}},{\"id\":\"umqsTz7tbY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Group Policy\",\"col\":3}},{\"id\":\"yYueT5H0lA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"O-9vE91cPS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"NrRt2vjhpo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees Basic Data\",\"col\":3}},{\"id\":\"K0x_vKdp-s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices Report\",\"col\":3}},{\"id\":\"HeK3Qzu10i\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"IT Tasks Report\",\"col\":3}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -1019,7 +1035,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2025-01-02 14:16:53.026304",
+  "modified": "2025-01-18 23:35:40.690973",
   "module": null,
   "name": "Infra - IT",
   "number_cards": [],
@@ -1056,7 +1072,7 @@
     "role": "Help Desk User"
    }
   ],
-  "sequence_id": 4.0,
+  "sequence_id": 2.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -1120,6 +1136,22 @@
     "restrict_to_domain": null,
     "stats_filter": "[]",
     "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "IT Tasks Report",
+    "link_to": "IT Support Tasks Report",
+    "parent": "Infra - IT",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Report",
     "url": null
    },
    {
@@ -1394,7 +1426,7 @@
   "is_hidden": 0,
   "label": "Charging and DisCharging",
   "links": [],
-  "modified": "2025-01-16 11:59:09.118092",
+  "modified": "2025-01-18 10:57:28.449152",
   "module": null,
   "name": "Charging and DisCharging",
   "number_cards": [],
@@ -1416,7 +1448,7 @@
     "role": "Logistic User"
    }
   ],
-  "sequence_id": 3.0,
+  "sequence_id": 4.0,
   "shortcuts": [
    {
     "color": "Grey",

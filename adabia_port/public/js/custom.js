@@ -8,7 +8,7 @@ const main_section = document.querySelectorAll('.main-section')[0];
 const footer = main_section.querySelector('footer');
 
 const footer_content = 
-`<div class="footer-content navbar ">
+`<div class="footer-content navbar px-2">
     <p>© 2024 GO Smart Soultion. All rights reserved. BY-<strong>Gharieb Khalefa</strong>@ISFP Built with Frappe</p>
     <p>Adabia Port Version 0.0.1</p>
   </div>`;
@@ -251,8 +251,48 @@ function create_progressbar( progress_title, data) {
   const bar = $('<div>', {class: 'progress ', style: `height: ${height}px;`}).append(
     $('<div>', {class: `progress-bar progress-bar-striped ${bg} `, role: 'progressbar', style: `width: ${value_now}%;`, 'aria-valuenow': value_now, 'aria-valuemin': 0, 'aria-valuemax': 100, title: progress_title}).text(`${value_now}%`)
   )
-  // .append(weight_details).append(quantity_details).append(bar) ${bg} ${animate ? 'progress-bar-animated' : ''}
   $(container).append(title).append(weight_details).append(quantity_details).append(bar)
   return container
  
+}
+
+
+/**
+ * @param {{}} data - should contain quantity, handled_quantity, weight, handled_weight, operation_rate, is_count
+ * @param {String} bg - bootstrap progress bar style
+ * @param {Boolean} is_count - specify should calc the percent based on weight or count
+ * @param {String} size - one of md, sm, lg
+ * @param {String} field - the fieldname to add progress bar to
+ * @param {String} key - the key for the arabic translation object
+ */
+function add_progress_bar(data, bg, is_count, size, field, key, title) {
+
+  value_now = is_count ?  ((data.handled_quantity / data.quantity) * 100).toFixed(2)
+                       :
+                          ((data.handled_weight / data.weight) * 100).toFixed(2)
+  const container = $('<div>', {class: 'text-center', id: key})
+  const progress_container = create_progressbar(title, {...data, value_now, bg, size})
+  $(container).append(progress_container)
+  // field.$wrapper.find(container).empty()
+  field.$wrapper.append(container)
+
+}
+
+/**
+ * Animates the progress bar based on the operation type.
+ *
+ * @param {string} operation_type - The type of operation, either "Charge" or "Discharge".
+ * If the operation type is an empty string, the animation is removed from both progress bars.
+ */
+function animate_progressbar(operation_type) {
+  
+  if (operation_type !== "") {
+    $('.progress').find(`[title='${operation_type === "Charge" ? 'charge' : "discharge"}']`).addClass('progress-bar-animated')
+    $('.progress').find(`[title='${operation_type === "Charge" ? 'discharge' : "charge"}']`).removeClass('progress-bar-animated')
+
+  } else {
+    $('.progress').find(`[title='charge']`).removeClass('progress-bar-animated')
+    $('.progress').find(`[title='discharge']`).removeClass('progress-bar-animated')
+  }
+  
 }

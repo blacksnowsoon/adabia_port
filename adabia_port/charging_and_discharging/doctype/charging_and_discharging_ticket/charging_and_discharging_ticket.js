@@ -75,11 +75,13 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
       percentage_field.$wrapper.empty()
       if (is_count.quantity) {
         const bg = operation_type === "Charge" ? "bg-success" : "bg-danger"
-        add_progress_bar(is_count, bg, 1, "md", percentage_field, "is_count")
+        const c_key = "is_count"
+        add_progress_bar(is_count, bg, 1, "md", percentage_field, c_key, arabic[c_key])
       }
       if (is_weight.weight) {
         const bg = operation_type === "Charge" ? "bg-warning" : "bg-info"
-        add_progress_bar(is_weight, bg, 0, "md", percentage_field, "is_weight")
+        const w_key = "is_weight"
+        add_progress_bar(is_weight, bg, 0, "md", percentage_field, w_key , arabic[w_key])
       }
       await add_shipment_details_progressbar(frm, parent, operation_type)
     }
@@ -87,7 +89,7 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
   },
   customs_declarations: async(frm) => {
     const selected = frm.doc.customs_declarations
-    if (selected == "") {
+    if (selected === "") {
       $(`.form-clickable-section`).find('.grid-add-row').hide()
       frm.set_df_property('section_break_customs_declaration_info', 'hidden', 1)
       } else {
@@ -226,11 +228,13 @@ async function add_shipment_details_progressbar(frm, parent, operation_type) {
   direct_view.$wrapper.empty()
   if (!!direct_is_count.quantity) {
     const bg = operation_type === "Charge" ? "bg-success" : "bg-danger"
-    add_progress_bar(direct_is_count, bg, 1, "sm", direct_view, operation_type + "Direct" + "Count" )
+    const d_c_key = operation_type + "Direct" + "Count"
+    add_progress_bar(direct_is_count, bg, 1, "sm", direct_view, d_c_key, arabic[d_c_key] )
   }
   if (!!direct_is_weight.weight) {
     const bg = operation_type === "Charge" ? "bg-warning" : "bg-info"
-    add_progress_bar(direct_is_weight, bg, 0, "sm", direct_view, operation_type + "Direct" + "Weight" )
+    const d_w_key = operation_type + "Direct" + "Weight"
+    add_progress_bar(direct_is_weight, bg, 0, "sm", direct_view, d_w_key, arabic[d_w_key]  )
   }
   // get the summations of customs declarations with count and weight for stroage
   const [[storage_is_count], [storage_is_weight]] = await Promise.all([
@@ -242,11 +246,13 @@ async function add_shipment_details_progressbar(frm, parent, operation_type) {
   storage_view.$wrapper.empty()
   if (!!storage_is_count.quantity) {
     const bg = operation_type === "Charge" ? "bg-success" : "bg-danger"
-    add_progress_bar(storage_is_count, bg, 1, "sm", storage_view, operation_type + "Storage" + "Count" )
+    const s_c_key = operation_type + "Storage" + "Count"
+    add_progress_bar(storage_is_count, bg, 1, "sm", storage_view, s_c_key, arabic[s_c_key] )
   }
   if (!!storage_is_weight.weight) {
     const bg = operation_type === "Charge" ? "bg-warning" : "bg-info"
-    add_progress_bar(storage_is_weight, bg, 0, "sm", storage_view, operation_type + "Storage" + "Weight" )
+    const s_w_key = operation_type + "Storage" + "Weight"
+    add_progress_bar(storage_is_weight, bg, 0, "sm", storage_view, s_w_key, arabic[s_w_key] )
   }
   
 }
@@ -272,7 +278,7 @@ async function populate_selected_Customs_declaration_summary(frm, selected) {
     const key = cust_declaration.operation_type + "Data"
     const is_count = cust_declaration.is_count
     const bg = cust_declaration.operation_type === "Charge" ? is_count ? "bg-success": "bg-warning" : is_count ? "bg-danger" : "bg-info"
-    add_progress_bar(cust_declaration, bg, is_count, 'md', cust_declaration_progressbar_container, key)
+    add_progress_bar(cust_declaration, bg, is_count, 'md', cust_declaration_progressbar_container, key, arabic[key])
   }
   
 } 
@@ -324,38 +330,4 @@ async function get_customs_declarations(data) {
     ]
   })
   return declarations
-}
-
-/**
- * @param {{}} data - should contain quantity, handled_quantity, weight, handled_weight, operation_rate, is_count
- * @param {String} bg - bootstrap progress bar style
- * @param {Boolean} is_count - specify should calc the percent based on weight or count
- * @param {String} size - one of md, sm, lg
- * @param {String} field - the fieldname to add progress bar to
- * @param {String} key - the key for the arabic translation object
- */
-function add_progress_bar(data, bg, is_count, size, field, key) {
-
-  value_now = is_count ?  ((data.handled_quantity / data.quantity) * 100).toFixed(2)
-                       :
-                          ((data.handled_weight / data.weight) * 100).toFixed(2)
-  const container = $('<div>', {class: 'text-center', id: key})
-  const progress_container = create_progressbar(arabic[key], {...data, value_now, bg, size})
-  $(container).append(progress_container)
-  field.$wrapper.find(container).empty()
-  field.$wrapper.append(container)
-
-}
-
-function animate_progressbar(operation_type) {
-  
-  if (operation_type !== "") {
-    $('.progress').find(`[title='${operation_type === "Charge" ? 'charge' : "discharge"}']`).addClass('progress-bar-animated')
-    $('.progress').find(`[title='${operation_type === "Charge" ? 'discharge' : "charge"}']`).removeClass('progress-bar-animated')
-
-  } else {
-    $('.progress').find(`[title='charge']`).removeClass('progress-bar-animated')
-    $('.progress').find(`[title='discharge']`).removeClass('progress-bar-animated')
-  }
-  
 }

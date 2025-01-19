@@ -47,7 +47,6 @@ frappe.ui.form.on("Ship Visit", {
     }
   }
     
-
 });
 
 
