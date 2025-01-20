@@ -248,7 +248,6 @@ async function get_customs_declarations(data) {
         "handled_weight",
         "operation_rate",
         "is_count",
-        "actual_rate"
     ]
   })
   return declarations
