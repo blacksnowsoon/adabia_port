@@ -252,7 +252,7 @@ async function get_customs_declarations(data) {
   })
   return declarations
 }
-// 
+// -----------------------------------------------------------------------------------
 async function setup_visit_info_section(frm) {
   if (visit){
     const operation_type = frm.doc.operations_type
@@ -289,16 +289,15 @@ async function setup_visit_info_section(frm) {
   }
   
 }
-// -----------------
+// -----------------------------------------------------------------------------------
 // populate customs declaration based on operation type
 function populate_customs_declarations(frm, customs_declarations) {
   frm.set_df_property("customs_declarations", 'hidden', 0)
   frm.set_df_property('customs_declarations','options', [])
   frm.set_df_property('customs_declarations','options', [""].concat(customs_declarations))
   filter_operations_grid(frm)
+  
 }
-
-// --------------
 // ------------------------------------------------------------------------------------
 // dispaly the registry table and filter the gird based on selected customs_declaration and operation type
 function filter_operations_grid(frm) {
@@ -306,11 +305,14 @@ function filter_operations_grid(frm) {
   const selected_operation_type = frm.doc.operations_type
   const gird_name = selected_operation_type === "Charge" ? "charging_operations_registry" : selected_operation_type === "Discharge" ? "discharging_operations_registry" : ""
   // show grid rows based on selected_customs_declaration
-  
   if (gird_name) {
     if (!selected_customs_declaration){
       frm.fields_dict[gird_name].grid.grid_buttons.hide()
-    } 
+    } else {
+      console.log('cstd', selected_customs_declaration)
+      
+      populate_selected_Customs_declaration_summary(frm, selected_customs_declaration)
+    }
     frm.doc[gird_name].map(d => {
       if(selected_customs_declaration === "") {
         $(`[data-name='${d.name}']`).find('.data-row').show()

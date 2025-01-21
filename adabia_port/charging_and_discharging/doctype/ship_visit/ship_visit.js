@@ -17,12 +17,12 @@ frappe.ui.form.on("Ship Visit", {
     reload_btn(frm)
     calculate_total_amounts(frm)
     double_click_to_open_row_form(frm, 'customs_declarations')
-    frm.fields_dict.customs_declarations.grid.wrapper.on('click', '.grid-row', function(event) {
+    frm.fields_dict.customs_declarations.grid.wrapper.on('click', '.row-check', function(event) {
         when_row_selected(frm, event)
     });
     
     $(`.form-clickable-section`).find('.grid-add-row').attr("class", "btn btn-info btn-sm grid-add-row")
-    
+    frm.fields_dict.customs_declarations.grid.wrapper.append('<div class="alert alert-danger" style="display:none;" id="cannot_delete">لا يمكن حذف العنصر المحدد بسبب ارتباطه ببعض العمليات</div>')
 	},
   validate(frm) {
     const arrival_time = frm.doc.actual_arrival_time;
@@ -52,11 +52,14 @@ frappe.ui.form.on("Ship Visit", {
 
 frappe.ui.form.on('Customs Declarations', {
 	form_render: function(frm, cdt, cdn) {
-    $('.form-in-grid').find(".grid-move-row").hide()
-    $('.form-in-grid').find(".grid-insert-row").hide()
-    $('.form-in-grid').find(".grid-insert-row-below").hide()
-    $('.form-in-grid').find(".grid-append-row").hide()
-    
+    set_grid_form_btns(frm)
+    const row_data = locals[cdt][cdn]
+    console.log("row_data: ", row_data)
+    if (row_data.handled_quantity !== 0 || row_data.handled_weight !== 0) {
+      frm.fields_dict.customs_declarations.grid.form_grid.find('.grid-delete-row').hide()
+    } else {
+      frm.fields_dict.customs_declarations.grid.form_grid.find('.grid-delete-row').show()
+    }
   },
   operation_type(frm, cdt, cdn) {
     const child = locals[cdt][cdn];
@@ -117,9 +120,22 @@ function calculate_total_amounts(frm) {
     render_html(frm, handled_total_weight, 'handled_total_weight', true)
 }
 
-when_row_selected = (frm, event) => {
-    const row = $(event.currentTarget).data('name');
-    const selected_row = frm.doc.customs_declarations.find(row => row.name === row)
+function when_row_selected(frm, event) {
+  const selected_rows = frm.fields_dict.customs_declarations.grid.get_selected()
+  const customs_declarations = frm.doc.customs_declarations
+  if (selected_rows.length === 0){
+    frm.fields_dict.customs_declarations.grid.grid_buttons.show()
+    frm.fields_dict.customs_declarations.grid.wrapper.find('#cannot_delete').hide()
+  } else {
+    const can_delete = customs_declarations.filter(item => selected_rows.includes(item.name)).every(item => item.handled_weight === 0 || item.handled_quantity === 0)
+    console.log("can_delete: ", can_delete)
+    if (!can_delete) {
+      frm.fields_dict.customs_declarations.grid.grid_buttons.hide()
+      frm.fields_dict.customs_declarations.grid.wrapper.find('#cannot_delete').show()
+    }
+  }
+ 
+  
     
 }
 

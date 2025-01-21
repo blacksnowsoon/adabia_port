@@ -70,7 +70,6 @@
   {
    "fieldname": "section_break_customs_declaration_info",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Customs Declaration Info",
    "read_only": 1
   },
@@ -152,7 +151,7 @@
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-19 22:32:16.067738",
+ "modified": "2025-01-21 10:27:32.089095",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",

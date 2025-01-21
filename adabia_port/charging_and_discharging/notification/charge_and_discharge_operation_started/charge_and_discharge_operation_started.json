@@ -1,0 +1,32 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.state=='In Progress'",
+ "creation": "2025-01-20 00:26:47.760724",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Ship Visit",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "message_type": "HTML",
+ "modified": "2025-01-20 11:15:36.280031",
+ "modified_by": "Administrator",
+ "module": "Charging and Discharging",
+ "name": "Charge and Discharge Operation Started",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "Adabia Port Notifications",
+ "sender_email": "gosmartsolution.info@gmail.com",
+ "subject": "Operations started for visit No. {{doc.name}} ",
+ "value_changed": "operations_started_time"
+}
