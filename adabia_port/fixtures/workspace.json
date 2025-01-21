@@ -1415,7 +1415,7 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"NA4MGEpR1o\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Charging and Discharging\",\"col\":3}},{\"id\":\"latQtP1i9M\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ship Visits\",\"col\":3}},{\"id\":\"7BO3d-eUI7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships List\",\"col\":3}},{\"id\":\"0fUhg4gfni\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Yards List\",\"col\":3}},{\"id\":\"sE_sccjjy9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods List\",\"col\":3}},{\"id\":\"g0JcuF5N_j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Piers List\",\"col\":3}},{\"id\":\"_BVUx4PWYM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Packing Types List\",\"col\":3}}]",
+  "content": "[{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"NA4MGEpR1o\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Charging and Discharging\",\"col\":3}},{\"id\":\"latQtP1i9M\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ship Visits\",\"col\":3}},{\"id\":\"7BO3d-eUI7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships List\",\"col\":3}},{\"id\":\"0fUhg4gfni\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Yards List\",\"col\":3}},{\"id\":\"sE_sccjjy9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods List\",\"col\":3}},{\"id\":\"g0JcuF5N_j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Piers List\",\"col\":3}},{\"id\":\"_BVUx4PWYM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Packing Types List\",\"col\":3}},{\"id\":\"_DTBWaTU-O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"SIYoTUamJ7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"ZG7fnm0LGs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Piers State\",\"col\":3}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -1426,7 +1426,7 @@
   "is_hidden": 0,
   "label": "Charging and DisCharging",
   "links": [],
-  "modified": "2025-01-18 10:57:28.449152",
+  "modified": "2025-01-22 00:04:29.680875",
   "module": null,
   "name": "Charging and DisCharging",
   "number_cards": [],
@@ -1450,6 +1450,22 @@
   ],
   "sequence_id": 4.0,
   "shortcuts": [
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Piers State",
+    "link_to": "Piers State",
+    "parent": "Charging and DisCharging",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Report",
+    "url": null
+   },
    {
     "color": "Grey",
     "doc_view": "List",

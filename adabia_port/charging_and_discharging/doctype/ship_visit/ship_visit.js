@@ -15,7 +15,7 @@ frappe.ui.form.on("Ship Visit", {
 	refresh(frm) {
     save_btn(frm)
     reload_btn(frm)
-    calculate_total_amounts(frm)
+    
     double_click_to_open_row_form(frm, 'customs_declarations')
     frm.fields_dict.customs_declarations.grid.wrapper.on('click', '.row-check', function(event) {
         when_row_selected(frm, event)
@@ -23,7 +23,10 @@ frappe.ui.form.on("Ship Visit", {
     
     $(`.form-clickable-section`).find('.grid-add-row').attr("class", "btn btn-info btn-sm grid-add-row")
     frm.fields_dict.customs_declarations.grid.wrapper.append('<div class="alert alert-danger" style="display:none;" id="cannot_delete">لا يمكن حذف العنصر المحدد بسبب ارتباطه ببعض العمليات</div>')
-	},
+    if(!frm.is_new()) {
+      calculate_total_amounts(frm)
+    }
+  },
   validate(frm) {
     const arrival_time = frm.doc.actual_arrival_time;
     const departure_time = frm.doc.actual_leaving_time;
@@ -63,10 +66,6 @@ frappe.ui.form.on('Customs Declarations', {
   },
   operation_type(frm, cdt, cdn) {
     const child = locals[cdt][cdn];
-    console.log("cdt: ", cdt)
-    console.log("cdn: ", cdn)
-    console.log("child: ", child.operations_handler)
-    console.log("locals: ", locals)
       
   },
   customs_declarations_add(frm, cdt, cdn) {
@@ -128,7 +127,7 @@ function when_row_selected(frm, event) {
     frm.fields_dict.customs_declarations.grid.wrapper.find('#cannot_delete').hide()
   } else {
     const can_delete = customs_declarations.filter(item => selected_rows.includes(item.name)).every(item => item.handled_weight === 0 || item.handled_quantity === 0)
-    console.log("can_delete: ", can_delete)
+    
     if (!can_delete) {
       frm.fields_dict.customs_declarations.grid.grid_buttons.hide()
       frm.fields_dict.customs_declarations.grid.wrapper.find('#cannot_delete').show()
@@ -139,4 +138,8 @@ function when_row_selected(frm, event) {
     
 }
 
-
+function get_totals(frm) {
+  const total_weight = frm.doc.customs_declarations.reduce((acc, item) =>  acc + item.weight, 0)
+  const total_quantity = frm.doc.customs_declarations.reduce((acc, item) => acc + item.quantity, 0)
+  return {total_weight, total_quantity}
+}

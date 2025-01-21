@@ -34,8 +34,7 @@
    "fieldname": "ended_at",
    "fieldtype": "Datetime",
    "in_list_view": 1,
-   "label": "Ended At",
-   "reqd": 1
+   "label": "Ended At"
   },
   {
    "fieldname": "weight",
@@ -73,7 +72,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-18 10:58:54.713323",
+ "modified": "2025-01-21 14:15:37.524854",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Discharging Operation Registry",
