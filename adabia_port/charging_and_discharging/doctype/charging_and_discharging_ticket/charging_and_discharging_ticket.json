@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "visit_info_section",
+  "state",
   "visit_id",
   "operations_type",
   "customs_declarations",
@@ -141,6 +142,12 @@
    "fieldtype": "Data",
    "label": "Ship Name",
    "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -150,7 +157,7 @@
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-22 13:50:05.836764",
+ "modified": "2025-01-22 22:49:05.509910",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",
@@ -195,6 +202,15 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Purple",
+   "title": "In Progress"
+  },
+  {
+   "color": "Blue",
+   "title": "Closed"
+  }
+ ],
  "track_changes": 1
 }

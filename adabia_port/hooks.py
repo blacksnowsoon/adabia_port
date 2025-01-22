@@ -98,6 +98,7 @@ fixtures = [
         "dt": "Letter Head", "filters": {
             "name": ["in", [
                 "IT Letter Head",
+                "Logistics Header"
             ]]
         }
     },

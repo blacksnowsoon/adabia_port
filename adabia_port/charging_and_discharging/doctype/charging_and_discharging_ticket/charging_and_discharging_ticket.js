@@ -54,6 +54,7 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
     // load visit data
     const {state }= await fetchValue({doctype: "Ship Visit", filters: {name: frm.doc.visit_id}, fields: ["state"]})
     disable_frm(frm, state)
+    frm.set_value('state', state)
     add_visit_data_tables(frm).then(()=> setup_visit_info_section(frm))
    }
 	},

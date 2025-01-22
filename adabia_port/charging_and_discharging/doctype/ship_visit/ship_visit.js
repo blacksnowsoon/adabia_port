@@ -21,7 +21,7 @@ frappe.ui.form.on("Ship Visit", {
     frm.fields_dict.customs_declarations.grid.wrapper.on('click', '.row-check', function(event) {
       when_row_selected(frm, event)
     });
-    
+    frm.fields_dict.customs_declarations.grid.header_search.show_search;
     $(`.form-clickable-section`).find('.grid-add-row').attr("class", "btn btn-info btn-sm grid-add-row")
     frm.fields_dict.customs_declarations.grid.wrapper.append('<div class="alert alert-danger" style="display:none;" id="cannot_delete">لا يمكن حذف العنصر المحدد بسبب ارتباطه ببعض العمليات</div>')
     if(!frm.is_new()) {

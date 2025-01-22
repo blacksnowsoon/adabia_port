@@ -363,15 +363,6 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": "CLA 3 مذيبات عضوية (ايثانول ايثيل جليكول)ETHOXY ETHANOL.E.GLYCOL",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:18.893263",
-  "name": "GD-2868"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
   "goods_name": "CLA 4 مستحضرات للتجميل أو الزينه والعنايه بالبشره (مكياج) MAKEUP",
   "hs_code": null,
   "modified": "2024-12-31 22:21:18.942622",
@@ -1087,15 +1078,6 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:22.934784",
   "name": "GD-2949"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
-  "goods_name": " كيماويات لاحبار الطباعة سائلة  PRINTING INK LIQUD",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:22.964001",
-  "name": "GD-2950"
  },
  {
   "class": null,
@@ -2361,15 +2343,6 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": "احماض دهنية (تدخل فى صناعة الزيوت) صب",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:28.271795",
-  "name": "GD-3092"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
   "goods_name": "اخشاب في صورتها الطبيعية غير مصنعة ( جزوع شجر )",
   "hs_code": null,
   "modified": "2024-12-31 22:21:28.317470",
@@ -3085,15 +3058,6 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:32.035372",
   "name": "GD-3172"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
-  "goods_name": "بلاستيك مجروش",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:32.081010",
-  "name": "GD-3173"
  },
  {
   "class": null,
@@ -4489,15 +4453,6 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:38.486821",
   "name": "GD-3329"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
-  "goods_name": "زيوت صناعية (لاستخدامات الصناعة والمعدات والمحركات) سائلة",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:38.512496",
-  "name": "GD-3330"
  },
  {
   "class": null,
@@ -6879,10 +6834,46 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
+  "goods_name": "احماض دهنية (تدخل فى صناعة الزيوت) صب",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:28.271795",
+  "name": "GD-3092"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "CLA 3 مذيبات عضوية (ايثانول ايثيل جليكول)ETHOXY ETHANOL.E.GLYCOL",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:18.893263",
+  "name": "GD-2868"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": " كيماويات لاحبار الطباعة سائلة  PRINTING INK LIQUD",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:22.964001",
+  "name": "GD-2950"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
   "goods_name": "يوريا معبا",
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.587080",
   "name": "GD-3602"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "زيوت صناعية (لاستخدامات الصناعة والمعدات والمحركات) سائلة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:38.512496",
+  "name": "GD-3330"
  },
  {
   "class": null,
@@ -6901,6 +6892,15 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.606321",
   "name": "GD-3603"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بلاستيك مجروش",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.081010",
+  "name": "GD-3173"
  },
  {
   "class": null,
@@ -6942,15 +6942,6 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": "حاويات مبرده 40 قدم فارغة",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:33.736417",
-  "name": "GD-3223"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
   "goods_name": "ورق مشبع بالزيوت PAPER UNSATURATE OIL",
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.491138",
@@ -6964,6 +6955,15 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.559942",
   "name": "GD-3601"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حاويات مبرده 40 قدم فارغة",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:33.736417",
+  "name": "GD-3223"
  },
  {
   "class": null,

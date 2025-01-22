@@ -1,7 +1,30 @@
 [
  {
   "align": "Left",
-  "content": "<div>\n    <img src=\"/assets/adabia_port/images/SC-ZONE.png\" width=\"100%\">\n    <h4 class=\"text-right m-1 mx-3 font-weight-bold text-secondary\">إدارة تكنولوجيا المعلومات</h4>\n</div>",
+  "content": "<div>\n    <img src=\"/assets/adabia_port/images/SC-ZONE.png\" width=\"100%\">\n    <h3 class=\"text-right m-1 mx-3 font-weight-bold text-secondary\">إدارة الشحن والتفريغ</h3>\n</div>",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Letter Head",
+  "footer": "",
+  "footer_align": "Left",
+  "footer_image": null,
+  "footer_image_height": 0.0,
+  "footer_image_width": 0.0,
+  "footer_script": null,
+  "footer_source": "HTML",
+  "header_script": "var el = document.getElementsByClassName(\"header-content\");\r\nif (el.length > 0) {\r\n\tel[0].textContent += \" \" + new Date().toGMTString();\r\n}\r\n",
+  "image": null,
+  "image_height": 0.0,
+  "image_width": 0.0,
+  "is_default": 0,
+  "letter_head_name": "Logistics Header",
+  "modified": "2025-01-22 23:38:59.523373",
+  "name": "Logistics Header",
+  "source": "HTML"
+ },
+ {
+  "align": "Left",
+  "content": "<div>\n    <img src=\"/assets/adabia_port/images/SC-ZONE.png\" width=\"100%\">\n    <h3 class=\"text-right m-1 mx-3 font-weight-bold text-secondary\">إدارة تكنولوجيا المعلومات</h3>\n</div>",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Letter Head",
@@ -18,7 +41,7 @@
   "image_width": 0.0,
   "is_default": 0,
   "letter_head_name": "IT Letter Head",
-  "modified": "2024-12-30 21:17:32.672223",
+  "modified": "2025-01-22 23:37:13.941382",
   "name": "IT Letter Head",
   "source": "HTML"
  }
