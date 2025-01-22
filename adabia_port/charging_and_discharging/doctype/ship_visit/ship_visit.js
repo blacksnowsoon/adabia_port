@@ -17,15 +17,18 @@ frappe.ui.form.on("Ship Visit", {
     reload_btn(frm)
     
     double_click_to_open_row_form(frm, 'customs_declarations')
+    // event when the row is selected
     frm.fields_dict.customs_declarations.grid.wrapper.on('click', '.row-check', function(event) {
-        when_row_selected(frm, event)
+      when_row_selected(frm, event)
     });
     
     $(`.form-clickable-section`).find('.grid-add-row').attr("class", "btn btn-info btn-sm grid-add-row")
     frm.fields_dict.customs_declarations.grid.wrapper.append('<div class="alert alert-danger" style="display:none;" id="cannot_delete">لا يمكن حذف العنصر المحدد بسبب ارتباطه ببعض العمليات</div>')
     if(!frm.is_new()) {
       calculate_total_amounts(frm)
-    }
+      const state= frm.doc.state
+      disable_frm(frm, state)
+    } 
   },
   validate(frm) {
     const arrival_time = frm.doc.actual_arrival_time;
@@ -49,7 +52,6 @@ frappe.ui.form.on("Ship Visit", {
       } 
     }
   }
-    
 });
 
 
@@ -126,8 +128,7 @@ function when_row_selected(frm, event) {
     frm.fields_dict.customs_declarations.grid.grid_buttons.show()
     frm.fields_dict.customs_declarations.grid.wrapper.find('#cannot_delete').hide()
   } else {
-    const can_delete = customs_declarations.filter(item => selected_rows.includes(item.name)).every(item => item.handled_weight === 0 || item.handled_quantity === 0)
-    
+    const can_delete = customs_declarations.filter(item => selected_rows.includes(item.name)).every(item => item.handled_weight === 0 && item.handled_quantity === 0 || item.__islocal)
     if (!can_delete) {
       frm.fields_dict.customs_declarations.grid.grid_buttons.hide()
       frm.fields_dict.customs_declarations.grid.wrapper.find('#cannot_delete').show()
@@ -142,4 +143,10 @@ function get_totals(frm) {
   const total_weight = frm.doc.customs_declarations.reduce((acc, item) =>  acc + item.weight, 0)
   const total_quantity = frm.doc.customs_declarations.reduce((acc, item) => acc + item.quantity, 0)
   return {total_weight, total_quantity}
+}
+function disable_frm(frm, state) {
+  
+  if (state === "Closed") {
+    frm.toggle_enable([ "customs_declarations"], 0);
+  }
 }

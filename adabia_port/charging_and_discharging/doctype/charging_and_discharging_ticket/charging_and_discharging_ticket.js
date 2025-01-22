@@ -52,8 +52,9 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
       set_visit_id_filter(frm)
    } else {
     // load visit data
+    const {state }= await fetchValue({doctype: "Ship Visit", filters: {name: frm.doc.visit_id}, fields: ["state"]})
+    disable_frm(frm, state)
     add_visit_data_tables(frm).then(()=> setup_visit_info_section(frm))
-    
    }
 	},
   visit_id: async(frm) => {
@@ -343,5 +344,11 @@ function filter_grid(grid_field ,value) {
     } else { 
       return false; // Exclude this row 
     } 
+  }
+}
+
+function disable_frm(frm, state) {
+  if (state === "Closed") {
+    frm.toggle_enable([ "charging_operations_registry", "discharging_operations_registry"], 0);
   }
 }
