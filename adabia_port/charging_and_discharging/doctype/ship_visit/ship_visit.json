@@ -6,7 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "visit_state_section",
-  "state",
+  "status",
   "ship_name",
   "column_break_crmh",
   "piers_number",
@@ -33,15 +33,10 @@
  ],
  "fields": [
   {
-   "fieldname": "state",
-   "fieldtype": "Select",
-   "label": "State",
-   "options": "Open\nIn Progress\nClosed"
-  },
-  {
    "fieldname": "visit_id",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Visit ID",
    "reqd": 1,
    "unique": 1
@@ -54,6 +49,7 @@
    "fieldname": "ship_name",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Ship Name",
    "options": "Ship",
    "reqd": 1
@@ -163,18 +159,24 @@
   {
    "fieldname": "agent",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Agent",
    "options": "Company"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Progress\nClosed"
   }
  ],
- "index_web_pages_for_search": 1,
  "links": [
   {
    "link_doctype": "Charging and Discharging Ticket",
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-22 20:03:46.070062",
+ "modified": "2025-01-24 20:16:31.383354",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Ship Visit",
@@ -221,15 +223,15 @@
  "sort_order": "DESC",
  "states": [
   {
-   "color": "Purple",
+   "color": "Blue",
    "title": "Open"
   },
   {
-   "color": "Purple",
+   "color": "Yellow",
    "title": "In Progress"
   },
   {
-   "color": "Blue",
+   "color": "Red",
    "title": "Closed"
   }
  ],

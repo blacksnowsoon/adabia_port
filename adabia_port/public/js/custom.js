@@ -274,7 +274,7 @@ function add_progress_bar(data, bg, is_count, size, field, key, title) {
   const container = $('<div>', {class: 'text-center', id: key})
   const progress_container = create_progressbar(title, {...data, value_now, bg, size})
   $(container).append(progress_container)
-  // field.$wrapper.find(container).empty()
+  field.$wrapper.empty()
   field.$wrapper.append(container)
 
 }

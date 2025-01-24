@@ -3,13 +3,13 @@
 
 import frappe
 from frappe.model.document import Document
-
+import re
 
 class ChargingandDischargingTicket(Document):
 	def before_save(self):
 		charge = self.charging_operations_registry
 		discharge = self.discharging_operations_registry
-
+		customs_declarations = self.customs_declarations
 		if len(charge) > 0:
 			charging_data={}
 			
@@ -22,10 +22,15 @@ class ChargingandDischargingTicket(Document):
 				charging_data[operation.customs_declaration_no]['quantity'] = charging_data[operation.customs_declaration_no]['quantity'] + operation.quantity
 				
 			for (key, value) in charging_data.items():
-				doc = frappe.get_doc("Customs Declarations", key)
-				doc.handled_weight = value['weight']
-				doc.handled_quantity = value['quantity']
-				doc.save()	
+				match = re.match(r'^(.*?)-L-(\d+)', key)
+				if match:
+					cust_dec , line_no = match.group(1), match.group(2)
+					parent = frappe.get_value('Customs Declarations', filters={"parent": self.visit_id, "customs_declaration_no": cust_dec, "line_no": line_no}, fieldname={"name"})
+					
+					doc = frappe.get_doc("Customs Declarations", parent)
+					doc.handled_weight = value['weight']
+					doc.handled_quantity = value['quantity']
+					doc.save()	
 		else :
 			docs = frappe.get_all("Customs Declarations", fields=["name"], filters={"parent": self.name, "operation_type": "Charge"})
 			if len(docs) > 0 :
@@ -38,7 +43,6 @@ class ChargingandDischargingTicket(Document):
 
 		if len(discharge) > 0:
 			discharging_data={}
-
 			for operation in discharge:
 				if operation.customs_declaration_no not in discharging_data:
 					discharging_data[operation.customs_declaration_no] = {'weight': 0, 'quantity': 0}
@@ -49,10 +53,15 @@ class ChargingandDischargingTicket(Document):
 			
 			
 			for (key, value) in discharging_data.items():
-				doc = frappe.get_doc("Customs Declarations", key)
-				doc.handled_weight = value['weight']
-				doc.handled_quantity = value['quantity']
-				doc.save()
+				match = re.match(r'^(.*?)-L-(\d+)', key)
+				if match:
+					cust_dec , line_no = match.group(1), match.group(2)
+					parent = frappe.get_value('Customs Declarations', filters={"parent": self.visit_id, "customs_declaration_no": cust_dec, "line_no": line_no}, fieldname={"name"})
+					
+					doc = frappe.get_doc("Customs Declarations", parent)
+					doc.handled_weight = value['weight']
+					doc.handled_quantity = value['quantity']
+					doc.save()
 		else :
 			docs = frappe.get_all("Customs Declarations", fields=["name"], filters={"parent": self.name, "operation_type": "Discharge"})
 			if len(docs) > 0 :

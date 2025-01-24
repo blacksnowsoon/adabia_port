@@ -1,13 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:visit_id",
+ "autoname": "format:{YYYY}-{MM}-{visit_id}",
  "creation": "2025-01-01 12:54:49.331763",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "percentage_of_operations_type",
   "visit_info_section",
-  "state",
+  "status",
   "visit_id",
   "operations_type",
   "customs_declarations",
@@ -15,7 +16,6 @@
   "ship_name",
   "visit_data",
   "column_break_vlyx",
-  "percentage_of_operations_type",
   "shipment_details_section",
   "direct_view",
   "column_break_fswq",
@@ -36,6 +36,7 @@
    "label": "Visit ID",
    "options": "Ship Visit",
    "reqd": 1,
+   "set_only_once": 1,
    "unique": 1
   },
   {
@@ -69,6 +70,7 @@
    "label": "Registry"
   },
   {
+   "depends_on": "eval:doc.customs_declarations !== ''",
    "fieldname": "section_break_customs_declaration_info",
    "fieldtype": "Section Break",
    "label": "Customs Declaration Info",
@@ -113,7 +115,6 @@
    "label": "Declarations Registry"
   },
   {
-   "depends_on": "eval:doc.operations_type",
    "fieldname": "shipment_details_section",
    "fieldtype": "Section Break",
    "label": "Shipment Details"
@@ -144,24 +145,20 @@
    "read_only": 1
   },
   {
-   "fieldname": "state",
-   "fieldtype": "Data",
-   "label": "State",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "In Progress\nClosed",
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [
-  {
-   "link_doctype": "Ship Visit",
-   "link_fieldname": "visit_id"
-  }
- ],
- "modified": "2025-01-22 22:49:05.509910",
+ "links": [],
+ "modified": "2025-01-24 15:10:10.705349",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -204,11 +201,11 @@
  "sort_order": "DESC",
  "states": [
   {
-   "color": "Purple",
+   "color": "Green",
    "title": "In Progress"
   },
   {
-   "color": "Blue",
+   "color": "Red",
    "title": "Closed"
   }
  ],

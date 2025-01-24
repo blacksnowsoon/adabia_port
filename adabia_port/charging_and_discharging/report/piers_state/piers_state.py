@@ -23,36 +23,39 @@ def execute(filters=None):
 
 	query = """
 		SELECT
+			visit.visit_id as visit_id,
 			GROUP_CONCAT(DISTINCT pier.pier_number) as piers_numbers,
-			customs.parent as visit_id,
 			agent.company_name as agent,
-			company.company_name as charge_discharge_comp,
+			IFNULL(company.company_name, "NONE") as charge_discharge_comp,
 			ship.ship_name as ship_name,
-			visit.actual_arrival_time as arrival_time,
-			visit.operations_started_time as started_time,
-			GROUP_CONCAT(DISTINCT goods.goods_type) as good_types,
+			IFNULL(DATE_FORMAT(visit.actual_arrival_time, '%Y-%m-%d %H:%i'), "NONE") as arrival_time,
+			IFNULL(DATE_FORMAT(visit.operations_started_time, '%Y-%m-%d %H:%i'), "NONE") as started_time,
+			IFNULL(GROUP_CONCAT(DISTINCT goods.goods_type), "NONE") as good_types,
 			
-			if(
+			IFNULL(IF(
 				customs.operation_type = "Charge", "شحن", "تفريغ"
-				) as operation_type,
-			IF(
+				), "NONE") as operation_type,
+			IFNULL(IF(
 				customs.is_count = '1', 'عدد', 'وزن'
-				) as opt,
-			IF(
+				), "NONE") as opt,
+			IFNULL( ROUND( IF(
 				customs.is_count  = '1', SUM(customs.quantity), SUM(customs.weight)
-				) as quy,
-			IF(
+				), 2), "0") as quy,
+			IFNULL( ROUND( IF(
 				customs.is_count  = '1', SUM(customs.handled_quantity), SUM(customs.handled_weight)
-				) as hand_quy,
+				), 2), "0") as hand_quy,
     
-			ROUND (IF(
+		    IFNULL(	ROUND( IF(
 			customs.is_count  = '1', SUM(customs.quantity), SUM(customs.weight)
 			) - IF(
 			customs.is_count  = '1', SUM(customs.handled_quantity), SUM(customs.handled_weight)
-			), 2) as rest
+			), 2), "0") as rest
 	
 		FROM
-			`tabCustoms Declarations` as customs 
+			 `tabShip Visit` as visit
+			 
+		JOIN `tabCustoms Declarations` as customs 
+		ON customs.parent = visit.visit_id
 			
 		JOIN `tabGoods Type` as goods
 		ON  goods.name = customs.goods_type 
@@ -60,11 +63,8 @@ def execute(filters=None):
 		JOIN `tabCompany` as company
 		ON  customs.company = company.name
 
-		JOIN `tabShip Visit` as visit
-		ON customs.parent = visit.visit_id
-
 		JOIN `tabPier Child Table` as piers
-		ON customs.parent = piers.parent
+		ON visit.visit_id = piers.parent
 
 		JOIN `tabPier` as pier
 		ON pier.name = piers.pier
@@ -74,12 +74,13 @@ def execute(filters=None):
 
 		JOIN `tabCompany` as agent
 		ON visit.agent = agent.name
+		
 		WHERE
-			visit.state = "In Progress"
+			visit.status = "In Progress"
 		GROUP BY
-			customs.operation_type, customs.is_count, customs.parent
+			visit.visit_id, customs.operation_type, customs.is_count
 		ORDER BY
-			customs.parent
+			visit.visit_id
 	 """
 
 	data = frappe.db.sql(query, as_dict=1)

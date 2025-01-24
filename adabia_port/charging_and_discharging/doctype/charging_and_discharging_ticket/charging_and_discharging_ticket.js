@@ -30,8 +30,8 @@ const arabic = {
   "DischargeDirectWeight": "تفريغ مباشر وزن",
   "DischargeStorageCount": "تفريغ الى المخزن عدد",
   "DischargeStorageWeight": "تفريغ الى المخزن وزن",
-  "is_count": "نسبة التنفيذ في العدد",
-  "is_weight": "نسبة التنفيذ في الوزن",
+  "is_count": "النسبة الكلية في العدد",
+  "is_weight": "النسبة الكلية في الوزن",
   "ChargeData": "بيانات الشحن",
   "DischargeData": "بيانات التفريغ",
   "calculation_method": "تخصيم"
@@ -51,10 +51,6 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
     // show only in progress visits
       set_visit_id_filter(frm)
    } else {
-    // load visit data
-    const {state }= await fetchValue({doctype: "Ship Visit", filters: {name: frm.doc.visit_id}, fields: ["state"]})
-    disable_frm(frm, state)
-    frm.set_value('state', state)
     add_visit_data_tables(frm).then(()=> setup_visit_info_section(frm))
    }
 	},
@@ -66,14 +62,14 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
     await setup_visit_info_section(frm)
   },
   customs_declarations: async(frm) => {
-    const selected = frm.doc.customs_declarations
     const operation = frm.doc.operations_type
     const grid_name = operation === 'Charge' ? 'charging_operations_registry' : 'discharging_operations_registry'
+    const selected = frm.doc.customs_declarations
     // toggle selected customs declaration info
     if (selected === "") {
       frm.fields_dict[grid_name].grid.grid_buttons.hide()
       frm.set_df_property('section_break_customs_declaration_info', 'hidden', 1)
-      } else {
+    } else {
       frm.fields_dict[grid_name].grid.grid_buttons.show()
       frm.set_df_property('section_break_customs_declaration_info', 'hidden', 0)
       await populate_selected_Customs_declaration_summary(frm, selected)
@@ -137,11 +133,12 @@ async function add_visit_data_tables(frm) {
   const visit_id = frm.doc.visit_id
   if (visit_id) {
     // trigger the spenner
+    // clean_up_html(frm, ['visit_data'])
     frm.fields_dict.visit_data.$wrapper.append(spenner());
     // fetch the visit doc data and set the visit global variable
     visit = await fetchDoc({doctype: "Ship Visit", name: visit_id})
     // get piers to fetch it's own linked data
-    const { piers_number, doctype } = visit
+    const { piers_number, doctype, status } = visit
     // get ship name from it's linked doc and piers data from it's linked docs
     const [ship_name, piers_data ] = await Promise.all(
         [
@@ -155,23 +152,64 @@ async function add_visit_data_tables(frm) {
     visit_data.push({key: arabic["operations_started_time"], value: visit.operations_started_time})
     visit_data.push({key: arabic["actual_arrival_time"], value: visit.actual_arrival_time})
     // render the visit table data
-    frm.set_value("ship_name", ship_name.ship_name)
     render_html(frm, visit_data, 'visit_data', true)
+    frm.set_value("ship_name", ship_name.ship_name)
+    frm.set_value('status', status)
     frm.set_df_property('operations_type', 'read_only', 0)
-  } 
+    disable_frm(frm, status)
+  } else {
+    set_visit_id_filter(frm)
+  }
+}
+// -----------------------------------------------------------------------------------
+async function setup_visit_info_section(frm) {
+  if (visit){
+    const operation_type = frm.doc.operations_type
+    const customs_declarations = visit.customs_declarations.filter(item =>  item.operation_type === operation_type).map(item => item.customs_declaration_no + "-L-" + item.line_no)
+    
+    if (operation_type !== '' && customs_declarations.length > 0) {
+      
+      // get summations of selected operation type in case of count and weight
+      const parent = visit.name
+      const percentage_field = frm.fields_dict.percentage_of_operations_type
+      const [[is_count], [is_weight]] = await Promise.all([
+        await get_customs_declarations_sum(parent, operation_type, null, 1),
+        await get_customs_declarations_sum(parent, operation_type, null, 0)
+      ])
+      
+      if (is_count.quantity) {
+        const bg = operation_type === "Charge" ? "bg-success" : "bg-danger"
+        const c_key = "is_count"
+        add_progress_bar(is_count, bg, 1, "md", percentage_field, c_key, arabic[c_key])
+      }
+      if (is_weight.weight) {
+        const bg = operation_type === "Charge" ? "bg-warning" : "bg-info"
+        const w_key = "is_weight"
+        add_progress_bar(is_weight, bg, 0, "md", percentage_field, w_key , arabic[w_key])
+      }
+      await add_operation_details_progressbar(frm, parent, operation_type)
+      populate_customs_declarations(frm, customs_declarations)
+    } else {
+      populate_customs_declarations(frm, [])
+      clean_up_html(frm, ["direct_view", "storage_view", "declarations_data", "declarations_registry", "percentage_of_operations_type"])
+      
+    }
+  }
+  
 }
 // add the shipment details progressbar for charge and discharge - direct and storage - is_count and is_weight
 async function add_operation_details_progressbar(frm, parent, operation_type) {
-  
-   // get the summations of customs declarations with handlers count and weight from direct
-   const [[direct_is_count], [direct_is_weight]] = await Promise.all([
+  // clean it up
+  // clean_up_html(frm, ["storage_view", "direct_view", "declarations_data", "declarations_registry"])
+  const storage_view = frm.fields_dict.storage_view
+  const direct_view = frm.fields_dict.direct_view
+  // get the summations of customs declarations with handlers count and weight from direct
+  const [[direct_is_count], [direct_is_weight]] = await Promise.all([
     await get_customs_declarations_sum(parent, operation_type, "Direct", 1), // is_count
     await get_customs_declarations_sum(parent, operation_type, "Direct", 0) // is_weight
   ])
-  // get the html for the direct handler html
-  const direct_view = frm.fields_dict['direct_view']
-  // clean it up
-  direct_view.$wrapper.empty()
+  // get the html for the direct handler html container
+  
   if (!!direct_is_count.quantity) {
     const bg = operation_type === "Charge" ? "bg-success" : "bg-danger"
     const d_c_key = operation_type + "Direct" + "Count"
@@ -187,9 +225,7 @@ async function add_operation_details_progressbar(frm, parent, operation_type) {
     await get_customs_declarations_sum(parent, operation_type, "Storage", 1), // is_count
     await get_customs_declarations_sum(parent, operation_type, "Storage", 0) // is_weight
   ])
-  const storage_view = frm.fields_dict['storage_view']
-  // clean it up
-  storage_view.$wrapper.empty()
+  
   if (!!storage_is_count.quantity) {
     const bg = operation_type === "Charge" ? "bg-success" : "bg-danger"
     const s_c_key = operation_type + "Storage" + "Count"
@@ -204,10 +240,11 @@ async function add_operation_details_progressbar(frm, parent, operation_type) {
 }
 // add html table with the selected customs_declaration data
 async function populate_selected_Customs_declaration_summary(frm, selected) {
-  if (visit) {
+  // clean_up_html(frm, ["declarations_data", "declarations_registry"])
+  if (visit && selected !== "") {
     frm.fields_dict.declarations_data.wrapper.appendChild(spenner());
-    const [cust_declaration] = await get_customs_declarations({doc: "Customs Declarations", filters: {name: selected}})
-    
+    const [cust_declaration] = await get_customs_declarations({doc: "Customs Declarations", filters: {parent: visit.visit_id, customs_declaration_no: selected.split("-L")[0]}})
+  
     const table_data = {
       customs_declaration_no: cust_declaration.customs_declaration_no,
       line_no: cust_declaration.line_no,
@@ -219,13 +256,12 @@ async function populate_selected_Customs_declaration_summary(frm, selected) {
     }
     const declaration_data = Object.entries(table_data).map(([key, value])=> ({key : arabic[key], value}))
     render_html(frm, declaration_data, 'declarations_data', true)
-    const cust_declaration_progressbar_container = frm.fields_dict.declarations_registry
-    cust_declaration_progressbar_container.$wrapper.empty()
     const key = cust_declaration.operation_type + "Data"
     const is_count = cust_declaration.is_count
     const bg = cust_declaration.operation_type === "Charge" ? is_count ? "bg-success": "bg-warning" : is_count ? "bg-danger" : "bg-info"
+    const cust_declaration_progressbar_container = frm.fields_dict.declarations_registry
     add_progress_bar(cust_declaration, bg, is_count, 'md', cust_declaration_progressbar_container, key, arabic[key])
-  }
+  } 
   
 } 
 // get the selected customs_declaration data
@@ -254,65 +290,32 @@ async function get_customs_declarations(data) {
   })
   return declarations
 }
-// -----------------------------------------------------------------------------------
-async function setup_visit_info_section(frm) {
-  if (visit){
-    const operation_type = frm.doc.operations_type
-    const customs_declarations = visit.customs_declarations.filter(item =>  item.operation_type === operation_type).map(item => item.name)
-    // push the customs_declarations names to the list and show it up
-    populate_customs_declarations(frm, customs_declarations)
-    // get the progressbar html container 
-    const percentage_field = frm.fields_dict.percentage_of_operations_type
-    // clean it up
-    percentage_field.$wrapper.empty()
-    if (operation_type) {
-      // get summations of selected operation type in case of count and weight
-      const parent = visit.name
-      const [[is_count], [is_weight]] = await Promise.all([
-        await get_customs_declarations_sum(parent, operation_type, null, 1),
-        await get_customs_declarations_sum(parent, operation_type, null, 0)
-      ])
-      
-      if (is_count.quantity) {
-        const bg = operation_type === "Charge" ? "bg-success" : "bg-danger"
-        const c_key = "is_count"
-        add_progress_bar(is_count, bg, 1, "md", percentage_field, c_key, arabic[c_key])
-      }
-      if (is_weight.weight) {
-        const bg = operation_type === "Charge" ? "bg-warning" : "bg-info"
-        const w_key = "is_weight"
-        add_progress_bar(is_weight, bg, 0, "md", percentage_field, w_key , arabic[w_key])
-      }
-      await add_operation_details_progressbar(frm, parent, operation_type)
 
-    } else {
-      percentage_field.$wrapper.empty()
-    }
-  }
-  
-}
 // -----------------------------------------------------------------------------------
 // populate customs declaration based on operation type
 function populate_customs_declarations(frm, customs_declarations) {
+  
   frm.set_df_property("customs_declarations", 'hidden', 0)
   frm.set_df_property('customs_declarations','options', [])
   frm.set_df_property('customs_declarations','options', [""].concat(customs_declarations))
+  frm.set_value('customs_declarations', "")
   filter_operations_grid(frm)
   
 }
 // ------------------------------------------------------------------------------------
 // dispaly the registry table and filter the gird based on selected customs_declaration and operation type
 function filter_operations_grid(frm) {
-  const selected_customs_declaration = frm.doc.customs_declarations
   const selected_operation_type = frm.doc.operations_type
   const gird_name = selected_operation_type === "Charge" ? "charging_operations_registry" : selected_operation_type === "Discharge" ? "discharging_operations_registry" : ""
+  const selected_customs_declaration = frm.doc.customs_declarations
   // show grid rows based on selected_customs_declaration
   if (gird_name) {
+    console.log("selected_customs: ", selected_customs_declaration)
     if (!selected_customs_declaration){
       frm.fields_dict[gird_name].grid.grid_buttons.hide()
+      clean_up_html(frm, ["declarations_data", "declarations_registry"])
+      frm.set_df_property('section_break_customs_declaration_info', 'hidden', 1)
     } else {
-      console.log('cstd', selected_customs_declaration)
-      
       populate_selected_Customs_declaration_summary(frm, selected_customs_declaration)
     }
     frm.doc[gird_name].map(d => {
@@ -326,30 +329,41 @@ function filter_operations_grid(frm) {
     })
   }
 }
-// 
+// show only visits in progress and clean the new form html fields
 function set_visit_id_filter(frm){
   frm.set_query('visit_id', function(){
     return {
       filters: [
-        ['state', '=', 'In Progress']
+        ['status', '=', 'In Progress']
       ]
     }
   })
+  clear_fields_value(frm, ["visit_id", "ship_name", "status"])
+  clean_up_html(frm)
 }
 
-function filter_grid(grid_field ,value) {
-  grid_field.grid.filter = function(doc, cdt, cdn) { 
-    var row = locals[cdt][cdn]; 
-    if (row.customs_declaration_no === value) { 
-      return true; // Include this row 
-    } else { 
-      return false; // Exclude this row 
-    } 
-  }
-}
-
-function disable_frm(frm, state) {
-  if (state === "Closed") {
+// disable the form based on the visit state 'Colsed'
+function disable_frm(frm, status) {
+  if (status === "Closed") {
     frm.toggle_enable([ "charging_operations_registry", "discharging_operations_registry"], 0);
   }
+}
+// clean up the html container
+function clean_up_html(frm, fields) {
+  if (fields) {
+    fields.map(field => frm.fields_dict[field].$wrapper.empty())
+  } else {
+    frm.fields_dict.visit_data.$wrapper.empty()
+    frm.fields_dict.percentage_of_operations_type.$wrapper.empty()
+    frm.fields_dict.direct_view.$wrapper.empty()
+    frm.fields_dict.storage_view.$wrapper.empty()
+    frm.fields_dict.declarations_data.$wrapper.empty();
+    frm.fields_dict.declarations_registry.$wrapper.empty()
+  }
+}
+// clear fields value
+function clear_fields_value(frm, fields) {
+  if (fields) {
+    fields.map(field => frm.set_value(field, ""))
+  } 
 }

@@ -26,11 +26,12 @@ frappe.ui.form.on("Ship Visit", {
     frm.fields_dict.customs_declarations.grid.wrapper.append('<div class="alert alert-danger" style="display:none;" id="cannot_delete">لا يمكن حذف العنصر المحدد بسبب ارتباطه ببعض العمليات</div>')
     if(!frm.is_new()) {
       calculate_total_amounts(frm)
-      const state= frm.doc.state
-      disable_frm(frm, state)
+      const status= frm.doc.status
+      disable_frm(frm, status)
     } 
   },
   validate(frm) {
+    const status = frm.doc.status
     const arrival_time = frm.doc.actual_arrival_time;
     const departure_time = frm.doc.actual_leaving_time;
     const operations_started_time = frm.doc.operations_started_time;
@@ -50,6 +51,10 @@ frappe.ui.form.on("Ship Visit", {
           err_message('يجب ان يكون وقت انتهاء العمليات اكبر من وقت بدء العمليات')
           frappe.validated = false;
       } 
+    }
+    if (status === 'Closed' && !operations_ended_time ) {
+      err_message('يجب تسجيل تاريخ نهاية الاعمال لاغلاق الزيارة')
+      frappe.validated = false;
     }
   }
 });
@@ -144,9 +149,9 @@ function get_totals(frm) {
   const total_quantity = frm.doc.customs_declarations.reduce((acc, item) => acc + item.quantity, 0)
   return {total_weight, total_quantity}
 }
-function disable_frm(frm, state) {
+function disable_frm(frm, status) {
   
-  if (state === "Closed") {
+  if (status === "Closed") {
     frm.toggle_enable([ "customs_declarations"], 0);
   }
 }

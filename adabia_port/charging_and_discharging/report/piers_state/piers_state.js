@@ -14,8 +14,12 @@ frappe.query_reports["Piers State"] = {
 	},
 	"onload": function(report) {
 		if (report.report_name) { 
-			const currentDateTime = frappe.datetime.nowdate();
-			$('#page-query-report').find("[title='Piers State']").text( 'بيان موقف الارصفة' + ' ** ' + currentDateTime)
+			const currentDateTime = new Date().toLocaleString();
+			$('#page-query-report').find("[title='Piers State']").text( 'بيان موقف الشحن والتفريغ بالارصفة' + ' ** ' + currentDateTime)
+			report.prepared_report_name = "Piers State" + ' ** ' + currentDateTime
+			
 		}
+		
+		
 	}
 };
