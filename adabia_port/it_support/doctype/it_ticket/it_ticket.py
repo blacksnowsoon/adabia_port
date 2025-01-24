@@ -17,5 +17,4 @@ class ITTicket(Document):
 			self.duration = frappe.utils.time_diff_in_seconds(self.closed_at, self.open_at)
 	def after_save(self):
 		name = self.name
-		frappe.errprint(name)
 		frappe.db.delete('Communication', {'reference_doctype': 'IT Ticket', 'reference_name': name})
