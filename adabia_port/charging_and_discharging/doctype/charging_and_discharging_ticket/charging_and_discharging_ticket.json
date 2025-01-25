@@ -155,12 +155,13 @@
   {
    "fieldname": "state",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "State"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-25 16:55:26.279419",
+ "modified": "2025-01-25 19:38:45.765702",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",

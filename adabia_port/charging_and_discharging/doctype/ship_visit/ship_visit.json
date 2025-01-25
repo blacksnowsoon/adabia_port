@@ -163,6 +163,7 @@
   {
    "fieldname": "state",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "State"
   }
  ],
@@ -172,7 +173,7 @@
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-25 16:54:49.167879",
+ "modified": "2025-01-25 19:39:26.883964",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Ship Visit",
