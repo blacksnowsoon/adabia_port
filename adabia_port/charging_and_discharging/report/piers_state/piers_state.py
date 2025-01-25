@@ -16,9 +16,9 @@ def execute(filters=None):
 		{"fieldname": "good_types", "label": "نوع البضاعة", "fieldtype": "Data", "width": 100},
 		{"fieldname": "charge_discharge_comp", "label": "شركة الشحن والتفريغ", "fieldtype": "Data", "width": 200},
 		{"fieldname": "opt", "label": "التخصيم", "fieldtype": "Data", "width": 100},
-		{"fieldname": "quy", "label": "الكمية الكلية", "fieldtype": "Data", "width": 130},
-		{"fieldname": "hand_quy", "label": "الكمية المنفذة", "fieldtype": "Data", "width": 130},
-		{"fieldname": "rest", "label": "الكمية المتبقية", "fieldtype": "Data", "width": 130},
+		{"fieldname": "quy", "label": "الكمية الكلية", "fieldtype": "Float", "width": 130},
+		{"fieldname": "hand_quy", "label": "الكمية المنفذة", "fieldtype": "Float", "width": 130},
+		{"fieldname": "rest", "label": "الكمية المتبقية", "fieldtype": "Float", "width": 130},
 		], []
 
 	query = """
@@ -85,4 +85,39 @@ def execute(filters=None):
 
 	data = frappe.db.sql(query, as_dict=1)
 	now = datetime.datetime.now().strftime("%Y-%m-%d / %H:%M")
-	return columns, data, now, None, None
+	chart = get_chart(data)
+     
+	# Create a dictionary to store unique visit_id and ship_name
+	unique_visits = {}
+	for row in data:
+		if row["visit_id"] not in unique_visits:
+			unique_visits[row["visit_id"]] = row["ship_name"]
+
+	# Generate report summary
+	report_summary = [
+		{
+			"value": ship_name,
+			"indicator": "Blue",
+			"label": f"{visit_id}",
+			"datatype": "Data",
+			"fieldname": f"visit_{visit_id}"
+		}
+		for visit_id, ship_name in unique_visits.items()
+	]
+
+	return columns, data, now, chart, report_summary
+
+
+def get_chart(data):
+    return {
+        "data": {
+            "labels": [ d["operation_type"] +"-"+ d["opt"] +"-"+ d["visit_id"] for d in data],
+            "datasets": [
+                {"name": "الكمية الكلية", "values": [d["quy"] for d in data]},
+                {"name": "الكمية المنفذة", "values": [d["hand_quy"] for d in data]},
+                {"name": "الكمية المتبقية", "values": [d["rest"] for d in data]}
+            ]
+        },
+        "type": "bar",
+        "colors": ["#74ba8b", "#0289f7", "#ff0000"]
+    }
