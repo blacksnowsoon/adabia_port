@@ -7,7 +7,10 @@
  "engine": "InnoDB",
  "field_order": [
   "location",
-  "code"
+  "code",
+  "column_break_lism",
+  "active_connectivity_points",
+  "inactive_connectivity_points"
  ],
  "fields": [
   {
@@ -23,11 +26,25 @@
    "in_list_view": 1,
    "label": "Code",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lism",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "active_connectivity_points",
+   "fieldtype": "Data",
+   "label": "Active Connectivity Points"
+  },
+  {
+   "fieldname": "inactive_connectivity_points",
+   "fieldtype": "Data",
+   "label": "Inactive Connectivity Points "
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-22 20:36:31.750178",
+ "modified": "2025-01-25 15:43:25.253831",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Port Location Map Code",
