@@ -8,6 +8,7 @@
   "visit_state_section",
   "status",
   "ship_name",
+  "state",
   "column_break_crmh",
   "piers_number",
   "column_break_bvuw",
@@ -158,6 +159,11 @@
    "fieldname": "handled_total",
    "fieldtype": "HTML",
    "label": "Handled Total"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
   }
  ],
  "links": [
@@ -166,7 +172,7 @@
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-25 14:59:30.381482",
+ "modified": "2025-01-25 16:54:49.167879",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Ship Visit",

@@ -12,6 +12,7 @@
   "visit_id",
   "operations_type",
   "customs_declarations",
+  "state",
   "column_break_rfam",
   "ship_name",
   "visit_data",
@@ -150,11 +151,16 @@
    "label": "Status",
    "options": "In Progress\nClosed",
    "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-24 15:10:10.705349",
+ "modified": "2025-01-25 16:55:26.279419",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",
