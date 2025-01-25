@@ -6870,15 +6870,6 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": "زيوت صناعية (لاستخدامات الصناعة والمعدات والمحركات) سائلة",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:38.512496",
-  "name": "GD-3330"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
   "goods_name": "وحدة بحرية ( يخت/ رماث- وحدة انقاذ / قاطرة / حفار) - طرود و مهيئات ذات طبيعة خاصة",
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.386854",
@@ -6897,10 +6888,10 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": "بلاستيك مجروش",
+  "goods_name": "زيوت صناعية (لاستخدامات الصناعة والمعدات والمحركات) سائلة",
   "hs_code": null,
-  "modified": "2024-12-31 22:21:32.081010",
-  "name": "GD-3173"
+  "modified": "2024-12-31 22:21:38.512496",
+  "name": "GD-3330"
  },
  {
   "class": null,
@@ -6946,6 +6937,15 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:47.491138",
   "name": "GD-3599"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بلاستيك مجروش",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:32.081010",
+  "name": "GD-3173"
  },
  {
   "class": null,

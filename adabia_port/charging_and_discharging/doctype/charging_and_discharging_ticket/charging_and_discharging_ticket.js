@@ -51,6 +51,7 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
     // show only in progress visits
       set_visit_id_filter(frm)
    } else {
+    clean_up_html(frm)
     add_visit_data_tables(frm).then(()=> setup_visit_info_section(frm))
    }
 	},
@@ -59,6 +60,7 @@ frappe.ui.form.on("Charging and Discharging Ticket", {
     await add_visit_data_tables(frm)
   },
   operations_type: async(frm) => {
+    clean_up_html(frm)
     await setup_visit_info_section(frm)
   },
   customs_declarations: async(frm) => {
@@ -294,7 +296,6 @@ async function get_customs_declarations(data) {
 // -----------------------------------------------------------------------------------
 // populate customs declaration based on operation type
 function populate_customs_declarations(frm, customs_declarations) {
-  
   frm.set_df_property("customs_declarations", 'hidden', 0)
   frm.set_df_property('customs_declarations','options', [])
   frm.set_df_property('customs_declarations','options', [""].concat(customs_declarations))

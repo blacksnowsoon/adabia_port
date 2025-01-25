@@ -268,13 +268,13 @@ function create_progressbar( progress_title, data) {
  */
 function add_progress_bar(data, bg, is_count, size, field, key, title) {
 
-  value_now = is_count ?  ((data.handled_quantity / data.quantity) * 100).toFixed(2)
-                       :
-                          ((data.handled_weight / data.weight) * 100).toFixed(2)
+  const value_now = 
+  is_count ?  ((data.handled_quantity / data.quantity) * 100).toFixed(2)
+           :
+              ((data.handled_weight / data.weight) * 100).toFixed(2)
   const container = $('<div>', {class: 'text-center', id: key})
   const progress_container = create_progressbar(title, {...data, value_now, bg, size})
   $(container).append(progress_container)
-  field.$wrapper.empty()
   field.$wrapper.append(container)
 
 }

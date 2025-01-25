@@ -25,11 +25,9 @@
   "visit_manifest_section",
   "customs_declarations",
   "section_totals",
-  "manifest_total_weight",
+  "manifest_total",
   "column_break_etfa",
-  "handled_total_weight",
-  "column_break_zovy",
-  "column_break_mkrx"
+  "handled_total"
  ],
  "fields": [
   {
@@ -129,15 +127,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_zovy",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_xkfq",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_mkrx",
    "fieldtype": "Column Break"
   },
   {
@@ -145,16 +135,6 @@
    "fieldname": "section_totals",
    "fieldtype": "Section Break",
    "label": "Totals"
-  },
-  {
-   "fieldname": "manifest_total_weight",
-   "fieldtype": "HTML",
-   "label": "Manifest Total Weight"
-  },
-  {
-   "fieldname": "handled_total_weight",
-   "fieldtype": "HTML",
-   "label": "Handled Total Weight"
   },
   {
    "fieldname": "agent",
@@ -168,6 +148,16 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Open\nIn Progress\nClosed"
+  },
+  {
+   "fieldname": "manifest_total",
+   "fieldtype": "HTML",
+   "label": "Manifest Total"
+  },
+  {
+   "fieldname": "handled_total",
+   "fieldtype": "HTML",
+   "label": "Handled Total"
   }
  ],
  "links": [
@@ -176,7 +166,7 @@
    "link_fieldname": "visit_id"
   }
  ],
- "modified": "2025-01-24 20:16:31.383354",
+ "modified": "2025-01-25 14:59:30.381482",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Ship Visit",
