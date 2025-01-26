@@ -110,7 +110,8 @@ fixtures = [
                 "Bugs In Progress",
                 "New Requests In Progress",
                 "Modules Activities",
-                "Departments Vs Managements in Details"
+                "Departments Vs Managements in Details",
+                "Most Used Procedures in CUST SPP"
             ]]
         }
     },
@@ -123,7 +124,8 @@ fixtures = [
                 "Tickets Activities Track",
                 "Management List",
                 "Tickets Activity",
-                "Employees and Managements"
+                "Employees and Managements",
+                "Charging Discharging InProgress"
             ]]
         }
     },
