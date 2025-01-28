@@ -168,7 +168,6 @@ async function setup_visit_info_section(frm) {
   if (visit){
     const operation_type = frm.doc.operations_type
     const customs_declarations = visit.customs_declarations.filter(item =>  item.operation_type === operation_type).map(item => item.customs_declaration_no + "-L-" + item.line_no)
-    
     if (operation_type !== '' && customs_declarations.length > 0) {
       
       // get summations of selected operation type in case of count and weight
@@ -242,7 +241,7 @@ async function add_operation_details_progressbar(frm, parent, operation_type) {
 }
 // add html table with the selected customs_declaration data
 async function populate_selected_Customs_declaration_summary(frm, selected) {
-  // clean_up_html(frm, ["declarations_data", "declarations_registry"])
+  clean_up_html(frm, ["declarations_data", "declarations_registry"])
   if (visit && selected !== "") {
     frm.fields_dict.declarations_data.wrapper.appendChild(spenner());
     const [cust_declaration] = await get_customs_declarations({doc: "Customs Declarations", filters: {parent: visit.visit_id, customs_declaration_no: selected.split("-L")[0]}})
@@ -311,7 +310,6 @@ function filter_operations_grid(frm) {
   const selected_customs_declaration = frm.doc.customs_declarations
   // show grid rows based on selected_customs_declaration
   if (gird_name) {
-    console.log("selected_customs: ", selected_customs_declaration)
     if (!selected_customs_declaration){
       frm.fields_dict[gird_name].grid.grid_buttons.hide()
       clean_up_html(frm, ["declarations_data", "declarations_registry"])
@@ -354,7 +352,7 @@ function clean_up_html(frm, fields) {
   if (fields) {
     fields.map(field => frm.fields_dict[field].$wrapper.empty())
   } else {
-    frm.fields_dict.visit_data.$wrapper.empty()
+    // frm.fields_dict.visit_data.$wrapper.empty()
     frm.fields_dict.percentage_of_operations_type.$wrapper.empty()
     frm.fields_dict.direct_view.$wrapper.empty()
     frm.fields_dict.storage_view.$wrapper.empty()

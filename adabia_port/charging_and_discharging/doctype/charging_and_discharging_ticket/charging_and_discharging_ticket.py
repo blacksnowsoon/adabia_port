@@ -26,7 +26,8 @@ class ChargingandDischargingTicket(Document):
 				if match:
 					cust_dec , line_no = match.group(1), match.group(2)
 					parent = frappe.get_value('Customs Declarations', filters={"parent": self.visit_id, "customs_declaration_no": cust_dec, "line_no": line_no}, fieldname={"name"})
-					
+					frappe.errprint("charge")
+					frappe.errprint(parent)
 					doc = frappe.get_doc("Customs Declarations", parent)
 					doc.handled_weight = value['weight']
 					doc.handled_quantity = value['quantity']
@@ -57,7 +58,8 @@ class ChargingandDischargingTicket(Document):
 				if match:
 					cust_dec , line_no = match.group(1), match.group(2)
 					parent = frappe.get_value('Customs Declarations', filters={"parent": self.visit_id, "customs_declaration_no": cust_dec, "line_no": line_no}, fieldname={"name"})
-					
+					frappe.errprint("discharge")
+					frappe.errprint(parent)
 					doc = frappe.get_doc("Customs Declarations", parent)
 					doc.handled_weight = value['weight']
 					doc.handled_quantity = value['quantity']
