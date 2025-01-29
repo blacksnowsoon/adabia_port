@@ -96,6 +96,7 @@
    "fieldname": "company",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Company",
    "options": "Company",
    "reqd": 1
@@ -131,12 +132,14 @@
   {
    "fieldname": "permission_ends_on",
    "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Permission Ends On"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-29 13:41:31.480870",
+ "modified": "2025-01-29 18:20:42.582230",
  "modified_by": "Administrator",
  "module": "Gates",
  "name": "Truck Without Reservation",
