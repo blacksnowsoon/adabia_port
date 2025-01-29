@@ -49,7 +49,7 @@ fixtures = [
                 "Charging Discharging User",
                 "Charging and Discharging Admin",
                 "Gate Man",
-                "Gate Admin Role"
+                "Gate Admin Level 0"
             ]]
         }
     },
