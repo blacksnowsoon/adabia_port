@@ -86,6 +86,8 @@
   {
    "fieldname": "visit_id",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Visit ID"
   },
   {
@@ -107,6 +109,8 @@
   {
    "fieldname": "ship_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Ship Name",
    "options": "Ship"
   },
@@ -145,7 +149,6 @@
    "label": "Registries"
   },
   {
-   "collapsible": 1,
    "fieldname": "customs_declarations_or_policies_section",
    "fieldtype": "Section Break",
    "label": "Customs Declarations or Policies"
@@ -169,7 +172,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-29 00:15:34.810712",
+ "modified": "2025-01-30 00:40:19.978504",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Visit Ticket",
