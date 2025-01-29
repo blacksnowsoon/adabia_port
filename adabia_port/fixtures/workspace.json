@@ -1423,7 +1423,7 @@
     "parenttype": "Workspace"
    }
   ],
-  "content": "[{\"id\":\"R2TAvkaEbp\",\"type\":\"chart\",\"data\":{\"chart_name\":\"عمليات الشحن والتفريغ\",\"col\":12}},{\"id\":\"SIYoTUamJ7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"ZG7fnm0LGs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Piers State\",\"col\":3}},{\"id\":\"zhTBhmnSdS\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"Mgp9cl0tFJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ship Visit\",\"col\":3}},{\"id\":\"latQtP1i9M\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ship Visits\",\"col\":3}},{\"id\":\"NA4MGEpR1o\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Charging and Discharging\",\"col\":3}},{\"id\":\"_DTBWaTU-O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sE_sccjjy9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods List\",\"col\":3}},{\"id\":\"g0JcuF5N_j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Piers List\",\"col\":3}},{\"id\":\"7BO3d-eUI7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships List\",\"col\":3}},{\"id\":\"0fUhg4gfni\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Yards List\",\"col\":3}},{\"id\":\"_BVUx4PWYM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Packing Types List\",\"col\":3}}]",
+  "content": "[{\"id\":\"R2TAvkaEbp\",\"type\":\"chart\",\"data\":{\"chart_name\":\"عمليات الشحن والتفريغ\",\"col\":12}},{\"id\":\"SIYoTUamJ7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"ZG7fnm0LGs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Piers State\",\"col\":3}},{\"id\":\"zhTBhmnSdS\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"Mgp9cl0tFJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"latQtP1i9M\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Visits List\",\"col\":3}},{\"id\":\"_DTBWaTU-O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h6di4K-qq9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"الزيارات الحالية\",\"col\":12}},{\"id\":\"i_CPkrRhT_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"g0JcuF5N_j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Piers List\",\"col\":3}},{\"id\":\"sE_sccjjy9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods List\",\"col\":3}},{\"id\":\"7BO3d-eUI7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships List\",\"col\":3}},{\"id\":\"0fUhg4gfni\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Yards List\",\"col\":3}},{\"id\":\"_BVUx4PWYM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Packing Types List\",\"col\":3}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -1434,13 +1434,22 @@
   "is_hidden": 0,
   "label": "Charging and DisCharging",
   "links": [],
-  "modified": "2025-01-29 13:20:34.380203",
+  "modified": "2025-01-30 01:01:40.256426",
   "module": null,
   "name": "Charging and DisCharging",
   "number_cards": [],
   "parent_page": "",
   "public": 1,
-  "quick_lists": [],
+  "quick_lists": [
+   {
+    "document_type": "Visit Ticket",
+    "label": "الزيارات الحالية",
+    "parent": "Charging and DisCharging",
+    "parentfield": "quick_lists",
+    "parenttype": "Workspace",
+    "quick_list_filter": "[[\"Visit Ticket\",\"status\",\"=\",\"In Progress\",false]]"
+   }
+  ],
   "restrict_to_domain": null,
   "roles": [
    {
@@ -1475,34 +1484,18 @@
     "url": null
    },
    {
-    "color": "Green",
-    "doc_view": "List",
+    "color": "Blue",
+    "doc_view": "New",
     "format": null,
     "icon": null,
     "kanban_board": null,
-    "label": "Charging and Discharging",
-    "link_to": "Charging and Discharging Ticket",
+    "label": "New Ticket",
+    "link_to": "Visit Ticket",
     "parent": "Charging and DisCharging",
     "parentfield": "shortcuts",
     "parenttype": "Workspace",
     "restrict_to_domain": null,
-    "stats_filter": "[[\"Charging and Discharging Ticket\",\"status\",\"=\",\"In Progress\",false]]",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Green",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Ship Visits",
-    "link_to": "Ship Visit",
-    "parent": "Charging and DisCharging",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "restrict_to_domain": null,
-    "stats_filter": "[[\"Ship Visit\",\"status\",\"=\",\"In Progress\",false]]",
+    "stats_filter": "[]",
     "type": "DocType",
     "url": null
    },
@@ -1523,13 +1516,13 @@
     "url": null
    },
    {
-    "color": "Blue",
-    "doc_view": "New",
+    "color": "Green",
+    "doc_view": "List",
     "format": null,
     "icon": null,
     "kanban_board": null,
-    "label": "New Ship Visit",
-    "link_to": "Ship Visit",
+    "label": "Visits List",
+    "link_to": "Visit Ticket",
     "parent": "Charging and DisCharging",
     "parentfield": "shortcuts",
     "parenttype": "Workspace",

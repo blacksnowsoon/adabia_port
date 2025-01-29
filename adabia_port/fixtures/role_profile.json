@@ -98,10 +98,23 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
-  "modified": "2025-01-29 14:17:19.780580",
-  "name": "Gate Admin Role",
-  "role_profile": "Gate Admin Role",
-  "roles": []
+  "modified": "2025-01-29 18:11:15.985372",
+  "name": "Gate Admin Level 0",
+  "role_profile": "Gate Admin Level 0",
+  "roles": [
+   {
+    "parent": "Gate Admin Level 0",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Gate Admin"
+   },
+   {
+    "parent": "Gate Admin Level 0",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Gate User"
+   }
+  ]
  },
  {
   "docstatus": 0,

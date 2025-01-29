@@ -3170,5 +3170,83 @@
   "name": "9nlja2k6pl",
   "source_text": "Truck Without Reservation",
   "translated_text": "تسجيل شاحنة او معدة بدون حجز"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 00:43:55.382189",
+  "name": "lltihlqecg",
+  "source_text": "Visit Status",
+  "translated_text": "حالة الزيارة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 00:45:16.274211",
+  "name": "lmmqu0hgk8",
+  "source_text": "Customs Declarations or Policies",
+  "translated_text": "تسجيلات البواالص والاقرارات"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 00:45:50.899639",
+  "name": "ln1latnrl6",
+  "source_text": "Registries",
+  "translated_text": "التسجيلات"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 00:46:25.435008",
+  "name": "lnce0775dl",
+  "source_text": "Charge Registry",
+  "translated_text": "تسجيلات الشحن"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 00:46:53.195373",
+  "name": "lnl4gl965a",
+  "source_text": "Discharge Registry",
+  "translated_text": "تسجيلات التفريغ"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 00:58:09.753156",
+  "name": "lu8hdnp1cj",
+  "source_text": "Visits List",
+  "translated_text": "قائمة الزيارات"
  }
 ]
