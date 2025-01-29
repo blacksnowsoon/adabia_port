@@ -1604,5 +1604,89 @@
    }
   ],
   "title": "Charging and DisCharging"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"99ErsiNijz\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gates</span>\",\"col\":12}},{\"id\":\"J1pvsLRMal\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Actions</b></span>\",\"col\":12}},{\"id\":\"QgAOr2pbdE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Truck Entrance\",\"col\":3}},{\"id\":\"DhciAejoLk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Registry List\",\"col\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "map",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Gates",
+  "links": [],
+  "modified": "2025-01-29 13:34:29.111435",
+  "module": null,
+  "name": "Gates",
+  "number_cards": [],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "parent": "Gates",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "Gate Admin"
+   },
+   {
+    "parent": "Gates",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "Gate User"
+   },
+   {
+    "parent": "Gates",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "Customer Support Admin"
+   },
+   {
+    "parent": "Gates",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "Customer Support User"
+   }
+  ],
+  "sequence_id": 2.0,
+  "shortcuts": [
+   {
+    "color": "Red",
+    "doc_view": "New",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "New Truck Entrance",
+    "link_to": "Truck Without Reservation",
+    "parent": "Gates",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Green",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Registry List",
+    "link_to": "Truck Without Reservation",
+    "parent": "Gates",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "Gates"
  }
 ]

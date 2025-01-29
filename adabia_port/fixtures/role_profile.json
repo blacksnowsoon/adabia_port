@@ -83,6 +83,29 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
+  "modified": "2025-01-29 13:25:42.116693",
+  "name": "Gate Man",
+  "role_profile": "Gate Man",
+  "roles": [
+   {
+    "parent": "Gate Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Gate User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-01-29 14:17:19.780580",
+  "name": "Gate Admin Role",
+  "role_profile": "Gate Admin Role",
+  "roles": []
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
   "modified": "2024-11-04 22:32:07.951418",
   "name": "IT System Admin Profile",
   "role_profile": "IT System Admin Profile",

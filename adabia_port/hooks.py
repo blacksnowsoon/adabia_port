@@ -29,7 +29,9 @@ fixtures = [
                 "Help Desk User",
                 "Logistic User",
                 "Logistic Admin",
-                "Charging User"
+                "Charging User",
+                "Gate Admin",
+                "Gate User"
             ]]
         }
     },
@@ -46,6 +48,8 @@ fixtures = [
                 "IT System Admin Profile",
                 "Charging Discharging User",
                 "Charging and Discharging Admin",
+                "Gate Man",
+                "Gate Admin Role"
             ]]
         }
     },
@@ -63,7 +67,9 @@ fixtures = [
                 "Help Desk User",
                 "Logistic User",
                 "Logistic Admin",
-                "Charging User"
+                "Charging User",
+                "Gate Admin",
+                "Gate User"
 
             ]]
         }
@@ -75,7 +81,8 @@ fixtures = [
                 "IT-Support M",
                 "Charging and Discharging M",
                 "CUST SUPP M",
-                "SPS Operation M"
+                "SPS Operation M",
+                "Gates"
             ] ]
         }
     },
@@ -137,7 +144,8 @@ fixtures = [
                 "Adabia Port",
                 "Cust Support Statistics",
                 "Customer Tech Sup",
-                "Charging and DisCharging"
+                "Charging and DisCharging",
+                "Gates"
 
             ]]
         }
