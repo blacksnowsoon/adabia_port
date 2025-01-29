@@ -38,7 +38,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-16 12:00:31.584346",
+ "modified": "2025-01-29 13:32:11.869078",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Company",
@@ -129,6 +129,28 @@
    "read": 1,
    "report": 1,
    "role": "Help Desk User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gate Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gate User",
    "share": 1,
    "write": 1
   }

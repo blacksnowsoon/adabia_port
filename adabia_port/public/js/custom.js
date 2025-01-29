@@ -34,7 +34,7 @@ function save_btn(frm) {
 }
 function reload_btn(frm) {
   frm.add_custom_button('Reload', ()=>{
-    frm.reload_doc();
+    frm.refresh();
   }).addClass("btn bg-info py-3 px-3 font-weight-bold text-white");
 }
 // spenner

@@ -25,7 +25,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-07 19:33:21.863441",
+ "modified": "2025-01-29 13:32:49.452335",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Ticket Event",
@@ -60,6 +60,24 @@
    "read": 1,
    "report": 1,
    "role": "Customer Support Admin",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gate Admin",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gate User",
    "share": 1
   }
  ],

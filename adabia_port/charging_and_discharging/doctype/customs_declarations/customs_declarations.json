@@ -38,7 +38,7 @@
    "fieldname": "operation_type",
    "fieldtype": "Select",
    "label": "Operation Type",
-   "options": "Charge\nDischarge",
+   "options": "Discharge\nCharge",
    "sort_options": 1
   },
   {
@@ -162,7 +162,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-24 18:52:02.198771",
+ "modified": "2025-01-28 23:07:55.988732",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Customs Declarations",
