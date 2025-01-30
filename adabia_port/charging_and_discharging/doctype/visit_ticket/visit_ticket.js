@@ -235,3 +235,12 @@ function set_html_status(frm, operation, key) {
 
   }
 }
+
+// // Get the datetime value from the field
+// let datetime_value = frm.doc.your_datetime_field;
+
+// Format the datetime value using moment.js
+// let formatted_datetime = moment(datetime_value).format('YYYY-MM-DD HH:mm:ss');
+
+// Set the formatted value back to the field
+// frm.set_value('your_datetime_field', formatted_datetime);

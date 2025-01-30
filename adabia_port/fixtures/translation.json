@@ -3192,10 +3192,10 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2025-01-30 00:45:16.274211",
+  "modified": "2025-01-30 11:24:14.085376",
   "name": "lmmqu0hgk8",
   "source_text": "Customs Declarations or Policies",
-  "translated_text": "تسجيلات البواالص والاقرارات"
+  "translated_text": "تسجيلات البوالص و الاقرارات"
  },
  {
   "context": null,
@@ -3248,5 +3248,96 @@
   "name": "lu8hdnp1cj",
   "source_text": "Visits List",
   "translated_text": "قائمة الزيارات"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 11:17:06.659151",
+  "name": "18trhk116u",
+  "source_text": "Piers",
+  "translated_text": "الارصفة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 11:19:38.034505",
+  "name": "1ad4v4dfd8",
+  "source_text": "Agency",
+  "translated_text": "التوكيلات الملاحية"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 11:20:07.422480",
+  "name": "1amalupdjv",
+  "source_text": "Arrival Time",
+  "translated_text": "توقيت الوصول الفعلي"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 11:23:48.478352",
+  "name": "1crcquak0l",
+  "source_text": "Departure Time",
+  "translated_text": "توقيت المغادرة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 11:24:38.385585",
+  "name": "1davkeq3pn",
+  "source_text": "Operations Start Time",
+  "translated_text": "توقيت بداية الاعمال"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 11:25:12.298149",
+  "name": "1dlj7rgh1d",
+  "source_text": "Operations End Time",
+  "translated_text": "توقيت نهاية الاعمال"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-01-30 11:25:52.538015",
+  "name": "1e25nlpcqb",
+  "source_text": "Customs Declaration or Policies",
+  "translated_text": "الافراجات الجمركيو والبوالص"
  }
 ]

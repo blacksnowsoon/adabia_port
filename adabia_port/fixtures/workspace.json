@@ -1600,7 +1600,7 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"99ErsiNijz\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gates</span>\",\"col\":12}},{\"id\":\"J1pvsLRMal\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Actions</b></span>\",\"col\":12}},{\"id\":\"QgAOr2pbdE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Truck Entrance\",\"col\":3}},{\"id\":\"DhciAejoLk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Registry List\",\"col\":3}}]",
+  "content": "[{\"id\":\"99ErsiNijz\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gates</span>\",\"col\":12}},{\"id\":\"J1pvsLRMal\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Actions</b></span>\",\"col\":12}},{\"id\":\"QgAOr2pbdE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Truck Entrance\",\"col\":3}},{\"id\":\"DhciAejoLk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Registry List\",\"col\":3}},{\"id\":\"puAlxKsYsd\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TdLfd5fLxe\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Open Records\",\"col\":5}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -1611,13 +1611,22 @@
   "is_hidden": 0,
   "label": "Gates",
   "links": [],
-  "modified": "2025-01-29 13:34:29.111435",
+  "modified": "2025-01-30 10:16:23.926630",
   "module": null,
   "name": "Gates",
   "number_cards": [],
   "parent_page": "",
   "public": 1,
-  "quick_lists": [],
+  "quick_lists": [
+   {
+    "document_type": "Truck Without Reservation",
+    "label": "Open Records",
+    "parent": "Gates",
+    "parentfield": "quick_lists",
+    "parenttype": "Workspace",
+    "quick_list_filter": "[[\"Truck Without Reservation\",\"status\",\"=\",\"Open\",false]]"
+   }
+  ],
   "restrict_to_domain": null,
   "roles": [
    {
