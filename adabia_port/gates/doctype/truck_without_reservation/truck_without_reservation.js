@@ -36,7 +36,7 @@ frappe.ui.form.on("Truck Without Reservation", {
       err_message("تاريخ الخروج يجب ان يكون اقل من تاريخ اليوم")
       frappe.validated = false
     }
-    if(name) {
+    if(name && frm.is_new()) {
       err_message("هناك سجل مفتوح لنفس الشاحنة / او المعدة")
       frappe.validated = false
     }
