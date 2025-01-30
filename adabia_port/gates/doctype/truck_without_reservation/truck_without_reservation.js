@@ -11,6 +11,9 @@ frappe.ui.form.on("Truck Without Reservation", {
     if(frm.doc.checkout_time !== '') {
       frm.set_value('status', 'Closed')
     }
+    if (frm.is_new()) {
+      frm.set_value('status', 'Open')
+    }
 	},
   entrance_time(frm) {
     format_time_field(frm, "entrance_time")
@@ -19,10 +22,11 @@ frappe.ui.form.on("Truck Without Reservation", {
     frm.set_value('status', 'Closed')
     format_time_field(frm, "checkout_time")
   },
-  validate(frm) {
+  validate : async(frm)=> {
     const ent_date = new Date(frm.doc.entrance_date + " " + frm.doc.entrance_time).getTime()
     const out_date = new Date(frm.doc.checkout_date + " " + frm.doc.checkout_time).getTime()
     const now = new Date().getTime()
+    const {name} = await fetchValue({doctype: "Truck Without Reservation", filters: {truck: frm.doc.truck, truck_tail: frm.doc.truck_tail, machine: frm.doc.machine, status: "Open"}, fields: ["name"]})
     
     if (ent_date > out_date) {
       err_message("تاريخ الخروج يجب ان يكون اكبر من تاريخ الدخول")
@@ -30,6 +34,10 @@ frappe.ui.form.on("Truck Without Reservation", {
     }
     if (out_date > now) {
       err_message("تاريخ الخروج يجب ان يكون اقل من تاريخ اليوم")
+      frappe.validated = false
+    }
+    if(name) {
+      err_message("هناك سجل مفتوح لنفس الشاحنة / او المعدة")
       frappe.validated = false
     }
   }
