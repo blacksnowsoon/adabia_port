@@ -8,16 +8,16 @@ frappe.ui.form.on("Truck Without Reservation", {
 	refresh: async function(frm) {
     save_btn(frm)
     frm.set_value('ticket_event', 'EV-10')
+    if(frm.doc.checkout_time !== '') {
+      frm.set_value('status', 'Closed')
+    }
 	},
-  checkout_time(frm) {
-    frm.set_value('status', 'Closed')
-  },
   entrance_time(frm) {
     format_time_field(frm, "entrance_time")
   },
   checkout_time(frm) {
+    frm.set_value('status', 'Closed')
     format_time_field(frm, "checkout_time")
-    
   },
   validate(frm) {
     const ent_date = new Date(frm.doc.entrance_date + " " + frm.doc.entrance_time).getTime()
