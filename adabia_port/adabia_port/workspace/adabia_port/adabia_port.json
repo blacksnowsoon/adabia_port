@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Adabia Port",
  "links": [],
- "modified": "2025-01-29 13:20:30.118972",
+ "modified": "2025-02-01 14:45:35.049905",
  "modified_by": "Administrator",
  "module": "Adabia Port",
  "name": "Adabia Port",
@@ -46,15 +46,7 @@
    "type": "Dashboard"
   },
   {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Devices",
-   "link_to": "Device",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
+   "color": "Cyan",
    "doc_view": "List",
    "label": "Managements",
    "link_to": "Management",
@@ -62,47 +54,7 @@
    "type": "DocType"
   },
   {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Job Titles",
-   "link_to": "Job Title",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Ships",
-   "link_to": "Ship",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Departments",
-   "link_to": "Department",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Tickets Event",
-   "link_to": "Ticket Event",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Employees",
-   "link_to": "Employee",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
+   "color": "Orange",
    "doc_view": "List",
    "label": "Companies",
    "link_to": "Company",
@@ -110,15 +62,7 @@
    "type": "DocType"
   },
   {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Trucks",
-   "link_to": "Truck",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
+   "color": "Orange",
    "doc_view": "List",
    "label": "Trucks Tail",
    "link_to": "Truck Tail",
@@ -126,10 +70,66 @@
    "type": "DocType"
   },
   {
-   "color": "Grey",
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Departments",
+   "link_to": "Department",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Trucks",
+   "link_to": "Truck",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
    "doc_view": "List",
    "label": "Machines",
    "link_to": "Machine",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Employees",
+   "link_to": "Employee",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Ships",
+   "link_to": "Ship",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Devices",
+   "link_to": "Device",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Job Titles",
+   "link_to": "Job Title",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Tickets Event",
+   "link_to": "Ticket Event",
    "stats_filter": "[]",
    "type": "DocType"
   }
