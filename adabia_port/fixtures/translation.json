@@ -3339,5 +3339,70 @@
   "name": "1e25nlpcqb",
   "source_text": "Customs Declaration or Policies",
   "translated_text": "الافراجات الجمركيو والبوالص"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-02-01 20:34:32.476349",
+  "name": "071lgefr3q",
+  "source_text": "Trucks Without Reservation List",
+  "translated_text": "قائمة دخول الشاحنات والمعدات بدون حجز"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-02-01 20:43:09.978464",
+  "name": "0bslu4hite",
+  "source_text": "Landscape",
+  "translated_text": "أفقي"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-02-01 20:43:38.136708",
+  "name": "0cc5ciqbc9",
+  "source_text": "Portrait",
+  "translated_text": "رئسي"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-02-01 20:44:41.188517",
+  "name": "0cvr90m85q",
+  "source_text": "Select All",
+  "translated_text": "تحديد الكل"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-02-01 20:45:29.309980",
+  "name": "0detmii5lf",
+  "source_text": "Unselect All",
+  "translated_text": "ازالة التحديد"
  }
 ]
