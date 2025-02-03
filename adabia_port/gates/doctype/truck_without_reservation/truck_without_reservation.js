@@ -40,7 +40,7 @@ frappe.ui.form.on("Truck Without Reservation", {
       frappe.validated = false
     }
   },
-  before_save(frm) {
+  after_save(frm) {
     const status = frm.doc.status 
     if (status === "Open") {
       frm.set_value('checkout_date', '')

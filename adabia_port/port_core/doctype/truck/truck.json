@@ -13,6 +13,7 @@
  ],
  "fields": [
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "title",
    "fieldtype": "Data",
    "label": "Title",
@@ -46,7 +47,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-30 13:24:02.246674",
+ "modified": "2025-02-03 20:33:08.940424",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Truck",
@@ -111,7 +112,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
