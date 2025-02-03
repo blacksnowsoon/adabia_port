@@ -6,4 +6,8 @@ from frappe.model.document import Document
 
 
 class TruckWithoutReservation(Document):
-	pass
+	def before_save(self): 
+		if (self.checkout_date and self.checkout_time):
+			self.status = "Closed"
+		else:
+			self.status = "Open"

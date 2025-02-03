@@ -90,7 +90,8 @@
   {
    "fieldname": "entrance_time",
    "fieldtype": "Time",
-   "label": "Entrance Time"
+   "label": "Entrance Time",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_fwdb",
@@ -109,8 +110,7 @@
    "fieldname": "checkout_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Checkout Date",
-   "mandatory_depends_on": "eval:doc.status === \"Closed\""
+   "label": "Checkout Date"
   },
   {
    "fieldname": "checkout_time",
@@ -143,7 +143,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-30 11:37:33.833307",
+ "modified": "2025-02-03 12:44:17.068522",
  "modified_by": "Administrator",
  "module": "Gates",
  "name": "Truck Without Reservation",

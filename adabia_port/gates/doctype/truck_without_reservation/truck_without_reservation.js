@@ -8,18 +8,17 @@ frappe.ui.form.on("Truck Without Reservation", {
 	refresh: async function(frm) {
     save_btn(frm)
     frm.set_value('ticket_event', 'EV-10')
-    if(frm.doc.checkout_time !== '') {
-      frm.set_value('status', 'Closed')
-    }
-    if (frm.is_new()) {
-      frm.set_value('status', 'Open')
-    }
+    // if(frm.doc.checkout_time !== '') {
+    //   frm.set_value('status', 'Closed')
+    // }
+    // if (frm.is_new()) {
+    //   frm.set_value('status', 'Open')
+    // }
 	},
   entrance_time(frm) {
     format_time_field(frm, "entrance_time")
   },
   checkout_time(frm) {
-    frm.set_value('status', 'Closed')
     format_time_field(frm, "checkout_time")
   },
   validate : async(frm)=> {
@@ -39,6 +38,13 @@ frappe.ui.form.on("Truck Without Reservation", {
     if(name && frm.is_new()) {
       err_message("هناك سجل مفتوح لنفس الشاحنة / او المعدة")
       frappe.validated = false
+    }
+  },
+  before_save(frm) {
+    const status = frm.doc.status 
+    if (status === "Open") {
+      frm.set_value('checkout_date', '')
+      frm.set_value('checkout_time', '')
     }
   }
 });
