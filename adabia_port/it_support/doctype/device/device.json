@@ -27,6 +27,7 @@
   "group_policy",
   "column_break_wwvf",
   "ip_address",
+  "mac_address",
   "section_break_zdjg",
   "description",
   "column_break_hjst",
@@ -202,6 +203,11 @@
    "label": "Disable Cause",
    "mandatory_depends_on": "eval:doc.disabled",
    "options": "\nSpare\nJunk\nForm Repair"
+  },
+  {
+   "fieldname": "mac_address",
+   "fieldtype": "Data",
+   "label": "MAC Address"
   }
  ],
  "links": [
@@ -210,7 +216,7 @@
    "link_fieldname": "name"
   }
  ],
- "modified": "2025-01-14 09:18:44.864718",
+ "modified": "2025-02-13 22:50:08.140987",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Device",
