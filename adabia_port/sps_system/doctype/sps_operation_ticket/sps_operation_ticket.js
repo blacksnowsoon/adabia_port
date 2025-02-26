@@ -69,7 +69,7 @@ function frm_status_change(frm) {
 			indicator: 'green'
 		}, 5);
 	} else {
-		toggle_frm(frm, 0)
+		toggle_frm(frm, 1)
 	}
 	
 }

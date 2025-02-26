@@ -85,6 +85,12 @@ def execute(filters=None):
 			"width": 100,
 		},
 		{
+			"fieldname": "mac_address",
+			"label": "MAC Address",
+			"fieldtype": "Data",
+			"width": 100,
+		},
+		{
 			"fieldname": "location_code",
 			"label": "Location Code",
 			"fieldtype": "Data",
@@ -109,7 +115,7 @@ def execute(filters=None):
 			"width": 100,
 		}
 	]
-	devices = frappe.get_all("Device", fields=["name", "device_type.device_type as device_type", "brand.brand_name as brand", "model", "serial_no", "product_year", "in_service_since", "os.os as os", "have_network_connection", "device_domain_name", "ip_address", "location_code", "location", "description", "disabled"], order_by="name")
+	devices = frappe.get_all("Device", fields=["name", "device_type.device_type as device_type", "brand.brand_name as brand", "model", "serial_no", "product_year", "in_service_since", "os.os as os", "have_network_connection", "device_domain_name", "ip_address", "mac_address", "location_code", "location", "description", "disabled"], order_by="name")
 	for device in devices:
 		device["disabled"] = "Enabled" if device["disabled"] == 0 else "Disabled"
 		device["have_network_connection"] = "Yes" if device["have_network_connection"] == 1 else "No"
