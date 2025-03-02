@@ -1,4 +1,4 @@
-// Copyright (c) 2024, Gharieb Kalefa and contributors
+// Copyright (c) 2024, Gharieb kalifa and contributors
 // For license information, please see license.txt
 
 

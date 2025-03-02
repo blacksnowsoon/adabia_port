@@ -1,4 +1,4 @@
-# Copyright (c) 2024, Gharieb Kalefa and contributors
+# Copyright (c) 2024, Gharieb Kalifa and contributors
 # For license information, please see license.txt
 
 import frappe
@@ -8,8 +8,8 @@ def execute(filters=None):
 	columns = [
 		{
 			"fieldname": "name",
-			"label": "Device Name",
-			"fieldtype": "Data",
+			"label": "Device ID",
+			"fieldtype": "Link",
 			"width": 200,
 		},
 		{
