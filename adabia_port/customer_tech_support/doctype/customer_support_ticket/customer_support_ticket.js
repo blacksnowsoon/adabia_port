@@ -21,7 +21,7 @@ const toggleDetails = (frm) => {
 	if (!ev_value) return
 	frappe.db.get_value('Ticket Event', ev_value, 'event').then((r)=> {
 		const data = r.message.event;
-		  if (data.includes('Truck')) {
+		  if (data.includes('Truck') || data.includes('Machine')) {
 				frm.set_df_property('section_break_truck', 'hidden', 0);
 				frm.set_df_property('section_break_company', 'hidden', 0);
 				frm.set_df_property('section_break_ship', 'hidden', 1);
@@ -29,6 +29,14 @@ const toggleDetails = (frm) => {
 				frm.set_df_property('ship', 'reqd', 0);
 				frm.set_df_property('company', 'reqd', 0);
 				frm.set_df_property('amount', 'reqd', 0);
+				if (data.includes('Machine')) {
+					frm.set_df_property('machine', 'reqd', 1);
+					frm.set_df_property('truck', 'reqd', 0);
+				} else {
+					frm.set_df_property('truck', 'reqd', 1);
+					frm.set_df_property('machine', 'reqd', 0);
+				}
+				
 		  } else if (data.includes('Company') || data.includes('Ship')) {
 				frm.set_df_property('section_break_truck', 'hidden', 1);
 				frm.set_df_property('section_break_company', 'hidden', 0);

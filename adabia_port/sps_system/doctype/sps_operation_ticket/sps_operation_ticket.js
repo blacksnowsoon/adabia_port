@@ -61,7 +61,7 @@ frappe.ui.form.on("SPS Operation Ticket", {
 function frm_status_change(frm) {
 	const status = frm.doc.status
 	 if (status === "In Progress") {
-		const fields = frm.fields.map(f => f.df.fieldname !== 'status' || f.df.fieldname !== 'patch_num' || f.df.fieldname !== 'developed_by' || f.df.fieldname !== 'tested_by');
+		
 		toggle_frm(frm, 0)
 		if (!frm.doc.in_progress_since) {
 		frappe.show_alert({
