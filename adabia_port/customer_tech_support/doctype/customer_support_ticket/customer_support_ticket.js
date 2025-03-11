@@ -29,10 +29,17 @@ const toggleDetails = (frm) => {
 				frm.set_df_property('ship', 'reqd', 0);
 				frm.set_df_property('company', 'reqd', 0);
 				frm.set_df_property('amount', 'reqd', 0);
+				frm.set_df_property('machine', 'hidden', 0);
 				if (data.includes('Machine')) {
+					frm.set_df_property('machine', 'hidden', 0);
 					frm.set_df_property('machine', 'reqd', 1);
 					frm.set_df_property('truck', 'reqd', 0);
+					frm.set_df_property('truck', 'hidden', 1);
+					frm.set_df_property('truck_tail', 'hidden', 1);
 				} else {
+					frm.set_df_property('truck', 'hidden', 0);
+					frm.set_df_property('truck_tail', 'hidden', 0);
+					frm.set_df_property('machine', 'hidden', 1);
 					frm.set_df_property('truck', 'reqd', 1);
 					frm.set_df_property('machine', 'reqd', 0);
 				}
