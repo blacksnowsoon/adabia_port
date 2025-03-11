@@ -60,16 +60,22 @@ frappe.ui.form.on("SPS Operation Ticket", {
 // composion of frm status to handle the approvals 
 function frm_status_change(frm) {
 	const status = frm.doc.status
-	if (status === 'Open') {
+	 if (status === "In Progress") {
+		const fields = frm.fields.map(f => f.df.fieldname !== 'status' || f.df.fieldname !== 'patch_num' || f.df.fieldname !== 'developed_by' || f.df.fieldname !== 'tested_by');
 		toggle_frm(frm, 0)
-	} else if (status === "In Progress") {
-		toggle_frm(frm, 1)
+		if (!frm.doc.in_progress_since) {
 		frappe.show_alert({
 			message: __(`In Progress Since ${frm.doc.in_progress_since}`),
 			indicator: 'green'
-		}, 5);
-	} else {
-		toggle_frm(frm, 1)
+		}, 5);}
+	} else if (status === "Closed") {
+		if (!frm.doc.patch_num && !frm.doc.developed_by && !frm.doc.tested_by) {
+			err_message('يجب تحديد الباتش و المطور و المختبر قبل الاغلاق')
+			frappe.validated = false;
+			
+		} else {
+			toggle_frm(frm, 1)
+		}
 	}
 	
 }
@@ -100,7 +106,8 @@ function fetchValue({doctype, filters, fieldname}) {
 // toggle the fields in the form
 function toggle_frm(frm, disable) {
 	frm.fields.forEach(function(field) {
-		if (field.df["fieldname"] === 'status') return
-		frm.set_df_property(field.df["fieldname"], 'read_only', disable);
+		if (field.df["fieldname"] === 'status' ) return
+			frm.set_df_property(field.df["fieldname"], 'read_only', disable)
+		
 	});
 }

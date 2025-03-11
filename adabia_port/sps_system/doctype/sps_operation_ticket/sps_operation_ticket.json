@@ -195,7 +195,7 @@
    "fieldname": "patch_num",
    "fieldtype": "Data",
    "label": "Patch Num",
-   "mandatory_depends_on": "eval:doc.status=='Closed'"
+   "mandatory_depends_on": "eval:doc.status==\"Closed\" "
   },
   {
    "fieldname": "column_break_ksei",
@@ -205,18 +205,17 @@
    "fieldname": "developed_by",
    "fieldtype": "Data",
    "label": "Developed By",
-   "mandatory_depends_on": "eval:doc.status=='Completed'"
+   "mandatory_depends_on": "eval:doc.status==\"Closed\""
   },
   {
    "fieldname": "column_break_vbxw",
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:doc.status=='Closed'",
+   "depends_on": "eval:doc.status==\"Closed\" || doc.status==\"In Progress\"",
    "fieldname": "complete_data_section",
    "fieldtype": "Section Break",
-   "label": "Complete Data",
-   "read_only_depends_on": "eval:doc.status=='Closed'"
+   "label": "Complete By"
   },
   {
    "fieldname": "in_progress_since",
@@ -235,7 +234,8 @@
   {
    "fieldname": "tested_by",
    "fieldtype": "Data",
-   "label": "Tested By"
+   "label": "Tested By",
+   "mandatory_depends_on": "eval:doc.status==\"Closed\""
   },
   {
    "fieldname": "duration_time",
@@ -275,7 +275,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-02-26 18:56:02.818876",
+ "modified": "2025-03-11 18:42:24.974970",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Ticket",
