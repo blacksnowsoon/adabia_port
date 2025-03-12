@@ -11,54 +11,63 @@ frappe.ui.form.on('Customer Support Ticket', {
 	   // clear the procedure field after updating the event field
 	    frm.set_value('procedure_name', '');
 		toggleDetails(frm)
+	},
+	validate: async function(frm) {
+		const ticket_event = await fetchDoc({doctype: 'Ticket Event', name: frm.doc.ticket_event});
+		if (ticket_event) {
+			
+			const {event} = ticket_event
+			if (event === "To Truck" && frm.doc.truck_tail) {
+				frm.set_df_property('truck', 'reqd', 0);
+				
+			}
+		}
 	}
 })
 
-const toggleDetails = (frm) => {
+const toggleDetails = async(frm) => {
 	 // hide unused section
 	 const ev_value = frm.doc.ticket_event;
 	
 	if (!ev_value) return
-	frappe.db.get_value('Ticket Event', ev_value, 'event').then((r)=> {
-		const data = r.message.event;
-		  if (data.includes('Truck') || data.includes('Machine')) {
-				frm.set_df_property('section_break_truck', 'hidden', 0);
-				frm.set_df_property('section_break_company', 'hidden', 0);
-				frm.set_df_property('section_break_ship', 'hidden', 1);
-				frm.set_df_property('voyage_number', 'reqd', 0);
-				frm.set_df_property('ship', 'reqd', 0);
-				frm.set_df_property('company', 'reqd', 0);
-				frm.set_df_property('amount', 'reqd', 0);
-				frm.set_df_property('machine', 'hidden', 0);
-				if (data.includes('Machine')) {
-					frm.set_df_property('machine', 'hidden', 0);
-					frm.set_df_property('machine', 'reqd', 1);
-					frm.set_df_property('truck', 'reqd', 0);
-					frm.set_df_property('truck', 'hidden', 1);
-					frm.set_df_property('truck_tail', 'hidden', 1);
-				} else {
-					frm.set_df_property('truck', 'hidden', 0);
-					frm.set_df_property('truck_tail', 'hidden', 0);
-					frm.set_df_property('machine', 'hidden', 1);
-					frm.set_df_property('truck', 'reqd', 1);
-					frm.set_df_property('machine', 'reqd', 0);
-				}
-				
-		  } else if (data.includes('Company') || data.includes('Ship')) {
-				frm.set_df_property('section_break_truck', 'hidden', 1);
-				frm.set_df_property('section_break_company', 'hidden', 0);
-				frm.set_df_property('section_break_ship', 'hidden', 0);
-				frm.set_df_property('company', 'reqd', 1);
-				frm.set_df_property('amount', 'reqd', 1);
-		  }else {
-				frm.set_df_property('section_break_truck', 'hidden', 1);
-				frm.set_df_property('section_break_company', 'hidden', 1);
-				frm.set_df_property('section_break_ship', 'hidden', 1);
-				
-		  }
-		  
+	const ticket_event = await fetchDoc({doctype: 'Ticket Event', name: frm.doc.ticket_event});
+	const {event} = ticket_event;
+	if (event.includes('Truck') || event.includes('Machine')) {
+		frm.set_df_property('section_break_truck', 'hidden', 0);
+		frm.set_df_property('section_break_company', 'hidden', 0);
+		frm.set_df_property('section_break_ship', 'hidden', 1);
+		frm.set_df_property('voyage_number', 'reqd', 0);
+		frm.set_df_property('ship', 'reqd', 0);
+		frm.set_df_property('company', 'reqd', 0);
+		frm.set_df_property('amount', 'reqd', 0);
+		frm.set_df_property('machine', 'hidden', 0);
+		if (event.includes('Machine')) {
+			frm.set_df_property('machine', 'hidden', 0);
+			frm.set_df_property('machine', 'reqd', 1);
+			frm.set_df_property('truck', 'reqd', 0);
+			frm.set_df_property('truck', 'hidden', 1);
+			frm.set_df_property('truck_tail', 'hidden', 1);
+		} else {
+			frm.set_df_property('truck', 'hidden', 0);
+			frm.set_df_property('truck_tail', 'hidden', 0);
+			frm.set_df_property('machine', 'hidden', 1);
+			frm.set_df_property('truck', 'reqd', 1);
+			frm.set_df_property('machine', 'reqd', 0);
+		}
 		
-	 });
+	} else if (event.includes('Company') || event.includes('Ship')) {
+		frm.set_df_property('section_break_truck', 'hidden', 1);
+		frm.set_df_property('section_break_company', 'hidden', 0);
+		frm.set_df_property('section_break_ship', 'hidden', 0);
+		frm.set_df_property('company', 'reqd', 1);
+		frm.set_df_property('amount', 'reqd', 1);
+	}else {
+		frm.set_df_property('section_break_truck', 'hidden', 1);
+		frm.set_df_property('section_break_company', 'hidden', 1);
+		frm.set_df_property('section_break_ship', 'hidden', 1);
+		
+	}
+	
 }
 
 // في حالة اقرار صادر يدويا يتم تعطيل الحقل الخاص برقم الطريق  والسفينة
