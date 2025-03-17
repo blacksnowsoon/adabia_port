@@ -17,7 +17,7 @@ frappe.ui.form.on('Customer Support Ticket', {
 		if (ticket_event) {
 			
 			const {event} = ticket_event
-			if (event === "To Truck" && frm.doc.truck_tail) {
+			if (event === "To Truck" && frm.doc.truck_tail || event !== `To Truck`) {
 				frm.set_df_property('truck', 'reqd', 0);
 				
 			}
@@ -47,7 +47,7 @@ const toggleDetails = async(frm) => {
 			frm.set_df_property('truck', 'reqd', 0);
 			frm.set_df_property('truck', 'hidden', 1);
 			frm.set_df_property('truck_tail', 'hidden', 1);
-		} else {
+		} else if(event.includes('Truck')){
 			frm.set_df_property('truck', 'hidden', 0);
 			frm.set_df_property('truck_tail', 'hidden', 0);
 			frm.set_df_property('machine', 'hidden', 1);
