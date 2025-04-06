@@ -2,18 +2,12 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Truck Without Reservation", {
-  onload(frm){
-    
-  },
+ 
 	refresh: async function(frm) {
     save_btn(frm)
+    // custom_buttons(frm).save()
+    
     frm.set_value('ticket_event', 'EV-10')
-    // if(frm.doc.checkout_time !== '') {
-    //   frm.set_value('status', 'Closed')
-    // }
-    // if (frm.is_new()) {
-    //   frm.set_value('status', 'Open')
-    // }
 	},
   entrance_time(frm) {
     format_time_field(frm, "entrance_time")

@@ -9,19 +9,19 @@ def execute(filters=None):
 		{
 			"fieldname": "name",
 			"label": "Device ID",
-			"fieldtype": "Link",
+			"fieldtype": "link",
 			"width": 200,
 		},
 		{
 			"fieldname": "device_type",
 			"label": "Device Type",
-			"fieldtype": "link",
+			"fieldtype": "Data",
 			"width": 150,
 		},
 		{
 			"fieldname": "brand",
 			"label": "Brand",
-			"fieldtype": "link",
+			"fieldtype": "Data",
 			"width": 75,
 		},
 		{

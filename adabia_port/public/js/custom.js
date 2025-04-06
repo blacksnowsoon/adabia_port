@@ -7,9 +7,10 @@ const ipRegex = /^(\d{1,3}.){3}\d{1,3}$/;
 const main_section = document.querySelectorAll('.main-section')[0];
 const footer = main_section.querySelector('footer');
 
+console.log($.find('footer'))
 const footer_content = 
 `<div class="footer-content navbar px-2">
-    <p>© 2024 GO Smart Soultion. All rights reserved. BY-<strong>Gharieb Khalefa</strong>@ISFP Built with Frappe</p>
+    <p>© 2024 GO Smart Soultion. All rights reserved. BY-<strong>Gharieb Khalifa</strong>@ISFP Built with Frappe</p>
     <p>Adabia Port Version 0.0.1</p>
   </div>`;
 footer.innerHTML = footer_content;
@@ -37,6 +38,33 @@ function reload_btn(frm) {
     frm.refresh();
   }).addClass("btn bg-info py-3 px-3 font-weight-bold text-white");
 }
+
+// compostion custom buttons
+function custom_buttons(frm) {
+  return {
+    save: ()=> {
+      frm.disable_save();
+      frm.add_custom_button('Save', () => {
+        const status = frm.doc.status;
+        if (status === 'Closed' && frm.is_new()) {
+          frappe.show_alert({
+            title: 'Save Error',
+            message: 'You can not save a new record when the status is Closed',
+            indicator: 'red'
+          })
+        } else {
+          frm.save();
+        }
+      }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
+    },
+    reload: () => {
+      frm.add_custom_button('Reload', ()=>{
+        frm.refresh();
+      }).addClass("btn bg-info py-3 px-3 font-weight-bold text-white");
+    }
+  }
+}
+  
 // spenner
 function spenner(){
   const container = document.createElement('div');
@@ -237,7 +265,6 @@ function set_grid_form_btns(frm, field, btn_class) {
 function change_grid_add_btn(){
   $(`.form-clickable-section`).find('.grid-add-row').attr("class", "btn btn-info btn-sm grid-add-row")
 }
-
 
 function create_progressbar( progress_title, data) {
   const { weight, handled_weight, quantity, handled_quantity, bg, value_now, size } = data
