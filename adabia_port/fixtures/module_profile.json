@@ -84,6 +84,138 @@
   "block_modules": [
    {
     "module": "Automation",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Charging and Discharging",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Custom",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Customer Tech Support",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Geo",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Integrations",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Printing",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "SPS System",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Website",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Workflow",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Module Profile",
+  "modified": "2025-04-06 21:07:11.928552",
+  "module_profile_name": "IT-Support M",
+  "name": "IT-Support M"
+ },
+ {
+  "block_modules": [
+   {
+    "module": "Automation",
+    "parent": "SPS Operation M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Core",
+    "parent": "SPS Operation M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Custom",
+    "parent": "SPS Operation M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Geo",
+    "parent": "SPS Operation M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Integrations",
+    "parent": "SPS Operation M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Printing",
+    "parent": "SPS Operation M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Social",
+    "parent": "SPS Operation M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Website",
+    "parent": "SPS Operation M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Workflow",
+    "parent": "SPS Operation M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Module Profile",
+  "modified": "2025-01-16 13:28:07.920393",
+  "module_profile_name": "SPS Operation M",
+  "name": "SPS Operation M"
+ },
+ {
+  "block_modules": [
+   {
+    "module": "Automation",
     "parent": "Charging and Discharging M",
     "parentfield": "block_modules",
     "parenttype": "Module Profile"
@@ -160,87 +292,6 @@
   "modified": "2025-01-16 13:29:38.612856",
   "module_profile_name": "Charging and Discharging M",
   "name": "Charging and Discharging M"
- },
- {
-  "block_modules": [
-   {
-    "module": "Automation",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Charging and Discharging",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Core",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Custom",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Customer Tech Support",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Geo",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Integrations",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Printing",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Social",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "SPS System",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Website",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Workflow",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Module Profile",
-  "modified": "2025-01-16 13:30:29.632602",
-  "module_profile_name": "IT-Support M",
-  "name": "IT-Support M"
  },
  {
   "block_modules": [
@@ -340,69 +391,6 @@
   "modified": "2025-01-29 13:46:06.887276",
   "module_profile_name": "Gates",
   "name": "Gates"
- },
- {
-  "block_modules": [
-   {
-    "module": "Automation",
-    "parent": "SPS Operation M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Core",
-    "parent": "SPS Operation M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Custom",
-    "parent": "SPS Operation M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Geo",
-    "parent": "SPS Operation M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Integrations",
-    "parent": "SPS Operation M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Printing",
-    "parent": "SPS Operation M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Social",
-    "parent": "SPS Operation M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Website",
-    "parent": "SPS Operation M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Workflow",
-    "parent": "SPS Operation M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Module Profile",
-  "modified": "2025-01-16 13:28:07.920393",
-  "module_profile_name": "SPS Operation M",
-  "name": "SPS Operation M"
  },
  {
   "block_modules": [

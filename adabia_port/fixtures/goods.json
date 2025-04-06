@@ -3567,15 +3567,6 @@
   "class": null,
   "docstatus": 0,
   "doctype": "Goods",
-  "goods_name": "حديد تسليح لفف",
-  "hs_code": null,
-  "modified": "2024-12-31 22:21:34.087482",
-  "name": "GD-3231"
- },
- {
-  "class": null,
-  "docstatus": 0,
-  "doctype": "Goods",
   "goods_name": "حديد خردة صب - غير نظيف",
   "hs_code": null,
   "modified": "2024-12-31 22:21:34.153650",
@@ -6856,6 +6847,15 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:22.964001",
   "name": "GD-2950"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حديد تسليح لفف",
+  "hs_code": null,
+  "modified": "2024-12-31 22:21:34.087482",
+  "name": "GD-3231"
  },
  {
   "class": null,

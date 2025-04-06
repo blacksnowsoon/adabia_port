@@ -53,21 +53,6 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
-  "modified": "2025-01-16 10:05:37.853288",
-  "name": "Charging Discharging User",
-  "role_profile": "Charging Discharging User",
-  "roles": [
-   {
-    "parent": "Charging Discharging User",
-    "parentfield": "roles",
-    "parenttype": "Role Profile",
-    "role": "Logistic User"
-   }
-  ]
- },
- {
-  "docstatus": 0,
-  "doctype": "Role Profile",
   "modified": "2025-01-14 11:04:43.181978",
   "name": "Charging and Discharging Admin",
   "role_profile": "Charging and Discharging Admin",
@@ -77,21 +62,6 @@
     "parentfield": "roles",
     "parenttype": "Role Profile",
     "role": "Logistic Admin"
-   }
-  ]
- },
- {
-  "docstatus": 0,
-  "doctype": "Role Profile",
-  "modified": "2025-01-29 13:25:42.116693",
-  "name": "Gate Man",
-  "role_profile": "Gate Man",
-  "roles": [
-   {
-    "parent": "Gate Man",
-    "parentfield": "roles",
-    "parenttype": "Role Profile",
-    "role": "Gate User"
    }
   ]
  },
@@ -128,6 +98,36 @@
     "parentfield": "roles",
     "parenttype": "Role Profile",
     "role": "IT System Admin"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-01-16 10:05:37.853288",
+  "name": "Charging Discharging User",
+  "role_profile": "Charging Discharging User",
+  "roles": [
+   {
+    "parent": "Charging Discharging User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Logistic User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-01-29 13:25:42.116693",
+  "name": "Gate Man",
+  "role_profile": "Gate Man",
+  "roles": [
+   {
+    "parent": "Gate Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Gate User"
    }
   ]
  },
