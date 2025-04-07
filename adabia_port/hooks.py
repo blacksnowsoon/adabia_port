@@ -1,6 +1,6 @@
 app_name = "adabia_port"
 app_title = "Adabia Port"
-app_publisher = "Gharieb Kalifa"
+app_publisher = "Gharieb Khalifa"
 app_description = "Tracking business in departments of the adabia port"
 app_email = "blacksnow.soon@gmail.com"
 app_license = "mit"
@@ -170,6 +170,14 @@ fixtures = [
                 "70adaa500a",
                 "7939e2a7ef",
                 "2c5c8020d1"
+            ]]
+        }
+    },
+    {
+        "dt": "Kanban Board", "filters": {
+            "name": ["in", [
+                "Default ToDo Kanban",
+                
             ]]
         }
     }

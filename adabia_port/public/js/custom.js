@@ -5,10 +5,10 @@ const ipRegex = /^(\d{1,3}.){3}\d{1,3}$/;
 
 // this section setes the footer of the site
 const footer_content = 
-`<div class="navbar fixed-bottom navbar-default">
+`<div class="navbar fixed-bottom navbar-default border-top border-primary">
   <div class="container">
     <div>
-      <small class="">Adabia Port Version 0.0.1</small><br>
+      <small class="">Adabia Port Version 1.0.1</small><br>
       <small class="">© 2024 GO Smart Soultion. All rights reserved.</small>
     </div>
     <p>Powered by <a href="https://gh-portfolio-liard.vercel.app/" target="_blank"><strong>Gharieb Khalifa</strong></a></p>
@@ -16,9 +16,7 @@ const footer_content =
   </div>`;
 
   $('footer').html(footer_content)
- console.log($('footer'))
  
-
 // ----------------------------------------------------------------------------------------
 // composition custom buttons
 function custom_buttons(frm={}) {
