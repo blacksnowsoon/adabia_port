@@ -165,8 +165,11 @@ fixtures = [
     {
         "dt": "File", "filters": {
             "name": ["in", [
-                "go-150-170.png",
-                "go-banner-150.png",
+                "17b1ffbbd9",
+                "91deed463e",
+                "70adaa500a",
+                "7939e2a7ef",
+                "2c5c8020d1"
             ]]
         }
     }
