@@ -4,63 +4,95 @@
 const ipRegex = /^(\d{1,3}.){3}\d{1,3}$/;
 
 // this section setes the footer of the site
-const main_section = document.querySelectorAll('.main-section')[0];
-const footer = main_section.querySelector('footer');
-
-console.log($.find('footer'))
 const footer_content = 
-`<div class="footer-content navbar px-2">
-    <p>© 2024 GO Smart Soultion. All rights reserved. BY-<strong>Gharieb Khalifa</strong>@ISFP Built with Frappe</p>
-    <p>Adabia Port Version 0.0.1</p>
+`<div class="navbar fixed-bottom navbar-default">
+  <div class="container">
+    <div>
+      <small class="">Adabia Port Version 0.0.1</small><br>
+      <small class="">© 2024 GO Smart Soultion. All rights reserved.</small>
+    </div>
+    <p>Powered by <a href="https://gh-portfolio-liard.vercel.app/" target="_blank"><strong>Gharieb Khalifa</strong></a></p>
+  </div>
   </div>`;
-footer.innerHTML = footer_content;
+
+  $('footer').html(footer_content)
+ console.log($('footer'))
+ 
+
 // ----------------------------------------------------------------------------------------
-// change save button and don't save a new record when the status is Closed
-function save_btn(frm) {
-  frm.disable_save();
-  frm.add_custom_button('Save', () => {
-    const status = frm.doc.status;
-    if (status === 'Closed' && frm.is_new()) {
-      frappe.show_alert({
-        title: 'Save Error',
-        message: 'You can not save a new record when the status is Closed',
-        indicator: 'red'
-      })
-    } else {
-      frm.save();
-    }
-  }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
-
-  
-}
-function reload_btn(frm) {
-  frm.add_custom_button('Reload', ()=>{
-    frm.refresh();
-  }).addClass("btn bg-info py-3 px-3 font-weight-bold text-white");
-}
-
-// compostion custom buttons
-function custom_buttons(frm) {
-  return {
-    save: ()=> {
-      frm.disable_save();
-      frm.add_custom_button('Save', () => {
-        const status = frm.doc.status;
-        if (status === 'Closed' && frm.is_new()) {
-          frappe.show_alert({
-            title: 'Save Error',
-            message: 'You can not save a new record when the status is Closed',
-            indicator: 'red'
-          })
-        } else {
-          frm.save();
+// composition custom buttons
+function custom_buttons(frm={}) {
+  const save= () => {
+    frm.disable_save();
+    frm.add_custom_button('Save', () => {
+      const status = frm.doc.status;
+      if (status === 'Closed' && frm.is_new()) {
+        frappe.show_alert({
+          title: 'Save Error',
+          message: 'You can not save a new record when the status is Closed',
+          indicator: 'red'
+        })
+      } else {
+        frm.save();
+      }
+    }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
+  }
+  const reload = () => {
+    frm.add_custom_button('Reload', ()=>{
+      frm.refresh();
+    }).addClass("btn bg-info py-3 px-3 font-weight-bold text-white");
+  }
+  const toggle_built_in_el_with_date_tag = (data = [[]], is_hide=false) => {
+    if (data.length === 0) return
+    data.forEach(item => {
+      const [containerClass, attrName, attrValue] = item
+      if (containerClass && attrName && attrValue) {
+        switch (is_hide) {
+          case true:
+            $(`.${containerClass}`).find(`[${attrName}="${attrValue}"]`).hide();
+            break;
+          case false:
+            $(`.${containerClass}`).find(`[${attrName}="${attrValue}"]`).show();
+            break;
         }
-      }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
+      }
+    })
+  }
+  const toggle_built_in_el_with_classes = (data=[[]], is_hide=true) => {
+    
+    if (data[0].length === 0) return
+    data.forEach(item => {
+      const [containerClass, className] = item
+      if (containerClass && className) {
+        switch (is_hide) {
+          case true:
+            $(`.${containerClass}`).find(`.${className}`).hide();
+            break;
+          case false:
+            $(`.${containerClass}`).find(`.${className}`).show();
+            break;
+        }
+      }
+    })
+  }
+  
+  return {
+    save,
+    reload,
+    toggle_built_in_el_with_date_tag,
+    toggle_built_in_el_with_classes,
+    setup_btns_for_new_form: () => {
+      save();
+      toggle_built_in_el_with_classes([['page-actions', 'standard-actions']], true);
     },
-    reload: () => {
-      frm.add_custom_button('Reload', ()=>{
-        frm.refresh();
-      }).addClass("btn bg-info py-3 px-3 font-weight-bold text-white");
+    setup_btns_for_saved_form: () => {
+      save();
+      toggle_built_in_el_with_classes([['page-actions', 'standard-actions']], false);
+      toggle_built_in_el_with_date_tag([
+        ['page-actions', 'data-original-title', 'Previous Document'],
+        ['page-actions', 'data-original-title', 'Next Document'],
+        ['page-actions', 'data-original-title', 'Print']
+      ], true)
     }
   }
 }

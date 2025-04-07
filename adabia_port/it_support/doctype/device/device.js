@@ -3,7 +3,11 @@
 
 frappe.ui.form.on("Device", {
 	refresh(frm) {
-        save_btn(frm)
+        if (frm.is_new()) {
+			custom_buttons(frm).setup_btns_for_new_form()
+		} else {
+			custom_buttons(frm).setup_btns_for_saved_form()
+		}
 	},
 	before_save: async function(frm) {
 		const {brand_name: d_brand} = await fetchDoc({ doctype: 'Brand', name: frm.doc.brand })

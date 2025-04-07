@@ -1,6 +1,6 @@
 app_name = "adabia_port"
 app_title = "Adabia Port"
-app_publisher = "Gharieb Kalefa"
+app_publisher = "Gharieb Kalifa"
 app_description = "Tracking business in departments of the adabia port"
 app_email = "blacksnow.soon@gmail.com"
 app_license = "mit"
@@ -11,10 +11,12 @@ app_version = "0.1.0"
 
 # required_apps = []
 fixtures = [
-    "Translation",
     "Ticket Event",
     "Goods",
     "Packing Type",
+    "Translation",
+    "Website Settings",
+    "Navbar Settings",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
@@ -159,13 +161,21 @@ fixtures = [
                 "Adabia Port"
             ]]
         }
+    }, 
+    {
+        "dt": "File", "filters": {
+            "name": ["in", [
+                "go-150-170.png",
+                "go-banner-150.png",
+            ]]
+        }
     }
 ]
 # Each item in the list will be shown as an app in the apps page
 add_to_apps_screen = [
 	{
 		"name": "adabia_port",
-		"logo": "/assets/adabia_port/logo.png",
+		"logo": "/assets/adabia_port/public/images/go150x170.png",
 		"title": "Adabia Port",
 		"route": "/",
 	    # "has_permission": "adabia_port.api.permission.has_app_permission"
@@ -203,7 +213,7 @@ app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "adabia_port/public/icons/puzzle.svg"
+# app_include_icons = "adabia_port/public/icons/infra.svg"
 
 # Home Pages
 # ----------
@@ -283,10 +293,10 @@ home_page = "/home_page/"
 # ---------------
 # Override standard doctype classes
 
-override_doctype_class = {
+# override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
     # "User": "adabia_port.utils.CustomUser"
-}
+# }
 
 # Document Events
 # ---------------

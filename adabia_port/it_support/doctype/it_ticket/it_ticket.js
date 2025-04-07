@@ -8,7 +8,11 @@ frappe.ui.form.on("IT Ticket", {
 		filter_device_list(frm)
 	},
 	 refresh: async(frm) =>{
-		save_btn(frm)
+		if (frm.is_new()) {
+			custom_buttons(frm).setup_btns_for_new_form()
+		  } else {
+			custom_buttons(frm).setup_btns_for_saved_form()
+		  }
 		clean_wrapper_innerHTML(frm, ['user_info', 'devices_info'])
 		// render the html from the stored json data
 		if(!frm.is_new() && frm.doc.t_data) {

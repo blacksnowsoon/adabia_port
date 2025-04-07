@@ -3,9 +3,12 @@
 
 frappe.ui.form.on('Customer Support Ticket', {
 	refresh(frm) {
-		// your code here
-        save_btn(frm)
 		toggleDetails(frm)
+		if (frm.is_new()) {
+			custom_buttons(frm).setup_btns_for_new_form()
+		  } else {
+			custom_buttons(frm).setup_btns_for_saved_form()
+		  }
 	},
 	ticket_event(frm) {
 	   // clear the procedure field after updating the event field

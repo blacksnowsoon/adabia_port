@@ -21,16 +21,7 @@ body {
     margin-bottom: 30px;
     padding-bottom: 50px;
 }
-.footer-content {
-    text-align: center;
-    border-top: 1px solid #e9ecef;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 999;
-    margin-top: 30px;
-  }
+
 @-moz-document url-prefix() {
     fieldset { display: table-cell; }
   }
