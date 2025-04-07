@@ -5,7 +5,7 @@ const ipRegex = /^(\d{1,3}.){3}\d{1,3}$/;
 
 // this section setes the footer of the site
 const footer_content = 
-`<div class="navbar fixed-bottom navbar-default border-top border-primary">
+`<div class="navbar fixed-bottom navbar-default border-top">
   <div class="container">
     <div>
       <small class="">Adabia Port Version 1.0.1</small><br>

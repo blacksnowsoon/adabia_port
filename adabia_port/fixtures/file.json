@@ -113,5 +113,28 @@
   "thumbnail_url": null,
   "uploaded_to_dropbox": 0,
   "uploaded_to_google_drive": 0
+ },
+ {
+  "attached_to_doctype": "Website Settings",
+  "attached_to_field": "favicon",
+  "attached_to_name": "Website Settings",
+  "content_hash": "f94a9efad19ce54d9762cc3107cf6602",
+  "docstatus": 0,
+  "doctype": "File",
+  "file_name": "go-150-170.png",
+  "file_size": 20611,
+  "file_type": "PNG",
+  "file_url": "/files/go-150-170.png",
+  "folder": "Home",
+  "is_attachments_folder": 0,
+  "is_folder": 0,
+  "is_home_folder": 0,
+  "is_private": 0,
+  "modified": "2025-04-07 21:26:57.268453",
+  "name": "9f839a6164",
+  "old_parent": null,
+  "thumbnail_url": null,
+  "uploaded_to_dropbox": 0,
+  "uploaded_to_google_drive": 0
  }
 ]

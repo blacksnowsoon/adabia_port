@@ -169,7 +169,8 @@ fixtures = [
                 "91deed463e",
                 "70adaa500a",
                 "7939e2a7ef",
-                "2c5c8020d1"
+                "2c5c8020d1",
+                "9f839a6164"
             ]]
         }
     },
@@ -186,7 +187,8 @@ fixtures = [
 add_to_apps_screen = [
 	{
 		"name": "adabia_port",
-		"logo": "/assets/adabia_port/public/images/go150x170.png",
+		# "logo": "/assets/adabia_port/logo.png",
+		"logo": "/assets/adabia_port/icons/infra.svg",
 		"title": "Adabia Port",
 		"route": "/",
 	    # "has_permission": "adabia_port.api.permission.has_app_permission"
