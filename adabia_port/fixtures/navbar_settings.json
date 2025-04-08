@@ -50,7 +50,7 @@
     "route": "https://frappe.io/support"
    }
   ],
-  "modified": "2025-04-07 18:13:17.826354",
+  "modified": "2025-04-08 14:00:25.314097",
   "name": "Navbar Settings",
   "settings_dropdown": [
    {
@@ -110,7 +110,7 @@
    },
    {
     "action": null,
-    "hidden": 1,
+    "hidden": 0,
     "is_standard": 1,
     "item_label": "Apps",
     "item_type": "Route",

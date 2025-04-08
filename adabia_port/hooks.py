@@ -99,7 +99,8 @@ fixtures = [
         "dt": "Print Format", "filters" : {
             "name": ["in", [
                 "SPS CR Builder Temp",
-                "Custom SPS CR Print Custom Format"
+                "Custom SPS CR Print Custom Format",
+                "Customer Tech Support TKT Payment Permit"
             ]]
         }
     },
@@ -107,7 +108,9 @@ fixtures = [
         "dt": "Letter Head", "filters": {
             "name": ["in", [
                 "IT Letter Head",
-                "Logistics Header"
+                "Logistics Header",
+                "Global Header",
+                "ISFP Header"
             ]]
         }
     },
@@ -187,8 +190,7 @@ fixtures = [
 add_to_apps_screen = [
 	{
 		"name": "adabia_port",
-		# "logo": "/assets/adabia_port/logo.png",
-		"logo": "/assets/adabia_port/icons/infra.svg",
+		"logo": "/assets/adabia_port/images/favicon-32x32.png",
 		"title": "Adabia Port",
 		"route": "/",
 	    # "has_permission": "adabia_port.api.permission.has_app_permission"

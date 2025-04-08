@@ -3404,5 +3404,31 @@
   "name": "0detmii5lf",
   "source_text": "Unselect All",
   "translated_text": "ازالة التحديد"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-04-08 13:49:21.972179",
+  "name": "514k54sjjf",
+  "source_text": "plain",
+  "translated_text": "قياسي"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-04-08 13:50:01.073832",
+  "name": "51gqoja11b",
+  "source_text": "Payment Permit",
+  "translated_text": "إذن توريد"
  }
 ]

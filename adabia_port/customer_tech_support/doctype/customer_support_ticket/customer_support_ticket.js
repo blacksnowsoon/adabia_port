@@ -7,7 +7,14 @@ frappe.ui.form.on('Customer Support Ticket', {
 		if (frm.is_new()) {
 			custom_buttons(frm).setup_btns_for_new_form()
 		  } else {
-			custom_buttons(frm).setup_btns_for_saved_form()
+			  const {setup_btns_for_saved_form, custom_print } = custom_buttons(frm)
+			  setup_btns_for_saved_form()
+			  // this ticket has a full custom print format
+			  // /printview?doctype=Customer%20Support%20Ticket&name=TKT-003653&trigger_print=1&format=Customer%20Tech%20Support%20TKT%20Payment%20Permit&no_letterhead=1&letterhead=No%20Letterhead&settings=%7B%7D&_lang=ar
+			custom_print('Customer Tech Support TKT Payment Permit', '', "Payment Permit")
+			// http://10.0.95.56:8000/printview?doctype=Customer%20Support%20Ticket&name=TKT-002429&trigger_print=1&format=Standard&no_letterhead=1&letterhead=No%20Letterhead&settings=%7B%7D&_lang=العربية
+			custom_print(null, 'Global Header', "plain")
+
 		  }
 	},
 	ticket_event(frm) {

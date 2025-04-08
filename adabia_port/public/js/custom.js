@@ -17,6 +17,8 @@ const footer_content =
 
   $('footer').html(footer_content)
  
+  const kanban_container = $('.kanban');
+  
 // ----------------------------------------------------------------------------------------
 // composition custom buttons
 function custom_buttons(frm={}) {
@@ -36,10 +38,20 @@ function custom_buttons(frm={}) {
     }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
   }
   const reload = () => {
-    frm.add_custom_button('Reload', ()=>{
+    frm.add_custom_button('Reload', () => {
       frm.refresh();
-    }).addClass("btn bg-info py-3 px-3 font-weight-bold text-white");
+    }).addClass(" p-2");
   }
+  const custom_print = (format='', header='', buttonName='Custom Print')=> {
+    frm.add_custom_button(`${buttonName}`, () => {
+      // /printview?doctype=Customer%20Support%20Ticket&name=TKT-003653&trigger_print=1&format=Customer%20Tech%20Support%20TKT%20Payment%20Permit&no_letterhead=0&letterhead=ISFP%20Header&settings=%7B%7D&_lang=ar
+     
+      const print_url = `/printview?doctype=${encodeURIComponent(frm.doctype)}&name=${encodeURIComponent(frm.doc.name)}&trigger_print=1&format=${encodeURIComponent(format)}&no_letterhead=${!!(header) ? 0 : 1}&letterhead=${!!(header) ? encodeURIComponent(header) : encodeURIComponent('No Letterhead')}&settings=%7B%7D&_lang=ar`;
+      // Open the print URL in a new tab
+      window.open(print_url, '_blank');
+    }, 'Print').prepend(`<i class="fa fa-print mx-1"></i>`).addClass("");
+  }
+  
   const toggle_built_in_el_with_date_tag = (data = [[]], is_hide=false) => {
     if (data.length === 0) return
     data.forEach(item => {
@@ -74,9 +86,11 @@ function custom_buttons(frm={}) {
     })
   }
   
+
   return {
     save,
     reload,
+    custom_print,
     toggle_built_in_el_with_date_tag,
     toggle_built_in_el_with_classes,
     setup_btns_for_new_form: () => {
