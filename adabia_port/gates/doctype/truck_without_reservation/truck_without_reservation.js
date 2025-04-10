@@ -8,8 +8,11 @@ frappe.ui.form.on("Truck Without Reservation", {
     frm.set_value('ticket_event', 'EV-10')
     if (frm.is_new()) {
       custom_buttons(frm).setup_btns_for_new_form()
+      
     } else {
       custom_buttons(frm).setup_btns_for_saved_form()
+      $('.form-stats-likes').remove()
+		$('.form-assignments').remove()
     }
 	},
   entrance_time(frm) {

@@ -670,19 +670,6 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2024-10-05 00:37:29.058166",
-  "name": "7g7q0jocbo",
-  "source_text": "Public",
-  "translated_text": "عام"
- },
- {
-  "context": null,
-  "contributed": 0,
-  "contribution_docname": null,
-  "contribution_status": "",
-  "docstatus": 0,
-  "doctype": "Translation",
-  "language": "ar",
   "modified": "2024-10-05 16:28:48.806432",
   "name": "otl8j7fhdi",
   "source_text": "Port Management",
@@ -1762,19 +1749,6 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2024-11-04 22:58:26.737320",
-  "name": "o5fclfr4tn",
-  "source_text": "Public",
-  "translated_text": "عام"
- },
- {
-  "context": null,
-  "contributed": 0,
-  "contribution_docname": null,
-  "contribution_status": "",
-  "docstatus": 0,
-  "doctype": "Translation",
-  "language": "ar",
   "modified": "2024-11-04 23:00:35.780543",
   "name": "o6s567skhh",
   "source_text": "Infra - IT",
@@ -2659,10 +2633,10 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2025-01-08 11:23:56.742521",
+  "modified": "2025-04-09 12:47:31.638609",
   "name": "tadv94dar1",
   "source_text": "PUBLIC",
-  "translated_text": "عام"
+  "translated_text": "القائمة"
  },
  {
   "context": null,

@@ -12,9 +12,12 @@ const arabic = {
 }
 frappe.ui.form.on("Visit Ticket", {
 	refresh(frm) {
+
     if (frm.is_new()) {
       custom_buttons(frm).setup_btns_for_new_form()
     } else {
+      $('.form-stats-likes').remove()
+		  $('.form-assignments').remove()
       custom_buttons(frm).setup_btns_for_saved_form()
       custom_buttons(frm).reload()
     }

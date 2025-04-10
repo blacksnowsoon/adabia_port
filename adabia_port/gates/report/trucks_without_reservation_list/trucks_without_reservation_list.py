@@ -58,18 +58,6 @@ def execute(filters=None):
 		ON user.name = ticket.owner
 
 	"""
-	
-	if(group_by_value == "truck"):
-		query += "GROUP BY ticket.truck"
-		params['group_by_value'] = 'ticket.truck'
-	elif(group_by_value == "machine"):
-		query += "GROUP BY ticket.machine"
-		params['group_by_value'] = 'ticket.machine'
-	elif(group_by_value == "company"):
-		query += "GROUP BY ticket.company"
-		params['group_by_value'] = 'ticket.company'
-
-	
 	where = """
 		WHERE ticket.creation >= %(from_date)s
 		AND ticket.creation <= %(to_date)s 
@@ -89,16 +77,28 @@ def execute(filters=None):
 
 	query += where
 
-	group_by = """
-		GROUP BY
-			%(group_by_value)s
-		"""
+	# Add group by clause if needed
+	if(group_by_value):
+		query += """
+			GROUP BY
+				%(group_by_value)s
+			"""
+		params['group_by_value'] = group_by_value
+	
+	
+	query += group_by
 	
 	order_by = """
 		ORDER BY
 			ticket.status ASC
 		"""
+	
 	query += order_by
-	frappe.errprint(query)
+	
+	
+	
 	data = frappe.db.sql(query, params, as_dict=1, debug=1)
+	if not data:
+		frappe.msgprint("لا توجد بيانات مطابقة للمعايير المحددة")
+		return columns, data
 	return columns, data

@@ -25,13 +25,6 @@ frappe.query_reports["Trucks Without Reservation List"] = {
       "reqd": 0
     },
     {
-      "fieldname":"truck_tail",
-      "label": __("Truck Tail"),
-      "fieldtype": "Link",
-      "options": "Truck Tail",
-      "reqd": 0
-    },
-    {
       "fieldname":"machine",
       "label": __("Machine"),
       "fieldtype": "Link",
@@ -53,14 +46,14 @@ frappe.query_reports["Trucks Without Reservation List"] = {
       "options": "Company",
       "reqd": 0
     }
-    // ,
-    // {
-    //   "fieldname":"count_by",
-    //   "label": __("Group By"),
-    //   "fieldtype": "Select",
-    //   "options": "Company\nTruck\nMachine",
-    //   "reqd": 0
-    // }
+    ,
+    {
+      "fieldname":"group_by",
+      "label": __("Group By"),
+      "fieldtype": "Select",
+      "options": "Company\nTruck\nMachine",
+      "reqd": 0
+    }
 	],
   "formatter": function (value, row, column, data, default_formatter) {
     value = default_formatter(value, row, column, data);
@@ -79,7 +72,7 @@ frappe.query_reports["Trucks Without Reservation List"] = {
           'font-size': '12px',
           'color': '#888'
       })
-      .html('By Gharieb Khalefa. © 2025 GO-Smart');
+      .html('By Gharieb Khalifa. © 2025 GO-Smart');
 
     // Append footer to the report
     $(report.page.main).append(footer);

@@ -12,14 +12,13 @@ body {
     margin: 5px;
     outline: 1px solid rgba(134, 134, 134, 0.8);
 }
-.ce-block__content div[shortcut_name="New Ticket"] .widget.shortcut-widget-box,
-.ce-block__content div[shortcut_name="New Ship Visit"] .widget.shortcut-widget-box  {
-    background-color: #ffc938;
-    color:black;
+.ce-block__content .widget.shortcut-widget-box:hover, .widget-body .link-item:hover {
+    background-color: #1ab8e9;
+    color:#FFF;
 }
 .page-container {
-    margin-bottom: 30px;
-    padding-bottom: 50px;
+    margin-bottom: 2rem;
+    padding-bottom: 2.5rem;
 }
 
 @-moz-document url-prefix() {

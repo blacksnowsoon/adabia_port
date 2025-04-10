@@ -24,6 +24,7 @@ const footer_content =
 function custom_buttons(frm={}) {
   const save= () => {
     frm.disable_save();
+    
     frm.add_custom_button('Save', () => {
       const status = frm.doc.status;
       if (status === 'Closed' && frm.is_new()) {
@@ -42,14 +43,14 @@ function custom_buttons(frm={}) {
       frm.refresh();
     }).addClass(" p-2");
   }
-  const custom_print = (format='', header='', buttonName='Custom Print')=> {
+  const custom_print = (format='', header='', buttonName='Print')=> {
     frm.add_custom_button(`${buttonName}`, () => {
       // /printview?doctype=Customer%20Support%20Ticket&name=TKT-003653&trigger_print=1&format=Customer%20Tech%20Support%20TKT%20Payment%20Permit&no_letterhead=0&letterhead=ISFP%20Header&settings=%7B%7D&_lang=ar
      
       const print_url = `/printview?doctype=${encodeURIComponent(frm.doctype)}&name=${encodeURIComponent(frm.doc.name)}&trigger_print=1&format=${encodeURIComponent(format)}&no_letterhead=${!!(header) ? 0 : 1}&letterhead=${!!(header) ? encodeURIComponent(header) : encodeURIComponent('No Letterhead')}&settings=%7B%7D&_lang=ar`;
       // Open the print URL in a new tab
       window.open(print_url, '_blank');
-    }, 'Print').prepend(`<i class="fa fa-print mx-1"></i>`).addClass("");
+    }, 'Print').addClass("");
   }
   
   const toggle_built_in_el_with_date_tag = (data = [[]], is_hide=false) => {
@@ -68,7 +69,7 @@ function custom_buttons(frm={}) {
       }
     })
   }
-  const toggle_built_in_el_with_classes = (data=[[]], is_hide=true) => {
+  const toggle_built_in_el_with_classes = (data=[[]], is_hide= true) => {
     
     if (data[0].length === 0) return
     data.forEach(item => {
@@ -95,11 +96,11 @@ function custom_buttons(frm={}) {
     toggle_built_in_el_with_classes,
     setup_btns_for_new_form: () => {
       save();
-      toggle_built_in_el_with_classes([['page-actions', 'standard-actions']], true);
+      toggle_built_in_el_with_classes([['page-actions', 'standard-actions'] ], true);
     },
     setup_btns_for_saved_form: () => {
       save();
-      toggle_built_in_el_with_classes([['page-actions', 'standard-actions']], false);
+      toggle_built_in_el_with_classes([['page-actions', 'standard-actions'], ['form-stats', 'form-stats-likes']], false);
       toggle_built_in_el_with_date_tag([
         ['page-actions', 'data-original-title', 'Previous Document'],
         ['page-actions', 'data-original-title', 'Next Document'],
@@ -108,7 +109,19 @@ function custom_buttons(frm={}) {
     }
   }
 }
+
+
+function custom_rm_el() {
+  const remove = (className='', is_hide=true) => {
+    if (className) {
+      is_hide ? $(`.${className}`).remove(): $(`.${className}`).hide();
+    }
+  }
   
+  return {
+    remove
+  }
+}
 // spenner
 function spenner(){
   const container = document.createElement('div');

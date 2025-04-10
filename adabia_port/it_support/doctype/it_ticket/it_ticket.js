@@ -6,6 +6,9 @@ let stash = null
 frappe.ui.form.on("IT Ticket", {
 	onload(frm) {
 		filter_device_list(frm)
+		$('.form-stats-likes').remove()
+		$('.form-assignments').remove()
+		
 	},
 	 refresh: async(frm) =>{
 		if (frm.is_new()) {
