@@ -29,7 +29,7 @@
   "home_page": "home_page/",
   "indexing_authorization_code": null,
   "indexing_refresh_token": null,
-  "modified": "2025-04-07 21:26:57.811681",
+  "modified": "2025-04-11 14:52:49.729611",
   "name": "Website Settings",
   "navbar_search": 0,
   "navbar_template": null,
@@ -41,9 +41,9 @@
   "show_language_picker": 0,
   "splash_image": "/files/go-150-170.png",
   "subdomain": null,
-  "title_prefix": "Adabia Port",
+  "title_prefix": "Go Smart",
   "top_bar_items": [],
-  "website_theme": "Standard",
+  "website_theme": "Go Smart",
   "website_theme_image_link": null
  }
 ]

@@ -12,20 +12,27 @@
   "status",
   "priority",
   "column_break_fovk",
-  "section_break_truck",
+  "section_to_truck",
   "truck_col",
   "truck",
-  "machine",
-  "column_break_peww",
   "truck_tail",
-  "section_break_ship",
+  "column_break_uood",
+  "column_break_offd",
+  "section_to_machine",
+  "machine_col",
+  "machine",
+  "column_break_wrtu",
+  "column_break_fbso",
+  "section_to_ship",
   "ship_col",
   "voyage_number",
-  "column_break_pkea",
   "ship",
-  "section_break_company",
+  "column_break_pkea",
+  "column_break_yvrn",
+  "section_to_company",
+  "company_col",
   "company",
-  "column_break_ooxs",
+  "payment_col",
   "amount",
   "receipt_number",
   "section_break_qedm",
@@ -54,7 +61,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Opened\nPending\nClosed",
+   "options": "Open\nPending\nClosed",
    "permlevel": 1,
    "translatable": 1
   },
@@ -80,10 +87,6 @@
    "options": "Normal\nHeigh",
    "read_only_depends_on": "eval:doc.status=='Closed';",
    "translatable": 1
-  },
-  {
-   "fieldname": "column_break_ooxs",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "truck",
@@ -147,49 +150,89 @@
   },
   {
    "fieldname": "truck_col",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "label": "Truck Data"
   },
   {
    "fieldname": "ship_col",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_peww",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "label": "Ship Data"
   },
   {
    "fieldname": "column_break_pkea",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_ship",
-   "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "Ship"
-  },
-  {
-   "fieldname": "section_break_company",
-   "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "Company",
-   "show_on_timeline": 1
-  },
-  {
-   "fieldname": "section_break_truck",
-   "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "Truck",
-   "read_only_depends_on": "eval:doc.status=='Closed';"
-  },
-  {
    "fieldname": "receipt_number",
    "fieldtype": "Data",
    "label": "Receipt Number"
+  },
+  {
+   "fieldname": "machine_col",
+   "fieldtype": "Column Break",
+   "hidden": 1,
+   "label": "Machine Data"
+  },
+  {
+   "fieldname": "column_break_uood",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_to_truck",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "To Truck",
+   "read_only_depends_on": "eval:doc.status=='Closed';"
+  },
+  {
+   "fieldname": "column_break_offd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_to_machine",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "To Machine"
+  },
+  {
+   "fieldname": "column_break_wrtu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fbso",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_to_ship",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "To Ship"
+  },
+  {
+   "fieldname": "column_break_yvrn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_to_company",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "To Company",
+   "show_on_timeline": 1
+  },
+  {
+   "fieldname": "company_col",
+   "fieldtype": "Column Break",
+   "label": "Company Data"
+  },
+  {
+   "fieldname": "payment_col",
+   "fieldtype": "Column Break",
+   "label": "Payment Data"
   }
  ],
  "links": [],
  "make_attachments_public": 1,
- "modified": "2024-12-30 20:29:37.477750",
+ "modified": "2025-04-11 17:45:20.710089",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",
@@ -250,11 +293,11 @@
  "states": [
   {
    "color": "Red",
-   "title": "Opend"
+   "title": "Open"
   },
   {
    "color": "Yellow",
-   "title": "Pinding"
+   "title": "Pending"
   },
   {
    "color": "Gray",

@@ -17,6 +17,7 @@ fixtures = [
     "Translation",
     "Website Settings",
     "Navbar Settings",
+    "Print Settings",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
@@ -98,9 +99,7 @@ fixtures = [
     {
         "dt": "Print Format", "filters" : {
             "name": ["in", [
-                "SPS CR Builder Temp",
-                "Custom SPS CR Print Custom Format",
-                "Customer Tech Support TKT Payment Permit"
+                "Payment Permit"
             ]]
         }
     },
@@ -110,58 +109,40 @@ fixtures = [
                 "IT Letter Head",
                 "Logistics Header",
                 "Global Header",
-                "ISFP Header"
+                "ISFP Header",
+                "ISFP CR Letter Head"
             ]]
         }
     },
     {
         "dt": "Report", "filters" : {
             "name": ["in", [
-                "SPS Modules Activities Report",
-                "Open New Request",
-                "Bugs In Progress",
-                "New Requests In Progress",
-                "Modules Activities",
+                "Most Used Procedures in CUST SPP",
                 "Departments Vs Managements in Details",
-                "Most Used Procedures in CUST SPP"
+                "SPS Modules Activities Report",
+                "Modules Activities"
             ]]
         }
     },
     {
         "dt":"Dashboard Chart", "filters" : { 
             "name":["in", [
-                "SPS OP Ticket Chart",
-                "Most Effected Modules in SPS",
-                "Tickets Activities By User",
-                "Tickets Activities Track",
-                "Management List",
-                "Tickets Activity",
-                "Employees and Managements",
-                "Charging Discharging InProgress"
+                "Employees and Managements"
+                
             ]]
         }
     },
     {
         "dt":"Workspace", "filters" : { 
             "name":["in", [
-                "SPS OP Space",
-                "Infra - IT",
-                "Adabia Port",
-                "Cust Support Statistics",
-                "Customer Tech Sup",
-                "Charging and DisCharging",
-                "Gates"
-
+                
             ]]
         }
     },
     {
         "dt":"Dashboard", "filters" : { 
             "name":["in", [
-                "SPS Operation Dash",
-                "Customer Sup Dash",
-                "IT-Dashboard",
-                "Adabia Port"
+                
             ]]
         }
     }, 
@@ -181,6 +162,14 @@ fixtures = [
         "dt": "Kanban Board", "filters": {
             "name": ["in", [
                 "Default ToDo Kanban",
+                
+            ]]
+        }
+    },
+    {
+        "dt": "Website Theme", "filters": {
+            "name": ["in", [
+                "Go Smart",
                 
             ]]
         }

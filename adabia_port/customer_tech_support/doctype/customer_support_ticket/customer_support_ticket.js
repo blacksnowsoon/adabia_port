@@ -3,34 +3,32 @@
 
 frappe.ui.form.on('Customer Support Ticket', {
 	refresh(frm) {
-		$('.form-stats-likes').remove()
-		$('.form-assignments').remove()
+		const { custom_print } = custom_buttons(frm)
 		toggleDetails(frm)
 		if (frm.is_new()) {
-			custom_buttons(frm).setup_btns_for_new_form()
+			frm.set_value('status', 'Open');
+			set_def_property(frm, ['status'], 1).read_only()
 		  } else {
-			  const {setup_btns_for_saved_form, custom_print } = custom_buttons(frm)
-			  setup_btns_for_saved_form()
-			  // this ticket has a full custom print format
+			  // this ticket has a full custom print format Customer Tech Support TKT 
 			  // /printview?doctype=Customer%20Support%20Ticket&name=TKT-003653&trigger_print=1&format=Customer%20Tech%20Support%20TKT%20Payment%20Permit&no_letterhead=1&letterhead=No%20Letterhead&settings=%7B%7D&_lang=ar
-			custom_print('Customer Tech Support TKT Payment Permit', '', "Payment Permit")
+			custom_print('Payment Permit', '', "Payment Permit")
 			// http://10.0.95.56:8000/printview?doctype=Customer%20Support%20Ticket&name=TKT-002429&trigger_print=1&format=Standard&no_letterhead=1&letterhead=No%20Letterhead&settings=%7B%7D&_lang=العربية
 			custom_print(null, 'Global Header', "plain")
 
 		  }
 	},
 	ticket_event(frm) {
-	   // clear the procedure field after updating the event field
-	    frm.set_value('procedure_name', '');
+	   // clear the dirty fields as it new ticket since the event is changed
+		set_def_property(frm, [], '').reset_fields()
 		toggleDetails(frm)
 	},
 	validate: async function(frm) {
-		const ticket_event = await fetchDoc({doctype: 'Ticket Event', name: frm.doc.ticket_event});
-		if (ticket_event) {
-			
-			const {event} = ticket_event
-			if (event === "To Truck" && frm.doc.truck_tail || event !== `To Truck`) {
-				frm.set_df_property('truck', 'reqd', 0);
+		const { get_doc } = getData()
+		const { event } = await get_doc('Ticket Event', frm.doc.ticket_event);
+		if (event) {
+			// allow to save the tikcet with truck tail only
+			if (event === "To Truck" && frm.doc.truck_tail) {
+				set_def_property(frm,['truck'], 0).reqd()
 				
 			}
 		}
@@ -38,52 +36,48 @@ frappe.ui.form.on('Customer Support Ticket', {
 })
 
 const toggleDetails = async(frm) => {
-	 // hide unused section
-	 const ev_value = frm.doc.ticket_event;
-	
+	// hide unused section
+	const ev_value = frm.doc.ticket_event;
 	if (!ev_value) return
-	const ticket_event = await fetchDoc({doctype: 'Ticket Event', name: frm.doc.ticket_event});
-	const {event} = ticket_event;
-	if (event.includes('Truck') || event.includes('Machine')) {
-		frm.set_df_property('section_break_truck', 'hidden', 0);
-		frm.set_df_property('section_break_company', 'hidden', 0);
-		frm.set_df_property('section_break_ship', 'hidden', 1);
-		frm.set_df_property('voyage_number', 'reqd', 0);
-		frm.set_df_property('ship', 'reqd', 0);
-		frm.set_df_property('company', 'reqd', 0);
-		frm.set_df_property('amount', 'reqd', 0);
-		frm.set_df_property('machine', 'hidden', 0);
-		if (event.includes('Machine')) {
-			frm.set_df_property('machine', 'hidden', 0);
-			frm.set_df_property('machine', 'reqd', 1);
-			frm.set_df_property('truck', 'reqd', 0);
-			frm.set_df_property('truck', 'hidden', 1);
-			frm.set_df_property('truck_tail', 'hidden', 1);
-		} else if(event.includes('Truck')){
-			frm.set_df_property('truck', 'hidden', 0);
-			frm.set_df_property('truck_tail', 'hidden', 0);
-			frm.set_df_property('machine', 'hidden', 1);
-			frm.set_df_property('truck', 'reqd', 1);
-			frm.set_df_property('machine', 'reqd', 0);
-		}
-		
-	} else if (event.includes('Company') || event.includes('Ship')) {
-		frm.set_df_property('section_break_truck', 'hidden', 1);
-		frm.set_df_property('section_break_company', 'hidden', 0);
-		frm.set_df_property('section_break_ship', 'hidden', 0);
-		frm.set_df_property('company', 'reqd', 1);
-		frm.set_df_property('amount', 'reqd', 1);
-	}else {
-		frm.set_df_property('section_break_truck', 'hidden', 1);
-		frm.set_df_property('section_break_company', 'hidden', 1);
-		frm.set_df_property('section_break_ship', 'hidden', 1);
-		
+	const { get_doc } = getData()
+	const { event } = await get_doc('Ticket Event', ev_value);
+	if (!event) return
+	// reset the requierd fields
+	set_def_property(frm, [
+		'truck', 'truck_tail', 'company', 'machine', 'amount'], 0).reqd()
+	set_def_property(frm, [
+		'section_to_truck', 'section_to_company', 'section_to_ship', 'section_to_machine'], 1).hidden()
+	switch (event) {
+		case 'To Truck':
+			set_def_property(frm, [
+				'section_to_truck', 'section_to_company'], 0).hidden()
+
+			set_def_property(frm, [
+				'truck', 'truck_tail'], 1).reqd()
+			break;
+		case 'To Company':
+			set_def_property(frm, [
+				'section_to_company'], 0).hidden()
+			set_def_property(frm, [
+				'company', 'amount'], 1).reqd()
+			break;
+		case 'To Machine': 
+			set_def_property(frm, [
+				'section_to_machine', 'section_to_company'], 0).hidden()
+
+			set_def_property(frm, [
+				'machine'], 1).reqd()
+			break;
+		case 'To Ship':
+			set_def_property(frm, [
+				'section_to_ship'], 0).hidden()
+			set_def_property(frm, [
+				'ship', 'voyage_number'], 1).reqd()
+		default:
+			set_def_property(frm, [], '').reset_fields()
+			['section_break_truck', 'section_break_company', 'section_break_ship'].forEach((field) => {
+				frm.set_df_property(field, 'hidden', 1);
+			});
+			
 	}
-	
 }
-
-// في حالة اقرار صادر يدويا يتم تعطيل الحقل الخاص برقم الطريق  والسفينة
-// frm.set_df_property('voyage_number', 'reqd', 1);
-				// frm.set_df_property('ship', 'reqd', 1);
-
-

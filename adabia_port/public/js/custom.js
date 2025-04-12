@@ -2,7 +2,8 @@
 // validate ip Address
 // const ipRegex = /^(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\. (25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\. (25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\. (25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$/;
 const ipRegex = /^(\d{1,3}.){3}\d{1,3}$/;
-
+const span = document.createElement('span');
+const observed_fields = ['status', 'priority', 'ticket_event'];
 // this section setes the footer of the site
 const footer_content = 
 `<div class="navbar fixed-bottom navbar-default border-top">
@@ -19,6 +20,31 @@ const footer_content =
  
   const kanban_container = $('.kanban');
   
+function custom_rm_el() {
+  const remove = (className='', is_hide=true) => {
+    if (className) {
+      is_hide ? $(`.${className}`).remove(): $(`.${className}`).hide();
+    }
+  }
+  
+  return {
+    remove
+  }
+}
+// spenner
+function spenner(){
+  const container = document.createElement('div');
+  container.classList.add('container');
+	const spenner = document.createElement('div');
+	spenner.classList.add('text-center');
+	spenner.classList.add('spinner-border');
+	spenner.classList.add('spinner-border-sm');
+	spenner.classList.add('mb-3');
+	spenner.setAttribute('role', 'status');
+	spenner.setAttribute('aria-hidden', 'true');
+  container.appendChild(spenner);
+	return container
+}
 // ----------------------------------------------------------------------------------------
 // composition custom buttons
 function custom_buttons(frm={}) {
@@ -36,7 +62,7 @@ function custom_buttons(frm={}) {
       } else {
         frm.save();
       }
-    }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
+    }).addClass("btn bg-gradient py-3 px-3 font-weight-medium text-white");
   }
   const reload = () => {
     frm.add_custom_button('Reload', () => {
@@ -44,13 +70,13 @@ function custom_buttons(frm={}) {
     }).addClass(" p-2");
   }
   const custom_print = (format='', header='', buttonName='Print')=> {
-    frm.add_custom_button(`${buttonName}`, () => {
+    frm.add_custom_button(__(`${buttonName}`), () => {
       // /printview?doctype=Customer%20Support%20Ticket&name=TKT-003653&trigger_print=1&format=Customer%20Tech%20Support%20TKT%20Payment%20Permit&no_letterhead=0&letterhead=ISFP%20Header&settings=%7B%7D&_lang=ar
-     
       const print_url = `/printview?doctype=${encodeURIComponent(frm.doctype)}&name=${encodeURIComponent(frm.doc.name)}&trigger_print=1&format=${encodeURIComponent(format)}&no_letterhead=${!!(header) ? 0 : 1}&letterhead=${!!(header) ? encodeURIComponent(header) : encodeURIComponent('No Letterhead')}&settings=%7B%7D&_lang=ar`;
+      
       // Open the print URL in a new tab
       window.open(print_url, '_blank');
-    }, 'Print').addClass("");
+    }, __('Print')).addClass("");
   }
   
   const toggle_built_in_el_with_date_tag = (data = [[]], is_hide=false) => {
@@ -96,47 +122,71 @@ function custom_buttons(frm={}) {
     toggle_built_in_el_with_classes,
     setup_btns_for_new_form: () => {
       save();
-      toggle_built_in_el_with_classes([['page-actions', 'standard-actions'] ], true);
+      toggle_built_in_el_with_classes([['editable-form', 'menu-btn-group'] ], true);
     },
     setup_btns_for_saved_form: () => {
       save();
-      toggle_built_in_el_with_classes([['page-actions', 'standard-actions'], ['form-stats', 'form-stats-likes']], false);
+      toggle_built_in_el_with_classes([['editable-form', 'menu-btn-group'] ], false);
       toggle_built_in_el_with_date_tag([
         ['page-actions', 'data-original-title', 'Previous Document'],
         ['page-actions', 'data-original-title', 'Next Document'],
         ['page-actions', 'data-original-title', 'Print']
       ], true)
+    },
+    stylePrimaryButton : () => {
+      $('.btn-primary').addClass('btn bg-gradient py-3 px-3 font-weight-medium text-white')
     }
+
   }
 }
 
-
-function custom_rm_el() {
-  const remove = (className='', is_hide=true) => {
-    if (className) {
-      is_hide ? $(`.${className}`).remove(): $(`.${className}`).hide();
-    }
-  }
-  
+// fetching data
+function getData() {
   return {
-    remove
+    get_doc: (doctype='', name='') => {
+      return new Promise((resolve, reject)=> {
+      frappe.call({
+        method: 'adabia_port.utils.get_document',
+        args: {
+          doctype: doctype,
+          name: name,
+        },
+        callback: function(r={}) {
+          if (r.message) {
+            resolve(r.message);
+          } else {
+            reject(`No value found for ${name}`);
+          }
+        }
+      });
+      })
+    },
+    get_doc_values: ({doctype='', filters={}, fields=[]}) => {
+      return new Promise((resolve, reject) => {
+        frappe.call({
+          method: 'frappe.client.get_value',
+          args: {
+            doctype: doctype,
+            filters: filters,
+            fieldname: fields
+          },
+          callback: function(r) {
+            if (r.message) {
+              console.log('get_doc_values', r.message)
+              resolve(r.message);
+            } else {
+              reject(`No value found for ${doctype}`);
+            }
+          }
+        });
+      })
+    }
   }
 }
-// spenner
-function spenner(){
-  const container = document.createElement('div');
-  container.classList.add('container');
-	const spenner = document.createElement('div');
-	spenner.classList.add('text-center');
-	spenner.classList.add('spinner-border');
-	spenner.classList.add('spinner-border-sm');
-	spenner.classList.add('mb-3');
-	spenner.setAttribute('role', 'status');
-	spenner.setAttribute('aria-hidden', 'true');
-  container.appendChild(spenner);
-	return container
-}
-// fetch one value
+
+
+
+
 function fetchValue({doctype='', filters={}, fields=[]}) {
 	return new Promise((resolve, reject) => {
 		frappe.call({
@@ -219,6 +269,39 @@ function fetchAll({doctype='', filters={}, fields=[]}) {
   });
 }
 
+// set def property
+function set_def_property(frm, fields, value) {
+  return {
+    reqd: () => {
+      fields.forEach(field => {
+        frm.set_df_property(field, 'reqd', value);
+      });
+    },
+    hidden: () => {
+      fields.forEach(field => {
+        frm.set_df_property(field, 'hidden', value);
+      });
+    },
+    read_only: () => {
+      fields.forEach(field => {
+        frm.set_df_property(field, 'read_only', value);
+      });
+    },
+    reset_fields: () => {
+      Object.entries(frm.fields_dict).forEach(([field, field_obj]) => {
+        if (Object.hasOwn(field_obj, 'value') && !observed_fields.includes(field)) {
+          if (field_obj.value) {
+            frm.set_value(field, value);
+            frm.refresh_field(field);
+          }
+        }
+      })
+    }
+  }
+}
+
+
+
 function get_customs_declarations_sum(parent, operation_type, operation_handler, is_count) {
   return new Promise((resolve, reject) => {
     frappe.call({
@@ -240,6 +323,8 @@ function get_customs_declarations_sum(parent, operation_type, operation_handler,
     })
   })
 }
+
+
 // -----------------------------------------------------------------------------
 // append html code to it's field if cba (clean before append) will clean the wrapper
 function render_html(frm, data, field, cba) {

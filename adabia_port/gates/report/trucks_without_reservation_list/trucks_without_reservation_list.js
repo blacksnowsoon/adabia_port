@@ -1,4 +1,4 @@
-// Copyright (c) 2025, Gharieb Kalefa and contributors
+// Copyright (c) 2025, Gharieb Kalifa and contributors
 // For license information, please see license.txt
 
 frappe.query_reports["Trucks Without Reservation List"] = {
@@ -15,7 +15,7 @@ frappe.query_reports["Trucks Without Reservation List"] = {
       "label": __("To Date"),
       "fieldtype": "Date",
       "default": frappe.datetime.get_today(),
-      "reqd": 1
+      "reqd": 0
     },
     {
       "fieldname":"truck",
@@ -46,19 +46,19 @@ frappe.query_reports["Trucks Without Reservation List"] = {
       "options": "Company",
       "reqd": 0
     }
-    ,
-    {
-      "fieldname":"group_by",
-      "label": __("Group By"),
-      "fieldtype": "Select",
-      "options": "Company\nTruck\nMachine",
-      "reqd": 0
-    }
+    // ,
+    // {
+    //   "fieldname":"group_by",
+    //   "label": __("Group By"),
+    //   "fieldtype": "Select",
+    //   "options": "\ncompany\ntruck\nmachine",
+    //   "reqd": 0
+    // }
 	],
   "formatter": function (value, row, column, data, default_formatter) {
     value = default_formatter(value, row, column, data);
     if (data) {
-      // return "<i>" + value + "</i>";
+      // return "<i>" + _(data.status) + "</i>";
     }
     return value
   },

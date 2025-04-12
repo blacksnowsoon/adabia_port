@@ -44,15 +44,15 @@
  {
   "docstatus": 0,
   "doctype": "Ticket Event",
-  "event": "To Truck",
-  "modified": "2024-09-27 19:11:10.436914",
-  "name": "EV-10"
+  "event": "Port Management",
+  "modified": "2024-10-05 01:06:42.500571",
+  "name": "EV-22"
  },
  {
   "docstatus": 0,
   "doctype": "Ticket Event",
-  "event": "Port Management",
-  "modified": "2024-10-05 01:06:42.500571",
-  "name": "EV-22"
+  "event": "To Truck",
+  "modified": "2024-09-27 19:11:10.436914",
+  "name": "EV-10"
  }
 ]

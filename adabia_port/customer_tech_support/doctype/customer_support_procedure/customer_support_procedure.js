@@ -4,12 +4,6 @@
 frappe.ui.form.on("Customer Support Procedure", {
 	refresh(frm) {
 		// your code here
-		
-		frm.disable_save();
-	    frm.add_custom_button('Save', () => {
-	        frm.save();
-             
-        }).addClass("btn bg-success py-3 px-3 font-weight-bold text-white");
 	},
 	after_save (frm) {
 	   frappe.set_route('customer-support-procedure')

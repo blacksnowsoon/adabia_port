@@ -172,7 +172,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-30 01:04:57.107941",
+ "modified": "2025-04-12 15:11:14.168083",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Visit Ticket",
@@ -219,12 +219,12 @@
  "sort_order": "DESC",
  "states": [
   {
-   "color": "Red",
+   "color": "Light Blue",
    "title": "Open"
   },
   {
    "color": "Green",
-   "title": "InProgress"
+   "title": "In Progress"
   },
   {
    "color": "Gray",
