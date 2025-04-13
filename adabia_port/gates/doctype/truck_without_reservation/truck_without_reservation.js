@@ -24,15 +24,18 @@ frappe.ui.form.on("Truck Without Reservation", {
     const now = new Date().getTime()
     
     if (ent_date > out_date) {
-      err_message("تاريخ الخروج يجب ان يكون اكبر من تاريخ الدخول")
+      // err_message("تاريخ الخروج يجب ان يكون اكبر من تاريخ الدخول")
+      err_message(_("Checkout date must be greater than entrance date"))
       frappe.validated = false
     }
     if (out_date > now) {
-      err_message("تاريخ الخروج يجب ان يكون اقل من تاريخ اليوم")
+      // err_message("تاريخ الخروج يجب ان يكون اقل من تاريخ اليوم")
+      err_message(_("Checkout date must be less than today"))
       frappe.validated = false
     }
     if(name && frm.is_new()) {
-      err_message("هناك سجل مفتوح لنفس الشاحنة / او المعدة")
+      // err_message("هناك سجل مفتوح لنفس الشاحنة / او المعدة")
+      err_message(_("There is an open record for the same truck or machine"))
       frappe.validated = false
     }
     if (frm.doc.status === "Open") {

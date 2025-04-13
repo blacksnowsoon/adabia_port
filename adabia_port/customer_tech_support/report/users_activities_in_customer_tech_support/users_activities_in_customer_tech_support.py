@@ -73,3 +73,5 @@ def get_chart(data):
 		},
 		"type": "bar"
 	}
+
+

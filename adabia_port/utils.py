@@ -2,6 +2,7 @@ import asyncio
 from pysnmp.hlapi.asyncio import SnmpEngine, CommunityData, UdpTransportTarget, ContextData, ObjectType, ObjectIdentity, get_cmd
 import frappe
 
+
 @frappe.whitelist()
 def get_printer_status(ip_address, oids):
     async def fetch_status(ip_address, oid_list):
@@ -107,3 +108,4 @@ def get_customs_declarations_sum(parent, operation_type, operation_handler, is_c
             WHERE parent = %s AND operation_type = %s AND is_count = %s
             """,(parent, operation_type, is_count), as_dict=1)
     return summation
+

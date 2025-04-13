@@ -217,8 +217,17 @@ app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "adabia_port/public/icons/infra.svg"
+# app_include_icons = "adabia_port/public/icons/icons.svg"
+app_include_icons = [
+    # "adabia_port/public/icons/customer-support-icon.svg",
+    # "adabia_port/public/icons/networking-icon.svg",
 
+]
+
+
+website_route_rules = [
+    # {"from_route": "/icons/", "to_route": "public/icons/"}
+]
 # Home Pages
 # ----------
 

@@ -6,7 +6,12 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "management_name"
+  "management_name",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_management"
  ],
  "fields": [
   {
@@ -17,15 +22,51 @@
    "label": "Management Name",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Management"
+  },
+  {
+   "fieldname": "parent_management",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Management",
+   "options": "Management"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_tree": 1,
  "links": [],
- "modified": "2024-11-05 19:46:39.775991",
+ "modified": "2025-04-13 09:42:58.303846",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Management",
  "naming_rule": "Expression",
+ "nsm_parent_field": "parent_management",
  "owner": "Administrator",
  "permissions": [
   {
