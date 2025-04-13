@@ -74,7 +74,7 @@ const toggleDetails = async(frm) => {
 			set_def_property(frm, [
 				'ship', 'voyage_number'], 1).reqd()
 		default:
-			set_def_property(frm, [], '').reset_fields()
+			
 			['section_break_truck', 'section_break_company', 'section_break_ship'].forEach((field) => {
 				frm.set_df_property(field, 'hidden', 1);
 			});
