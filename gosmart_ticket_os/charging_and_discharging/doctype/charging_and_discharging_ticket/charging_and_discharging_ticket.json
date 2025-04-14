@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{YYYY}-{MM}-{visit_id}",
+ "creation": "2025-01-01 12:54:49.331763",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "percentage_of_operations_type",
+  "visit_info_section",
+  "status",
+  "visit_id",
+  "operations_type",
+  "customs_declarations",
+  "state",
+  "column_break_rfam",
+  "ship_name",
+  "visit_data",
+  "column_break_vlyx",
+  "shipment_details_section",
+  "direct_view",
+  "column_break_fswq",
+  "storage_view",
+  "section_break_customs_declaration_info",
+  "declarations_data",
+  "column_break_aahk",
+  "declarations_registry",
+  "registry_section",
+  "charging_operations_registry",
+  "discharging_operations_registry"
+ ],
+ "fields": [
+  {
+   "fieldname": "visit_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Visit ID",
+   "options": "Ship Visit",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_rfam",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visit_info_section",
+   "fieldtype": "Section Break",
+   "label": "Visit Info"
+  },
+  {
+   "fieldname": "column_break_vlyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visit_data",
+   "fieldtype": "HTML",
+   "label": "Visit Data"
+  },
+  {
+   "fieldname": "declarations_data",
+   "fieldtype": "HTML",
+   "is_virtual": 1,
+   "label": "Declarations Data"
+  },
+  {
+   "depends_on": "eval:doc.operations_type !== ''",
+   "fieldname": "registry_section",
+   "fieldtype": "Section Break",
+   "label": "Registry"
+  },
+  {
+   "depends_on": "eval:doc.customs_declarations !== ''",
+   "fieldname": "section_break_customs_declaration_info",
+   "fieldtype": "Section Break",
+   "label": "Customs Declaration Info",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.visit_id",
+   "fieldname": "operations_type",
+   "fieldtype": "Select",
+   "label": "Operations Type",
+   "options": "\nCharge\nDischarge"
+  },
+  {
+   "depends_on": "eval:doc.operations_type",
+   "fieldname": "customs_declarations",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Customs Declarations"
+  },
+  {
+   "depends_on": "eval:doc.operations_type === 'Charge'",
+   "fieldname": "charging_operations_registry",
+   "fieldtype": "Table",
+   "label": "Charging Operations Registry",
+   "options": "Charging Operation Registry"
+  },
+  {
+   "depends_on": "eval:doc.operations_type === 'Discharge'",
+   "fieldname": "discharging_operations_registry",
+   "fieldtype": "Table",
+   "label": "Discharging Operations Registry",
+   "options": "Discharging Operation Registry"
+  },
+  {
+   "fieldname": "column_break_aahk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "declarations_registry",
+   "fieldtype": "HTML",
+   "is_virtual": 1,
+   "label": "Declarations Registry"
+  },
+  {
+   "fieldname": "shipment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Shipment Details"
+  },
+  {
+   "fieldname": "percentage_of_operations_type",
+   "fieldtype": "HTML",
+   "label": "Percentage Of Operations Type"
+  },
+  {
+   "fieldname": "column_break_fswq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "storage_view",
+   "fieldtype": "HTML",
+   "label": "Storage View"
+  },
+  {
+   "fieldname": "direct_view",
+   "fieldtype": "HTML",
+   "label": "Direct View"
+  },
+  {
+   "fieldname": "ship_name",
+   "fieldtype": "Data",
+   "label": "Ship Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "In Progress\nClosed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "State"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-25 19:38:45.765702",
+ "modified_by": "Administrator",
+ "module": "Charging and Discharging",
+ "name": "Charging and Discharging Ticket",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Logistic User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Logistic Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "In Progress"
+  },
+  {
+   "color": "Red",
+   "title": "Closed"
+  }
+ ],
+ "track_changes": 1
+}

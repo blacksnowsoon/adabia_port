@@ -1,0 +1,200 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-01-16 10:06:37.964770",
+  "name": "Increase-Import-Manifest-Group",
+  "role_profile": "Increase-Import-Manifest-Group",
+  "roles": [
+   {
+    "parent": "Increase-Import-Manifest-Group",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Increase Import Manifest Correspondence"
+   },
+   {
+    "parent": "Increase-Import-Manifest-Group",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Logistic Admin"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-10-20 20:42:23.698134",
+  "name": "SPS CR Res-Profile",
+  "role_profile": "SPS CR Res-Profile",
+  "roles": [
+   {
+    "parent": "SPS CR Res-Profile",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "SPS Responsible Group"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-10-22 19:27:23.613464",
+  "name": "SPS-OP-Admin",
+  "role_profile": "SPS-OP-Admin",
+  "roles": [
+   {
+    "parent": "SPS-OP-Admin",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "SPS OP Admin"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-01-16 10:05:37.853288",
+  "name": "Charging Discharging User",
+  "role_profile": "Charging Discharging User",
+  "roles": [
+   {
+    "parent": "Charging Discharging User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Logistic User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-01-14 11:04:43.181978",
+  "name": "Charging and Discharging Admin",
+  "role_profile": "Charging and Discharging Admin",
+  "roles": [
+   {
+    "parent": "Charging and Discharging Admin",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Logistic Admin"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-01-29 13:25:42.116693",
+  "name": "Gate Man",
+  "role_profile": "Gate Man",
+  "roles": [
+   {
+    "parent": "Gate Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Gate User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-01-29 18:11:15.985372",
+  "name": "Gate Admin Level 0",
+  "role_profile": "Gate Admin Level 0",
+  "roles": [
+   {
+    "parent": "Gate Admin Level 0",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Gate Admin"
+   },
+   {
+    "parent": "Gate Admin Level 0",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Gate User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-11-04 22:32:07.951418",
+  "name": "IT System Admin Profile",
+  "role_profile": "IT System Admin Profile",
+  "roles": [
+   {
+    "parent": "IT System Admin Profile",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "IT System Admin"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-10-22 19:24:30.180368",
+  "name": "SPS-OP-Man",
+  "role_profile": "SPS-OP-Man",
+  "roles": [
+   {
+    "parent": "SPS-OP-Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "SPS OP User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-11-04 18:11:29.431427",
+  "name": "Help Desk Man",
+  "role_profile": "Help Desk Man",
+  "roles": [
+   {
+    "parent": "Help Desk Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Help Desk User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-10-19 01:41:16.334852",
+  "name": "Cust-Sup-Ticket-Man",
+  "role_profile": "Cust-Sup-Ticket-Man",
+  "roles": [
+   {
+    "parent": "Cust-Sup-Ticket-Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer Support User"
+   },
+   {
+    "parent": "Cust-Sup-Ticket-Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "SPS Responsible Group"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-11-20 10:37:54.387718",
+  "name": "Cust-Sup-Admin",
+  "role_profile": "Cust-Sup-Admin",
+  "roles": [
+   {
+    "parent": "Cust-Sup-Admin",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer Support Admin"
+   }
+  ]
+ }
+]

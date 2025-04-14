@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "autoname": "field:visit_id",
+ "creation": "2025-01-03 15:29:54.186329",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "visit_state_section",
+  "status",
+  "ship_name",
+  "state",
+  "column_break_crmh",
+  "piers_number",
+  "column_break_bvuw",
+  "visit_id",
+  "agent",
+  "visit_timing_section",
+  "actual_arrival_time",
+  "actual_leaving_time",
+  "staying_duration",
+  "column_break_ujcy",
+  "operations_started_time",
+  "operations_ended_time",
+  "operations_duration",
+  "column_break_xkfq",
+  "visit_manifest_section",
+  "customs_declarations",
+  "section_totals",
+  "manifest_total",
+  "column_break_etfa",
+  "handled_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "visit_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Visit ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_crmh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ship_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ship Name",
+   "options": "Ship",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bvuw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "piers_number",
+   "fieldtype": "Table MultiSelect",
+   "label": "Piers Number",
+   "options": "Pier Child Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_state_section",
+   "fieldtype": "Section Break",
+   "label": "Visit State"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "visit_timing_section",
+   "fieldtype": "Section Break",
+   "label": "Visit Timing"
+  },
+  {
+   "fieldname": "actual_arrival_time",
+   "fieldtype": "Datetime",
+   "label": "Actual Arrival Time"
+  },
+  {
+   "fieldname": "actual_leaving_time",
+   "fieldtype": "Datetime",
+   "label": "Actual Leaving Time"
+  },
+  {
+   "fieldname": "staying_duration",
+   "fieldtype": "Duration",
+   "label": "Staying Duration ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ujcy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operations_started_time",
+   "fieldtype": "Datetime",
+   "label": "Operations Started Time"
+  },
+  {
+   "fieldname": "operations_ended_time",
+   "fieldtype": "Datetime",
+   "label": "Operations Ended Time"
+  },
+  {
+   "fieldname": "operations_duration",
+   "fieldtype": "Duration",
+   "label": "Operations Duration",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.operations_started_time",
+   "fieldname": "visit_manifest_section",
+   "fieldtype": "Section Break",
+   "label": "Visit Manifest"
+  },
+  {
+   "fieldname": "customs_declarations",
+   "fieldtype": "Table",
+   "label": "Customs Declarations",
+   "options": "Customs Declarations"
+  },
+  {
+   "fieldname": "column_break_etfa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xkfq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.customs_declarations.length > 0",
+   "fieldname": "section_totals",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Agent",
+   "options": "Company"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Progress\nClosed"
+  },
+  {
+   "fieldname": "manifest_total",
+   "fieldtype": "HTML",
+   "label": "Manifest Total"
+  },
+  {
+   "fieldname": "handled_total",
+   "fieldtype": "HTML",
+   "label": "Handled Total"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "State"
+  }
+ ],
+ "links": [
+  {
+   "link_doctype": "Charging and Discharging Ticket",
+   "link_fieldname": "visit_id"
+  }
+ ],
+ "modified": "2025-01-25 19:39:26.883964",
+ "modified_by": "Administrator",
+ "module": "Charging and Discharging",
+ "name": "Ship Visit",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Logistic Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Logistic User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Open"
+  },
+  {
+   "color": "Yellow",
+   "title": "In Progress"
+  },
+  {
+   "color": "Red",
+   "title": "Closed"
+  }
+ ],
+ "track_changes": 1
+}

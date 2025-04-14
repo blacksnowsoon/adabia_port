@@ -1,0 +1,13 @@
+{
+ "creation": "2024-10-25 14:47:15.992814",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2024-10-25 14:47:15.992814",
+ "modified_by": "Administrator",
+ "module": "SPS System",
+ "name": "SPS OP TKT",
+ "owner": "Administrator",
+ "source_name": "SPS OP TKT",
+ "timeseries": 1
+}

@@ -1,0 +1,290 @@
+{
+ "actions": [],
+ "autoname": "field:device_name",
+ "creation": "2024-11-01 13:33:42.170698",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "have_network_connection",
+  "device_name",
+  "column_break_druu",
+  "disabled",
+  "disable_cause",
+  "section_break_nrjj",
+  "device_type",
+  "model",
+  "employees",
+  "additional_software",
+  "column_break_accd",
+  "brand",
+  "serial_no",
+  "product_year",
+  "in_service_since",
+  "os",
+  "os_notes",
+  "section_break_qehd",
+  "device_domain_name",
+  "group_policy",
+  "column_break_wwvf",
+  "ip_address",
+  "mac_address",
+  "section_break_zdjg",
+  "description",
+  "column_break_hjst",
+  "location_code",
+  "location"
+ ],
+ "fields": [
+  {
+   "fieldname": "device_type",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Device Type",
+   "options": "Device Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_accd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Brand",
+   "options": "Brand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_zdjg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "device_name",
+   "fieldtype": "Data",
+   "label": "Device Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "have_network_connection",
+   "fieldtype": "Check",
+   "label": "Have Network Connection?"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled?"
+  },
+  {
+   "depends_on": "eval:doc.have_network_connection",
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address",
+   "unique": 1
+  },
+  {
+   "depends_on": "eval:doc.have_network_connection",
+   "fieldname": "device_domain_name",
+   "fieldtype": "Data",
+   "label": "Device Name"
+  },
+  {
+   "depends_on": "eval:doc.have_network_connection",
+   "fieldname": "section_break_qehd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "group_policy",
+   "fieldtype": "Link",
+   "label": "Group Policy",
+   "link_filters": "[[\"Group Policy\", \"is_user_group\",\"=\", \"0\"]]",
+   "options": "Group Policy",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_wwvf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hjst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Location Code",
+   "options": "Port Location Map Code"
+  },
+  {
+   "fieldname": "product_year",
+   "fieldtype": "Int",
+   "label": "Product Year",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "in_service_since",
+   "fieldtype": "Date",
+   "label": "In Service Since"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Table MultiSelect",
+   "in_filter": 1,
+   "label": "Employees",
+   "options": "Emp Devices Child Table"
+  },
+  {
+   "fetch_from": "location_code.location",
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "label": "Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_druu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nrjj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "additional_software",
+   "fieldtype": "Table MultiSelect",
+   "label": "Additional Software",
+   "options": "Additional Soft Child Table"
+  },
+  {
+   "fieldname": "os",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "OS",
+   "options": "OS"
+  },
+  {
+   "fetch_from": "os.description",
+   "fieldname": "os_notes",
+   "fieldtype": "Data",
+   "label": "OS Notes",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.disabled",
+   "fieldname": "disable_cause",
+   "fieldtype": "Select",
+   "label": "Disable Cause",
+   "mandatory_depends_on": "eval:doc.disabled",
+   "options": "\nSpare\nJunk\nForm Repair"
+  },
+  {
+   "fieldname": "mac_address",
+   "fieldtype": "Data",
+   "label": "MAC Address"
+  }
+ ],
+ "links": [
+  {
+   "link_doctype": "Employee",
+   "link_fieldname": "name"
+  }
+ ],
+ "modified": "2025-02-13 22:50:08.140987",
+ "modified_by": "Administrator",
+ "module": "IT Support",
+ "name": "Device",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Help Desk Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IT System Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
