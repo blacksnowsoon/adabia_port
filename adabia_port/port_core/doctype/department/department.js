@@ -3,10 +3,6 @@
 
 frappe.ui.form.on("Department", {
 	refresh(frm) {
-        if (frm.is_new()) {
-			custom_buttons(frm).setup_btns_for_new_form()
-		} else {
-			custom_buttons(frm).setup_btns_for_saved_form()
-		}
+        
 	},
 });
