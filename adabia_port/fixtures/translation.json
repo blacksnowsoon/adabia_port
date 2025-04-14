@@ -592,9 +592,9 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2024-10-05 00:38:57.534931",
+  "modified": "2025-04-13 23:05:58.530623",
   "name": "1dgsh48gs0",
-  "source_text": "Customer Tech Sup",
+  "source_text": "Customers Technical Support",
   "translated_text": "خدمة الدعم الفني للعملاء"
  },
  {
@@ -3703,5 +3703,70 @@
   "name": "i9aqnsugn6",
   "source_text": "Entrance Report",
   "translated_text": "تقرير تسجيلات الدخول"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-04-13 23:09:21.772360",
+  "name": "j40h1cilpm",
+  "source_text": "Ship Data",
+  "translated_text": "بيانات السفينة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-04-14 01:27:58.465570",
+  "name": "ll7i29n2cf",
+  "source_text": "User Activity",
+  "translated_text": "انشطة المستخدمين"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-04-14 10:23:04.930976",
+  "name": "veopk4os32",
+  "source_text": "Checkout date must be greater than entrance date",
+  "translated_text": "تاريخ الخروج يجب ان يكون اكبر من تاريخ الدخول"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-04-14 10:23:32.689085",
+  "name": "vf1et9m8cm",
+  "source_text": "Checkout date must be less than today",
+  "translated_text": "تاريخ الخروج يجب ان يكون اقل من تاريخ اليوم"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-04-14 10:25:37.392602",
+  "name": "vg8dou9vaj",
+  "source_text": "There is an open record for the same truck or machine",
+  "translated_text": "هناك سجل مفتوح لنفس الشاحنة / او المعدة"
  }
 ]

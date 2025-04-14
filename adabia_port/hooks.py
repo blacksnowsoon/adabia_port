@@ -127,7 +127,9 @@ fixtures = [
     {
         "dt":"Dashboard Chart", "filters" : { 
             "name":["in", [
-                "Employees and Managements"
+                "Employees and Managements",
+                "Most Used Procedures in Customer Technical Support",
+                "User Activity"
                 
             ]]
         }
@@ -142,7 +144,7 @@ fixtures = [
     {
         "dt":"Dashboard", "filters" : { 
             "name":["in", [
-                
+                "Main"
             ]]
         }
     }, 

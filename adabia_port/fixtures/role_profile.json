@@ -164,6 +164,21 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
+  "modified": "2024-11-20 10:37:54.387718",
+  "name": "Cust-Sup-Admin",
+  "role_profile": "Cust-Sup-Admin",
+  "roles": [
+   {
+    "parent": "Cust-Sup-Admin",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer Support Admin"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
   "modified": "2024-10-19 01:41:16.334852",
   "name": "Cust-Sup-Ticket-Man",
   "role_profile": "Cust-Sup-Ticket-Man",
@@ -179,21 +194,6 @@
     "parentfield": "roles",
     "parenttype": "Role Profile",
     "role": "SPS Responsible Group"
-   }
-  ]
- },
- {
-  "docstatus": 0,
-  "doctype": "Role Profile",
-  "modified": "2024-11-20 10:37:54.387718",
-  "name": "Cust-Sup-Admin",
-  "role_profile": "Cust-Sup-Admin",
-  "roles": [
-   {
-    "parent": "Cust-Sup-Admin",
-    "parentfield": "roles",
-    "parenttype": "Role Profile",
-    "role": "Customer Support Admin"
    }
   ]
  }
