@@ -1,9 +1,9 @@
 [project]
-name = "adabia_port"
+name = "gosmart_ticket_os"
 authors = [
     { name = "Gharieb Kalifa", email = "blacksnow.soon@gmail.com"}
 ]
-description = "Tracking business in departments of the adabia port"
+description = "Tracking business in departments of the Go Smart Ticket OS"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]

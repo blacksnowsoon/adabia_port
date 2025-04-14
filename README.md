@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 ### Go Smart
+=======
+### Go Smart Ticket OS
+>>>>>>> Stashed changes
 
-Tracking business in departments of the adabia port
+Tracking business in departments of the Go Smart Ticket OS
 
 - Module Port core exsist By Default with all branches holds the core doctypes of the app.
 
@@ -17,7 +21,7 @@ You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 ```bash
 cd $PATH_TO_YOUR_BENCH
 bench get-app $URL_OF_THIS_REPO --branch master
-bench install-app adabia_port
+bench install-app gosmart_ticket_os
 ```
 
 ### Contributing
@@ -25,7 +29,7 @@ bench install-app adabia_port
 This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
 
 ```bash
-cd apps/adabia_port
+cd apps/gosmart_ticket_os
 pre-commit install
 ```
 

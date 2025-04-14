@@ -8,7 +8,7 @@ repos:
     rev: v4.3.0
     hooks:
       - id: trailing-whitespace
-        files: "adabia_port.*"
+        files: "gosmart_ticket_os.*"
         exclude: ".*json$|.*txt$|.*csv|.*md|.*svg"
       - id: check-yaml
       - id: check-merge-conflict
@@ -36,11 +36,11 @@ repos:
         # Ignore any files that might contain jinja / bundles
         exclude: |
             (?x)^(
-                adabia_port/public/dist/.*|
+                gosmart_ticket_os/public/dist/.*|
                 .*node_modules.*|
                 .*boilerplate.*|
-                adabia_port/templates/includes/.*|
-                adabia_port/public/js/lib/.*
+                gosmart_ticket_os/templates/includes/.*|
+                gosmart_ticket_os/public/js/lib/.*
             )$
 
 
@@ -53,12 +53,12 @@ repos:
         # Ignore any files that might contain jinja / bundles
         exclude: |
             (?x)^(
-                adabia_port/public/dist/.*|
+                gosmart_ticket_os/public/dist/.*|
                 cypress/.*|
                 .*node_modules.*|
                 .*boilerplate.*|
-                adabia_port/templates/includes/.*|
-                adabia_port/public/js/lib/.*
+                gosmart_ticket_os/templates/includes/.*|
+                gosmart_ticket_os/public/js/lib/.*
             )$
 
 ci:
