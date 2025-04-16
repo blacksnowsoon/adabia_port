@@ -35,7 +35,7 @@
   "fields": "[\"priority\", \"reference_type\", \"status\", \"reference_name\", \"allocated_to\"]",
   "filters": null,
   "kanban_board_name": "Default ToDo Kanban",
-  "modified": "2025-04-08 14:09:51.878589",
+  "modified": "2025-04-16 10:16:15.709633",
   "name": "Default ToDo Kanban",
   "private": 0,
   "reference_doctype": "ToDo",

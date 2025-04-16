@@ -149,21 +149,6 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
-  "modified": "2024-11-04 18:11:29.431427",
-  "name": "Help Desk Man",
-  "role_profile": "Help Desk Man",
-  "roles": [
-   {
-    "parent": "Help Desk Man",
-    "parentfield": "roles",
-    "parenttype": "Role Profile",
-    "role": "Help Desk User"
-   }
-  ]
- },
- {
-  "docstatus": 0,
-  "doctype": "Role Profile",
   "modified": "2024-11-20 10:37:54.387718",
   "name": "Cust-Sup-Admin",
   "role_profile": "Cust-Sup-Admin",
@@ -194,6 +179,21 @@
     "parentfield": "roles",
     "parenttype": "Role Profile",
     "role": "SPS Responsible Group"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-11-04 18:11:29.431427",
+  "name": "Help Desk Man",
+  "role_profile": "Help Desk Man",
+  "roles": [
+   {
+    "parent": "Help Desk Man",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Help Desk User"
    }
   ]
  }

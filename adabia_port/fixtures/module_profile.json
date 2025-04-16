@@ -3,75 +3,6 @@
   "block_modules": [
    {
     "module": "Automation",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Charging and Discharging",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Custom",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Customer Tech Support",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Geo",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Integrations",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Printing",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "SPS System",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Website",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Workflow",
-    "parent": "IT-Support M",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Module Profile",
-  "modified": "2025-04-06 21:07:11.928552",
-  "module_profile_name": "IT-Support M",
-  "name": "IT-Support M"
- },
- {
-  "block_modules": [
-   {
-    "module": "Automation",
     "parent": "SPS Operation M",
     "parentfield": "block_modules",
     "parenttype": "Module Profile"
@@ -391,6 +322,93 @@
   "modified": "2025-01-29 13:46:06.887276",
   "module_profile_name": "Gates",
   "name": "Gates"
+ },
+ {
+  "block_modules": [
+   {
+    "module": "Automation",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Charging and Discharging",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Custom",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Customer Tech Support",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Geo",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Integrations",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Printing",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "SPS System",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Website",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Workflow",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Gates",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Adabia Port",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Core",
+    "parent": "IT-Support M",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Module Profile",
+  "modified": "2025-04-16 10:13:31.416157",
+  "module_profile_name": "IT-Support M",
+  "name": "IT-Support M"
  },
  {
   "block_modules": [
