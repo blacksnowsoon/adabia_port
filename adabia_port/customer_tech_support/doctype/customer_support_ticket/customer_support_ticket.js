@@ -53,7 +53,7 @@ const toggleDetails = async(frm) => {
 				'section_to_truck', 'section_to_company'], 0).hidden()
 
 			set_def_property(frm, [
-				'truck', 'truck_tail'], 1).reqd()
+				'truck', 'truck'], 1).reqd()
 			break;
 		case 'To Company':
 			set_def_property(frm, [
