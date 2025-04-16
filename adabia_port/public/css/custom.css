@@ -93,7 +93,7 @@ body {
 
   /* overide general style */
   .liked-by, .list-row-like, .list-liked-by-me, 
-  .editable-form:not([data-page-route*="DocType"]) .menu-btn-group, .form-assignments, 
+  .editable-form:not([data-page-route*="DocType"], [data-page-route*="Notification"], [data-page-route*="Dashboard Chart"]) .menu-btn-group, .form-assignments, 
   .next-doc, .prev-doc, .editable-form button[data-original-title*="Print"],
   .editable-form button[data-original-title*="طباعة"] {
     display: none!important;
