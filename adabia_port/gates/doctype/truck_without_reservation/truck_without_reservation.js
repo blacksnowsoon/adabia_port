@@ -22,7 +22,7 @@ frappe.ui.form.on("Truck Without Reservation", {
     const ent_date = new Date(frm.doc.entrance_date + " " + frm.doc.entrance_time).getTime()
     const out_date = new Date(frm.doc.checkout_date + " " + frm.doc.checkout_time).getTime()
     const now = new Date().getTime()
-    
+    console.log(name)
     if (ent_date > out_date) {
       // err_message("تاريخ الخروج يجب ان يكون اكبر من تاريخ الدخول")
       err_message(_("Checkout date must be greater than entrance date"))
@@ -38,19 +38,24 @@ frappe.ui.form.on("Truck Without Reservation", {
       err_message(_("There is an open record for the same truck or machine"))
       frappe.validated = false
     }
-    if (frm.doc.status === "Open") {
+    if (frm.is_new() && frm.doc.status === "Open") {
       frm.set_value('checkout_date', '')
       frm.set_value('checkout_time', '')
     }
   },
-
   status(frm) {
     const status = frm.doc.status 
     if (status === "Closed" && !frm.doc.checkout_date || !frm.doc.checkout_time) {
       frm.set_value('status', 'Open')
       err_message("يجب ان يكون هناك تاريخ و وقت خروج")
       frappe.validated = false
+    } else if(status === "Open") {
+      frm.set_value('checkout_date', '')
+      frm.set_value('checkout_time', '')
     }
+  },
+  after_save(frm) {
+    console.log('before save', !!frm.doc.checkout_date, !!frm.doc.checkout_time)
   }
 });
 

@@ -6,16 +6,16 @@ let stash = null
 frappe.ui.form.on("IT Ticket", {
 	onload(frm) {
 		filter_device_list(frm)
-		$('.form-stats-likes').remove()
-		$('.form-assignments').remove()
+		// $('.form-stats-likes').remove()
+		// $('.form-assignments').remove()
 		
 	},
 	 refresh: async(frm) =>{
-		if (frm.is_new()) {
-			custom_buttons(frm).setup_btns_for_new_form()
-		  } else {
-			custom_buttons(frm).setup_btns_for_saved_form()
-		  }
+		// if (frm.is_new()) {
+		// 	custom_buttons(frm).setup_btns_for_new_form()
+		//   } else {
+		// 	custom_buttons(frm).setup_btns_for_saved_form()
+		//   }
 		clean_wrapper_innerHTML(frm, ['user_info', 'devices_info'])
 		// render the html from the stored json data
 		if(!frm.is_new() && frm.doc.t_data) {

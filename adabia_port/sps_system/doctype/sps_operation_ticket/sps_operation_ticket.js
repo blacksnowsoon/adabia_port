@@ -4,15 +4,8 @@
 
 frappe.ui.form.on("SPS Operation Ticket", {
 	refresh(frm) {
-		$('.form-stats-likes').remove()
-		$('.form-assignments').remove()
-		if (frm.is_new()) {
-			custom_buttons(frm).setup_btns_for_new_form()
-		} else {
-			custom_buttons(frm).setup_btns_for_saved_form()
-			const status = frm.doc.status;
-			frm_status_change(frm)
-		}
+		const status = frm.doc.status;
+		frm_status_change(frm)
 	},
 	modules(frm) {
 		// handle the approvels list without the managers
