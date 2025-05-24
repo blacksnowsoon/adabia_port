@@ -1,0 +1,30 @@
+{% extends "templates/base.html" %}
+
+
+  {% block content %}
+  <div class="container" >
+    <div>
+      <h3 class="text-center text-info">Simplified Customs Message Parser</h3>
+    </div>
+    <textarea id="xml-input" class="form-control " rows="20" placeholder="قم بنسخ ولصق الرسالة في هذا الحقل"></textarea>
+    <div>{{ _('Read Integration Message:') }} MSG03501</div>
+    <div class="d-flex justify-content-end">
+      <button id="parse-btn" class="btn btn-primary  mt-4 p-2 self-start">تنفيذ</button>
+    </div>
+    <div id="result" class="my-12"></div>
+    <div id="error" class="my-12"></div>
+    <div id="loading"></div>
+  </div>
+  {% endblock %}
+
+  {%- block footer -%}
+    <div class="navbar fixed-bottom navbar-default bg-white border-top ">
+      <div class="container">
+        <div>
+          <small class="">Adabia Port Version 1.0.1</small><br>
+          <small class="">© 2024 GO Smart Soultion. All rights reserved.</small>
+        </div>
+        <p>Powered by <a href="https://gh-portfolio-liard.vercel.app/" target="_blank"><strong>Gharieb Khalifa</strong></a></p>
+      </div>
+    </div>
+  {%- endblock -%}

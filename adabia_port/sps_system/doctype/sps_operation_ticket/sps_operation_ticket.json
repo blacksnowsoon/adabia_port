@@ -53,7 +53,7 @@
    "fieldname": "task_type",
    "fieldtype": "Select",
    "label": "Task Type",
-   "options": "New Request\nBug",
+   "options": "New Request\nBug\nQuery",
    "reqd": 1
   },
   {
@@ -275,7 +275,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-04-14 21:37:37.462681",
+ "modified": "2025-05-20 10:47:03.293514",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Ticket",

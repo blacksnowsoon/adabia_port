@@ -130,7 +130,6 @@ fixtures = [
                 "Employees and Managements",
                 "Most Used Procedures in Customer Technical Support",
                 "User Activity"
-                
             ]]
         }
     },
@@ -192,13 +191,15 @@ add_to_apps_screen = [
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = "/assets/adabia_port/css/custom.css"
-app_include_js = "/assets/adabia_port/js/custom.js"
+app_include_css = ["/assets/adabia_port/css/custom.css"]
+app_include_js = ["/assets/adabia_port/js/custom.js", "/assets/adabia_port/js/api-calls.js", "/assets/adabia_port/js/helpers.js"]
 app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/adabia_port/css/adabia_port.css"
 # web_include_js = "/assets/adabia_port/js/adabia_port.js"
+web_include_css = "/assets/adabia_port/css/custom.css"
+web_include_js = "js/customs_message_parser.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "adabia_port/public/scss/website"
@@ -228,7 +229,8 @@ app_include_icons = [
 
 
 website_route_rules = [
-    # {"from_route": "/icons/", "to_route": "public/icons/"}
+    # {"from_route": "/icons/", "to_route": "public/icons/"},
+    {"from_route": "/app/customs-message-parser", "to_route": "customs_message_parser"}
 ]
 # Home Pages
 # ----------
@@ -308,10 +310,11 @@ home_page = "/home_page/"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-    # "User": "adabia_port.utils.CustomUser"
-# }
+override_doctype_class = {
+# "ToDo": "custom_app.overrides.CustomToDo"
+# "User": "adabia_port.utils.CustomUser"
+ "Customs Message": "adabia_port.overrides.customs_message.CustomsMessageController"
+}
 
 # Document Events
 # ---------------
@@ -368,7 +371,8 @@ override_whitelisted_methods = {
     "frappe.utils.get_list": "adabia_port.utils.get_list",
     "frappe.utils.get_all": "adabia_port.utils.get_all",
     "frappe.utils.update_value": "adabia_port.utils.update_value",
-    "frappe.utils.get_customs_declarations_sum": "adabia_port.utils.get_customs_declarations_sum"
+    "frappe.utils.get_customs_declarations_sum": "adabia_port.utils.get_customs_declarations_sum",
+    "frappe.utils.parse_customs_message": "adabia_port.utils.parse_customs_message",
     # "frappe.utils.pdf.get_pdf": "adabia_port.utils.get_pdf"
 	# "frappe.desk.doctype.event.event.get_events": "adabia_port.event.get_events"
     # 'frappe.client.save': 'adabia_port.adabia_port.doctype.sps_operation_ticket.sps_operation_ticket.validate_duplicate_attachment'
@@ -438,3 +442,5 @@ override_whitelisted_methods = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+def get_timezone():
+    return "Etc/GMT-1"

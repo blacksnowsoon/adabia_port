@@ -11,7 +11,7 @@ def get_context(context):
 	context['issues'] = [item['issue'] for item in issues]
 
 	if doc.t_data :
-		# user_info = t_data = None if doc.t_data is None else json.loads(doc.t_data)
+		
 		# get user_info and devices_info from t_field in IT Ticket
 		user_info = json.loads(doc.t_data)['user_info']
 		devices_info = json.loads(doc.t_data)['devices_info']

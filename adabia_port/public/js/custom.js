@@ -20,7 +20,8 @@ const footer_content =
  
   const kanban_container = $('.kanban');
   
-function custom_rm_el() {
+
+  function custom_rm_el() {
   const remove = (className='', is_hide=true) => {
     if (className) {
       is_hide ? $(`.${className}`).remove(): $(`.${className}`).hide();
@@ -34,10 +35,12 @@ function custom_rm_el() {
 // spenner
 function spenner(){
   const container = document.createElement('div');
-  container.classList.add('container');
+  container.classList.add('d-flex');
+  container.classList.add('justify-content-center');
 	const spenner = document.createElement('div');
 	spenner.classList.add('text-center');
-	spenner.classList.add('spinner-border');
+	spenner.classList.add('spinner-grow');
+	spenner.classList.add('text-info');
 	spenner.classList.add('spinner-border-sm');
 	spenner.classList.add('mb-3');
 	spenner.setAttribute('role', 'status');
@@ -56,7 +59,7 @@ function custom_buttons(frm={}) {
       if (status === 'Closed' && frm.is_new()) {
         frappe.show_alert({
           title: 'Save Error',
-          message: 'You can not save a new record when the status is Closed',
+          message: 'You can not save a New Document when the status is Closed',
           indicator: 'red'
         })
       } else {
@@ -76,7 +79,7 @@ function custom_buttons(frm={}) {
       
       // Open the print URL in a new tab
       window.open(print_url, '_blank');
-    }, __('Print')).addClass("");
+    }, __('Print'))
   }
   
   const toggle_built_in_el_with_date_tag = (data = [[]], is_hide=false) => {
@@ -168,7 +171,7 @@ function getData() {
           args: {
             doctype: doctype,
             filters: filters,
-            fieldname: fields
+            fieldname: fields || "*"
           },
           callback: function(r) {
             if (r.message) {
@@ -180,11 +183,28 @@ function getData() {
           }
         });
       })
+    },
+    get_list: ({doctype='', filters={}, fields=[]}) => {
+      return new Promise((resolve, reject) => {
+        frappe.call({
+          method: 'frappe.client.get_list',
+          args: {
+            doctype: doctype,
+            filters: filters,
+            fields: fields || "*"
+          },
+          callback: function(r) {
+            if (r.message) {
+              resolve(r.message);
+            } else {
+              reject(`No value found for ${doctype}`);
+            }
+          }
+        });
+      })
     }
   }
 }
-
-
 
 
 function fetchValue({doctype='', filters={}, fields=[]}) {
@@ -270,11 +290,15 @@ function fetchAll({doctype='', filters={}, fields=[]}) {
 }
 
 // set def property
-function set_def_property(frm, fields, value) {
+function set_def_property(frm, fields, flag) {
   return {
+    /**
+     * Sets the required property of the given fields based the given flag
+     * @param {boolean} flag - The flag to set the required property to
+     */
     reqd: () => {
       fields.forEach(field => {
-        frm.set_df_property(field, 'reqd', value);
+        frm.set_df_property(field, 'reqd', flag);
       });
     },
     hidden: () => {

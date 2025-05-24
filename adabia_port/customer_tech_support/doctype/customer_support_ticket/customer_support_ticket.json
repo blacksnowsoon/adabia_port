@@ -10,8 +10,8 @@
   "procedure_name",
   "column_break_atpl",
   "status",
-  "priority",
   "column_break_fovk",
+  "priority",
   "section_to_truck",
   "truck_col",
   "truck",
@@ -42,7 +42,6 @@
   {
    "fieldname": "ticket_event",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Ticket Event",
    "mandatory_depends_on": "eval:doc.status=='Closed';",
@@ -57,9 +56,6 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
-   "in_filter": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Status",
    "options": "Open\nPending\nClosed",
    "permlevel": 1,
@@ -70,19 +66,18 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.ticket_event",
    "fieldname": "procedure_name",
    "fieldtype": "Link",
    "label": "Procedure Name",
    "link_filters": "[[\"Customer Support Procedure\", \"ticket_event\",\"=\", \"eval:doc.ticket_event\"]]",
+   "mandatory_depends_on": "eval:doc.ticket_event",
    "options": "Customer Support Procedure",
-   "read_only_depends_on": "eval:doc.status=='Closed';",
-   "reqd": 1
+   "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
    "fieldname": "priority",
    "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Priority",
    "options": "Normal\nHeigh",
    "read_only_depends_on": "eval:doc.status=='Closed';",
@@ -91,6 +86,8 @@
   {
    "fieldname": "truck",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Truck",
    "options": "Truck",
    "read_only_depends_on": "eval:doc.status=='Closed';"
@@ -110,8 +107,11 @@
    "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
+   "columns": 4,
    "fieldname": "company",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Company",
    "options": "Company",
    "read_only_depends_on": "eval:doc.status=='Closed';"
@@ -232,7 +232,7 @@
  ],
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-04-11 17:45:20.710089",
+ "modified": "2025-05-24 16:14:31.549530",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",

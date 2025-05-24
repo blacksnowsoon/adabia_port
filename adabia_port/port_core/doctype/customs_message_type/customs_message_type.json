@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:message_code",
+ "creation": "2025-05-20 20:57:52.566494",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_tvcs",
+  "message_code",
+  "description",
+  "column_break_iipj",
+  "column_break_mphi"
+ ],
+ "fields": [
+  {
+   "fieldname": "message_code",
+   "fieldtype": "Data",
+   "label": "Message Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_iipj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mphi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tvcs",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-20 21:25:07.986831",
+ "modified_by": "Administrator",
+ "module": "Port Core",
+ "name": "Customs Message Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "description"
+}

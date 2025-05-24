@@ -29,7 +29,6 @@ body {
     fieldset { display: table-cell; }
   }
 
-
   .charge-bar {
     position: relative;
     background-color: inherit;
@@ -108,5 +107,18 @@ body {
   .btn-primary:hover {
     outline: 1px solid #a3a6a9;
   }
-
-  
+  .level-right {
+    width: 80px;
+    max-width: 80px;
+  }
+  .list-row-col:has(.indicator) {
+    width: 80px;
+    max-width: 80px;
+  }
+  .list-row {
+    padding: 20px 15px 20px 0px;
+    height: 50px;
+  }
+  .ellipsis {
+    white-space: wrap;
+  }
