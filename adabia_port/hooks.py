@@ -136,7 +136,13 @@ fixtures = [
     {
         "dt":"Workspace", "filters" : { 
             "name":["in", [
-                
+                "Main",
+                "Customers Technical Support",
+                "SPS OP Space",
+                "Charging and DisCharging",
+                "Infra - IT",
+                "Gates",
+
             ]]
         }
     },

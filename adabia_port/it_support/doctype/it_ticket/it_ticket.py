@@ -49,7 +49,6 @@ class ITTicket(Document):
 			send_email(message_data)
 		
 
-
 def send_email(message_data):
 	recipients = frappe.db.get_list('User', filters={'role': "IT System Admin"} , fields=['email'], pluck="email")
 	recipients.append(message_data['assigned_to'])

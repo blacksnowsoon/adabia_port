@@ -23,16 +23,16 @@
  {
   "docstatus": 0,
   "doctype": "Ticket Event",
-  "event": "Regular",
-  "modified": "2024-09-27 17:43:48.894278",
-  "name": "EV-01"
+  "event": "To Company",
+  "modified": "2024-09-27 19:11:18.269390",
+  "name": "EV-11"
  },
  {
   "docstatus": 0,
   "doctype": "Ticket Event",
-  "event": "To Company",
-  "modified": "2024-09-27 19:11:18.269390",
-  "name": "EV-11"
+  "event": "Regular",
+  "modified": "2024-09-27 17:43:48.894278",
+  "name": "EV-01"
  },
  {
   "docstatus": 0,

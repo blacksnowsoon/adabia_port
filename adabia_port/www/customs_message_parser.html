@@ -1,7 +1,7 @@
-{% extends "templates/base.html" %}
+{% extends "templates/emails/base.html" %}
 
 
-  {% block content %}
+  {%- block content -%}
   <div class="container" >
     <div>
       <h3 class="text-center text-info">Simplified Customs Message Parser</h3>
@@ -15,7 +15,7 @@
     <div id="error" class="my-12"></div>
     <div id="loading"></div>
   </div>
-  {% endblock %}
+  {%- endblock -%}
 
   {%- block footer -%}
     <div class="navbar fixed-bottom navbar-default bg-white border-top ">

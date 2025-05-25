@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title><h4 class="text-right">{{_("Notice of quantity increase in import manifest")}}</h4></title>
+</head>
+
+<body dir="rtl">
+  <table class="body-table {% if header or with_container %} with-container {% endif %}" cellpadding="0" cellspacing="0">
+        <table class="table table-bordered text-right">
+          <tr>
+            <td class="body-content" align="center" valign="top">
+              <table class="email-container" border="0" cellpadding="0" cellspacing="0"
+                width="{% if header %} 600 {% else %} 100% {% endif %}">
+                {% if brand_logo %}
+                <tr>
+                  <td width="40" align="left" valign="middle">
+                    <a href="{{ site_url or '' }}">
+                      <img
+                        src="{{ brand_logo or '/assets/adabia_port/images/favicon-512x512.png' }}"
+                        height="40"
+                        class="brand-logo"
+                      />
+                    </a>
+                  </td>
+                </tr>
+                {% endif %}
+                <tr>
+                  <td valign="top">
+                      <h3 class="text-right">اشعار زيادة الكمية منافيست الوارد</h3>
+                      <h4 class="text-center">Ticket Number: {{doc.id}}</h4>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">
+                    <div>
+                      {% if doc.voyage_number %}
+                        <tr>
+                            <td><strong>{{_("رقم الطريق")}}</strong></td>
+                            <td>{{doc.voyage_number}}</td>            
+                        </tr>
+                      {% endif %}
+                      {% if doc.ship %}
+                        <tr>
+                            <td><strong>{{_("اسم السفينة")}}</strong></td>
+                            <td>{{ doc.ship }}</td>
+                        </tr>
+                      {% endif %}
+                      {% if doc.notes %}
+                        <tr>
+                            <td><strong>{{_("الملاحظات")}}</strong></td>
+                            <td>{{doc.notes}}</td>
+                        </tr>
+                      {% endif %}
+                    </div>	
+                  </td>
+                </tr>
+              </table>
+            </td>
+		      </tr>  
+        </table>
+    </div>
+  </table>
+</body>
