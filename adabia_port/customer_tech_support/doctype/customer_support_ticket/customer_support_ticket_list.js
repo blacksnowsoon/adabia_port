@@ -1,5 +1,10 @@
 
-frappe.listview_settings['Customer Support Ticket'] = { 
+frappe.listview_settings['Customer Support Ticket'] = {
+    hide_name_column: true,
+    hide_name_filter: true,
+    formatters: {
+        
+    },
     onload: function(listview){
         
     },
@@ -9,18 +14,6 @@ frappe.listview_settings['Customer Support Ticket'] = {
     render_report_view: function(listview){
         // Apply immediately on report view
         console.log("report view rendred",listview)
-    }
+    },
+    
 };
-// frappe.reportview_settings['Customer Support Ticket'] = { 
-//     onload: function(listview){
-//         console.log('report view loaded')
-//     },
-//     refresh: function(listview){
-//         // Apply immediately on refresh
-//         console.log('report view refreshed')
-//     },
-//     render_report_view: function(listview){
-//         // Apply immediately on report view
-//         console.log("report view rendred",listview)
-//     }
-// };
