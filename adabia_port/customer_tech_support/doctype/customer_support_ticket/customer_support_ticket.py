@@ -8,7 +8,7 @@ from frappe.model.document import Document
 class CustomerSupportTicket(Document):
 	
 	def on_update(self):
-		if self.status == "Open" and self.procedure_name=="CSP-2512":
+		if self.status == "Open" and self.procedure_name == "CSP-2430" or self.procedure_name == "2512":
 			message_data = {
 				"id": self.name,
 				"voyage_number": self.voyage_number,
