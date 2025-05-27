@@ -46,7 +46,7 @@ function getData(doctype) {
     get_doc_values: ({filters={}, fields=[]}) => {
       return new Promise((resolve, reject) => {
         frappe.call({
-          method: 'frappe.client.get_value',
+          method: 'adabia_port.utils.get_value',
           args: {
             doctype: doctype,
             filters: filters,
@@ -55,6 +55,27 @@ function getData(doctype) {
           callback: function(r) {
             if (r.message) {
               console.log('get_doc_values', r.message)
+              resolve(r.message);
+            } else {
+              reject(`No value found for ${doctype}`);
+            }
+          }
+        });
+      })
+    },
+    get_value: ({filters={}, fields}) => {
+      console.log(doctype, filters, fields)
+      return new Promise((resolve, reject) => {
+        frappe.call({
+          method: 'adabia_port.utils.get_value',
+          args: {
+            doctype: doctype,
+            filters: filters,
+            fields: fields
+          },
+          callback: function(r) {
+            console.log(r)
+            if (r.message) {
               resolve(r.message);
             } else {
               reject(`No value found for ${doctype}`);
@@ -88,6 +109,10 @@ function getData(doctype) {
           }
         });
       })
+    },
+
+    get_all({filters={}, fields=[]}) {
+      return this.get_list({filters, fields});
     },
     parse_xml_message: (xml_string) => {
       return new Promise((resolve, reject) => {

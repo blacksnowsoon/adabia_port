@@ -303,12 +303,12 @@ function set_def_property(frm, fields, flag) {
     },
     hidden: () => {
       fields.forEach(field => {
-        frm.set_df_property(field, 'hidden', value);
+        frm.set_df_property(field, 'hidden', flag);
       });
     },
     read_only: () => {
       fields.forEach(field => {
-        frm.set_df_property(field, 'read_only', value);
+        frm.set_df_property(field, 'read_only', flag);
       });
     },
     reset_fields: () => {
@@ -407,13 +407,13 @@ function clean_wrapper_innerHTML(frm, fields=[]) {
 }
 
 // alert messages
-function err_message( message) {
-  return frappe.msgprint({
-    title: __('Error'),
-    indicator: 'red',
-    message: __(message)
-  });
-}
+// function err_message( message) {
+//   return frappe.msgprint({
+//     title: __('Error'),
+//     indicator: 'red',
+//     message: __(message)
+//   });
+// }
 // add double click event to rows in grid table
 function double_click_to_open_row_form(frm, field) {
   frm.fields_dict[field].grid.wrapper.on('dblclick', '.grid-row', function(event) {

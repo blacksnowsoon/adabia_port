@@ -7,7 +7,8 @@ frappe.ui.form.on("Truck Without Reservation", {
     frm.set_value('ticket_event', 'EV-10')
     if (frm.is_new()) {
       frm.set_value('status', 'Open');
-			set_def_property(frm, ['status'], 1).read_only()
+			// set_def_property(frm, ['status'], 1).read_only()
+      set_property(frm, 'read_only', 1).apply_on(['status'])
     } 
 	},
   entrance_time(frm) {
@@ -17,25 +18,26 @@ frappe.ui.form.on("Truck Without Reservation", {
     format_time_field(frm, "checkout_time")
   },
   validate : async(frm)=> {
-    const { get_doc_values } = getData()
-    const { name } = await get_doc_values({doctype: "Truck Without Reservation", filters: {truck: frm.doc.truck, machine:frm.doc.machine, status: "Open", truck_tail: frm.doc.truck_tail}, fields: ["name"]})
+    
+    const res = await getData("Truck Without Reservation").get_list({filters: {truck: frm.doc.truck, machine:frm.doc.machine || '', status: "Open", truck_tail: frm.doc.truck_tail || ""}, fields: ["name"]})
+    
     const ent_date = new Date(frm.doc.entrance_date + " " + frm.doc.entrance_time).getTime()
     const out_date = new Date(frm.doc.checkout_date + " " + frm.doc.checkout_time).getTime()
     const now = new Date().getTime()
 
     if (ent_date > out_date) {
       // err_message("تاريخ الخروج يجب ان يكون اكبر من تاريخ الدخول")
-      err_message(_("Checkout date must be greater than entrance date"))
+      err_message("Checkout date must be greater than entrance date")
       frappe.validated = false
     }
     if (out_date > now) {
       // err_message("تاريخ الخروج يجب ان يكون اقل من تاريخ اليوم")
-      err_message(_("Checkout date must be less than today"))
+      err_message("Checkout date must be less than today")
       frappe.validated = false
     }
-    if(name && frm.is_new()) {
+    if(res.length > 0 && frm.doc.status === "Open") {
       // err_message("هناك سجل مفتوح لنفس الشاحنة / او المعدة")
-      err_message(_("There is an open record for the same truck or machine"))
+      err_message("There is an open record for the same truck or machine")
       frappe.validated = false
     }
     if (frm.is_new() && frm.doc.status === "Open") {

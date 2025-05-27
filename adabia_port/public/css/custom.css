@@ -117,9 +117,19 @@ body {
   max-width: 30%; /* Fallback */
 }
   .list-row {
-    padding: 20px 15px 20px 0px;
+    /* padding: 20px 15px 20px 0px; */
     height: 50px;
   }
   /* .ellipsis {
     white-space: wrap;
   } */
+
+  .indicator-pill[data-filter="task_type,=,Bug"] {
+    background-color: rgba(255, 0, 0, 0.415);
+  }
+  .indicator-pill[data-filter="task_type,=,New Request"] {
+    background-color: rgba(0, 255, 220, 0.415);
+  }
+  .indicator-pill[data-filter="task_type,=,Query"] {
+    background-color: rgba(40, 255, 0, 0.415);
+  }

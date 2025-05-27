@@ -1,11 +1,13 @@
 // Copyright (c) 2024, Gharieb kalifa and contributors
 // For license information, please see license.txt
 
+// status [Open, In Progress, Cancelled, Closed]
+
 
 frappe.ui.form.on("SPS Operation Ticket", {
 	refresh(frm) {
-		const status = frm.doc.status;
-		frm_status_change(frm)
+		const config = form_config()
+		frm_display(frm, config)
 	},
 	modules(frm) {
 		// handle the approvels list without the managers
@@ -38,17 +40,13 @@ frappe.ui.form.on("SPS Operation Ticket", {
 			set_json_field_value(frm, 'approvals', removed_modules);
 		}
 	},
-	before_save(frm) {
-		
-		
-		
-	},
 	status(frm) {
 		frm_status_change(frm)
 	},
 	validate(frm) {
 		if (!frm.doc.in_progress_since && frm.doc.status === "Closed") {
-			err_message(`يجب حفظ المهام قيد التنفيذ قبل الاغلاق`)
+			// `يجب حفظ المهام قيد التنفيذ قبل الاغلاق`
+			err_message("Tasks must be saved as In Progress before closing it.");
 			// cancel save form
 			frappe.validated = false;
 			
@@ -59,8 +57,8 @@ frappe.ui.form.on("SPS Operation Ticket", {
 // composion of frm status to handle the approvals 
 function frm_status_change(frm) {
 	const status = frm.doc.status
-	 if (status === "In Progress") {
-		
+	 if (status === "In Progress" && isFormValid(frm)) {
+
 		toggle_frm(frm, 0)
 		if (!frm.doc.in_progress_since) {
 		frappe.show_alert({
@@ -75,7 +73,7 @@ function frm_status_change(frm) {
 		} else {
 			toggle_frm(frm, 1)
 		}
-	}
+	} 
 	
 }
 
@@ -109,4 +107,44 @@ function toggle_frm(frm, disable) {
 			frm.set_df_property(field.df["fieldname"], 'read_only', disable)
 		
 	});
+}
+
+function form_config() {
+	const config = {
+		"open": {
+			show: ['modules'],
+			require: ['modules'],
+			read_only: false
+		},
+		'In Progress': {
+			show: ['in_progress_since'],
+			require: ['in_progress_since'],
+			read_only: true
+		},
+		'Closed': {
+			show: ['patch_num', 'developed_by', 'tested_by'],
+			require: ['patch_num', 'developed_by', 'tested_by'],
+			read_only: true
+		},
+		"Cancelled": {
+			show: ['cancel_reason'],
+			require: ['cancel_reason'],
+			read_only: true
+		}
+	};
+
+	return config
+}
+
+function frm_display(frm, config) {
+	switch (frm.doc.status) {
+		case 'Open':
+			set_property(frm, 'read_only', config['Open'].read_only).apply_on(frm['fields'].map(f => f.df.fieldname !== 'status' && f.df.fieldname));
+			break;
+		case 'In Progress':
+			break;
+		case 'Cancelled' || 'Closed':
+			set_property(frm, 'read_only', config['Cancelled'].read_only).apply_on(frm['fields'].map(f => f.df.fieldname !== 'status' && f.df.fieldname));
+			break;
+	}
 }

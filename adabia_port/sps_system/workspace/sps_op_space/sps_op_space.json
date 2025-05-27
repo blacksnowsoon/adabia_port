@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"h_6ALxVqfr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Operation</span>\",\"col\":12}},{\"id\":\"ZLa8ZDtGSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"3ld3WgmpNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"View Tickets\",\"col\":3}},{\"id\":\"aHxbSTTQ6L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Modules\",\"col\":3}},{\"id\":\"b2QE4BzEyw\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XipeUBYI6w\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>In Progress</b></span>\",\"col\":12}},{\"id\":\"_Dn8-E-yp0\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bugs In Progress\",\"col\":6}},{\"id\":\"81gYiPN7Th\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests In Progress\",\"col\":6}},{\"id\":\"jA1Jf2AzJN\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oDSUarCKcv\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Opened</b></span>\",\"col\":12}},{\"id\":\"b-5KMUQ7Ny\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bugs\",\"col\":6}},{\"id\":\"_J3XCB7Arq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests\",\"col\":6}}]",
+ "content": "[{\"id\":\"h_6ALxVqfr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Operation</span>\",\"col\":12}},{\"id\":\"ZLa8ZDtGSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Task\",\"col\":3}},{\"id\":\"3ld3WgmpNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tasks List\",\"col\":3}},{\"id\":\"aHxbSTTQ6L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Modules\",\"col\":3}},{\"id\":\"b2QE4BzEyw\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XipeUBYI6w\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>In Progress</b></span>\",\"col\":12}},{\"id\":\"_Dn8-E-yp0\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bugs In Progress\",\"col\":4}},{\"id\":\"81gYiPN7Th\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests In Progress\",\"col\":4}},{\"id\":\"xI8D0ym8Wx\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Queries In Progress\",\"col\":4}},{\"id\":\"jA1Jf2AzJN\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oDSUarCKcv\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Opened</b></span>\",\"col\":12}},{\"id\":\"b-5KMUQ7Ny\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bugs\",\"col\":4}},{\"id\":\"_J3XCB7Arq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests\",\"col\":4}},{\"id\":\"5aq3nLFiqA\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Queries\",\"col\":4}}]",
  "creation": "2024-10-25 18:55:11.204728",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "SPS OP Space",
  "links": [],
- "modified": "2025-05-20 11:44:52.023819",
+ "modified": "2025-05-27 13:28:11.069268",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS OP Space",
@@ -22,6 +22,16 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [
+  {
+   "document_type": "SPS Operation Ticket",
+   "label": "Queries In Progress",
+   "quick_list_filter": "[[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false],[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Query\",false]]"
+  },
+  {
+   "document_type": "SPS Operation Ticket",
+   "label": "Queries",
+   "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Query\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"Open\",false]]"
+  },
   {
    "document_type": "SPS Operation Ticket",
    "label": "Bugs In Progress",
@@ -54,17 +64,17 @@
  "sequence_id": 5.0,
  "shortcuts": [
   {
-   "color": "Orange",
-   "doc_view": "List",
-   "label": "View Tickets",
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Task",
    "link_to": "SPS Operation Ticket",
    "stats_filter": "[]",
    "type": "DocType"
   },
   {
-   "color": "Grey",
-   "doc_view": "New",
-   "label": "New Ticket",
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Tasks List",
    "link_to": "SPS Operation Ticket",
    "stats_filter": "[]",
    "type": "DocType"

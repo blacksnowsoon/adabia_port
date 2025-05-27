@@ -63,6 +63,13 @@ def update_value(doctype, docname, fieldname, value):
     doc.db_set(fieldname, value)
     doc.save()
 
+@frappe.whitelist()
+def get_value(doctype, filters, fieldname='name'):
+    res = frappe.db.get_value(doctype, filters, fieldname)
+    frappe.errprint(res)
+    return res
+    # return frappe.db.get_doc(doctype, None, filters)
+
 def award_energy_points(doc, method):
     if doc.status == 'Pending':
         # Award energy points

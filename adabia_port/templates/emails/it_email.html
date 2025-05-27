@@ -1,33 +1,33 @@
 <div style="margin: 1rem;">
     <h5 class="text-center">IT Ticket Number: {{ doc.id }}</h5>
-    <h6 class="text-center">Created At : {{ doc.created_at }}</h6>
+    <h6 class="text-center">{{_("Created At")}} : {{ doc.created_at }}</h6>
         
-    <table style="outline: 1px solid gray; width: 100%; padding: 1rem;  box-shadow: 3px 3px 6px 0px rgb(42, 42, 42);" class="table table-bordered">
+    <table style="outline: 1px solid gray; width: 100%; padding: 1rem;  box-shadow: 3px 3px 6px 0px rgb(42, 42, 42);" class="table table-bordered" dir="rtl">
         <!-- Assign To -->
         <tr>
             {% if doc.assigned_to %}
-                <td><strong>Assigned To</strong></td>
+                <td><strong>{{_("Assigned To")}}</strong></td>
                 <td>{{ doc.assigned_to_full_name }}</td>
             {% endif %}
         </tr>
         <!-- Employee -->
         <tr>
             {% if doc.employee_name %}
-                <td><strong>To Employee</strong></td>
+                <td><strong>{{_("Employee Name")}}</strong></td>
                 <td>{{ doc.employee_name | default('Unknown Employee') }}</td>
             {% endif %}
         </tr>
         <!-- Department -->
         <tr>
             {% if doc.department %}
-                <td><strong>Department</strong></td>
+                <td><strong>{{_("Department")}}</strong></td>
                 <td>{{ doc.department | default('Unknown Department') }}</td>
             {% endif %}
         </tr>
         <!-- Locations -->
         <tr>
             {% if doc.locations %}
-                <td><strong>Locations</strong></td>
+                <td><strong>{{_("Locations")}}</strong></td>
                 <td>
                     {% for location in doc.locations %}
                         {{ location | default('Unknown Location') }} 
@@ -39,7 +39,7 @@
         <!-- Devices -->
         <tr>
             {% if doc.devices %}
-                <td><strong>Devices</strong></td>
+                <td><strong>{{_("Devices")}}</strong></td>
                  <td>
                     {% for device in doc.devices %}
                         {{ device | default('Unknown Device') }}
@@ -52,14 +52,14 @@
         <!-- company -->
          <tr>
             {% if doc.company %}
-                <td><strong>To Company</strong></td>
+                <td><strong>{{_("To Company")}}</strong></td>
                 <td>{{ doc.company | default('Unknown Company') }}</td>
             {% endif %}
          </tr>
         <!-- Issues -->
         <tr>
             {% if doc.issues %}
-            <td><strong>Issue About</strong></td>
+            <td><strong>{{_("Issues")}}</strong></td>
             <td>
                 {% for issue in doc.issues %}
                     {{ issue | default('Unknown Issue') }} 
@@ -71,18 +71,18 @@
         <!-- Description -->
         <tr>
             {% if doc.description %}
-                <td><strong>Description</strong></td>
+                <td><strong>{{_("Description")}}</strong></td>
                 <td>{{ doc.description | default('No Issue Description Provided') }}</td>
             {% endif %}
         </tr>
         <tr>
             {% if doc.what_implemented %}
-                <td><strong>What Implemented</strong></td>
+                <td><strong>{{_("What Implemented")}}</strong></td>
                 <td>{{ doc.what_implemented | default('The Issue Not Solved yet') }}</td>
             {% endif %}
         </tr>
     </table>
-    <p class="text-center text-red">Please Take Your Action & Close the Ticket</p>
+    <p class="text-center text-red">{{_("Task Status")}} {{ doc.status }}</p>
     <p class="text-center text-blue"><small>Thank You</small></p>
     </section>
 </div>

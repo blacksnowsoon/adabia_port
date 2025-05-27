@@ -26,7 +26,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Basic Data",
-   "link_count": 5,
+   "link_count": 7,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -80,9 +80,29 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SPS Ports",
+   "link_count": 0,
+   "link_to": "SPS-Port",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "MTS Ports",
+   "link_count": 0,
+   "link_to": "MTS-Port",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-05-21 18:40:00.152611",
+ "modified": "2025-05-27 11:17:20.047253",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customers Technical Support",

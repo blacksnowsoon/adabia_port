@@ -60,3 +60,29 @@ function isFormValid(frm) {
   
   return isValid; // All checks passed
 }
+
+/**
+ * Shows an error message to the user.
+ * @param {string} message - The error message to show.
+ * @returns {frappe.ui.Dialog} - The error message dialog.
+ */
+function err_message(message) {
+  return frappe.msgprint({
+    title: __('Error'),
+    indicator: 'red',
+    message: __(message)
+  });
+}
+
+/**
+ * Shows a alert message to the user with indicator for 5 seconds.
+ * @param {string} message - The message to show.
+ * @param {string} indicator - The indicator color to use (e.g. 'green', 'red', 'yellow').
+ * @returns {frappe.ui.Dialog} - The alert dialog.
+ */
+function show_alert(message, indicator){
+  return frappe.show_alert({
+			message: __(message),
+			indicator: indicator
+		}, 5);
+  } 

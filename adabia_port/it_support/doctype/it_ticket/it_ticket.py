@@ -19,6 +19,7 @@ class ITTicket(Document):
 	def on_update(self):
 		if self.status == "Closed":
 			tkt_id = self.name
+			status = self.status
 			dt = datetime.strptime(self.creation, "%Y-%m-%d %H:%M:%S.%f")
 			created_at = dt.strftime("%d-%m-%Y at %H:%M")
 			description = self.description
@@ -35,6 +36,7 @@ class ITTicket(Document):
 				issues.append(frappe.db.get_value('Tech Issue', issue.issue_type, 'issue_type'))
 			message_data = {
 				"id": tkt_id,
+				"status": status,
 				"assigned_to": self.assign_to,
 				"employee_name": employee_data.emp_name , 
 				"department": employee_data.depart_name , 

@@ -376,6 +376,7 @@ override_whitelisted_methods = {
     "frappe.utils.get_document": "adabia_port.utils.get_document",
     "frappe.utils.get_list": "adabia_port.utils.get_list",
     "frappe.utils.get_all": "adabia_port.utils.get_all",
+    "frappe.utils.get_value": "adabia_port.utils.get_value",
     "frappe.utils.update_value": "adabia_port.utils.update_value",
     "frappe.utils.get_customs_declarations_sum": "adabia_port.utils.get_customs_declarations_sum",
     "frappe.utils.parse_customs_message": "adabia_port.utils.parse_customs_message",
