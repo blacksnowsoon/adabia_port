@@ -46,7 +46,7 @@ function getData(doctype) {
     get_doc_values: ({filters={}, fields=[]}) => {
       return new Promise((resolve, reject) => {
         frappe.call({
-          method: 'adabia_port.utils.get_value',
+          method: 'frappe.client.get_value',
           args: {
             doctype: doctype,
             filters: filters,
