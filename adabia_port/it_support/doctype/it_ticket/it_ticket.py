@@ -24,17 +24,20 @@ class ITTicket(Document):
 			created_at = dt.strftime("%d-%m-%Y at %H:%M")
 			description = self.description
 			what_implemented = self.what_implemented
-			assigned_to_full_name = frappe.get_value('User', self.assign_to, 'full_name')
-			employee_data = frappe.get_value('Employee', self.employee, ['emp_name', 'depart_name.depart_name'], as_dict=1)
-			devices_locations = []
-			devices = []
-			for device in self.emp_devices:
-				devices_locations.append(frappe.db.get_value('Device', device.device, 'location'))
-				devices.append(device.device)
 			issues = []
 			for issue in self.issues:
 				issues.append(frappe.db.get_value('Tech Issue', issue.issue_type, 'issue_type'))
-			message_data = {
+			assigned_to_full_name = frappe.get_value('User', self.assign_to, 'full_name')
+			event = frappe.db.get_value('Ticket Event', self.ticket_event, ['event'], pluck=1)
+			if (event == 'Port Management'):
+				employee_data = frappe.get_value('Employee', self.employee, ['emp_name', 'depart_name.depart_name'], as_dict=1)
+				devices_locations = []
+				devices = []
+				for device in self.emp_devices:
+					devices_locations.append(frappe.db.get_value('Device', device.device, 'location'))
+					devices.append(device.device)
+				
+				message_data = {
 				"id": tkt_id,
 				"status": status,
 				"assigned_to": self.assign_to,
@@ -48,6 +51,22 @@ class ITTicket(Document):
 				"issues": issues,
 				'created_at': created_at
 			}
+			elif (event == 'To Company'):
+				
+				company = frappe.db.get_value('Company', self.company, ['company_name'])
+				
+				message_data = {
+				"id": tkt_id,
+				"status": status,
+				"assigned_to": self.assign_to,
+				"issues": issues,
+				"description": description,
+				"what_implemented": what_implemented,
+				"assigned_to_full_name": assigned_to_full_name, 
+				'created_at': created_at,
+				'company': company
+			}
+			
 			send_email(message_data)
 		
 

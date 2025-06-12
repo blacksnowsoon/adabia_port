@@ -18,9 +18,7 @@ const footer_content =
 
   $('footer').html(footer_content)
  
-  const kanban_container = $('.kanban');
   
-
   function custom_rm_el() {
   const remove = (className='', is_hide=true) => {
     if (className) {
@@ -32,22 +30,7 @@ const footer_content =
     remove
   }
 }
-// spenner
-function spenner(){
-  const container = document.createElement('div');
-  container.classList.add('d-flex');
-  container.classList.add('justify-content-center');
-	const spenner = document.createElement('div');
-	spenner.classList.add('text-center');
-	spenner.classList.add('spinner-grow');
-	spenner.classList.add('text-info');
-	spenner.classList.add('spinner-border-sm');
-	spenner.classList.add('mb-3');
-	spenner.setAttribute('role', 'status');
-	spenner.setAttribute('aria-hidden', 'true');
-  container.appendChild(spenner);
-	return container
-}
+
 // ----------------------------------------------------------------------------------------
 // composition custom buttons
 function custom_buttons(frm={}) {
@@ -351,21 +334,26 @@ function get_customs_declarations_sum(parent, operation_type, operation_handler,
 
 // -----------------------------------------------------------------------------
 // append html code to it's field if cba (clean before append) will clean the wrapper
+
+/**
+ * Renders HTML content into a specified form field by generating a two-column grid from the provided data.
+ *
+ * @param {Object} frm - The form object containing field definitions and wrappers.
+ * @param {Array|Object} data - The data to be rendered in the grid.
+ * @param {string} field - The name of the field where the HTML will be rendered.
+ * @param {boolean} cba - If true, clears the existing HTML content before rendering.
+ */
 function render_html(frm, data, field, cba) {
-	cba ? frm.fields_dict[field].wrapper.innerHTML = "" : null
+	cba ? frm.fields_dict[field].$wrapper.html = "" : null
   frm.fields_dict[field].wrapper.classList.add('grid');
-  
   // generate the table
 	frm.fields_dict[field].wrapper.appendChild(generat_2_col_rows(data));
-  
-  
 }
 // generate table data row
 function generat_2_col_rows(rows) {
   const table = document.createElement('table');
   table.classList.add('table');
   table.classList.add('table-bordered');
-  
   const tbody = document.createElement('tbody');
   rows.forEach(row => !!row.value ?  tbody.appendChild(generat_row(row)): null );
   table.appendChild(tbody);
@@ -394,26 +382,13 @@ function setup_filter(frm, doc, filter){
 }
 
 // set JSON Field Value
-function set_json_field_value(frm, fieldname, value) {
-	frm.set_value(fieldname,JSON.stringify(value));
-}
-// parse JSON Value
-function parse_json_value(value) {
-  return JSON.parse(value)
+
+
+function clean_wrapper_content(frm, fields=[]) {
+  fields.forEach(field => frm.fields_dict[field].$wrapper.html = "")
 }
 
-function clean_wrapper_innerHTML(frm, fields=[]) {
-  fields.forEach(field => frm.fields_dict[field].wrapper.innerHTML = "")
-}
 
-// alert messages
-// function err_message( message) {
-//   return frappe.msgprint({
-//     title: __('Error'),
-//     indicator: 'red',
-//     message: __(message)
-//   });
-// }
 // add double click event to rows in grid table
 function double_click_to_open_row_form(frm, field) {
   frm.fields_dict[field].grid.wrapper.on('dblclick', '.grid-row', function(event) {

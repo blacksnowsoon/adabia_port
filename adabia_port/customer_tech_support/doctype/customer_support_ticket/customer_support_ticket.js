@@ -18,7 +18,8 @@ frappe.ui.form.on('Customer Support Ticket', {
 			// http://10.0.95.56:8000/printview?doctype=Customer%20Support%20Ticket&name=TKT-002429&trigger_print=1&format=Standard&no_letterhead=1&letterhead=No%20Letterhead&settings=%7B%7D&_lang=العربية
 			custom_print(null, 'Global Header', "plain")
 
-		  }
+		}
+		
 	},
 	ticket_event(frm) {
 		toggleDetails(frm)
@@ -80,7 +81,8 @@ frappe.ui.form.on('Customer Support Ticket', {
 
 	// 5. Only return false if we want to block save
 	return !allow_save;
-	}
+	},
+	
 })
 
 // to show and hide the sections based on ticket event and reset the form cache on event change

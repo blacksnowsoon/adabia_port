@@ -15,8 +15,8 @@
   "section_to_truck",
   "truck_col",
   "truck",
-  "truck_tail",
   "column_break_uood",
+  "truck_tail",
   "column_break_offd",
   "section_to_machine",
   "machine_col",
@@ -26,14 +26,15 @@
   "section_to_ship",
   "ship_col",
   "voyage_number",
-  "ship",
   "column_break_pkea",
+  "ship",
   "column_break_yvrn",
   "section_to_company",
   "company_col",
   "company",
   "payment_col",
   "amount",
+  "column_break_nmiy",
   "receipt_number",
   "section_break_qedm",
   "notes"
@@ -150,13 +151,11 @@
   },
   {
    "fieldname": "truck_col",
-   "fieldtype": "Column Break",
-   "label": "Truck Data"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "ship_col",
-   "fieldtype": "Column Break",
-   "label": "Ship Data"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_pkea",
@@ -181,7 +180,6 @@
    "fieldname": "section_to_truck",
    "fieldtype": "Section Break",
    "hidden": 1,
-   "label": "To Truck",
    "read_only_depends_on": "eval:doc.status=='Closed';"
   },
   {
@@ -191,8 +189,7 @@
   {
    "fieldname": "section_to_machine",
    "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "To Machine"
+   "hidden": 1
   },
   {
    "fieldname": "column_break_wrtu",
@@ -205,8 +202,7 @@
   {
    "fieldname": "section_to_ship",
    "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "To Ship"
+   "hidden": 1
   },
   {
    "fieldname": "column_break_yvrn",
@@ -216,23 +212,24 @@
    "fieldname": "section_to_company",
    "fieldtype": "Section Break",
    "hidden": 1,
-   "label": "To Company",
    "show_on_timeline": 1
   },
   {
    "fieldname": "company_col",
-   "fieldtype": "Column Break",
-   "label": "Company Data"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "payment_col",
-   "fieldtype": "Column Break",
-   "label": "Payment Data"
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nmiy",
+   "fieldtype": "Column Break"
   }
  ],
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-05-24 16:14:31.549530",
+ "modified": "2025-06-09 14:29:14.490267",
  "modified_by": "Administrator",
  "module": "Customer Tech Support",
  "name": "Customer Support Ticket",

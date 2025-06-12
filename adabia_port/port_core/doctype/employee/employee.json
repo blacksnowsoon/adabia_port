@@ -7,9 +7,11 @@
  "field_order": [
   "have_internet_access",
   "emp_name",
+  "english_name",
   "management",
   "job_title",
   "shift",
+  "system_user",
   "column_break_qmfm",
   "disabled",
   "user_name",
@@ -123,10 +125,21 @@
    "fieldtype": "Data",
    "label": "Department Name in Eng",
    "read_only": 1
+  },
+  {
+   "fieldname": "system_user",
+   "fieldtype": "Link",
+   "label": "System User",
+   "options": "User"
+  },
+  {
+   "fieldname": "english_name",
+   "fieldtype": "Data",
+   "label": "English Name"
   }
  ],
  "links": [],
- "modified": "2024-12-09 20:10:05.821265",
+ "modified": "2025-06-06 01:27:05.877346",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Employee",

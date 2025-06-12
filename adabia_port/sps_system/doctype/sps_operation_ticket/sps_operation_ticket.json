@@ -33,8 +33,10 @@
   "is_repeated",
   "section_break_zprv",
   "title",
+  "canceled_reason",
   "column_break_jvpa",
   "requestor",
+  "assign_to",
   "section_details",
   "approvals",
   "details",
@@ -45,8 +47,8 @@
   "requirements",
   "section_description",
   "description",
-  "section_break_qnxz",
-  "pdf"
+  "pdf_view_tab",
+  "cr_preview"
  ],
  "fields": [
   {
@@ -98,8 +100,9 @@
   },
   {
    "fieldname": "requestor",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Requestor / BY",
+   "options": "Employee",
    "reqd": 1
   },
   {
@@ -116,7 +119,6 @@
   {
    "fieldname": "section_details",
    "fieldtype": "Section Break",
-   "label": "Details",
    "read_only_depends_on": "eval:doc.status=='Closed'"
   },
   {
@@ -143,12 +145,7 @@
    "label": "Details"
   },
   {
-   "fieldname": "pdf",
-   "fieldtype": "HTML",
-   "label": "PDF"
-  },
-  {
-   "default": "0",
+   "default": "1",
    "fieldname": "use_editor",
    "fieldtype": "Check",
    "label": "Use Editor"
@@ -159,10 +156,6 @@
    "fieldtype": "Tab Break",
    "label": "Editor",
    "show_on_timeline": 1
-  },
-  {
-   "fieldname": "section_break_qnxz",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "modules",
@@ -194,8 +187,7 @@
   {
    "fieldname": "patch_num",
    "fieldtype": "Data",
-   "label": "Patch Num",
-   "mandatory_depends_on": "eval:doc.status==\"Closed\" "
+   "label": "Patch Num"
   },
   {
    "fieldname": "column_break_ksei",
@@ -204,15 +196,13 @@
   {
    "fieldname": "developed_by",
    "fieldtype": "Data",
-   "label": "Developed By",
-   "mandatory_depends_on": "eval:doc.status==\"Closed\""
+   "label": "Developed By"
   },
   {
    "fieldname": "column_break_vbxw",
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:doc.status==\"Closed\" || doc.status==\"In Progress\"",
    "fieldname": "complete_data_section",
    "fieldtype": "Section Break",
    "label": "Complete By"
@@ -232,8 +222,7 @@
   {
    "fieldname": "tested_by",
    "fieldtype": "Data",
-   "label": "Tested By",
-   "mandatory_depends_on": "eval:doc.status==\"Closed\""
+   "label": "Tested By"
   },
   {
    "fieldname": "duration_time",
@@ -273,12 +262,35 @@
   {
    "fieldname": "column_break_gpux",
    "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:!doc.__unsaved",
+   "fieldname": "pdf_view_tab",
+   "fieldtype": "Tab Break",
+   "label": "PDF View"
+  },
+  {
+   "fieldname": "cr_preview",
+   "fieldtype": "HTML",
+   "label": "CR Preview"
+  },
+  {
+   "fieldname": "canceled_reason",
+   "fieldtype": "Data",
+   "label": "Canceled Reason"
+  },
+  {
+   "fieldname": "assign_to",
+   "fieldtype": "Link",
+   "label": "Assign To",
+   "options": "Employee",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-05-28 00:42:47.726717",
+ "modified": "2025-06-08 17:49:51.400932",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Ticket",

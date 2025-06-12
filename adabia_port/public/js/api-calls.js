@@ -43,18 +43,18 @@ function getData(doctype) {
      * @param {string[]} options.fields - fields to fetch
      * @returns {Promise<object>} - object with the fetched values
      */
-    get_doc_values: ({filters={}, fields=[]}) => {
+    get_doc_values: ({filters={}, fields= "" | []}) => {
       return new Promise((resolve, reject) => {
         frappe.call({
           method: 'frappe.client.get_value',
           args: {
             doctype: doctype,
             filters: filters,
-            fieldname: fields || "*"
+            fieldname: fields
           },
           callback: function(r) {
             if (r.message) {
-              console.log('get_doc_values', r.message)
+              console.log(r)
               resolve(r.message);
             } else {
               reject(`No value found for ${doctype}`);
@@ -91,14 +91,14 @@ function getData(doctype) {
      * @param {string[]} options.fields - fields to fetch
      * @returns {Promise<object[]>} - list of objects with the fetched values
      */
-    get_list: ({filters={}, fields=[]}) => {
+    get_all: ({filters={}, fields=[]}) => {
       return new Promise((resolve, reject) => {
         frappe.call({
-          method: 'frappe.client.get_list',
+          method: 'adabia_port.utils.get_all',
           args: {
             doctype: doctype,
             filters: filters,
-            fields: fields || "*"
+            fields: fields || ["*"]
           },
           callback: function(r) {
             if (r.message) {
@@ -109,10 +109,6 @@ function getData(doctype) {
           }
         });
       })
-    },
-
-    get_all({filters={}, fields=[]}) {
-      return this.get_list({filters, fields});
     },
     parse_xml_message: (xml_string) => {
       return new Promise((resolve, reject) => {

@@ -1,5 +1,7 @@
 {
  "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
  "autoname": "format:IT-TKT-{MM}-{YY}-{#####}",
  "creation": "2024-11-01 21:28:07.942219",
  "doctype": "DocType",
@@ -12,24 +14,21 @@
   "column_break_kreg",
   "section_break_zkgb",
   "status",
+  "ticket_event",
   "column_break_mfrm",
   "priority",
-  "column_break_okbe",
   "assign_to",
-  "column_break_fsoe",
+  "column_break_okbe",
   "duration",
   "section_break_wggi",
-  "ticket_event",
   "company",
-  "column_break_jzxe",
-  "issues",
-  "section_break_tzsg",
   "employee",
   "user_info",
-  "column_break_kuky",
+  "column_break_jzxe",
   "emp_devices",
   "devices_info",
   "ticket_details_section",
+  "issues",
   "description",
   "solved_remotely",
   "what_implemented",
@@ -41,18 +40,15 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nClosed"
+   "options": "Open\nClosed\nCancelld"
   },
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Employee",
    "options": "Employee"
-  },
-  {
-   "fieldname": "column_break_kuky",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_mfrm",
@@ -69,17 +65,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_tzsg",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_fsoe",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "ticket_details_section",
    "fieldtype": "Section Break",
-   "label": "Ticket Details"
+   "label": "Issue Details"
   },
   {
    "fieldname": "description",
@@ -97,8 +85,7 @@
    "fieldname": "what_implemented",
    "fieldtype": "Text Editor",
    "label": "What Implemented",
-   "mandatory_depends_on": "eval:doc.status=='Closed'",
-   "read_only_depends_on": "eval:doc.status=='Closed'"
+   "mandatory_depends_on": "eval:doc.status === 'Closed'"
   },
   {
    "fieldname": "open_at",
@@ -134,14 +121,12 @@
   {
    "fieldname": "user_info",
    "fieldtype": "HTML",
-   "label": "User Info",
-   "search_index": 1
+   "label": "User Info"
   },
   {
    "fieldname": "devices_info",
    "fieldtype": "HTML",
-   "label": "Devices Info",
-   "search_index": 1
+   "label": "Devices Info"
   },
   {
    "fieldname": "assign_to",
@@ -152,20 +137,21 @@
   },
   {
    "fieldname": "section_break_pofq",
-   "fieldtype": "Section Break",
-   "hidden": 1
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "t_data",
    "fieldtype": "JSON",
+   "hidden": 1,
    "label": "T Data",
-   "print_hide": 1
+   "print_hide": 1,
+   "read_only": 1
   },
   {
+   "depends_on": "eval:doc.employee",
    "fieldname": "emp_devices",
    "fieldtype": "Table MultiSelect",
    "label": "Devices",
-   "mandatory_depends_on": "eval:doc.employee",
    "options": "Device Child Table"
   },
   {
@@ -209,7 +195,8 @@
   }
  ],
  "links": [],
- "modified": "2024-12-29 19:53:54.384611",
+ "make_attachments_public": 1,
+ "modified": "2025-06-04 15:27:17.625744",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "IT Ticket",

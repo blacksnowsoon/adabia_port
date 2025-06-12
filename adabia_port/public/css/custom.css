@@ -4,7 +4,7 @@
     src: url('/assets/adabia_port/fonts/Cairo-Regular.ttf');
 }
 body {
-    font-family: 'cairo', Arial, Helvetica, sans-serif;
+    font-family: 'cairo', Arial, sans-serif;
 }
 .widget.quick-list-widget-box, .widget.shortcut-widget-box {
     border-radius: 8px;
@@ -25,9 +25,9 @@ body {
     padding-bottom: 2.5rem;
 }
 
-@-moz-document url-prefix() {
-    fieldset { display: table-cell; }
-  }
+@supports (-moz-appearance:none) {
+  fieldset { display: table-cell; }
+}
 
   .charge-bar {
     position: relative;
@@ -124,12 +124,26 @@ body {
     white-space: wrap;
   } */
 
-  .indicator-pill[data-filter="task_type,=,Bug"] {
+  .indicator-pill[data-filter="task_type,=,Bug"], .indicator-pill[data-filter="priority,=,High"], .indicator-pill[data-filter="procedure,=,Check-In"] {
     background-color: rgba(255, 0, 0, 0.415);
   }
-  .indicator-pill[data-filter="task_type,=,New Request"] {
+  .indicator-pill[data-filter="task_type,=,New Request"], .indicator-pill[data-filter="priority,=,Normal"] {
     background-color: rgba(0, 255, 220, 0.415);
   }
-  .indicator-pill[data-filter="task_type,=,Query"] {
+  .indicator-pill[data-filter="task_type,=,Query"], .indicator-pill[data-filter="procedure,=,Check-Out"] {
     background-color: rgba(40, 255, 0, 0.415);
   }
+  .kanban {
+    overflow-x: scroll;
+    margin-bottom: 60px;
+  }
+  .kanban-colmun {
+    flex: 1;
+  }
+  .kanban-card-meta .like-action {
+    display: none;
+  }
+  /* ISFP Header print format style */
+  /* http://192.168.1.6:8000/api/method/frappe.utils.print_format.download_multi_pdf?doctype=SPS%20Operation%20Ticket&name=%5B%22OPT-3685-05-2025%22%5D&format=Application%20CR%20Builder&no_letterhead=1&letterhead=No%20Letterhead&options=%7B%22page-size%22%3A%22A4%22%7D */
+  /* http://192.168.1.6:8000/api/method/frappe.utils.print_format.download_multi_pdf?doctype=SPS%20Operation%20Ticket&name=%5B%22OPT-3685-05-2025%22%5D&format=SPS%20CR%20in%20PDF&no_letterhead=1&letterhead=No%20Letterhead&options=%7B%22page-size%22%3A%22A4%22%7D */
+        /* <th colspan="4" class="section-header">Template Identification</th> */

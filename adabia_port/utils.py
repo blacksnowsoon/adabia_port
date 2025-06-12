@@ -4,7 +4,7 @@ from pysnmp.hlapi.asyncio import SnmpEngine, CommunityData, UdpTransportTarget, 
 import frappe
 import xmltodict
 from frappe import _
-#from your_app.utils import lookup_port, validate_message_type  # Your custom utils
+import json
 
 
 @frappe.whitelist()
@@ -50,8 +50,7 @@ def get_document(doctype, name):
 
 @frappe.whitelist()
 def get_list(doctype='', filters={}, fields=[]):
-    doc_list = frappe.db.get_list(doctype,  fields=fields, filters=filters)
-    return doc_list
+    return frappe.db.get_list(doctype, fields, filters)
 
 @frappe.whitelist()
 def get_all(doctype='', fields=[], filters={}):
