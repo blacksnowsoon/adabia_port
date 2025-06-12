@@ -99,7 +99,9 @@ fixtures = [
     {
         "dt": "Print Format", "filters" : {
             "name": ["in", [
-                "Payment Permit"
+                "Payment Permit",
+                "Application CR Builder",
+                "SPS OP Bug PRT Format"
             ]]
         }
     },
