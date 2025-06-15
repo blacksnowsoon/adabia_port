@@ -18,7 +18,6 @@ fixtures = [
     "Website Settings",
     "Navbar Settings",
     "Print Settings",
-    "Port Country",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
