@@ -4,10 +4,6 @@
 
 frappe.ui.form.on("SPS Module", {
 	refresh(frm) {
-		if (frm.is_new()) {
-			custom_buttons(frm).setup_btns_for_new_form()
-		} else {
-			custom_buttons(frm).setup_btns_for_saved_form()
-		}
+		
 	},
 });

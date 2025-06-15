@@ -592,9 +592,9 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2025-04-13 23:05:58.530623",
+  "modified": "2025-06-14 18:30:45.232578",
   "name": "1dgsh48gs0",
-  "source_text": "Customers Technical Support",
+  "source_text": "Customers Support",
   "translated_text": "خدمة الدعم الفني للعملاء"
  },
  {
@@ -4405,5 +4405,44 @@
   "name": "v1k0btaagh",
   "source_text": "Locations",
   "translated_text": "المواقع"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-06-12 14:19:06.446422",
+  "name": "b588jb0qcf",
+  "source_text": "Issue Description",
+  "translated_text": "الوصف"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-06-12 14:19:32.546118",
+  "name": "bddt0b4n7s",
+  "source_text": "Issues",
+  "translated_text": "الاعطال"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-06-14 19:15:23.063969",
+  "name": "g8ertnod0q",
+  "source_text": "Integration Message",
+  "translated_text": "رسائل التكامل"
  }
 ]

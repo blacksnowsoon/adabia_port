@@ -18,6 +18,9 @@ fixtures = [
     "Website Settings",
     "Navbar Settings",
     "Print Settings",
+    "MTS-Port",
+    "SPS-Port",
+    "Port Country",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
@@ -119,7 +122,6 @@ fixtures = [
     {
         "dt": "Report", "filters" : {
             "name": ["in", [
-                "Most Used Procedures in CUST SPP",
                 "Departments Vs Managements in Details",
                 "SPS Modules Activities Report",
                 "Modules Activities"
@@ -130,8 +132,6 @@ fixtures = [
         "dt":"Dashboard Chart", "filters" : { 
             "name":["in", [
                 "Employees and Managements",
-                "Most Used Procedures in Customer Technical Support",
-                "User Activity"
             ]]
         }
     },
@@ -139,11 +139,11 @@ fixtures = [
         "dt":"Workspace", "filters" : { 
             "name":["in", [
                 "Main",
-                "Customers Technical Support",
                 "SPS OP Space",
                 "Charging and DisCharging",
                 "Infra - IT",
                 "Gates",
+                "Customers Support"
 
             ]]
         }
@@ -151,26 +151,18 @@ fixtures = [
     {
         "dt":"Dashboard", "filters" : { 
             "name":["in", [
-                "Main"
             ]]
         }
     }, 
     {
         "dt": "File", "filters": {
             "name": ["in", [
-                "17b1ffbbd9",
-                "91deed463e",
-                "70adaa500a",
-                "7939e2a7ef",
-                "2c5c8020d1",
-                "9f839a6164"
             ]]
         }
     },
     {
         "dt": "Kanban Board", "filters": {
             "name": ["in", [
-                "Default ToDo Kanban",
                 
             ]]
         }
@@ -179,7 +171,6 @@ fixtures = [
         "dt": "Website Theme", "filters": {
             "name": ["in", [
                 "Go Smart",
-                
             ]]
         }
     }

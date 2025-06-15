@@ -143,7 +143,6 @@ body {
   .kanban-card-meta .like-action {
     display: none;
   }
-  /* ISFP Header print format style */
-  /* http://192.168.1.6:8000/api/method/frappe.utils.print_format.download_multi_pdf?doctype=SPS%20Operation%20Ticket&name=%5B%22OPT-3685-05-2025%22%5D&format=Application%20CR%20Builder&no_letterhead=1&letterhead=No%20Letterhead&options=%7B%22page-size%22%3A%22A4%22%7D */
-  /* http://192.168.1.6:8000/api/method/frappe.utils.print_format.download_multi_pdf?doctype=SPS%20Operation%20Ticket&name=%5B%22OPT-3685-05-2025%22%5D&format=SPS%20CR%20in%20PDF&no_letterhead=1&letterhead=No%20Letterhead&options=%7B%22page-size%22%3A%22A4%22%7D */
-        /* <th colspan="4" class="section-header">Template Identification</th> */
+  .avatar-frame {
+    border-color: #0575E6;
+  }
