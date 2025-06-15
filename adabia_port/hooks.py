@@ -18,8 +18,6 @@ fixtures = [
     "Website Settings",
     "Navbar Settings",
     "Print Settings",
-    "MTS-Port",
-    "SPS-Port",
     "Port Country",
     {
         "dt":"Role", "filters" : { 
