@@ -7,6 +7,8 @@
 frappe.ui.form.on("SPS Operation Ticket", {
 	refresh(frm) {
 		frm_display(frm)
+		
+		
 		if (!frm.is_new()){
 			// Re-setup listener in case tabs reload
 			setup_pdf_tab_listener(frm);
@@ -146,20 +148,21 @@ function fetchValue({doctype, filters, fieldname}) {
 }
 
 function setup_pdf_tab_listener(frm) {
-		// Create new listener
-		$("a[href^='#sps-operation-ticket-pdf_view_tab']").on('click', function() {
-			const $wrapper = frm.fields_dict['cr_preview'].$wrapper;
-			 // clean the wrapper
-			$wrapper.empty()
-			// 1. Synchronously show spinner immediately
-    		$wrapper.html(spinner());
-			load_pdf_content(frm);
-			frm.add_custom_button(__('Open in new tab'), function() {
-				const pdf_url = generate_pdf_url(frm, 'Application CR Builder');
-				window.open(pdf_url, '_blank');
-			}
-			);
-		});
+	const $wrapper = frm.fields_dict['cr_preview'].$wrapper;
+	$wrapper.empty(); // Clear previous content
+	// Create new listener
+	$("a[href^='#sps-operation-ticket-pdf_view_tab']").on('click', function() {
+			// clean the wrapper
+		$wrapper.empty()
+		// 1. Synchronously show spinner immediately
+		
+		load_pdf_content(frm);
+		frm.add_custom_button(__('Open in new tab'), function() {
+			const pdf_url = generate_pdf_url(frm, 'Application CR Builder');
+			window.open(pdf_url, '_blank');
+		}
+		);
+	});
 		
  
 }
@@ -168,13 +171,15 @@ function setup_pdf_tab_listener(frm) {
 async function load_pdf_content(frm) {
     const $wrapper = frm.fields_dict['cr_preview'].$wrapper;
 	const format = frm.doc.task_type === "New Request" ? "Application CR Builder" : "SPS OP Bug PRT Format";
-   
+	$wrapper.empty(); // Clear previous content
+	$wrapper.html(spinner());
     // 2. Force DOM update before heavy operations
     await new Promise(resolve => requestAnimationFrame(resolve));
     
     try {
         // 3. Generate and load PDF
         const pdf_url = generate_pdf_url(frm, format);
+		
          await render_pdf_viewer($wrapper, pdf_url);
 		// if (iframe) {
 		// 	$wrapper.empty()
@@ -187,8 +192,7 @@ async function load_pdf_content(frm) {
 
 function show_loading_indicator($wrapper) {
     $wrapper.html(spinner());
-    // Force synchronous layout/reflow
-    // $wrapper[0].offsetHeight; 
+    
 }
 
 async function render_pdf_viewer($wrapper, pdf_url) {
