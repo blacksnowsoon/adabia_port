@@ -54,22 +54,22 @@ function form_config() {
 		"Open": {
 			show: [],
 			require: [],
-			frm_read_only: false 
+			frm_read_only: 0 
 		},
 		'In Progress': {
 			show: [],
 			require: [],
-			frm_read_only: true 
+			frm_read_only: 1 
 		},
 		'Closed': {
 			show: ['patch_num', 'developed_by', 'tested_by'],
 			require: ['patch_num', 'developed_by', 'tested_by'],
-			frm_read_only: true
+			frm_read_only: 1
 		},
 		"Cancelled": {
 			show: ['canceled_reason'],
 			require: ['canceled_reason'],
-			frm_read_only: true
+			frm_read_only: 1
 		}
 	};
 
