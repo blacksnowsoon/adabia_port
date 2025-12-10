@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"id\":\"h_6ALxVqfr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Operation</span>\",\"col\":12}},{\"id\":\"ZLa8ZDtGSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Task\",\"col\":3}},{\"id\":\"3ld3WgmpNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tasks List\",\"col\":3}},{\"id\":\"aHxbSTTQ6L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Modules\",\"col\":3}},{\"id\":\"b2QE4BzEyw\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XipeUBYI6w\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>In Progress</b></span>\",\"col\":12}},{\"id\":\"_Dn8-E-yp0\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bugs In Progress\",\"col\":4}},{\"id\":\"81gYiPN7Th\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests In Progress\",\"col\":4}},{\"id\":\"xI8D0ym8Wx\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Queries In Progress\",\"col\":4}},{\"id\":\"jA1Jf2AzJN\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oDSUarCKcv\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Opened</b></span>\",\"col\":12}},{\"id\":\"b-5KMUQ7Ny\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bugs\",\"col\":4}},{\"id\":\"_J3XCB7Arq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests\",\"col\":4}},{\"id\":\"5aq3nLFiqA\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Queries\",\"col\":4}}]",
- "creation": "2024-10-25 18:55:11.204728",
+ "creation": "2025-12-06 16:02:28.237051",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "SPS OP Space",
  "links": [],
- "modified": "2025-06-14 18:32:54.140716",
+ "modified": "2025-12-09 14:18:54.747136",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS OP Space",
@@ -23,34 +23,34 @@
  "public": 1,
  "quick_lists": [
   {
-   "document_type": "SPS Operation Ticket",
-   "label": "Queries In Progress",
-   "quick_list_filter": "[[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false],[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Query\",false]]"
-  },
-  {
-   "document_type": "SPS Operation Ticket",
-   "label": "Queries",
-   "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Query\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"Open\",false]]"
-  },
-  {
-   "document_type": "SPS Operation Ticket",
+   "document_type": "SPS Operation Task",
    "label": "Bugs In Progress",
-   "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Bug\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false]]"
+   "quick_list_filter": "[[\"SPS Operation Task\",\"task_type\",\"=\",\"Bug\",false],[\"SPS Operation Task\",\"status\",\"=\",\"In Progress\",false]]"
   },
   {
-   "document_type": "SPS Operation Ticket",
-   "label": "Bugs",
-   "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Bug\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"Open\",false]]"
-  },
-  {
-   "document_type": "SPS Operation Ticket",
+   "document_type": "SPS Operation Task",
    "label": "New Requests In Progress",
-   "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"New Request\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false]]"
+   "quick_list_filter": "[[\"SPS Operation Task\",\"task_type\",\"=\",\"New Request\",false],[\"SPS Operation Task\",\"status\",\"=\",\"In Progress\",false]]"
   },
   {
-   "document_type": "SPS Operation Ticket",
+   "document_type": "SPS Operation Task",
+   "label": "Queries In Progress",
+   "quick_list_filter": "[[\"SPS Operation Task\",\"task_type\",\"=\",\"Query\",false],[\"SPS Operation Task\",\"status\",\"=\",\"In Progress\",false]]"
+  },
+  {
+   "document_type": "SPS Operation Task",
+   "label": "Bugs",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "SPS Operation Task",
    "label": "New Requests",
-   "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"New Request\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"Open\",false]]"
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "SPS Operation Task",
+   "label": "Queries",
+   "quick_list_filter": "[]"
   }
  ],
  "roles": [
@@ -67,7 +67,7 @@
    "color": "Grey",
    "doc_view": "New",
    "label": "New Task",
-   "link_to": "SPS Operation Ticket",
+   "link_to": "SPS Operation Task",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -75,7 +75,7 @@
    "color": "Pink",
    "doc_view": "List",
    "label": "Tasks List",
-   "link_to": "SPS Operation Ticket",
+   "link_to": "SPS Operation Task",
    "stats_filter": "[]",
    "type": "DocType"
   },

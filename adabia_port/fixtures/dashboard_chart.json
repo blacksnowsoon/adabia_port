@@ -26,6 +26,7 @@
   "parent_document_type": null,
   "report_name": "Employees Main Data Records",
   "roles": [],
+  "show_values_over_chart": 0,
   "source": null,
   "time_interval": "Yearly",
   "timeseries": 0,

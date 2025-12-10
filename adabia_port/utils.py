@@ -123,10 +123,6 @@ def get_customs_declarations_sum(parent, operation_type, operation_handler, is_c
 
 
 
-
-
-
-
 @frappe.whitelist()
 def parse_customs_message(xml_string):
     frappe.cache().delete_keys(f"method:parse_customs_message:*")
@@ -468,8 +464,7 @@ def _get_field_by_path(data, path):
         return None
 
 def _validate_port_code(port_code):
-    return bool(port_code and frappe.db.exists("SPS-Port", {"name": port_code}))
-       
+    return bool(port_code and frappe.db.exists("SPS-Port", {"name": port_code}))   
 
 def validate_message_type(message_type):
     allowed_types = frappe.get_all("Customs Message Type", pluck="name")

@@ -16,11 +16,11 @@
   "image": null,
   "image_height": 0.0,
   "image_width": 0.0,
-  "is_default": 0,
+  "is_default": 1,
   "letter_head_name": "ISFP CR Letter Head",
   "modified": "2025-05-29 23:01:45.101630",
   "name": "ISFP CR Letter Head",
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "align": "Left",
@@ -93,7 +93,7 @@
  },
  {
   "align": "Center",
-  "content": "\n\t\t\t<div style=\"text-align: center;\">\n\t\t\t\t<img src=\"/files/DocHeaderfc74d4.jpg\" alt=\"Global Header\" width=\"700\" style=\"width: 700px;\">\n\t\t\t</div>\n\t\t",
+  "content": "<div style=\"text-align: center;\">\n<img src=\"/files/DocHeaderfc74d4.jpg\" alt=\"Global Header\" width=\"700.0\" style=\"width: 700.0px;\">\n</div>",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Letter Head",
@@ -112,6 +112,6 @@
   "letter_head_name": "Global Header",
   "modified": "2025-06-09 22:29:28.870417",
   "name": "Global Header",
-  "source": "HTML"
+  "source": "Image"
  }
 ]

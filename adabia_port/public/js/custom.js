@@ -2,8 +2,8 @@
 // validate ip Address
 // const ipRegex = /^(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\. (25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\. (25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\. (25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$/;
 const ipRegex = /^(\d{1,3}.){3}\d{1,3}$/;
-const span = document.createElement('span');
 const observed_fields = ['status', 'priority', 'ticket_event'];
+const span = document.createElement('span');
 // this section setes the footer of the site
 const footer_content = 
 `<div class="navbar fixed-bottom navbar-default border-top">
@@ -17,19 +17,6 @@ const footer_content =
   </div>`;
 
   $('footer').html(footer_content)
- 
-  
-  function custom_rm_el() {
-  const remove = (className='', is_hide=true) => {
-    if (className) {
-      is_hide ? $(`.${className}`).remove(): $(`.${className}`).hide();
-    }
-  }
-  
-  return {
-    remove
-  }
-}
 
 // ----------------------------------------------------------------------------------------
 // composition custom buttons
@@ -50,11 +37,13 @@ function custom_buttons(frm={}) {
       }
     }).addClass("btn bg-gradient py-3 px-3 font-weight-medium text-white");
   }
+
   const reload = () => {
     frm.add_custom_button('Reload', () => {
       frm.refresh();
     }).addClass(" p-2");
   }
+
   const custom_print = (format='', header='', buttonName='Print')=> {
     frm.add_custom_button(__(`${buttonName}`), () => {
       // /printview?doctype=Customer%20Support%20Ticket&name=TKT-003653&trigger_print=1&format=Customer%20Tech%20Support%20TKT%20Payment%20Permit&no_letterhead=0&letterhead=ISFP%20Header&settings=%7B%7D&_lang=ar
@@ -67,6 +56,7 @@ function custom_buttons(frm={}) {
   
   const toggle_built_in_el_with_date_tag = (data = [[]], is_hide=false) => {
     if (data.length === 0) return
+    
     data.forEach(item => {
       const [containerClass, attrName, attrValue] = item
       if (containerClass && attrName && attrValue) {
@@ -98,7 +88,6 @@ function custom_buttons(frm={}) {
       }
     })
   }
-  
 
   return {
     save,
@@ -108,11 +97,11 @@ function custom_buttons(frm={}) {
     toggle_built_in_el_with_classes,
     setup_btns_for_new_form: () => {
       save();
-      toggle_built_in_el_with_classes([['editable-form', 'menu-btn-group'] ], true);
+      // toggle_built_in_el_with_classes([['editable-form', 'menu-btn-group'] ], true);
     },
     setup_btns_for_saved_form: () => {
       save();
-      toggle_built_in_el_with_classes([['editable-form', 'menu-btn-group'] ], false);
+      // toggle_built_in_el_with_classes([['editable-form', 'menu-btn-group'] ], false);
       toggle_built_in_el_with_date_tag([
         ['page-actions', 'data-original-title', 'Previous Document'],
         ['page-actions', 'data-original-title', 'Next Document'],

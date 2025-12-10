@@ -1,7 +1,7 @@
 app_name = "adabia_port"
 app_title = "Adabia Port"
 app_publisher = "Gharieb Khalifa"
-app_description = "Tracking business in departments of the adabia port"
+app_description = "Tasks Tracking in departments of the adabia port"
 app_email = "blacksnow.soon@gmail.com"
 app_license = "mit"
 app_version = "1.0.1"
@@ -15,8 +15,6 @@ fixtures = [
     "Goods",
     "Packing Type",
     "Translation",
-    "Website Settings",
-    "Navbar Settings",
     "Print Settings",
     {
         "dt":"Role", "filters" : { 
@@ -152,19 +150,6 @@ fixtures = [
         }
     }, 
     {
-        "dt": "File", "filters": {
-            "name": ["in", [
-            ]]
-        }
-    },
-    {
-        "dt": "Kanban Board", "filters": {
-            "name": ["in", [
-                
-            ]]
-        }
-    },
-    {
         "dt": "Website Theme", "filters": {
             "name": ["in", [
                 "Go Smart",
@@ -261,7 +246,12 @@ home_page = "/home_page/"
 
 # before_install = "adabia_port.install.before_install"
 # after_install = "adabia_port.install.after_install"
-
+after_install = [
+    "adabia_port.customization.app_setting.upload_logo_and_set"
+]
+after_migrate = [
+    "adabia_port.customization.app_setting.upload_logo_and_set"
+]
 # Uninstallation
 # ------------
 
