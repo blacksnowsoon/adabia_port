@@ -6982,5 +6982,77 @@
   "hs_code": null,
   "modified": "2024-12-31 22:21:22.014067",
   "name": "GD-2934"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حنطة قمح صلبه",
+  "hs_code": null,
+  "modified": "2025-01-31 13:27:16.343294",
+  "name": "GD-6618"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "أكسيد حديد",
+  "hs_code": null,
+  "modified": "2025-01-30 12:57:40.984315",
+  "name": "GD-6522"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "اكسيد حديد احمر",
+  "hs_code": null,
+  "modified": "2025-01-23 17:03:18.399107",
+  "name": "GD-6204"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بروفليت-صب جاف",
+  "hs_code": null,
+  "modified": "2025-01-21 10:02:55.963880",
+  "name": "GD-6101"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كلوريد البوتاسيوم",
+  "hs_code": null,
+  "modified": "2025-01-16 15:28:30.767276",
+  "name": "GD-5948"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "كبريتات الحديد معبأ",
+  "hs_code": null,
+  "modified": "2025-02-07 23:29:42.675087",
+  "name": "GD-6939"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "حاويات",
+  "hs_code": null,
+  "modified": "2025-02-03 23:20:38.480416",
+  "name": "GD-6804"
+ },
+ {
+  "class": null,
+  "docstatus": 0,
+  "doctype": "Goods",
+  "goods_name": "بلاستيك مجروش",
+  "hs_code": null,
+  "modified": "2025-01-21 10:14:19.149544",
+  "name": "GD-6103"
  }
 ]

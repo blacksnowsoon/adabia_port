@@ -3,10 +3,10 @@
 
 
 frappe.ui.form.on("SPS Operation Task", {
-	onload(frm) { },
 	refresh(frm) {
+
+		frm_display(frm)
 		set_assign_to_filter(frm)
-		// frm_display(frm)
 
 		if (!frm.is_new()) {
 			// Re-setup listener in case tabs reload
@@ -53,80 +53,86 @@ frappe.ui.form.on("SPS Operation Task", {
 });
 
 
-function form_config() {
-	const config = {
-		"Backlog": {
-			show: [],
-			require: [],
-			frm_read_only: 0
-		},
-		"In Progress": {
-			show: [],
-			require: [],
-			frm_read_only: 1
-		},
-		'Closed': {
-			show: ['patch_num', 'developed_by', 'tested_by'],
-			require: ['patch_num', 'developed_by', 'tested_by'],
-			frm_read_only: 1
-		},
-		"Cancelled": {
-			show: ['canceled_reason'],
-			require: ['canceled_reason'],
-			frm_read_only: 1
-		}
-	};
+function frm_display(frm) {
+	// Get all fields except status to manage lock state
+	const all_fields = frm.meta.fields
+		.filter(f => f.fieldname !== 'status')
+		.map(f => f.fieldname);
 
-	return config
+	// 1. New Document Logic
+	if (frm.is_new()) {
+		// Set Status to Backlog and lock it
+		frm.set_value('status', 'Backlog');
+		frm.set_df_property('status', 'read_only', 1);
+
+		// Reset/Hide special sections for new docs
+		frm.toggle_display(['complete_data_section', 'canceled_reason'], false);
+		set_reqd(frm, ['patch_num', 'developed_by', 'tested_by', 'canceled_reason'], 0);
+		set_read_only(frm, all_fields, 0); // Ensure everything else is editable
+
+	} else {
+		// 2. Existing Document Logic
+		const status = frm.doc.status;
+
+		// Reset defaults for existing docs to ensure clean state before applying specific status rules
+		// This handles transitions (e.g. if status changed from Closed back to something else)
+		frm.toggle_display(['complete_data_section', 'canceled_reason'], false);
+		frm.set_df_property('status', 'read_only', 0); // Status is generally editable unless locked by workflow/logic
+		frm.set_df_property('canceled_reason', 'reqd', 0);
+		set_reqd(frm, ['patch_num', 'developed_by', 'tested_by'], 0);
+
+		// Lock content for any status other than Backlog (In Progress, Closed, Cancelled)
+		const is_locked = status !== 'Backlog';
+		set_read_only(frm, all_fields, is_locked ? 1 : 0);
+
+		const closed_fields = ['patch_num', 'developed_by', 'tested_by'];
+		// Handle Specific Statuses
+		if (status === 'Closed') {
+			frm.toggle_display('complete_data_section', true);
+			// Unlock and Require Closed fields
+			reset_value(frm, 'canceled_reason');
+			set_read_only(frm, closed_fields, 0);
+			set_reqd(frm, closed_fields, 1);
+		} else if (status === 'Cancelled') {
+			reset_value(frm, closed_fields);
+			frm.toggle_display('canceled_reason', true);
+			// Unlock and Require Cancelled reason
+			frm.set_df_property('canceled_reason', 'read_only', 0);
+			frm.set_df_property('canceled_reason', 'reqd', 1);
+		} else {
+			reset_value(frm, [...closed_fields, 'canceled_reason']);
+		}
+	}
 }
 
-function frm_display(frm) {
-	const config = form_config();
-	const currentStatus = frm.doc.status;
-	const allStatuses = Object.keys(config);
-
-	// Get all field names except 'status'
-	const allFields = frm.fields
-		.map(f => f.df.fieldname)
-		.filter(field => field !== 'status');
-
-	// Handle new form case - make status read-only
-	if (frm.is_new()) {
-		set_property(frm, 'read_only', 1).apply_on(['status']);
+function set_reqd(frm, fields, value) {
+	if (Array.isArray(fields)) {
+		fields.forEach(f => frm.set_df_property(f, 'reqd', value));
+	} else {
+		frm.set_df_property(fields, 'reqd', value);
 	}
+}
 
-	// Process current status fields
-	if (config[currentStatus]) {
-		const currentConfig = config[currentStatus];
+function set_read_only(frm, fields, value) {
+	if (Array.isArray(fields)) {
+		fields.forEach(f => frm.set_df_property(f, 'read_only', value));
+	} else {
+		frm.set_df_property(fields, 'read_only', value);
+	}
+}
 
-		// Set read_only for all fields except status
-		set_property(frm, 'read_only', currentConfig.frm_read_only)
-			.apply_on(allFields);
-
-		// Show and make required fields for current status
-		if (currentConfig.show) {
-			set_property(frm, 'hidden', 0).apply_on(currentConfig.show);
-			if (currentConfig.frm_read_only) {
-				set_property(frm, 'read_only', 0).apply_on(currentConfig.show);
+function reset_value(frm, fields) {
+	if (Array.isArray(fields)) {
+		fields.forEach(f => {
+			if (frm.doc[f]) {
+				frm.set_value(f, '');
 			}
-		}
-		if (currentConfig.require) {
-			set_property(frm, 'reqd', 1).apply_on(currentConfig.require);
+		});
+	} else {
+		if (frm.doc[fields]) {
+			frm.set_value(fields, '');
 		}
 	}
-
-	// Hide and make non-required fields from other status
-	allStatuses.forEach(status => {
-		if (status !== currentStatus && config[status]) {
-			if (config[status].show) {
-				set_property(frm).clear_value(config[status].show)
-				set_property(frm, 'hidden', 1).apply_on(config[status].show);
-			}
-			if (config[status].require) {
-				set_property(frm, 'reqd', 0).apply_on(config[status].require);
-			}
-		}
-	});
 }
 
 // fetch values from doctype
@@ -157,7 +163,6 @@ function setup_pdf_tab_listener(frm) {
 	});
 }
 
-
 async function load_pdf_content(frm) {
 	const wrapper = frm.fields_dict['cr_preview'].$wrapper;
 	const format = frm.doc.task_type === "New Request" ? "Application CR Builder" : "SPS OP Bug PRT Format";
@@ -169,8 +174,8 @@ async function load_pdf_content(frm) {
 	try {
 		// set options for pdf
 		const options = {
-		"page-size": "A4",
-		"margin-top": "5",
+			"page-size": "A4",
+			"margin-top": "5",
 		};
 		// 3. Generate and load PDF
 		const pdf_url = generate_pdf_url(frm, format, options);
@@ -224,8 +229,6 @@ function show_error_state(wrapper, message) {
 // Generate PDF URL for a single document
 function generate_pdf_url(frm, format, options) {
 
-	
-
 	return `/api/method/frappe.utils.print_format.download_pdf?` +
 		`doctype=${encodeURIComponent(frm.doctype)}` +
 		`&name=${encodeURIComponent(frm.doc.name)}` +
@@ -238,7 +241,7 @@ function generate_pdf_url(frm, format, options) {
 
 // Generate PDF URL for multi pdf format
 function generateMultiPDFUrl(frm, format, options) {
-	
+
 	const params = new URLSearchParams({
 		doctype: encodeURIComponent(frm.doctype),
 		name: JSON.stringify([frm.doc.name]), // Wrap in array and stringify

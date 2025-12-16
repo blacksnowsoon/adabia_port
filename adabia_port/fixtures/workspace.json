@@ -1,7 +1,22 @@
 [
  {
-  "charts": [],
-  "content": "[{\"id\":\"h_6ALxVqfr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Operation</span>\",\"col\":12}},{\"id\":\"ZLa8ZDtGSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Task\",\"col\":3}},{\"id\":\"3ld3WgmpNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tasks List\",\"col\":3}},{\"id\":\"aHxbSTTQ6L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Modules\",\"col\":3}},{\"id\":\"b2QE4BzEyw\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XipeUBYI6w\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>In Progress</b></span>\",\"col\":12}},{\"id\":\"_Dn8-E-yp0\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bugs In Progress\",\"col\":4}},{\"id\":\"81gYiPN7Th\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests In Progress\",\"col\":4}},{\"id\":\"xI8D0ym8Wx\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Queries In Progress\",\"col\":4}},{\"id\":\"jA1Jf2AzJN\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oDSUarCKcv\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Opened</b></span>\",\"col\":12}},{\"id\":\"b-5KMUQ7Ny\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bugs\",\"col\":4}},{\"id\":\"_J3XCB7Arq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests\",\"col\":4}},{\"id\":\"5aq3nLFiqA\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Queries\",\"col\":4}}]",
+  "charts": [
+   {
+    "chart_name": "SPS OP Ticket Chart",
+    "label": "Tasks Statistics",
+    "parent": "SPS OP Space",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   },
+   {
+    "chart_name": "Most Effected Modules in SPS",
+    "label": "Tasks Per Module",
+    "parent": "SPS OP Space",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   }
+  ],
+  "content": "[{\"id\":\"yKVmw_NzG_\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tasks Per Module\",\"col\":6}},{\"id\":\"2llifoxq9a\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tasks Statistics\",\"col\":6}},{\"id\":\"h_6ALxVqfr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Operation</span>\",\"col\":12}},{\"id\":\"ZLa8ZDtGSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Task\",\"col\":3}},{\"id\":\"3ld3WgmpNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tasks List\",\"col\":3}},{\"id\":\"aHxbSTTQ6L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Modules\",\"col\":3}},{\"id\":\"b2QE4BzEyw\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XipeUBYI6w\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>In Progress</b></span>\",\"col\":12}},{\"id\":\"_Dn8-E-yp0\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bugs In Progress\",\"col\":4}},{\"id\":\"81gYiPN7Th\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests In Progress\",\"col\":4}},{\"id\":\"xI8D0ym8Wx\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Queries In Progress\",\"col\":4}},{\"id\":\"jA1Jf2AzJN\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oDSUarCKcv\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Backlog</b></span>\",\"col\":12}},{\"id\":\"_J3XCB7Arq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"New Requests\",\"col\":4}},{\"id\":\"b-5KMUQ7Ny\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bugs\",\"col\":4}},{\"id\":\"5aq3nLFiqA\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Queries\",\"col\":4}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -12,7 +27,7 @@
   "is_hidden": 0,
   "label": "SPS OP Space",
   "links": [],
-  "modified": "2025-06-14 18:32:54.140716",
+  "modified": "2025-12-11 12:42:39.676423",
   "module": "SPS System",
   "name": "SPS OP Space",
   "number_cards": [],
@@ -20,52 +35,52 @@
   "public": 1,
   "quick_lists": [
    {
-    "document_type": "SPS Operation Ticket",
-    "label": "Queries In Progress",
-    "parent": "SPS OP Space",
-    "parentfield": "quick_lists",
-    "parenttype": "Workspace",
-    "quick_list_filter": "[[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false],[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Query\",false]]"
-   },
-   {
-    "document_type": "SPS Operation Ticket",
-    "label": "Queries",
-    "parent": "SPS OP Space",
-    "parentfield": "quick_lists",
-    "parenttype": "Workspace",
-    "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Query\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"Open\",false]]"
-   },
-   {
-    "document_type": "SPS Operation Ticket",
+    "document_type": "SPS Operation Task",
     "label": "Bugs In Progress",
     "parent": "SPS OP Space",
     "parentfield": "quick_lists",
     "parenttype": "Workspace",
-    "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Bug\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false]]"
+    "quick_list_filter": "[[\"SPS Operation Task\",\"task_type\",\"=\",\"Bug\",false],[\"SPS Operation Task\",\"status\",\"=\",\"In Progress\",false]]"
    },
    {
-    "document_type": "SPS Operation Ticket",
-    "label": "Bugs",
-    "parent": "SPS OP Space",
-    "parentfield": "quick_lists",
-    "parenttype": "Workspace",
-    "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"Bug\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"Open\",false]]"
-   },
-   {
-    "document_type": "SPS Operation Ticket",
-    "label": "New Requests In Progress",
-    "parent": "SPS OP Space",
-    "parentfield": "quick_lists",
-    "parenttype": "Workspace",
-    "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"New Request\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"In Progress\",false]]"
-   },
-   {
-    "document_type": "SPS Operation Ticket",
+    "document_type": "SPS Operation Task",
     "label": "New Requests",
     "parent": "SPS OP Space",
     "parentfield": "quick_lists",
     "parenttype": "Workspace",
-    "quick_list_filter": "[[\"SPS Operation Ticket\",\"task_type\",\"=\",\"New Request\",false],[\"SPS Operation Ticket\",\"status\",\"=\",\"Open\",false]]"
+    "quick_list_filter": "[[\"SPS Operation Task\",\"status\",\"=\",\"Backlog\",false],[\"SPS Operation Task\",\"task_type\",\"=\",\"New Request\",false]]"
+   },
+   {
+    "document_type": "SPS Operation Task",
+    "label": "New Requests In Progress",
+    "parent": "SPS OP Space",
+    "parentfield": "quick_lists",
+    "parenttype": "Workspace",
+    "quick_list_filter": "[[\"SPS Operation Task\",\"task_type\",\"=\",\"New Request\",false],[\"SPS Operation Task\",\"status\",\"=\",\"In Progress\",false]]"
+   },
+   {
+    "document_type": "SPS Operation Task",
+    "label": "Bugs",
+    "parent": "SPS OP Space",
+    "parentfield": "quick_lists",
+    "parenttype": "Workspace",
+    "quick_list_filter": "[[\"SPS Operation Task\",\"status\",\"=\",\"Backlog\",false],[\"SPS Operation Task\",\"task_type\",\"=\",\"Bug\",false]]"
+   },
+   {
+    "document_type": "SPS Operation Task",
+    "label": "Queries In Progress",
+    "parent": "SPS OP Space",
+    "parentfield": "quick_lists",
+    "parenttype": "Workspace",
+    "quick_list_filter": "[[\"SPS Operation Task\",\"task_type\",\"=\",\"Query\",false],[\"SPS Operation Task\",\"status\",\"=\",\"In Progress\",false]]"
+   },
+   {
+    "document_type": "SPS Operation Task",
+    "label": "Queries",
+    "parent": "SPS OP Space",
+    "parentfield": "quick_lists",
+    "parenttype": "Workspace",
+    "quick_list_filter": "[[\"SPS Operation Task\",\"status\",\"=\",\"Backlog\",false],[\"SPS Operation Task\",\"task_type\",\"=\",\"Query\",false]]"
    }
   ],
   "restrict_to_domain": null,
@@ -92,7 +107,7 @@
     "icon": null,
     "kanban_board": null,
     "label": "New Task",
-    "link_to": "SPS Operation Ticket",
+    "link_to": "SPS Operation Task",
     "parent": "SPS OP Space",
     "parentfield": "shortcuts",
     "parenttype": "Workspace",
@@ -109,7 +124,7 @@
     "icon": null,
     "kanban_board": null,
     "label": "Tasks List",
-    "link_to": "SPS Operation Ticket",
+    "link_to": "SPS Operation Task",
     "parent": "SPS OP Space",
     "parentfield": "shortcuts",
     "parenttype": "Workspace",
@@ -941,7 +956,7 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"VxBocacsCg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h1\\\">Main</span><span class=\\\"h4\\\"><b></b></span>\",\"col\":12}},{\"id\":\"8JYaam9Okd\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\" style=\\\"font-weight: normal;\\\">Basic Data</span>\",\"col\":12}},{\"id\":\"AFh96UAS0q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements\",\"col\":3}},{\"id\":\"8UHd2gBMPv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Departments\",\"col\":3}},{\"id\":\"ncTtedAc5s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees\",\"col\":3}},{\"id\":\"HlohEg72oC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Titles\",\"col\":3}},{\"id\":\"uTDUHw-mMl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ticket Events\",\"col\":3}},{\"id\":\"Q7t551-Va3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods\",\"col\":3}},{\"id\":\"RmEucPSAsc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods Types\",\"col\":3}},{\"id\":\"-xfmRolvQd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Packing Types\",\"col\":3}},{\"id\":\"M0Tn2NZsNI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Companies\",\"col\":3}},{\"id\":\"ia0-EjQzHF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Logistics Operations\",\"col\":3}},{\"id\":\"-q0Vz6uF1p\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Machines\",\"col\":3}},{\"id\":\"pRQPgUNeCe\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Piers\",\"col\":3}},{\"id\":\"rO1vul3Iwg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Port Locations Map\",\"col\":3}},{\"id\":\"XHWUTVTlsm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships\",\"col\":3}},{\"id\":\"h6kXiaJnT-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trucks\",\"col\":3}},{\"id\":\"DoFX4D1i5a\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Truck Tails\",\"col\":3}},{\"id\":\"UAXlQ1uiM9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"MTS Ports\",\"col\":3}},{\"id\":\"wjGXFrbHzN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Ports\",\"col\":3}},{\"id\":\"D5l8YzaBke\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices Brands\",\"col\":3}},{\"id\":\"uXxSHNWMeC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices Types\",\"col\":3}}]",
+  "content": "[{\"id\":\"VxBocacsCg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h1\\\">Main</span><span class=\\\"h4\\\"><b></b></span>\",\"col\":12}},{\"id\":\"8JYaam9Okd\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\" style=\\\"font-weight: normal;\\\">Master Data</span>\",\"col\":12}},{\"id\":\"AFh96UAS0q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Managements\",\"col\":3}},{\"id\":\"8UHd2gBMPv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Departments\",\"col\":3}},{\"id\":\"ncTtedAc5s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees\",\"col\":3}},{\"id\":\"HlohEg72oC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Titles\",\"col\":3}},{\"id\":\"uTDUHw-mMl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ticket Events\",\"col\":3}},{\"id\":\"Q7t551-Va3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods\",\"col\":3}},{\"id\":\"RmEucPSAsc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods Types\",\"col\":3}},{\"id\":\"-xfmRolvQd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Packing Types\",\"col\":3}},{\"id\":\"M0Tn2NZsNI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Companies\",\"col\":3}},{\"id\":\"ia0-EjQzHF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Logistics Operations\",\"col\":3}},{\"id\":\"-q0Vz6uF1p\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Machines\",\"col\":3}},{\"id\":\"pRQPgUNeCe\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Piers\",\"col\":3}},{\"id\":\"rO1vul3Iwg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Port Locations Map\",\"col\":3}},{\"id\":\"XHWUTVTlsm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships\",\"col\":3}},{\"id\":\"h6kXiaJnT-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trucks\",\"col\":3}},{\"id\":\"DoFX4D1i5a\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Truck Tails\",\"col\":3}},{\"id\":\"UAXlQ1uiM9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"MTS Ports\",\"col\":3}},{\"id\":\"wjGXFrbHzN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Ports\",\"col\":3}},{\"id\":\"D5l8YzaBke\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices Brands\",\"col\":3}},{\"id\":\"uXxSHNWMeC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices Types\",\"col\":3}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -952,7 +967,7 @@
   "is_hidden": 0,
   "label": "Main",
   "links": [],
-  "modified": "2025-06-14 18:32:53.217342",
+  "modified": "2025-12-07 09:47:01.946028",
   "module": null,
   "name": "Main",
   "number_cards": [],

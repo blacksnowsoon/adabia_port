@@ -47,5 +47,12 @@
   "event": "To Truck",
   "modified": "2024-09-27 19:11:10.436914",
   "name": "EV-10"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Ticket Event",
+  "event": "To Machine",
+  "modified": "2025-03-12 10:03:17.603298",
+  "name": "EV-8528"
  }
 ]

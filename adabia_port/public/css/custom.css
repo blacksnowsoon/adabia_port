@@ -141,7 +141,21 @@
 .indicator-pill[data-filter="procedure,=,Check-Out"] {
   background-color: rgba(40, 255, 0, 0.415);
 }
-
+.tag-pill {
+  font-size: 0.7em;
+  max-width:50px;
+  max-height: 20px;
+}
 .avatar-frame {
   border-color: #0575E6;
+}
+
+/* chart style */
+.legend-dataset-label {
+  font-size: 12px;
+  font-family: 'cairo', sans-serif;
+}
+.widget.dashboard-widget-box {
+  min-width: 180px;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }

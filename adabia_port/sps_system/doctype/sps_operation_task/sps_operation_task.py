@@ -8,15 +8,15 @@ from frappe.model.document import Document
 
 class SPSOperationTask(Document):
 	def before_save(self):
-		is_in_progress = frappe.db.get_value("SPS Operation Ticket", self.name, "in_progress_since")
-		if is_in_progress == None:	
-			if self.status == "In Progress":
-					self.in_progress_since = frappe.utils.now() 
+		if self.status == "In Progress":
+			is_in_progress = frappe.db.get_value("SPS Operation Task", self.name, "in_progress_since")
+			if is_in_progress == None:	
+				self.in_progress_since = frappe.utils.now() 
 		
-		is_completed = frappe.db.get_value("SPS Operation Ticket", self.name, "completed_in")
-		if is_completed == None:
-			if self.status == "Closed":
-					self.completed_in = frappe.utils.now()
+		elif self.status == "Closed":
+			is_completed = frappe.db.get_value("SPS Operation Task", self.name, "completed_in")
+			if is_completed == None:
+				self.completed_in = frappe.utils.now()
 	
 
 	def sync_assignment(self):
