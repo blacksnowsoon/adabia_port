@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_events_in_timeline": 1,
+ "allow_import": 1,
  "autoname": "format:OPT-{####}-{MM}-{YYYY}",
  "creation": "2025-12-13 14:16:50.035471",
  "default_view": "List",
@@ -309,7 +310,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-12-13 14:16:50.035471",
+ "modified": "2025-12-16 10:45:03.723750",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Ticket",
