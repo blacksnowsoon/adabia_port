@@ -1,8 +1,7 @@
-# Copyright (c) 2024, Gharieb Khalifa and contributors
+# Copyright (c) 2025, Gharieb Khalifa and contributors
 # For license information, please see license.txt
 
-
-import frappe
+# import frappe
 from frappe.model.document import Document
 
 

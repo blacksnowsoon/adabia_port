@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:EMP-{user_name}-{####}",
+ "autoname": "format:EMP--{####}",
  "creation": "2024-11-01 12:54:43.949321",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -142,7 +142,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-12-13 14:40:00.750999",
+ "modified": "2025-12-16 12:02:10.667414",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Employee",
