@@ -56,7 +56,7 @@ def execute(filters=None):
 	
 	group_by = """
 			GROUP BY 
-				ticket.owner, user.full_name;
+				ticket.owner, user.full_name
 		"""
 	
 	query = select + where + group_by
