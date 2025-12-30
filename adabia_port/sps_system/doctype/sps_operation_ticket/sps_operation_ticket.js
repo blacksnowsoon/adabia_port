@@ -3,11 +3,11 @@
 
 
 frappe.ui.form.on("SPS Operation Ticket", {
-	refresh(frm) {
-
-		frm_display(frm)
+	onload(frm){
 		set_assign_to_filter(frm)
-
+	},
+	refresh(frm) {
+		frm_display(frm)
 		if (!frm.is_new()) {
 			// Re-setup listener in case tabs reload
 			setup_pdf_tab_listener(frm);

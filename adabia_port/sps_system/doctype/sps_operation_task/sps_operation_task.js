@@ -2,11 +2,11 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("SPS Operation Task", {
-	refresh(frm) {
-
-		frm_display(frm)
+	onload(frm){
 		set_assign_to_filter(frm)
-
+	},
+	refresh(frm) {
+		frm_display(frm)
 		if (!frm.is_new()) {
 			// Re-setup listener in case tabs reload
 			setup_pdf_tab_listener(frm);
@@ -254,6 +254,7 @@ function generateMultiPDFUrl(frm, format, options) {
 	return `/api/method/frappe.utils.print_format.download_multi_pdf?${params}`;
 }
 
+
 function set_assign_to_filter(frm) {
 	frm.set_query('assign_to', function () {
 		return {
@@ -263,3 +264,5 @@ function set_assign_to_filter(frm) {
 		}
 	})
 }
+
+
