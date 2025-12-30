@@ -249,9 +249,9 @@ home_page = "/home_page/"
 after_install = [
     "adabia_port.customization.app_setting.upload_logo_and_set"
 ]
-after_migrate = [
-    "adabia_port.customization.app_setting.upload_logo_and_set"
-]
+# after_migrate = [
+#     "adabia_port.customization.app_setting.upload_logo_and_set"
+# ]
 # Uninstallation
 # ------------
 
