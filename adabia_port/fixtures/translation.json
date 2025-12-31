@@ -748,10 +748,10 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2025-05-27 12:42:58.887465",
+  "modified": "2025-12-31 14:11:17.320890",
   "name": "emqsqivvlb",
   "source_text": "Query",
-  "translated_text": "إستعلام"
+  "translated_text": "Query"
  },
  {
   "context": null,
@@ -4661,19 +4661,6 @@
   "docstatus": 0,
   "doctype": "Translation",
   "language": "ar",
-  "modified": "2025-05-27 11:34:40.593664",
-  "name": "eq57eqbudf",
-  "source_text": "Query",
-  "translated_text": "إستعلام"
- },
- {
-  "context": null,
-  "contributed": 0,
-  "contribution_docname": null,
-  "contribution_status": "",
-  "docstatus": 0,
-  "doctype": "Translation",
-  "language": "ar",
   "modified": "2025-05-27 11:56:52.039688",
   "name": "rq89brigsb",
   "source_text": "Tasks must be saved as In Progress before closing it.",
@@ -5224,5 +5211,18 @@
   "name": "g8ertnod0q",
   "source_text": "Integration Message",
   "translated_text": "رسائل التكامل"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2025-12-31 14:11:47.380188",
+  "name": "fh2d3isci9",
+  "source_text": "Script",
+  "translated_text": "Script"
  }
 ]
