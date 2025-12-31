@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("SPS Operation Task", {
 	onload(frm){
-		set_assign_to_filter(frm)
+		// set_assign_to_filter(frm)
 	},
 	refresh(frm) {
 		frm_display(frm)
