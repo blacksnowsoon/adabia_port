@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("SPS Operation Task", {
 	onload(frm){
-		// set_assign_to_filter(frm)
+		set_assign_to_filter(frm)
 	},
 	refresh(frm) {
 		frm_display(frm)
@@ -47,6 +47,14 @@ frappe.ui.form.on("SPS Operation Task", {
 	},
 	status(frm) {
 		frm_display(frm)
+	},
+	task_type(frm) {
+		const task = frm.doc.task_type;
+		if (task === "New Request") {
+			frm.set_value('use_editor', 1);
+		} else {
+			frm.set_value('use_editor', 0)
+		}
 	}
 
 });
