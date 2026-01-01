@@ -4,7 +4,7 @@
 
 frappe.ui.form.on("SPS Operation Ticket", {
 	onload(frm){
-		set_assign_to_filter(frm)
+		// set_assign_to_filter(frm)
 	},
 	refresh(frm) {
 		frm_display(frm)
