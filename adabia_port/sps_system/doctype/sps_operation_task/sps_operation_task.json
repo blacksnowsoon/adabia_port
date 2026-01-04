@@ -311,14 +311,9 @@
  ],
  "grid_page_length": 50,
  "is_calendar_and_gantt": 1,
- "links": [
-  {
-   "link_doctype": "ToDo",
-   "link_fieldname": "reference_name"
-  }
- ],
+ "links": [],
  "make_attachments_public": 1,
- "modified": "2026-01-01 19:55:06.766401",
+ "modified": "2026-01-04 09:16:43.709779",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Task",
