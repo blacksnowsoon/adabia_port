@@ -12,6 +12,7 @@
   "contact_name",
   "contact_phone",
   "contact_email",
+  "notes",
   "column_break_lymg"
  ],
  "fields": [
@@ -45,11 +46,16 @@
   {
    "fieldname": "column_break_lymg",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2026-01-01 19:56:02.795976",
+ "modified": "2026-01-04 10:17:09.835289",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "Developer Contact",
