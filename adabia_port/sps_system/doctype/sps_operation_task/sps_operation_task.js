@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("SPS Operation Task", {
 	onload(frm){
-		// set_assign_to_filter(frm)
+		set_assign_to_filter(frm)
 	},
 	refresh(frm) {
 		frm_display(frm)
@@ -264,7 +264,7 @@ function generateMultiPDFUrl(frm, format, options) {
 
 
 function set_assign_to_filter(frm) {
-	frm.set_query('assign_to', function () {
+	return frm.set_query('assign_to', function () {
 		return {
 			filters: {
 				'system_user': ['!=', null]
