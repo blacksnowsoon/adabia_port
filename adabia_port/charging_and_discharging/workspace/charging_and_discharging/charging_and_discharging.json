@@ -1,7 +1,7 @@
 {
  "charts": [],
- "content": "[{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"Mgp9cl0tFJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Visit\",\"col\":3}},{\"id\":\"latQtP1i9M\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Visits List\",\"col\":3}},{\"id\":\"_DTBWaTU-O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h6di4K-qq9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"\u0627\u0644\u0632\u064a\u0627\u0631\u0627\u062a \u0627\u0644\u062d\u0627\u0644\u064a\u0629\",\"col\":12}},{\"id\":\"i_CPkrRhT_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"g0JcuF5N_j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Piers List\",\"col\":3}},{\"id\":\"sE_sccjjy9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods List\",\"col\":3}},{\"id\":\"7BO3d-eUI7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships List\",\"col\":3}},{\"id\":\"0fUhg4gfni\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Yards List\",\"col\":3}},{\"id\":\"_BVUx4PWYM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Packing Types List\",\"col\":3}}]",
- "creation": "2025-01-02 14:16:28.909757",
+ "content": "[{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"Mgp9cl0tFJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"latQtP1i9M\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Visits List\",\"col\":3}},{\"id\":\"_DTBWaTU-O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ETkUlKDkYK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Procedure\",\"col\":3}},{\"id\":\"WvwDo9Owl0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Procedures List\",\"col\":3}},{\"id\":\"i_CPkrRhT_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sE_sccjjy9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods List\",\"col\":3}},{\"id\":\"7BO3d-eUI7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships List\",\"col\":3}},{\"id\":\"0fUhg4gfni\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Yards List\",\"col\":3}}]",
+ "creation": "2025-12-13 13:49:11.166334",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Charging and DisCharging",
  "links": [],
- "modified": "2025-06-16 11:35:55.459872",
+ "modified": "2026-01-19 18:13:54.391698",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and DisCharging",
@@ -21,13 +21,7 @@
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
- "quick_lists": [
-  {
-   "document_type": "Visit Ticket",
-   "label": "\u0627\u0644\u0632\u064a\u0627\u0631\u0627\u062a \u0627\u0644\u062d\u0627\u0644\u064a\u0629",
-   "quick_list_filter": "[[\"Visit Ticket\",\"status\",\"=\",\"In Progress\",false]]"
-  }
- ],
+ "quick_lists": [],
  "roles": [
   {
    "role": "Logistic Admin"
@@ -39,6 +33,14 @@
  "sequence_id": 6.0,
  "shortcuts": [
   {
+   "color": "Blue",
+   "doc_view": "New",
+   "label": "New Ticket",
+   "link_to": "Charging and Discharging Ticket",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
    "color": "Yellow",
    "doc_view": "List",
    "label": "Goods List",
@@ -47,26 +49,26 @@
    "type": "DocType"
   },
   {
-   "color": "Blue",
-   "doc_view": "New",
-   "label": "New Visit",
-   "link_to": "Visit Ticket",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
    "color": "Green",
    "doc_view": "List",
    "label": "Visits List",
-   "link_to": "Visit Ticket",
+   "link_to": "Charging and Discharging Ticket",
    "stats_filter": "[]",
    "type": "DocType"
   },
   {
-   "color": "Yellow",
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Procedure",
+   "link_to": "Charging Discharging Procedures",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
    "doc_view": "List",
-   "label": "Piers List",
-   "link_to": "Pier",
+   "label": "Procedures List",
+   "link_to": "Charging Discharging Procedures",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -83,14 +85,6 @@
    "doc_view": "List",
    "label": "Yards List",
    "link_to": "Yard Storage",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Packing Types List",
-   "link_to": "Packing Type",
    "stats_filter": "[]",
    "type": "DocType"
   }
