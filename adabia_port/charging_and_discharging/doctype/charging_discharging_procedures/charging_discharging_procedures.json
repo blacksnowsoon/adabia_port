@@ -28,13 +28,13 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Procedure In",
-   "options": "Direct Draw\nDirect Charge\nImport Storage\nExport Storage\nCharge\nDischarging"
+   "options": "Direct Draw\nDirect Charge\nImport Storage\nExport Storage\nCharge\nDischarge"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 14:41:13.694003",
+ "modified": "2026-01-19 18:18:42.974171",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging Discharging Procedures",
