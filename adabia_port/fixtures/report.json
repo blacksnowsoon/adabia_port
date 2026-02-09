@@ -1,21 +1,46 @@
 [
  {
-  "add_total_row": 0,
+  "add_total_row": 1,
   "add_translate_data": 0,
   "columns": [],
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Report",
-  "filters": [],
-  "is_standard": "No",
+  "filters": [
+   {
+    "default": "2025-01-01",
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "From Date",
+    "mandatory": 0,
+    "options": null,
+    "parent": "SPS Modules Activities Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": "Today",
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "To Date",
+    "mandatory": 0,
+    "options": null,
+    "parent": "SPS Modules Activities Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "Yes",
   "javascript": null,
   "json": null,
   "letter_head": "ISFP Header",
-  "modified": "2024-10-25 19:02:09.542126",
+  "modified": "2026-02-09 21:23:16.903714",
   "module": "SPS System",
   "name": "SPS Modules Activities Report",
   "prepared_report": 0,
-  "query": "SELECT\r\n    modulesTab.parent,\r\n    modules.module_name,\r\n    modulesTab.module,\r\n    COUNT(modules.module_name)\r\n   \r\n    \r\nFROM\r\n    `tabModule Child Table` AS modulesTab\r\nLEFT JOIN\r\n    `tabSPS Module` AS modules on modules.name = modulesTab.module\r\nGROUP BY modules.module_name\r\n    ;",
+  "query": "SELECT\n    module.module_name AS `Module Name`,\n    COUNT(combined_tasks.name) AS `Total Tasks`,\n    SUM(CASE WHEN combined_tasks.task_type = 'Bug' THEN 1 ELSE 0 END) AS `Bug`,\n    SUM(CASE WHEN combined_tasks.task_type = 'New Request' THEN 1 ELSE 0 END) AS `Request`,\n    SUM(CASE WHEN combined_tasks.task_type = 'Script' THEN 1 ELSE 0 END) AS `Script`,\n    SUM(CASE WHEN combined_tasks.task_type = 'Query' THEN 1 ELSE 0 END) AS `Query Report`,\n    -- Calculate Bug Percentage (Safely)\n    ROUND(\n        (SUM(CASE WHEN combined_tasks.task_type = 'Bug' THEN 1 ELSE 0 END) / NULLIF(COUNT(combined_tasks.name), 0)) * 100, 2) AS `Bug %% of Tasks`\nFROM\n    `tabSPS Module` AS module\nLEFT JOIN\n    `tabModule Child Table` AS moduleTab ON module.name = moduleTab.module\nLEFT JOIN (\n    -- This combines both current and old tasks into one stream\n    SELECT name, task_type, creation, status FROM `tabSPS Operation Task`\n    UNION ALL\n    SELECT name, task_type, creation, status FROM `tabSPS Operation Ticket` \n) AS combined_tasks ON moduleTab.parent = combined_tasks.name\n\nWHERE\n    -- Checking for NULL or Empty strings first to avoid the comparison if not needed\n    (%(from_date)s IS NULL OR %(from_date)s = '' OR combined_tasks.creation >= %(from_date)s)\n    AND \n    (%(to_date)s IS NULL OR %(to_date)s = '' OR combined_tasks.creation <= %(to_date)s)\n    AND\n    combined_tasks.status = 'Closed'\nGROUP BY\n    module.module_name\nORDER BY\n    `Total Tasks` DESC;",
   "ref_doctype": "SPS Module",
   "reference_report": null,
   "report_name": "SPS Modules Activities Report",
@@ -27,12 +52,6 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "System Manager"
-   },
-   {
-    "parent": "SPS Modules Activities Report",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "SPS Responsible Group"
    },
    {
     "parent": "SPS Modules Activities Report",
