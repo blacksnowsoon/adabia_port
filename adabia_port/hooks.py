@@ -17,6 +17,8 @@ fixtures = [
     "Translation",
     "Print Settings",
     "Number Card",
+    "Dashboard Chart",
+    "Dashboard",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
@@ -121,13 +123,6 @@ fixtures = [
                 "Departments Vs Managements in Details",
                 "SPS Modules Activities Report",
                 "Modules Activities"
-            ]]
-        }
-    },
-    {
-        "dt":"Dashboard Chart", "filters" : { 
-            "name":["in", [
-                "Employees and Managements",
             ]]
         }
     },
