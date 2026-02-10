@@ -140,12 +140,6 @@ fixtures = [
         }
     },
     {
-        "dt":"Dashboard", "filters" : { 
-            "name":["in", [
-            ]]
-        }
-    }, 
-    {
         "dt": "Website Theme", "filters": {
             "name": ["in", [
                 "Go Smart",
