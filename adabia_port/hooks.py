@@ -16,6 +16,7 @@ fixtures = [
     "Packing Type",
     "Translation",
     "Print Settings",
+    "Number Card",
     {
         "dt":"Role", "filters" : { 
             "name":["in", [
