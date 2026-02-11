@@ -267,7 +267,7 @@ function set_assign_to_filter(frm) {
 	return frm.set_query('assign_to', function () {
 		return {
 			filters: {
-				'system_user': ['!=', null]
+				'is_bug_reporter': ['=', 1]
 			}
 		}
 	})

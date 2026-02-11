@@ -13,6 +13,7 @@
   "job_title",
   "shift",
   "system_user",
+  "is_bug_reporter",
   "column_break_qmfm",
   "disabled",
   "user_name",
@@ -138,11 +139,17 @@
    "fieldname": "english_name",
    "fieldtype": "Data",
    "label": "English Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_bug_reporter",
+   "fieldtype": "Check",
+   "label": "Is Bug Reporter"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-12-16 12:02:10.667414",
+ "modified": "2026-02-11 12:59:22.351432",
  "modified_by": "Administrator",
  "module": "Port Core",
  "name": "Employee",

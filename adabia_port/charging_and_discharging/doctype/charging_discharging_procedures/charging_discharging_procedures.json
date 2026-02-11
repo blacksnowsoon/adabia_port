@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:CDS-{#####}",
  "creation": "2026-01-17 19:46:57.647547",
  "doctype": "DocType",
@@ -34,7 +35,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 18:18:42.974171",
+ "modified": "2026-02-11 12:50:42.580587",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging Discharging Procedures",

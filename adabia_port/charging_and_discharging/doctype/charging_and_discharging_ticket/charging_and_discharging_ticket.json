@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:CDT-{YYYY}-{MM}-{#####}",
  "creation": "2026-01-17 19:40:15.916086",
  "doctype": "DocType",
@@ -91,7 +92,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 18:18:28.027294",
+ "modified": "2026-02-11 12:51:00.039505",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",
