@@ -536,7 +536,7 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"Mgp9cl0tFJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"latQtP1i9M\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Visits List\",\"col\":3}},{\"id\":\"_DTBWaTU-O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ETkUlKDkYK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Procedure\",\"col\":3}},{\"id\":\"WvwDo9Owl0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Procedures List\",\"col\":3}},{\"id\":\"i_CPkrRhT_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sE_sccjjy9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods List\",\"col\":3}},{\"id\":\"7BO3d-eUI7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships List\",\"col\":3}},{\"id\":\"0fUhg4gfni\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Yards List\",\"col\":3}}]",
+  "content": "[{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"VV9S_-zckC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Logistics Tickets\",\"col\":4}},{\"id\":\"_DTBWaTU-O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Mgp9cl0tFJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"ETkUlKDkYK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Procedure\",\"col\":3}},{\"id\":\"WvwDo9Owl0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Procedures List\",\"col\":3}},{\"id\":\"i_CPkrRhT_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sE_sccjjy9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods List\",\"col\":3}},{\"id\":\"7BO3d-eUI7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships List\",\"col\":3}},{\"id\":\"0fUhg4gfni\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Yards List\",\"col\":3}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -547,10 +547,18 @@
   "is_hidden": 0,
   "label": "Charging and DisCharging",
   "links": [],
-  "modified": "2026-01-19 18:13:54.391698",
+  "modified": "2026-02-11 13:57:01.626162",
   "module": "Charging and Discharging",
   "name": "Charging and DisCharging",
-  "number_cards": [],
+  "number_cards": [
+   {
+    "label": "Logistics Tickets",
+    "number_card_name": "Logistic Ticket List",
+    "parent": "Charging and DisCharging",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   }
+  ],
   "parent_page": "",
   "public": 1,
   "quick_lists": [],
@@ -596,23 +604,6 @@
     "kanban_board": null,
     "label": "Goods List",
     "link_to": "Goods",
-    "parent": "Charging and DisCharging",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Green",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Visits List",
-    "link_to": "Charging and Discharging Ticket",
     "parent": "Charging and DisCharging",
     "parentfield": "shortcuts",
     "parenttype": "Workspace",
