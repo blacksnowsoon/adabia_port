@@ -17,7 +17,8 @@
   "ship_name",
   "column_break_zffi",
   "section_break_rdxq",
-  "details"
+  "details",
+  "amended_from"
  ],
  "fields": [
   {
@@ -87,12 +88,23 @@
    "fieldtype": "Link",
    "label": "Company Name",
    "options": "Company"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Charging and Discharging Ticket",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-02-11 12:51:00.039505",
+ "modified": "2026-02-11 13:53:49.123329",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and Discharging Ticket",
@@ -112,6 +124,8 @@
    "write": 1
   },
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -121,6 +135,7 @@
    "report": 1,
    "role": "Logistic Admin",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
