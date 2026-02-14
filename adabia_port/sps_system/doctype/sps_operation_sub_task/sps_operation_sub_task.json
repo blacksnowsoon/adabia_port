@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:OST-{MM}-{task}-{####}",
+ "creation": "2026-02-14 19:02:58.156440",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "task",
+  "column_break_humj",
+  "section_break_tvez",
+  "type",
+  "column_break_hkch",
+  "patch_number",
+  "section_break_xawk",
+  "details",
+  "preview_tab",
+  "sub_task_preview",
+  "pdf_tab",
+  "sub_task_pdf_view"
+ ],
+ "fields": [
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Main Task",
+   "options": "SPS Operation Task",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_humj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tvez",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Test Patch\nUpdate Task"
+  },
+  {
+   "fieldname": "column_break_hkch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xawk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Text Editor",
+   "label": "Details",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type === \"Test Patch\"",
+   "fieldname": "patch_number",
+   "fieldtype": "Data",
+   "label": "Patch Number",
+   "mandatory_depends_on": "eval:doc.type === \"Test Patch\""
+  },
+  {
+   "fieldname": "preview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Preview"
+  },
+  {
+   "fieldname": "sub_task_preview",
+   "fieldtype": "HTML",
+   "label": "Sub Task Preview"
+  },
+  {
+   "fieldname": "pdf_tab",
+   "fieldtype": "Tab Break",
+   "label": "PDF"
+  },
+  {
+   "fieldname": "sub_task_pdf_view",
+   "fieldtype": "HTML",
+   "label": "Sub Task PDF View"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2026-02-14 20:01:48.165010",
+ "modified_by": "Administrator",
+ "module": "SPS System",
+ "name": "SPS Operation Sub Task",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SPS OP Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SPS OP User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

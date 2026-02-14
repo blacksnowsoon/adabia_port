@@ -311,9 +311,14 @@
  ],
  "grid_page_length": 50,
  "is_calendar_and_gantt": 1,
- "links": [],
+ "links": [
+  {
+   "link_doctype": "SPS Operation Sub Task",
+   "link_fieldname": "task"
+  }
+ ],
  "make_attachments_public": 1,
- "modified": "2026-01-04 10:38:00.450685",
+ "modified": "2026-02-14 20:09:00.726951",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Task",

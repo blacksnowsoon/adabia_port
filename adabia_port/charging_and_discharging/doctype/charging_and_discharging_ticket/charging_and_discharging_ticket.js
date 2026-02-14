@@ -4,6 +4,7 @@
 frappe.ui.form.on("Charging and Discharging Ticket", {
 	refresh(frm) {
         setProceduresFilter(frm)
+        console.log(frm.doc)
 	},
     procedure_in(frm) {
         setProceduresFilter(frm)
