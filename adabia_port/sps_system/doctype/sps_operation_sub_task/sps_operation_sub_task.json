@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_events_in_timeline": 1,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:OST-{MM}-{####}",
@@ -101,7 +102,8 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2026-02-15 10:07:15.725255",
+ "make_attachments_public": 1,
+ "modified": "2026-02-15 13:54:27.307866",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Sub Task",

@@ -249,21 +249,6 @@ function generate_pdf_url(frm, format, options) {
 		`&_=${new Date().getTime()}`;
 }
 
-// Generate PDF URL for multi pdf format
-// function generateMultiPDFUrl(frm, format, options) {
-
-// 	const params = new URLSearchParams({
-// 		doctype: encodeURIComponent(frm.doctype),
-// 		name: JSON.stringify([frm.doc.name]), // Wrap in array and stringify
-// 		format: encodeURIComponent(format),
-// 		no_letterhead: 1,
-// 		letterhead: 'No Letterhead',
-// 		options: JSON.stringify(options),
-// 		_: new Date().getTime() // Cache buster
-// 	});
-
-// 	return `/api/method/frappe.utils.print_format.download_multi_pdf?${params}`;
-// }
 
 
 function set_assign_to_filter(frm) {
