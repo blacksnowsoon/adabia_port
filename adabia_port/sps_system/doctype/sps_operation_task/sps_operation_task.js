@@ -200,7 +200,14 @@ async function load_pdf_content(frm) {
 function show_loading_indicator(wrapper) {
 	wrapper.html(spinner());
 }
-
+function show_error_state(wrapper, message) {
+	wrapper.html(`
+		<div class="pdf-error-state" style="text-align: center; padding: 20px;">
+			<i class="fa fa-exclamation-triangle" style="color: red; font-size: 24px;"></i>
+			<p>${message}</p>
+		</div>
+	`);
+}
 async function render_pdf_viewer(wrapper, pdf_url) {
 
 	return new Promise((resolve) => {
@@ -227,14 +234,7 @@ async function render_pdf_viewer(wrapper, pdf_url) {
 	});
 }
 
-function show_error_state(wrapper, message) {
-	wrapper.html(`
-		<div class="pdf-error-state" style="text-align: center; padding: 20px;">
-			<i class="fa fa-exclamation-triangle" style="color: red; font-size: 24px;"></i>
-			<p>${message}</p>
-		</div>
-	`);
-}
+
 
 // Generate PDF URL for a single document
 function generate_pdf_url(frm, format, options) {
@@ -250,20 +250,20 @@ function generate_pdf_url(frm, format, options) {
 }
 
 // Generate PDF URL for multi pdf format
-function generateMultiPDFUrl(frm, format, options) {
+// function generateMultiPDFUrl(frm, format, options) {
 
-	const params = new URLSearchParams({
-		doctype: encodeURIComponent(frm.doctype),
-		name: JSON.stringify([frm.doc.name]), // Wrap in array and stringify
-		format: encodeURIComponent(format),
-		no_letterhead: 1,
-		letterhead: 'No Letterhead',
-		options: JSON.stringify(options),
-		_: new Date().getTime() // Cache buster
-	});
+// 	const params = new URLSearchParams({
+// 		doctype: encodeURIComponent(frm.doctype),
+// 		name: JSON.stringify([frm.doc.name]), // Wrap in array and stringify
+// 		format: encodeURIComponent(format),
+// 		no_letterhead: 1,
+// 		letterhead: 'No Letterhead',
+// 		options: JSON.stringify(options),
+// 		_: new Date().getTime() // Cache buster
+// 	});
 
-	return `/api/method/frappe.utils.print_format.download_multi_pdf?${params}`;
-}
+// 	return `/api/method/frappe.utils.print_format.download_multi_pdf?${params}`;
+// }
 
 
 function set_assign_to_filter(frm) {

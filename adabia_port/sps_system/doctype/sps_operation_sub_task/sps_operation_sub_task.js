@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("SPS Operation Sub Task", {
 	refresh(frm) {
-        
+
         if (!frm.is_new()) {
 			// Re-setup listener in case tabs reload
 			setup_pdf_tab_listener(frm);
@@ -33,7 +33,7 @@ function setup_pdf_tab_listener(frm) {
 }
 
 async function load_pdf_content(frm) {
-	const wrapper = frm.fields_dict['pdf'].$wrapper;
+	const wrapper = frm.fields_dict['sub_task_pdf_view'].$wrapper;
 	const format = "Operation Sub Task"
 	wrapper.empty(); // Clear previous content
 	wrapper.html(spinner());
@@ -47,26 +47,57 @@ async function load_pdf_content(frm) {
 			"margin-top": "5",
 		};
 		// 3. Generate and load PDF
-		const pdf_url = generateMultiPDFUrl(frm, format, options);
+		const pdf_url = generate_pdf_url(frm, format, options);
 
 		await render_pdf_viewer(wrapper, pdf_url);
 
 	} catch (error) {
-		show_error_state(wrapper, __('PDF failed to load'));
+		show_error_state(wrapper, __('PDF failed to load ') + error);
 	}
 }
+async function render_pdf_viewer(wrapper, pdf_url) {
 
-function generateMultiPDFUrl(frm, format, options) {
+	return new Promise((resolve) => {
+		const iframe = document.createElement('iframe');
+		iframe.style.cssText = `
+            width: 100%; 
+            height: 100vh; 
+            border: none;
+        `;
+		iframe.src = pdf_url;
 
-	const params = new URLSearchParams({
-		doctype: encodeURIComponent(frm.doctype),
-		name: JSON.stringify([frm.doc.name]), // Wrap in array and stringify
-		format: encodeURIComponent(format),
-		no_letterhead: 1,
-		letterhead: 'No Letterhead',
-		options: JSON.stringify(options),
-		_: new Date().getTime() // Cache buster
+		iframe.onload = () => {
+			iframe.style.opacity = '1';
+
+			wrapper.find('#spinner').remove();
+			resolve()
+		};
+
+		iframe.onerror = () => {
+			throw new Error('PDF load failed');
+		};
+		wrapper.append(iframe);
+		// resolve(iframe);
 	});
+}
+function show_error_state(wrapper, message) {
+	wrapper.html(`
+		<div class="pdf-error-state" style="text-align: center; padding: 20px;">
+			<i class="fa fa-exclamation-triangle" style="color: red; font-size: 24px;"></i>
+			<p>${message}</p>
+		</div>
+	`);
+}
 
-	return `/api/method/frappe.utils.print_format.download_multi_pdf?${params}`;
+
+function generate_pdf_url(frm, format, options) {
+
+	return `/api/method/frappe.utils.print_format.download_pdf?` +
+		`doctype=${encodeURIComponent(frm.doctype)}` +
+		`&name=${encodeURIComponent(frm.doc.name)}` +
+		`&format=${encodeURIComponent(format)}` +
+		`&no_letterhead=1` +
+		`&letterhead=${encodeURIComponent('No Letterhead')}` +
+		`&options=${encodeURIComponent(JSON.stringify(options))}` +
+		`&_=${new Date().getTime()}`;
 }
