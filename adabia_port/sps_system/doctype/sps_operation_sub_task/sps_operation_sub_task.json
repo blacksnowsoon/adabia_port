@@ -2,13 +2,15 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:OST-{MM}-{task}-{####}",
+ "autoname": "format:OST-{MM}-{####}",
  "creation": "2026-02-14 19:02:58.156440",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "task",
   "column_break_humj",
+  "status",
   "section_break_tvez",
   "type",
   "column_break_hkch",
@@ -40,6 +42,8 @@
   {
    "fieldname": "type",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Type",
    "options": "Test Patch\nUpdate Task"
   },
@@ -61,6 +65,8 @@
    "depends_on": "eval:doc.type === \"Test Patch\"",
    "fieldname": "patch_number",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Patch Number",
    "mandatory_depends_on": "eval:doc.type === \"Test Patch\""
   },
@@ -83,11 +89,19 @@
    "fieldname": "sub_task_pdf_view",
    "fieldtype": "HTML",
    "label": "Sub Task PDF View"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "task.status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2026-02-14 20:01:48.165010",
+ "modified": "2026-02-15 10:07:15.725255",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Sub Task",

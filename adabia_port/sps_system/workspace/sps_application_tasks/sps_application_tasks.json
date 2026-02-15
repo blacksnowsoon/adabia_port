@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"ZjrpYmSDhS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Application Tasks</span>\",\"col\":12}},{\"id\":\"BOtdn2veIQ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"In-Progress Tasks\",\"col\":4}},{\"id\":\"fbNoG_6hTi\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Tasks\",\"col\":4}},{\"id\":\"U9zNOhFmIy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Closed Tasks\",\"col\":4}},{\"id\":\"7su_3tAv9J\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"asHlSqnhyG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Operation Tasks\",\"col\":3}},{\"id\":\"-Tr-jthX0z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Task\",\"col\":3}},{\"id\":\"YGNQ4RqkJk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}}]",
+ "content": "[{\"id\":\"ZjrpYmSDhS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Application Tasks</span>\",\"col\":12}},{\"id\":\"BOtdn2veIQ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"In-Progress Tasks\",\"col\":4}},{\"id\":\"fbNoG_6hTi\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Tasks\",\"col\":4}},{\"id\":\"U9zNOhFmIy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Closed Tasks\",\"col\":4}},{\"id\":\"7su_3tAv9J\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"asHlSqnhyG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Operation Tasks\",\"col\":3}},{\"id\":\"-Tr-jthX0z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Task\",\"col\":3}},{\"id\":\"YGNQ4RqkJk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"5uLxTOHxUP\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"E8c40LmVeG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sub Tasks List\",\"col\":3}},{\"id\":\"zoHIjt3vku\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Sub Task\",\"col\":3}}]",
  "creation": "2025-12-28 11:06:01.767933",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "SPS Application Tasks",
  "links": [],
- "modified": "2026-02-10 09:26:07.458005",
+ "modified": "2026-02-15 10:19:56.471476",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Application Tasks",
@@ -49,6 +49,14 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Sub Tasks List",
+   "link_to": "SPS Operation Sub Task",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Dashboard",
    "link_to": "SPS Operation Dash",
    "type": "Dashboard"
@@ -58,6 +66,14 @@
    "doc_view": "New",
    "label": "New Task",
    "link_to": "SPS Operation Task",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "New Sub Task",
+   "link_to": "SPS Operation Sub Task",
    "stats_filter": "[]",
    "type": "DocType"
   }

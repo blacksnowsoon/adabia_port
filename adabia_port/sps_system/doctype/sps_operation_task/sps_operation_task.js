@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("SPS Operation Task", {
-	onload(frm){
+	onload(frm) {
 		set_assign_to_filter(frm)
 	},
 	refresh(frm) {
@@ -109,7 +109,10 @@ function frm_display(frm) {
 		} else {
 			reset_value(frm, [...closed_fields, 'canceled_reason']);
 		}
+
 	}
+
+	
 }
 
 function set_reqd(frm, fields, value) {
@@ -204,7 +207,7 @@ async function render_pdf_viewer(wrapper, pdf_url) {
 		const iframe = document.createElement('iframe');
 		iframe.style.cssText = `
             width: 100%; 
-            height: 80vh; 
+            height: 100vh; 
             border: none;
         `;
 		iframe.src = pdf_url;
