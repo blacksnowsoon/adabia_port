@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"VV9S_-zckC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Logistics Tickets\",\"col\":4}},{\"id\":\"_DTBWaTU-O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Mgp9cl0tFJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"ETkUlKDkYK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Procedure\",\"col\":3}},{\"id\":\"WvwDo9Owl0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Procedures List\",\"col\":3}},{\"id\":\"i_CPkrRhT_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sE_sccjjy9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods List\",\"col\":3}},{\"id\":\"7BO3d-eUI7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships List\",\"col\":3}},{\"id\":\"0fUhg4gfni\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Yards List\",\"col\":3}}]",
+ "content": "[{\"id\":\"XHr7_IC1vT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Charging and Discharging</span>\",\"col\":12}},{\"id\":\"VV9S_-zckC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Logistics Tickets\",\"col\":4}},{\"id\":\"_DTBWaTU-O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Mgp9cl0tFJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"ETkUlKDkYK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Procedure\",\"col\":3}},{\"id\":\"d2pSb3lDNs\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"gcLliMobhu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets List\",\"col\":3}},{\"id\":\"WvwDo9Owl0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Procedures List\",\"col\":3}},{\"id\":\"i_CPkrRhT_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sE_sccjjy9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goods List\",\"col\":3}},{\"id\":\"7BO3d-eUI7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ships List\",\"col\":3}},{\"id\":\"0fUhg4gfni\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Yards List\",\"col\":3}}]",
  "creation": "2025-12-13 13:49:11.166334",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Charging and DisCharging",
  "links": [],
- "modified": "2026-02-11 13:57:01.626162",
+ "modified": "2026-02-16 13:00:16.575513",
  "modified_by": "Administrator",
  "module": "Charging and Discharging",
  "name": "Charging and DisCharging",
@@ -37,6 +37,14 @@
  ],
  "sequence_id": 6.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tickets List",
+   "link_to": "Charging and Discharging Ticket",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
   {
    "color": "Blue",
    "doc_view": "New",
