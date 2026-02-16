@@ -16,6 +16,14 @@ class SPSOperationTask(Document):
 			is_completed = frappe.db.get_value("SPS Operation Task", self.name, "completed_in")
 			if is_completed == None:
 				self.completed_in = frappe.utils.now()
+				
+			existing = frappe.get_all('SPS Operation Sub Task', filters={
+			'task': self.name,
+			'status': 'In Progress'
+			}, fields=['name'])
+			if existing:
+				for row in existing:
+					frappe.db.set_value('SPS Operation Sub Task', row.name, 'status', 'Closed')
 	
 
 	def sync_assignment(self):

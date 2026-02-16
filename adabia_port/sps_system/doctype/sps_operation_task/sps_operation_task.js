@@ -11,6 +11,7 @@ frappe.ui.form.on("SPS Operation Task", {
 			// Re-setup listener in case tabs reload
 			setup_pdf_tab_listener(frm);
 		}
+		setup_save_reminder(frm);
 	},
 	// handle the approvels list without the managers
 	modules(frm) {
@@ -52,6 +53,7 @@ frappe.ui.form.on("SPS Operation Task", {
 		const task = frm.doc.task_type;
 		if (task === "New Request") {
 			frm.set_value('use_editor', 1);
+			frm.set_value('in', "")
 		} else {
 			frm.set_value('use_editor', 0)
 		}
@@ -112,7 +114,7 @@ function frm_display(frm) {
 
 	}
 
-	
+
 }
 
 function set_reqd(frm, fields, value) {
@@ -259,6 +261,21 @@ function set_assign_to_filter(frm) {
 			}
 		}
 	})
+}
+
+function setup_save_reminder(frm) {
+	if (frm.save_reminder_interval) {
+		return;
+	}
+
+	frm.save_reminder_interval = setInterval(() => {
+		if (frm.is_dirty() && frm.doc.status === 'Backlog') {
+			frappe.show_alert({
+				message: __("Please save your changes to avoid losing work."),
+				indicator: 'orange'
+			}, 5);
+		}
+	}, 5 * 60 * 1000); // 5 minutes
 }
 
 

@@ -8,6 +8,12 @@ frappe.ui.form.on("SPS Operation Sub Task", {
             setup_pdf_tab_listener(frm);
             setup_preview_tab_listener(frm);
         }
+        if (frm.doc.status === 'Closed') {
+            frm.disable_save();
+            ["task", "status", "type", "patch_number", "details"].forEach(field => {
+                frm.set_df_property(field, 'read_only', 1);
+            });
+        }
     },
     validate: async (frm) => {
         const status = frm.doc.status;
@@ -106,16 +112,18 @@ async function load_pdf_content(frm) {
             "margin-top": "5",
         };
         // 3. Generate and load PDF
-        const pdf_url = generate_pdf_url(frm, format, options);
+        const pdf_url = GenreatePDF_URL(frm, format, options);
 
         await render_pdf_viewer(wrapper, pdf_url).then((response) => {
             wrapper.append(response)
         });
 
     } catch (error) {
-        show_error_state(wrapper, __('PDF failed to load ') + error);
+        PDF_LoadError(wrapper, __('PDF failed to load ') + error);
     }
 }
+
+
 async function render_pdf_viewer(wrapper, pdf_url) {
 
     return new Promise((resolve) => {
@@ -137,7 +145,7 @@ async function render_pdf_viewer(wrapper, pdf_url) {
         iframe.onerror = () => {
             throw new Error('PDF load failed');
         };
-        // wrapper.append(iframe);
+        
         resolve(iframe);
     });
 }
