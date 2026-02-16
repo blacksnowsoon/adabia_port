@@ -108,7 +108,9 @@ async function load_pdf_content(frm) {
         // 3. Generate and load PDF
         const pdf_url = generate_pdf_url(frm, format, options);
 
-        await render_pdf_viewer(wrapper, pdf_url);
+        await render_pdf_viewer(wrapper, pdf_url).then((response) => {
+            wrapper.append(response)
+        });
 
     } catch (error) {
         show_error_state(wrapper, __('PDF failed to load ') + error);
@@ -129,16 +131,17 @@ async function render_pdf_viewer(wrapper, pdf_url) {
             iframe.style.opacity = '1';
 
             wrapper.find('#spinner').remove();
-            resolve()
+            resolve(iframe)
         };
 
         iframe.onerror = () => {
             throw new Error('PDF load failed');
         };
-        wrapper.append(iframe);
-        // resolve(iframe);
+        // wrapper.append(iframe);
+        resolve(iframe);
     });
 }
+
 function show_error_state(wrapper, message) {
     wrapper.html(`
 		<div class="pdf-error-state" style="text-align: center; padding: 20px;">

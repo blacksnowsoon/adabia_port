@@ -103,7 +103,7 @@
  "grid_page_length": 50,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2026-02-15 13:54:27.307866",
+ "modified": "2026-02-15 13:55:35.347767",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Sub Task",
@@ -150,6 +150,11 @@
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Green",
+   "title": "In Progress"
+  }
+ ],
  "track_changes": 1
 }

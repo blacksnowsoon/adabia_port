@@ -132,3 +132,29 @@ function getData(doctype) {
     }
   }
 }
+
+/**
+ * 
+ */
+function GenreatePDF_URL(frm, format, options) {
+
+    return `/api/method/frappe.utils.print_format.download_pdf?` +
+        `doctype=${encodeURIComponent(frm.doctype)}` +
+        `&name=${encodeURIComponent(frm.doc.name)}` +
+        `&format=${encodeURIComponent(format)}` +
+        `&no_letterhead=1` +
+        `&letterhead=${encodeURIComponent('No Letterhead')}` +
+        `&options=${encodeURIComponent(JSON.stringify(options))}` +
+        `&_=${new Date().getTime()}`;
+}
+/**
+ * 
+ */
+function PDF_LoadError(wrapper, message) {
+    wrapper.html(`
+		<div class="pdf-error-state" style="text-align: center; padding: 20px;">
+			<i class="fa fa-exclamation-triangle" style="color: red; font-size: 24px;"></i>
+			<p>${message}</p>
+		</div>
+	`);
+}
