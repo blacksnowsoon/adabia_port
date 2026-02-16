@@ -1,111 +1,5 @@
 [
  {
-  "charts": [
-   {
-    "chart_name": "SPS OP Ticket Chart",
-    "label": "Tasks Statistics",
-    "parent": "SPS OP Space",
-    "parentfield": "charts",
-    "parenttype": "Workspace"
-   },
-   {
-    "chart_name": "Most Effected Modules in SPS",
-    "label": "Tasks Per Module",
-    "parent": "SPS OP Space",
-    "parentfield": "charts",
-    "parenttype": "Workspace"
-   }
-  ],
-  "content": "[{\"id\":\"yKVmw_NzG_\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tasks Per Module\",\"col\":6}},{\"id\":\"2llifoxq9a\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tasks Statistics\",\"col\":6}},{\"id\":\"h_6ALxVqfr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Operation</span>\",\"col\":12}},{\"id\":\"ZLa8ZDtGSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Task\",\"col\":3}},{\"id\":\"3ld3WgmpNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tasks List\",\"col\":3}},{\"id\":\"aHxbSTTQ6L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Modules\",\"col\":3}},{\"id\":\"b2QE4BzEyw\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XipeUBYI6w\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>In Progress</b></span>\",\"col\":12}},{\"id\":\"jA1Jf2AzJN\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oDSUarCKcv\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Backlog</b></span>\",\"col\":12}}]",
-  "custom_blocks": [],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "for_user": "",
-  "hide_custom": 0,
-  "icon": "color-energy-points",
-  "indicator_color": "green",
-  "is_hidden": 1,
-  "label": "SPS OP Space",
-  "links": [],
-  "modified": "2026-02-15 10:17:56.619547",
-  "module": "SPS System",
-  "name": "SPS OP Space",
-  "number_cards": [],
-  "parent_page": "",
-  "public": 1,
-  "quick_lists": [],
-  "restrict_to_domain": null,
-  "roles": [
-   {
-    "parent": "SPS OP Space",
-    "parentfield": "roles",
-    "parenttype": "Workspace",
-    "role": "SPS OP Admin"
-   },
-   {
-    "parent": "SPS OP Space",
-    "parentfield": "roles",
-    "parenttype": "Workspace",
-    "role": "SPS OP User"
-   }
-  ],
-  "sequence_id": 5.0,
-  "shortcuts": [
-   {
-    "color": "Grey",
-    "doc_view": "New",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "New Task",
-    "link_to": "SPS Operation Ticket",
-    "parent": "SPS OP Space",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Pink",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Tasks List",
-    "link_to": "SPS Operation Ticket",
-    "parent": "SPS OP Space",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Grey",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "SPS Modules",
-    "link_to": "SPS Module",
-    "parent": "SPS OP Space",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   }
-  ],
-  "title": "SPS OP Space"
- },
- {
   "charts": [],
   "content": "[{\"id\":\"4lNhR0c5fP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"FnGnDZKnQ9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets\",\"col\":3}},{\"id\":\"Og2bHfuo6D\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"OP62ZdgzTC\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Open Tickets\",\"col\":6}},{\"id\":\"axUCA2vzSh\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Data\",\"col\":3}},{\"id\":\"j5xa-BvuaK\",\"type\":\"card\",\"data\":{\"card_name\":\"IT Data Tabels\",\"col\":3}},{\"id\":\"aNUVjBAJZm\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"yYueT5H0lA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"O-9vE91cPS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"NrRt2vjhpo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees Basic Data\",\"col\":3}},{\"id\":\"K0x_vKdp-s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices Report\",\"col\":3}},{\"id\":\"HeK3Qzu10i\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"IT Tasks Report\",\"col\":3}}]",
   "custom_blocks": [],
@@ -1407,5 +1301,139 @@
    }
   ],
   "title": "Customers Support"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"ZjrpYmSDhS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Application Tasks</span>\",\"col\":12}},{\"id\":\"BOtdn2veIQ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"In-Progress Tasks\",\"col\":4}},{\"id\":\"fbNoG_6hTi\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Tasks\",\"col\":4}},{\"id\":\"U9zNOhFmIy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Closed Tasks\",\"col\":4}},{\"id\":\"7su_3tAv9J\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"asHlSqnhyG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Operation Tasks\",\"col\":3}},{\"id\":\"-Tr-jthX0z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Task\",\"col\":3}},{\"id\":\"YGNQ4RqkJk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"5uLxTOHxUP\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"E8c40LmVeG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sub Tasks List\",\"col\":3}},{\"id\":\"zoHIjt3vku\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Sub Task\",\"col\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "color-review-points",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "SPS Application Tasks",
+  "links": [],
+  "modified": "2026-02-15 10:19:56.471476",
+  "module": "SPS System",
+  "name": "SPS Application Tasks",
+  "number_cards": [
+   {
+    "label": "In-Progress Tasks",
+    "number_card_name": "Total Tasks In-Progress",
+    "parent": "SPS Application Tasks",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "Closed Tasks",
+    "number_card_name": "Closed Tasks",
+    "parent": "SPS Application Tasks",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "Open Tasks",
+    "number_card_name": "Total Backlog Tasks",
+    "parent": "SPS Application Tasks",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   }
+  ],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 23.0,
+  "shortcuts": [
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "SPS Operation Tasks",
+    "link_to": "SPS Operation Task",
+    "parent": "SPS Application Tasks",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Sub Tasks List",
+    "link_to": "SPS Operation Sub Task",
+    "parent": "SPS Application Tasks",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Dashboard",
+    "link_to": "SPS Operation Dash",
+    "parent": "SPS Application Tasks",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Dashboard",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "New",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "New Task",
+    "link_to": "SPS Operation Task",
+    "parent": "SPS Application Tasks",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "New Sub Task",
+    "link_to": "SPS Operation Sub Task",
+    "parent": "SPS Application Tasks",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "SPS Application Tasks"
  }
 ]

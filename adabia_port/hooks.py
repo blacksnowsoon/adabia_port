@@ -130,11 +130,11 @@ fixtures = [
         "dt":"Workspace", "filters" : { 
             "name":["in", [
                 "Main",
-                "SPS OP Space",
                 "Charging and DisCharging",
                 "Infra - IT",
                 "Gates",
-                "Customers Support"
+                "Customers Support",
+                "SPS Application Tasks"
 
             ]]
         }
