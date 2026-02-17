@@ -102,7 +102,8 @@ fixtures = [
             "name": ["in", [
                 "Payment Permit",
                 "Application CR Builder",
-                "SPS OP Bug PRT Format"
+                "SPS OP Bug PRT Format",
+                "Operation Sub Task"
             ]]
         }
     },
