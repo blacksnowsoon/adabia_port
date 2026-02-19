@@ -49,6 +49,8 @@
   "requirements",
   "section_description",
   "description",
+  "preview_tab",
+  "task_preview",
   "pdf_view_tab",
   "cr_preview"
  ],
@@ -262,7 +264,6 @@
    "show_on_timeline": 1
   },
   {
-   "collapsible": 1,
    "fieldname": "section_scopes",
    "fieldtype": "Section Break",
    "label": "Scopes"
@@ -274,7 +275,6 @@
    "mandatory_depends_on": "doc.use_editor==1"
   },
   {
-   "collapsible": 1,
    "fieldname": "section_requirements",
    "fieldtype": "Section Break",
    "label": "Requirements"
@@ -285,7 +285,6 @@
    "label": "Requirements "
   },
   {
-   "collapsible": 1,
    "fieldname": "section_description",
    "fieldtype": "Section Break",
    "label": "Case Description"
@@ -301,12 +300,22 @@
    "depends_on": "eval:!doc.__unsaved",
    "fieldname": "pdf_view_tab",
    "fieldtype": "Tab Break",
-   "label": "PDF View"
+   "label": "PDF"
   },
   {
    "fieldname": "cr_preview",
    "fieldtype": "HTML",
    "label": "CR Preview"
+  },
+  {
+   "fieldname": "preview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Preview"
+  },
+  {
+   "fieldname": "task_preview",
+   "fieldtype": "HTML",
+   "label": "Task Preview"
   }
  ],
  "grid_page_length": 50,
@@ -318,7 +327,7 @@
   }
  ],
  "make_attachments_public": 1,
- "modified": "2026-02-14 20:09:00.726951",
+ "modified": "2026-02-19 09:40:00.660191",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Task",

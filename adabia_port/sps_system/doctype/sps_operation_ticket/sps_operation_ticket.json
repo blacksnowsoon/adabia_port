@@ -49,6 +49,8 @@
   "requirements",
   "section_description",
   "description",
+  "preview_tab",
+  "task_preview",
   "pdf_view_tab",
   "cr_preview"
  ],
@@ -132,19 +134,16 @@
    "read_only_depends_on": "eval:doc.status=='Closed'"
   },
   {
-   "collapsible": 1,
    "fieldname": "section_scopes",
    "fieldtype": "Section Break",
    "label": "Scopes"
   },
   {
-   "collapsible": 1,
    "fieldname": "section_requirements",
    "fieldtype": "Section Break",
    "label": "Requirements"
   },
   {
-   "collapsible": 1,
    "fieldname": "section_description",
    "fieldtype": "Section Break",
    "label": "Case Description"
@@ -282,7 +281,7 @@
    "depends_on": "eval:!doc.__unsaved",
    "fieldname": "pdf_view_tab",
    "fieldtype": "Tab Break",
-   "label": "PDF View"
+   "label": "PDF"
   },
   {
    "fieldname": "cr_preview",
@@ -300,17 +299,28 @@
    "in_list_view": 1,
    "label": "Assign To",
    "options": "Employee",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "column_break_tbtk",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Preview"
+  },
+  {
+   "fieldname": "task_preview",
+   "fieldtype": "HTML",
+   "label": "Task Preview"
   }
  ],
  "grid_page_length": 50,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2026-02-16 20:35:03.430850",
+ "modified": "2026-02-19 09:08:37.194017",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Operation Ticket",

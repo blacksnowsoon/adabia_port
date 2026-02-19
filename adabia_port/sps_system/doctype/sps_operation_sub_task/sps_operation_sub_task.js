@@ -98,7 +98,7 @@ function render_sub_task_preview(frm) {
 }
 
 async function load_pdf_content(frm) {
-    const wrapper = frm.fields_dict['sub_task_pdf_view'].$wrapper;
+    const wrapper = frm.get_field('sub_task_pdf_view').$wrapper;
     const format = "Operation Sub Task"
     wrapper.empty(); // Clear previous content
     wrapper.html(spinner());

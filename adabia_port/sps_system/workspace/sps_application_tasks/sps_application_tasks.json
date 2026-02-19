@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "SPS Application Tasks",
  "links": [],
- "modified": "2026-02-15 10:19:56.471476",
+ "modified": "2026-02-19 08:59:48.498332",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Application Tasks",
@@ -56,6 +56,14 @@
   },
   {
    "color": "Grey",
+   "doc_view": "New",
+   "label": "New Sub Task",
+   "link_to": "SPS Operation Sub Task",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
    "doc_view": "List",
    "label": "Dashboard",
    "link_to": "SPS Operation Dash",
@@ -66,14 +74,6 @@
    "doc_view": "New",
    "label": "New Task",
    "link_to": "SPS Operation Task",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "New Sub Task",
-   "link_to": "SPS Operation Sub Task",
    "stats_filter": "[]",
    "type": "DocType"
   }
