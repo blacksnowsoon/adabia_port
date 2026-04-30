@@ -18,7 +18,7 @@ frappe.ready(() => {
       callback:(r) => {
         $("#loading").html('')
         if (r.message) {
-          console.log('response', r.message)
+         
           $("#result").html(render_results(r.message))
         }
       },

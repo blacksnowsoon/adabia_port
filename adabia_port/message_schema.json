@@ -1,0 +1,365 @@
+{
+  "message": {
+    "description": "API Message",
+    "required": true,
+    "type": "object",
+    "sections": {
+      "_header": {
+        "description": "Message header",
+        "required": true,
+        "type": "object",
+        "fields": {
+          "sender": {
+            "description": "Sender Party Id",
+            "type": "string",
+            "max_length": 10,
+            "required": true
+          },
+          "receiver": {
+            "description": "Receivers Parties Ids",
+            "type": "string",
+            "max_length": 255,
+            "required": true
+          },
+          "message_type": {
+            "description": "Message Identification",
+            "type": "string",
+            "max_length": 10,
+            "required": true,
+            "allowed_values": ["MSG03501"]
+          },
+          "process_type": {
+            "description": "Workflow Id",
+            "type": "string",
+            "max_length": 20,
+            "required": true
+          },
+          "conversation_id": {
+            "description": "Unique Workflow Instance Id",
+            "type": "string",
+            "max_length": 30,
+            "required": true
+          },
+          "message_reference": {
+            "description": "Message Identification",
+            "type": "string",
+            "max_length": 50,
+            "required": true
+          },
+          "timestamp": {
+            "description": "Date/Time of the message creation (Request / Reply)",
+            "type": "timestamp",
+            "required": true
+          }
+        }
+      },
+      "contents": {
+        "description": "Message body",
+        "required": true,
+        "type": "object",
+        "sections": {
+          "XML": {
+            "description": "XML Message Structure",
+            "required": true,
+            "type": "object",
+            "sections": {
+              "application_timestamp": {
+                "description": "تاريخ / الوقت تقديم الطلب (Application Submission Date/Time)",
+                "type": "timestamp",
+                "required": true
+              },
+              "cargo_papers_ids": {
+                "description": "بيانات أوراق تعريف البضاعة (Cargo Paper Identification Data)",
+                "required": true,
+                "type": "object",
+                "fields": {
+                  "cargo_paper_type": {
+                    "description": "نوع وثيقة البضاعة (Cargo Paper Type)",
+                    "type": "string",
+                    "max_length": 10,
+                    "required": true
+                  },
+                  "cargo_paper_id": {
+                    "description": "رقم/معرف وثيقة البضاعة (Cargo Paper Number/ID)",
+                    "type": "string",
+                    "max_length": 30,
+                    "required": true
+                  }
+                }
+              },
+              "vessel_visit_info": {
+                "description": "بيانات رحلة سفينة (Vessel Visit Information)",
+                "required": true,
+                "type": "object",
+                "fields": {
+                  "vessel_name": {
+                    "description": "إسم السفينة (Vessel Name)",
+                    "type": "string",
+                    "max_length": 255,
+                    "required": true
+                  },
+                  "voyage_number": {
+                    "description": "رقم الرحلة (Voyage Number)",
+                    "type": "string",
+                    "max_length": 17,
+                    "required": true
+                  },
+                  "vessel_nationality_iso": {
+                    "description": "جنسية السفينة (ISO) (Vessel Nationality ISO Code)",
+                    "type": "string",
+                    "max_length": 32,
+                    "required": true
+                  }
+                }
+              },
+              "carrier_info": {
+                "description": "بيانات الناقل (Carrier Information)",
+                "required": true,
+                "type": "object",
+                "fields": {
+                  "shipping_agency_code": {
+                    "description": "كود التوكيل الملاحى (الرقم الضريبي) (Shipping Agency Code/Tax Number)",
+                    "type": "string",
+                    "max_length": 32,
+                    "required": true
+                  },
+                  "shipping_agency_name": {
+                    "description": "إسم التوكيل الملاحى (Shipping Agency Name)",
+                    "type": "string",
+                    "max_length": 255,
+                    "required": true
+                  }
+                }
+              },
+              "cargo_information": {
+                "description": "بيانات البضائع (Cargo Information)",
+                "required": true,
+                "type": "object",
+                "fields": {
+                  "bl_number": {
+                    "description": "إذن الشحن (صادر) (Bill of Lading Number)",
+                    "type": "string",
+                    "max_length": 35,
+                    "required": true
+                  },
+                  "port_of_delivery": {
+                    "description": "ميناء التسليم (Port of Delivery)",
+                    "type": "string",
+                    "max_length": 32,
+                    "required": true,
+                    "validation_rule": "port_code"
+                  },
+                  "port_of_loading": {
+                    "description": "ميناء الشحن (Port of Loading)",
+                    "type": "string",
+                    "max_length": 32,
+                    "required": true,
+                    "validation_rule": "port_code"
+                  },
+                  "port_of_discharge": {
+                    "description": "ميناء التفريغ (Port of Discharge)",
+                    "type": "string",
+                    "max_length": 32,
+                    "required": true,
+                    "validation_rule": "port_code"
+                  }
+                }
+              },
+              "shipper_information": {
+                "description": "بيانات الراسل (Shipper Information)",
+                "required": true,
+                "type": "object",
+                "fields": {
+                  "name": {
+                    "description": "إسم الراسل (Shipper Name)",
+                    "type": "string",
+                    "max_length": 255,
+                    "required": true
+                  }
+                }
+              },
+              "consignee_information": {
+                "description": "بيانات المرسل إليه (Consignee Information)",
+                "required": true,
+                "type": "object",
+                "fields": {
+                  "name": {
+                    "description": "إسم المرسل إليه (Consignee Name)",
+                    "type": "string",
+                    "max_length": 255,
+                    "required": true
+                  }
+                }
+              },
+              "goods_details": {
+                "description": "بيانات البضاعة (Goods Details)",
+                "required": true,
+                "type": "array",
+                "item": {
+                  "type": "object",
+                  "fields": {
+                    "goods_item_number": {
+                      "description": "رقم الصنف (السطر) (Goods Item Number/Line Number)",
+                      "type": "number",
+                      "max_length": 3,
+                      "required": true
+                    },
+                    "number_of_packages": {
+                      "description": "عدد العبوات (Number of Packages)",
+                      "type": "number",
+                      "max_length": 8,
+                      "required": true
+                    },
+                    "type_of_packages": {
+                      "description": "نوع العبوات (Type of Packages)",
+                      "type": "string",
+                      "max_length": 32,
+                      "required": true
+                    },
+                    "goods_description": {
+                      "description": "وصف البضاعة (Goods Description)",
+                      "type": "string",
+                      "max_length": 1000,
+                      "required": true
+                    },
+                    "goods_measurements": {
+                      "description": "بيان وزن/حجم/ …البضاعة (Goods Measurements)",
+                      "required": true,
+                      "type": "array",
+                      "item": {
+                        "type": "object",
+                        "fields": {
+                          "measurement": {
+                            "description": "نوع القياس (Measurement Type)",
+                            "type": "string",
+                            "max_length": 32,
+                            "required": true
+                          },
+                          "measurement_value": {
+                            "description": "الكمية (Measurement Value/Quantity)",
+                            "type": "string",
+                            "max_length": 18,
+                            "required": true
+                          },
+                          "measurement_unit": {
+                            "description": "الوحدة (Measurement Unit)",
+                            "type": "string",
+                            "max_length": 32,
+                            "required": true
+                          }
+                        }
+                      }
+                    },
+                    "split_goods_placement": {
+                      "description": "بيان وسط النقل (Container/Transport Unit Placement)",
+                      "required": false,
+                      "type": "array",
+                      "item": {
+                        "type": "object",
+                        "fields": {
+                          "containers_number": {
+                            "description": "رقم الحاوية/معدة النقل (Container/Transport Unit Number)",
+                            "type": "string",
+                            "max_length": 11,
+                            "required": true
+                          },
+                          "container_size": {
+                            "description": "مقاس الحاوية (Container Size)",
+                            "type": "string",
+                            "max_length": 32,
+                            "required": true
+                          },
+                          "container_type": {
+                            "description": "نوع الحاوية (Container Type)",
+                            "type": "string",
+                            "max_length": 32,
+                            "required": true
+                          },
+                          "seal_no": {
+                            "description": "رقم الخاتم الجمركى (Customs Seal Number)",
+                            "type": "string",
+                            "max_length": 35,
+                            "required": false
+                          },
+                          "container_measurements": {
+                            "description": "بيان وزن/حجم/ …البضاعة داخل الحاوية (Container Measurements)",
+                            "required": true,
+                            "type": "array",
+                            "item": {
+                              "type": "object",
+                              "fields": {
+                                "measurement": {
+                                  "description": "نوع القياس (Measurement Type)",
+                                  "type": "string",
+                                  "max_length": 32,
+                                  "required": true
+                                },
+                                "measurement_value": {
+                                  "description": "الكمية (Measurement Value/Quantity)",
+                                  "type": "string",
+                                  "max_length": 18,
+                                  "required": true
+                                },
+                                "measurement_unit": {
+                                  "description": "الوحدة (Measurement Unit)",
+                                  "type": "string",
+                                  "max_length": 32,
+                                  "required": true
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "dangerous_goods": {
+                      "description": "البضاعة الخطرة (Dangerous Goods)",
+                      "required": false,
+                      "type": "object",
+                      "fields": {
+                        "dangerous_code": {
+                          "description": "كود البضاعة الخطرة (Dangerous Goods Code)",
+                          "type": "string",
+                          "max_length": 32,
+                          "required": true
+                        },
+                        "undg_number": {
+                          "description": "نوع البضاعة الخطرة (UNDG Number)",
+                          "type": "string",
+                          "max_length": 32,
+                          "required": false
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attachments": {
+                "description": "صور ضوئية للمرفقات (Document Attachments)",
+                "required": false,
+                "type": "array",
+                "item": {
+                  "type": "object",
+                  "fields": {
+                    "document_description": {
+                      "description": "نوع الوثيقة (Document Description)",
+                      "type": "string",
+                      "max_length": 255,
+                      "required": true
+                    },
+                    "document": {
+                      "description": "مسار ملف الوثيقة (Scanned document path and file name)",
+                      "type": "string",
+                      "max_length": 255,
+                      "required": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

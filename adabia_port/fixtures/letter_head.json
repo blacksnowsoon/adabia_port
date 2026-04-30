@@ -2,7 +2,7 @@
  {
   "align": "Left",
   "content": "<div>\n    <img src=\"/assets/adabia_port/images/SC-ZONE.png\" width=\"100%\">\n    <h3 class=\"text-right m-1 mx-3 font-weight-bold text-secondary\">إدارة تكنولوجيا المعلومات</h3>\n</div>",
-  "disabled": 0,
+  "disabled": 1,
   "docstatus": 0,
   "doctype": "Letter Head",
   "footer": null,
@@ -18,14 +18,14 @@
   "image_width": 0.0,
   "is_default": 0,
   "letter_head_name": "IT Letter Head",
-  "modified": "2025-01-22 23:37:13.941382",
+  "modified": "2026-04-20 10:08:21.289760",
   "name": "IT Letter Head",
   "source": "Image"
  },
  {
   "align": "Left",
   "content": "<div>\n    <img src=\"/assets/adabia_port/images/SC-ZONE.png\" width=\"100%\" alt=\"\">\n    <i class=\"header-content\">\n        <h3 class=\"text-right m-1 mx-3 font-weight-bold text-secondary\">إدارة الشحن والتفريغ</h3>\n    </i>\n</div>",
-  "disabled": 0,
+  "disabled": 1,
   "docstatus": 0,
   "doctype": "Letter Head",
   "footer": "",
@@ -41,14 +41,14 @@
   "image_width": 0.0,
   "is_default": 0,
   "letter_head_name": "Logistics Header",
-  "modified": "2025-01-24 22:02:03.788951",
+  "modified": "2026-04-20 10:08:18.652054",
   "name": "Logistics Header",
   "source": "Image"
  },
  {
   "align": "Center",
   "content": "<div style=\"text-align: center;\">\n<img src=\"/files/DocHeaderfc74d4.jpg\" alt=\"Global Header\" width=\"700.0\" style=\"width: 700.0px;\">\n</div>",
-  "disabled": 0,
+  "disabled": 1,
   "docstatus": 0,
   "doctype": "Letter Head",
   "footer": null,
@@ -64,14 +64,14 @@
   "image_width": 700.0,
   "is_default": 0,
   "letter_head_name": "Global Header",
-  "modified": "2025-06-09 22:29:28.870417",
+  "modified": "2026-04-20 10:08:12.159050",
   "name": "Global Header",
   "source": "Image"
  },
  {
   "align": "Center",
   "content": "<div style=\"text-align: center;\">\n<img src=\"/files/SPS_Header_LOGOe6406c1b0682.jpg\" alt=\"ISFP Header\" width=\"700.0\" style=\"width: 700.0px;\">\n</div>",
-  "disabled": 0,
+  "disabled": 1,
   "docstatus": 0,
   "doctype": "Letter Head",
   "footer": null,
@@ -87,14 +87,14 @@
   "image_width": 700.0,
   "is_default": 0,
   "letter_head_name": "ISFP Header",
-  "modified": "2025-04-12 21:23:06.582615",
+  "modified": "2026-04-20 10:08:15.663136",
   "name": "ISFP Header",
   "source": "Image"
  },
  {
   "align": "Left",
   "content": "<div class=\"ql-editor read-mode\"><table class=\"table table-bordered\"><tbody><tr><td data-row=\"1\">Document Identification</td></tr><tr><td data-row=\"2\"><img src=\"/assets/adabia_port/images/ISFP.png\" alt=\"isfp logo\"></td><td data-row=\"2\">ISFP Adabia</td><td data-row=\"2\">SPS_PD_CRS</td><td data-row=\"2\">Ver.</td><td data-row=\"2\"><br></td></tr><tr><td data-row=\"3\">Template Identification</td></tr><tr><td data-row=\"4\">Name</td><td data-row=\"4\">ISFP [Adabia Project] [CR_Track No.]</td><td data-row=\"4\">Date.</td><td data-row=\"4\">2024</td></tr></tbody></table></div>",
-  "disabled": 0,
+  "disabled": 1,
   "docstatus": 0,
   "doctype": "Letter Head",
   "footer": null,
@@ -108,9 +108,9 @@
   "image": null,
   "image_height": 0.0,
   "image_width": 0.0,
-  "is_default": 1,
+  "is_default": 0,
   "letter_head_name": "ISFP CR Letter Head",
-  "modified": "2025-05-29 23:01:45.101630",
+  "modified": "2026-04-20 10:08:35.465986",
   "name": "ISFP CR Letter Head",
   "source": "Image"
  }

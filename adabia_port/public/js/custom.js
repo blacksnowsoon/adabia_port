@@ -16,7 +16,7 @@ const footer_content =
   </div>
   </div>`;
 
-  $('footer').html(footer_content)
+  // $('footer').html(footer_content)
 
 // ----------------------------------------------------------------------------------------
 // composition custom buttons
