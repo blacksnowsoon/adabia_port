@@ -498,3 +498,44 @@ body {
   .error-row:hover td {
     background-color: #ffeded !important;
   }
+
+  /* Badge Styles */
+  .badge-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+  }
+
+  .badge-custom {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .badge-msg-type {
+    background: #e3f2fd;
+    color: #1976d2;
+  }
+
+  .badge-import {
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+
+  .badge-export {
+    background: #fff3e0;
+    color: #e65100;
+  }
+
+  .badge-custom i {
+    font-size: 0.8rem;
+  }

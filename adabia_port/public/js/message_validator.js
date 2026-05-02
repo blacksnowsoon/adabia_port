@@ -91,14 +91,34 @@ class MessageValidator {
                   </table>`;
         };
 
+        let badgesHtml = '';
+          
+          if (parsedMessage) {
+              const msgType = parsedMessage.header ? parsedMessage.header.message_type : 'Unknown';
+              badgesHtml += `<div class="badge-custom badge-msg-type"><i class="fas fa-file-code"></i> ${msgType}</div>`;
+              
+              // Check for Document_Type in MSG2701
+              if (msgType && msgType.includes('2701')) {
+                  const docType = parsedMessage.contents && parsedMessage.contents.XML ? parsedMessage.contents.XML.Document_Type : null;
+                  if (docType === 'I') {
+                      badgesHtml += `<div class="badge-custom badge-import"><i class="fas fa-ship"></i> Import</div>`;
+                  } else if (docType === 'E') {
+                      badgesHtml += `<div class="badge-custom badge-export"><i class="fas fa-plane-departure"></i> Export</div>`;
+                  }
+              }
+          }
+
         let html = `
           <div class="result-card ${isValid ? '' : 'error'} fade-in">
             <div class="result-header">
-              <div class="result-status">
-                <div class="status-icon ${isValid ? 'status-success' : 'status-error'}">
-                  ${isValid ? '✓' : '✕'}
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div class="result-status">
+                  <div class="status-icon ${isValid ? 'status-success' : 'status-error'}">
+                    ${isValid ? '✓' : '✕'}
+                  </div>
+                  <span>${isValid ? 'Validation Passed' : 'Validation Failed'}</span>
                 </div>
-                <span>${isValid ? 'Validation Passed' : 'Validation Failed'}</span>
+                ${badgesHtml ? `<div class="badge-container">${badgesHtml}</div>` : ''}
               </div>
               ${!isValid ? `<div class="error-counter">${errorCount} Error${errorCount !== 1 ? 's' : ''}</div>` : ''}
             </div>
