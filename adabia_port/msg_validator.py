@@ -5,6 +5,8 @@ import xmltodict
 from datetime import datetime
 from frappe import _
 import re
+import jsonschema
+from jsonschema import Draft7Validator
 
 
 class UniversalMessageValidator:
@@ -32,6 +34,7 @@ class UniversalMessageValidator:
             'type_errors': [],
             'length_errors': []
         }
+        self.error_paths = []
     
     def _normalize_key(self, key):
         """Convert key to lowercase for case-insensitive comparison."""
@@ -148,6 +151,7 @@ class UniversalMessageValidator:
                 return self._error_response(f"Schema for message type '{message_type}' not found")
             
             # Step 4: Validate from root using recursive property validator
+            # Step 4: Coerce data and validate with jsonschema
             message_data = self._get_case_insensitive_value(parsed_data, 'message')
             if not message_data:
                 return self._error_response("Root element 'message' not found")
@@ -155,14 +159,29 @@ class UniversalMessageValidator:
             # Get the message schema definition
             message_schema = self.schema.get('properties', {}).get('message')
             if not message_schema:
-                # If schema root is the message definition itself
                 message_schema = self.schema
             
-            # Start recursive validation
-            self._validate_property(message_data, message_schema, 'message')
+            # Step 4: Validate structure
+            # We do two passes of coercion: 
+            # 1. Clean data for jsonschema (omitting missing fields to trigger 'required' errors)
+            # 2. Full data for display (including missing fields as None for UI highlighting)
+            coerced_validation = self._coerce_data(message_data, message_schema, fill_missing=False)
+            coerced_display = self._coerce_data(message_data, message_schema, fill_missing=True)
+            
+            # Step 4.2 Validate with jsonschema
+            validator = Draft7Validator(message_schema)
+            for error in validator.iter_errors(coerced_validation):
+                self._handle_jsonschema_error(error)
+            
+            # Step 4.3 Validate custom business rules (Port codes, etc.)
+            self._validate_business_rules(coerced_validation)
             
             # Step 5: Return results
-            return self._format_response()
+            result = self._format_response()
+            if result['valid'] or coerced_display:
+                result['coerced_data'] = coerced_display
+                result['error_paths'] = self.error_paths
+            return result
             
         except Exception as e:
             frappe.log_error(
@@ -207,6 +226,162 @@ class UniversalMessageValidator:
                 "UniversalMessageValidator._detect_message_type"
             )
             return None
+
+    def _coerce_data(self, data, schema, fill_missing=False):
+        """
+        Recursively coerce data to match schema types and casing.
+        Handles XML quirks like strings-as-numbers and case-insensitivity.
+        """
+        if not schema or not isinstance(schema, dict):
+            return data
+            
+        # Handle "type" being a list
+        prop_types = schema.get('type')
+        if isinstance(prop_types, list):
+            # Prefer non-null type if available
+            prop_type = next((t for t in prop_types if t != 'null'), prop_types[0])
+        else:
+            prop_type = prop_types
+
+        if prop_type == 'object':
+            if not isinstance(data, dict):
+                # xmltodict makes duplicated tags a list
+                if isinstance(data, list) and data:
+                    data = data[0]
+                else:
+                    return data
+            
+            properties = schema.get('properties', {})
+            coerced_dict = {}
+            
+            # Get normalized keys from data for case-insensitive lookup
+            data_normalized = self._get_all_keys_normalized(data)
+            
+            for schema_key, schema_val in properties.items():
+                norm_schema_key = self._normalize_key(schema_key)
+                
+                # Find the value in data
+                val = None
+                if norm_schema_key in data_normalized:
+                    val = data_normalized[norm_schema_key]
+                elif norm_schema_key == 'header' and '_header' in data_normalized:
+                    val = data_normalized['_header']
+                
+                if val is not None:
+                    coerced_dict[schema_key] = self._coerce_data(val, schema_val, fill_missing)
+                elif fill_missing:
+                    # For display purposes, show missing fields as None
+                    coerced_dict[schema_key] = self._coerce_data(None, schema_val, fill_missing)
+            
+            return coerced_dict
+            
+        elif prop_type == 'array':
+            items_schema = schema.get('items', {})
+            if not isinstance(data, list):
+                if data is not None:
+                    data = [data]
+                else:
+                    data = []
+            return [self._coerce_data(item, items_schema, fill_missing) for item in data]
+            
+        elif prop_type == 'integer':
+            try:
+                return int(data) if data is not None else None
+            except (ValueError, TypeError):
+                return data
+        elif prop_type == 'number':
+            try:
+                return float(data) if data is not None else None
+            except (ValueError, TypeError):
+                return data
+        elif prop_type == 'boolean':
+            if isinstance(data, str):
+                return data.lower() in ('true', '1', 'y', 'yes')
+            return bool(data)
+        
+        return data
+
+    def _handle_jsonschema_error(self, error):
+        """Map jsonschema errors to existing error categories."""
+        path_list = [str(p) for p in error.path]
+        path = " -> ".join(path_list)
+        
+        # Store the path for highlighting in frontend
+        self.error_paths.append(path_list)
+        
+        # If it's a 'required' error, the path points to the parent. 
+        # We also want to highlight the specific missing field.
+        if error.validator == 'required':
+            # Extract missing field name from error message (e.g. "'Field' is a required property")
+            match = re.search(r"'([^']+)' is a required property", error.message)
+            if match:
+                missing_field = match.group(1)
+                self.error_paths.append(path_list + [missing_field])
+
+        msg = f"Field '{path}': {error.message}"
+        
+        if error.validator == 'required':
+            self.errors['missing_required'].append(msg)
+        elif error.validator == 'type':
+            self.errors['type_errors'].append(msg)
+        elif error.validator in ('maxLength', 'minLength', 'maximum', 'minimum'):
+            self.errors['length_errors'].append(msg)
+        elif error.validator in ('enum', 'const', 'format', 'pattern'):
+            self.errors['invalid_values'].append(msg)
+        else:
+            self.errors['invalid_values'].append(msg)
+            
+    def _validate_port_code(self, port_code):
+        """Check if port code exists in SPS-Port doctype."""
+        return bool(port_code and frappe.db.exists("SPS-Port", {"name": port_code}))
+
+    def _validate_business_rules(self, data, path_prefix=None):
+        """
+        Recursively validate custom business rules (like port code existence).
+        """
+        if path_prefix is None:
+            path_prefix = []
+            
+        if isinstance(data, dict):
+            # Port fields to validate (case-insensitive keys are handled by coercion, 
+            # so we check the normalized schema keys)
+            port_fields = ['Port_of_Loading', 'Port_of_Delivery', 'Port_of_Discharge']
+            
+            for key, value in data.items():
+                current_path = path_prefix + [key]
+                
+                # Check if this key is a port field
+                if key in port_fields and value:
+                    if not self._validate_port_code(value):
+                        path_str = " -> ".join(current_path)
+                        self.error_paths.append(current_path)
+                        self.errors['invalid_values'].append(
+                            f"Field '{path_str}': Port code '{value}' does not exist in the system"
+                        )
+                
+                # Special check for Goods_Details uniqueness
+                if key == 'Goods_Details' and isinstance(value, list):
+                    seen_item_numbers = set()
+                    for i, item in enumerate(value):
+                        if isinstance(item, dict):
+                            item_num = item.get('Goods_Item_Number')
+                            if item_num is not None:
+                                if item_num in seen_item_numbers:
+                                    item_path = current_path + [str(i), 'Goods_Item_Number']
+                                    path_str = " -> ".join(item_path)
+                                    self.error_paths.append(item_path)
+                                    self.errors['invalid_values'].append(
+                                        f"Field '{path_str}': Duplicate Goods_Item_Number '{item_num}' found within the same Goods_Details list"
+                                    )
+                                seen_item_numbers.add(item_num)
+                
+                # Recurse
+                self._validate_business_rules(value, current_path)
+                
+        elif isinstance(data, list):
+            for i, item in enumerate(data):
+                current_path = path_prefix + [str(i)]
+                self._validate_business_rules(item, current_path)
     
     def _parse_xml(self, xml_string):
         """
@@ -267,169 +442,6 @@ class UniversalMessageValidator:
                     error_msg += " (Hint: Replace '&' with '&amp;')"
             return False, error_msg
     
-    def _validate_property(self, value, schema_property, property_name):
-        """
-        Validate a single property against JSON Schema definition.
-        
-        Args:
-            value: The property value
-            schema_property (dict): The schema definition for this property
-            property_name (str): The property name
-        """
-        prop_type = schema_property.get('type')
-        
-        # Check type
-        if prop_type:
-            if not self._validate_json_type(value, prop_type):
-                self.errors['type_errors'].append(
-                    f"Field '{property_name}': expected type '{prop_type}', got '{type(value).__name__}'"
-                )
-        
-        # Check constraints based on type
-        if prop_type == 'object':
-            # Handle duplicated tags in XML (xmltodict makes them a list)
-            if isinstance(value, list):
-                self.errors['structural_errors'].append(
-                    f"Field '{property_name}': Duplicated tag found. This element should appear only once."
-                )
-                if value:
-                    value = value[0] # Try to validate the first one anyway
-                else:
-                    return
-
-            # Check for required sub-fields (even if value is None/empty)
-            required_fields = schema_property.get('required', [])
-            normalized_data_keys = self._get_all_keys_normalized(value) if isinstance(value, dict) else {}
-            
-            for field in required_fields:
-                norm_field = self._normalize_key(field)
-                if norm_field not in normalized_data_keys:
-                    # Special handling for XML: accept '_header' as 'header'
-                    if norm_field == 'header' and isinstance(value, dict) and '_header' in self._get_all_keys_normalized(value):
-                        continue
-                    self.errors['missing_required'].append(
-                        f"Field '{property_name}': Missing required sub-field '{field}'"
-                    )
-
-            if isinstance(value, dict):
-                # Recursively validate nested object properties
-                nested_properties = schema_property.get('properties', {})
-                for actual_key, actual_val in value.items():
-                    if actual_key.startswith('@'): continue # Skip XML attributes
-                    
-                    norm_key = self._normalize_key(actual_key)
-                    # Special handling for XML: map '_header' to 'header'
-                    if norm_key == '_header':
-                        norm_key = 'header'
-                        
-                    # Find corresponding schema property
-                    found_schema_prop = None
-                    found_key_name = None
-                    
-                    for schema_key, schema_val in nested_properties.items():
-                        if self._normalize_key(schema_key) == norm_key:
-                            found_schema_prop = schema_val
-                            found_key_name = schema_key
-                            break
-                    
-                    if found_schema_prop:
-                        self._validate_property(actual_val, found_schema_prop, f"{property_name}.{found_key_name}")
-            elif value is not None:
-                # Type mismatch (expected object, got something else) - already handled by _validate_json_type
-                pass
-        
-        elif prop_type == 'object':
-            # Handle XML single-item-as-dict (wrap in list)
-            items = value
-            if not isinstance(value, list):
-                if value is not None:
-                    items = [value]
-                else:
-                    items = []
-            
-            items_schema = schema_property.get('items', {})
-            for idx, item in enumerate(items):
-                self._validate_property(item, items_schema, f"{property_name}[{idx}]")
-        
-        elif prop_type == 'string' and isinstance(value, str):
-            # Check length constraints
-            max_length = schema_property.get('maxLength')
-            if max_length and len(value) > max_length:
-                self.errors['length_errors'].append(
-                    f"Field '{property_name}': length {len(value)} exceeds max {max_length}"
-                )
-            
-            # Check enum values (case-insensitive)
-            if 'enum' in schema_property:
-                enum_values = [str(v).upper() for v in schema_property['enum']]
-                if str(value).upper() not in enum_values:
-                    self.errors['invalid_values'].append(
-                        f"Field '{property_name}': value '{value}' not in allowed values {schema_property['enum']}"
-                    )
-            
-            # Check const value (case-insensitive)
-            if 'const' in schema_property:
-                if str(value).upper() != str(schema_property['const']).upper():
-                    self.errors['invalid_values'].append(
-                        f"Field '{property_name}': expected '{schema_property['const']}', got '{value}'"
-                    )
-            
-            # Check format
-            if 'format' in schema_property:
-                if not self._validate_format(value, schema_property['format']):
-                    self.errors['invalid_values'].append(
-                        f"Field '{property_name}': invalid format '{value}' (expected {schema_property['format']})"
-                    )
-    
-    def _validate_json_type(self, value, expected_type):
-        """Check if value matches JSON Schema type."""
-        type_mapping = {
-            'string': str,
-            'number': (int, float),
-            'integer': int,
-            'boolean': bool,
-            'object': dict,
-            'array': list,
-            'null': type(None)
-        }
-        
-        if expected_type not in type_mapping:
-            return True
-        
-        expected = type_mapping[expected_type]
-        return isinstance(value, expected)
-    
-    def _validate_format(self, value, expected_format):
-        """
-        Validate field format (e.g., date-time, timestamp).
-        """
-        if not isinstance(value, str):
-            return False
-        
-        formats = {
-            'date-time': [
-                '%Y-%m-%dT%H:%M:%S',
-                '%Y-%m-%dT%H:%M:%SZ',
-                '%Y-%m-%dT%H:%M:%S.%f',
-                '%Y-%m-%dT%H:%M:%S+02:00',
-                '%Y-%m-%dT%H:%M:%S-00:00'
-            ],
-            'YYYY-MM-DDThh:mm:ss+02:00': [
-                '%Y-%m-%dT%H:%M:%S+02:00'
-            ]
-        }
-        
-        format_list = formats.get(expected_format, [])
-        if not format_list:
-            return True
-        
-        for fmt in format_list:
-            try:
-                datetime.strptime(value, fmt)
-                return True
-            except (ValueError, TypeError):
-                continue
-        
         return False
     
     def _format_response(self):
@@ -461,19 +473,6 @@ class UniversalMessageValidator:
         }
 
 
-# ============================================================================
-# Helper methods for custom validation rules (optional, for advanced use)
-# ============================================================================
-
-def _validate_port_code(port_code, field_path):
-    """Validate port code against database."""
-    try:
-        exists = frappe.db.exists('SPS-Port', {'name': port_code})
-        if not exists:
-            return f"Port code '{port_code}' not found"
-    except Exception as e:
-        frappe.log_error(f"Error validating port code: {str(e)}")
-    return None
 
 
 @frappe.whitelist()
@@ -492,16 +491,9 @@ def validate_message(xml_string):
     validator = UniversalMessageValidator()
     result = validator.validate_message(xml_string)
     
-    # If validation succeeded, also return the parsed message structure for front‑end display
-    if result.get('valid'):
-        try:
-            # We already parsed it in validate_message, but let's re-parse to get the dict
-            # or we could have modified validate_message to return it.
-            # For now, let's just re-parse since it's fast.
-            parsed = validator._parse_xml(xml_string)
-            result['parsed_message'] = parsed
-        except Exception:
-            result['parsed_message'] = None
+    # Include the parsed message structure for front-end display (even if invalid)
+    if result.get('coerced_data'):
+        result['parsed_message'] = result.get('coerced_data')
             
     return result
 
@@ -549,26 +541,6 @@ def validate_message_structure_only(xml_string):
         }
 
 
-@frappe.whitelist()
-def get_validation_schema():
-    """
-    Get the message validation schema (useful for frontend).
-    
-    Returns:
-        dict: The message schema
-    """
-    try:
-        schema_path = os.path.join(
-            os.path.dirname(__file__),
-            'message_schema.json'
-        )
-        if os.path.exists(schema_path):
-            with open(schema_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        return {'error': 'Default schema not found'}
-    except Exception as e:
-        frappe.log_error(f"Error loading schema: {str(e)}", "get_validation_schema")
-        return {'error': f'Failed to load schema: {str(e)}'}
 
 @frappe.whitelist()
 def get_message_schema_for_xml(xml_string):
