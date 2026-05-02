@@ -1226,7 +1226,7 @@
     "parenttype": "Workspace"
    }
   ],
-  "content": "[{\"id\":\"8Typ1V5yS0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Customers Support</span>\",\"col\":12}},{\"id\":\"8IaZwYIb2C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Procedure\",\"col\":3}},{\"id\":\"tEhuzYBFit\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Registry List\",\"col\":3}},{\"id\":\"dlCMCWebFA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Integration Message\",\"col\":3}},{\"id\":\"QvQ6vIwXos\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"yluJaNEzgP\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tickets Per User\",\"col\":12}}]",
+  "content": "[{\"id\":\"8Typ1V5yS0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Customers Support</span>\",\"col\":12}},{\"id\":\"8IaZwYIb2C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Procedure\",\"col\":3}},{\"id\":\"tEhuzYBFit\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Registry List\",\"col\":3}},{\"id\":\"dlCMCWebFA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Integration Message\",\"col\":3}},{\"id\":\"sPOXiqRM2c\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"MTS Message Validator\",\"col\":3}},{\"id\":\"9jGf3TyosU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Schema Parser\",\"col\":3}},{\"id\":\"QvQ6vIwXos\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"yluJaNEzgP\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tickets Per User\",\"col\":12}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -1237,7 +1237,7 @@
   "is_hidden": 0,
   "label": "Customers Support",
   "links": [],
-  "modified": "2025-06-15 00:39:05.471885",
+  "modified": "2026-04-30 23:32:16.611329",
   "module": null,
   "name": "Customers Support",
   "number_cards": [],
@@ -1248,6 +1248,23 @@
   "roles": [],
   "sequence_id": 4.0,
   "shortcuts": [
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "MTS Message Validator",
+    "link_to": null,
+    "parent": "Customers Support",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/message-validator"
+   },
    {
     "color": "Red",
     "doc_view": "List",
@@ -1264,6 +1281,23 @@
     "stats_filter": "[]",
     "type": "DocType",
     "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Schema Parser",
+    "link_to": null,
+    "parent": "Customers Support",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/msg-schema-parser"
    },
    {
     "color": "Grey",

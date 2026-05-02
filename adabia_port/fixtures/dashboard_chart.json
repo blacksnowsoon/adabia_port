@@ -854,5 +854,110 @@
     "y_field": "count(pu.name)"
    }
   ]
+ },
+ {
+  "aggregate_function_based_on": null,
+  "based_on": "creation",
+  "chart_name": "Tickets Activity",
+  "chart_type": "Count",
+  "color": null,
+  "currency": null,
+  "custom_options": null,
+  "docstatus": 0,
+  "doctype": "Dashboard Chart",
+  "document_type": "IT Ticket",
+  "dynamic_filters_json": "[]",
+  "filters_json": "[]",
+  "from_date": null,
+  "group_by_based_on": null,
+  "group_by_type": "Count",
+  "heatmap_year": null,
+  "is_public": 1,
+  "is_standard": 1,
+  "last_synced_on": "2025-04-09 11:04:56.152172",
+  "modified": "2025-04-12 19:34:04.129768",
+  "module": "IT Support",
+  "name": "Tickets Activity",
+  "number_of_groups": 0,
+  "parent_document_type": "",
+  "report_name": null,
+  "roles": [],
+  "show_values_over_chart": 0,
+  "source": "",
+  "time_interval": "Yearly",
+  "timeseries": 1,
+  "timespan": "Select Date Range",
+  "to_date": null,
+  "type": "Bar",
+  "use_report_chart": 0,
+  "value_based_on": "",
+  "x_field": null,
+  "y_axis": []
+ },
+ {
+  "aggregate_function_based_on": null,
+  "based_on": null,
+  "chart_name": "Tickets Per User",
+  "chart_type": "Report",
+  "color": null,
+  "currency": null,
+  "custom_options": "{\"x_field\": \"user_name\", \"chart_type\": \"Bar\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"y_field\": \"number_of_tickets\", \"color\": \"#CB2929\", \"name\": \"row 1\"}], \"y_fields\": [\"number_of_tickets\"], \"colors\": [\"#CB2929\"]}",
+  "docstatus": 0,
+  "doctype": "Dashboard Chart",
+  "document_type": null,
+  "dynamic_filters_json": null,
+  "filters_json": "{}",
+  "from_date": null,
+  "group_by_based_on": null,
+  "group_by_type": "Count",
+  "heatmap_year": null,
+  "is_public": 0,
+  "is_standard": 1,
+  "last_synced_on": null,
+  "modified": "2025-06-14 23:15:31.610249",
+  "module": "Customer Tech Support",
+  "name": "Tickets Per User",
+  "number_of_groups": 0,
+  "parent_document_type": null,
+  "report_name": "Tickets Per User",
+  "roles": [
+   {
+    "parent": "Tickets Per User",
+    "parentfield": "roles",
+    "parenttype": "Dashboard Chart",
+    "role": "Administrator"
+   },
+   {
+    "parent": "Tickets Per User",
+    "parentfield": "roles",
+    "parenttype": "Dashboard Chart",
+    "role": "Customer Support Admin"
+   },
+   {
+    "parent": "Tickets Per User",
+    "parentfield": "roles",
+    "parenttype": "Dashboard Chart",
+    "role": "Customer Support User"
+   }
+  ],
+  "show_values_over_chart": 0,
+  "source": null,
+  "time_interval": "Yearly",
+  "timeseries": 0,
+  "timespan": "Last Year",
+  "to_date": null,
+  "type": "Bar",
+  "use_report_chart": 0,
+  "value_based_on": null,
+  "x_field": "user_name",
+  "y_axis": [
+   {
+    "color": "#CB2929",
+    "parent": "Tickets Per User",
+    "parentfield": "y_axis",
+    "parenttype": "Dashboard Chart",
+    "y_field": "number_of_tickets"
+   }
+  ]
  }
 ]
