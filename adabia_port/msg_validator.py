@@ -23,6 +23,9 @@ class UniversalMessageValidator:
         # Add more message types as needed
     }
     
+    # Default blocked ports (blacklist)
+    BLOCKED_PORTS = ['XZiii']
+    
     def __init__(self):
         self.detected_message_type = None
         self.schema = None
@@ -332,8 +335,26 @@ class UniversalMessageValidator:
             self.errors['invalid_values'].append(msg)
             
     def _validate_port_code(self, port_code):
-        """Check if port code exists in SPS-Port doctype."""
-        return bool(port_code and frappe.db.exists("SPS-Port", {"name": port_code}))
+        """
+        Check if port code exists in SPS-Port doctype and is not blocked.
+        Returns: (is_valid, error_message)
+        """
+        if not port_code:
+            return False, "Port code is missing"
+            
+        # Get blocked ports from schema or use default
+        blocked_ports = []
+        if self.schema and isinstance(self.schema, dict):
+            blocked_ports = self.schema.get('x-business-rules', {}).get('blocked_ports', self.BLOCKED_PORTS)
+            
+        if port_code in blocked_ports:
+            return False, f"Port code '{port_code}' is blocked (International Water)"
+            
+        exists = frappe.db.exists("SPS-Port", {"name": port_code})
+        if not exists:
+            return False, f"Port code '{port_code}' does not exist in the system"
+            
+        return True, None
 
     def _validate_business_rules(self, data, path_prefix=None):
         """
@@ -352,11 +373,12 @@ class UniversalMessageValidator:
                 
                 # Check if this key is a port field
                 if key in port_fields and value:
-                    if not self._validate_port_code(value):
+                    is_valid, error_msg = self._validate_port_code(value)
+                    if not is_valid:
                         path_str = " -> ".join(current_path)
                         self.error_paths.append(current_path)
                         self.errors['invalid_values'].append(
-                            f"Field '{path_str}': Port code '{value}' does not exist in the system"
+                            f"Field '{path_str}': {error_msg}"
                         )
                 
                 # Special check for Goods_Details uniqueness

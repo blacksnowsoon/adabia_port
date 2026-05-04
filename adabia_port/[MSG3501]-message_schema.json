@@ -2,6 +2,9 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "MSG3501 Design Contract Schema",
   "type": "object",
+  "x-business-rules": {
+    "blocked_ports": ["XZiii"]
+  },
   "required": ["message"],
   "properties": {
     "message": {
