@@ -356,6 +356,7 @@ override_whitelisted_methods = {
     "frappe.utils.get_customs_declarations_sum": "adabia_port.utils.get_customs_declarations_sum",
     "frappe.utils.parse_customs_message": "adabia_port.utils.parse_customs_message",
     "frappe.msg_validator.validate_message": "adabia_port.msg_validator.validate_message",
+    "frappe.msg_validator.get_message_schema": "adabia_port.msg_validator.get_message_schema"
     # "frappe.utils.pdf.get_pdf": "adabia_port.utils.get_pdf"
 	# "frappe.desk.doctype.event.event.get_events": "adabia_port.event.get_events"
     # 'frappe.client.save': 'adabia_port.adabia_port.doctype.sps_operation_ticket.sps_operation_ticket.validate_duplicate_attachment'
