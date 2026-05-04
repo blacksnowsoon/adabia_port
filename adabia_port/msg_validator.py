@@ -586,3 +586,38 @@ def get_message_schema_for_xml(xml_string):
         'message_type': message_type,
         'schema': schema
     }
+
+
+@frappe.whitelist()
+def get_message_schema(message_type):
+    """
+    Return the schema for a specific message type.
+    Handles normalization (e.g. MSG2701-I -> MSG02701).
+    """
+    if not message_type:
+        return {'error': 'Message type is required'}
+        
+    # Normalization logic
+    normalized_type = str(message_type).strip().upper()
+    
+    # Remove subtype if present (e.g. MSG2701-I -> MSG2701)
+    if '-' in normalized_type:
+        normalized_type = normalized_type.split('-')[0]
+        
+    # Standardize format (e.g. MSG2701 -> MSG02701)
+    # The schema map expects a leading zero for 4-digit message numbers
+    if normalized_type.startswith('MSG'):
+        num_part = normalized_type[3:]
+        if len(num_part) == 4:
+            normalized_type = f"MSG0{num_part}"
+        
+    validator = UniversalMessageValidator()
+    schema = validator._load_schema(normalized_type)
+    if not schema:
+        return {'error': f"Schema for message type '{normalized_type}' not found"}
+    
+    return {
+        'message_type': normalized_type,
+        'display_type': message_type,
+        'schema': schema
+    }

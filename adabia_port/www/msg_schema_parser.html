@@ -2,345 +2,309 @@
 {% block style %}
 <style>
   :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --success-color: #27ae60;
-    --danger-color: #e74c3c;
-    --warning-color: #f39c12;
+    --primary-color: #1a2a6c;
+    --secondary-color: #b21f1f;
+    --accent-color: #fdbb2d;
+    --success-color: #00b894;
+    --danger-color: #ff7675;
+    --warning-color: #fdcb6e;
     --light-bg: #f8f9fa;
-    --border-color: #dee2e6;
-    --accent-color: #6c5ce7;
+    --border-color: #dfe6e9;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
   }
 
   body {
-    background: linear-gradient(135deg, #a8c0ff 0%, #3f2b96 100%);
+    background: #f0f2f5;
     min-height: 100vh;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #2d3436;
   }
 
   .container-main {
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 40px 20px;
   }
 
   .header-section {
     text-align: center;
-    color: white;
     margin-bottom: 40px;
   }
 
   .header-section h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: 15px;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+    margin-bottom: 10px;
   }
 
   .header-section p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: 1.1rem;
+    color: #636e72;
   }
 
-  .main-card {
+  .input-card {
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 25px;
+    margin-bottom: 40px;
   }
 
-  .card-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
-    padding: 8px 15px;
-    
+  .form-label {
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .card-body {
-    padding: 10px;
-  }
-
-  .form-group-custom {
-    margin-bottom: 25px;
-  }
-
-  .form-group-custom label {
+    margin-bottom: 10px;
     display: block;
-    font-weight: 700;
-    margin-bottom: 12px;
     color: var(--primary-color);
-   
   }
 
-  .textarea-wrapper {
-    position: relative;
-    border-radius: 12px;
-    background: #f1f3f5;
-    padding: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .textarea-wrapper:focus-within {
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-    box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.15);
-  }
-
-  textarea {
+  .msg-type-select {
     width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Fira Code', 'Courier New', monospace;
-    font-size: 0.95rem;
-    resize: vertical;
-    background-color: white;
-    min-height: 250px;
-    display: block;
-  }
-
-  textarea:focus {
-    outline: none;
-  }
-
-  .button-group {
-    display: flex;
-    gap: 15px;
-    justify-content: flex-end;
-    margin-top: 25px;
-  }
-
-  .btn-custom {
-    padding: 6px 15px;
-    border: none;
+    height: 50px;
+    padding: 0 15px;
+    border: 2px solid var(--border-color);
     border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: white;
+  }
+
+  .msg-type-select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(26, 42, 108, 0.1);
+  }
+
+  /* Field Card Styles */
+  .schema-section {
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
     display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .btn-parse {
-    background: linear-gradient(135deg, var(--accent-color), #4834d4);
-    color: white;
-    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
-  }
-
-  .btn-parse:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4);
-  }
-
-  .btn-clear {
-    background: #e9ecef;
-    color: #495057;
-  }
-
-  .btn-clear:hover {
-    background: #dee2e6;
-  }
-
-  /* Schema Table Styles */
-  .schema-container {
-    margin-top: 40px;
-    animation: slideUp 0.6s ease-out;
-  }
-
-  @keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .message-type-banner {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px 15px;
-    color: white;
-    margin-bottom: 25px;
-    display: inline-flex;
     align-items: center;
     gap: 12px;
-    font-weight: 600;
   }
 
-  .schema-card {
+  .field-card {
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 15px;
+    border-left: 5px solid #bdc3c7;
+    transition: all 0.3s ease;
     overflow: hidden;
-    margin-bottom: 30px;
   }
 
-  .schema-table-wrapper {
-    overflow-x: auto;
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
+  .field-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--hover-shadow);
   }
 
-  .schema-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.85rem;
-    table-layout: fixed;
-    word-break: break-word;
+  .field-card.required {
+    border-left-color: var(--secondary-color);
   }
 
-  .schema-table th {
-    background-color: #f8f9fa;
-    color: var(--primary-color);
-    font-weight: 700;
-    text-align: left;
-    padding: 8px 12px;
-    border-bottom: 2px solid var(--border-color);
-    text-transform: uppercase;
-    font-size: 0.70rem;
-    letter-spacing: 0.05em;
+  .field-card.nested {
+    border-left-color: var(--accent-color);
   }
 
-  .schema-table td {
-    padding: 8px 12px;
-    border-bottom: 1px solid #f1f3f5;
-    vertical-align: top;
+  .field-header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+  }
+
+  .field-header:hover {
+    background: #fdfdfd;
+  }
+
+  .field-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
   }
 
   .field-name {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--accent-color);
     font-family: 'Fira Code', monospace;
-    word-break: break-word;
-    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-color);
   }
 
-  .required-badge {
-    display: inline-block;
+  .badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .badge-required {
     background: #ffeaa7;
     color: #d35400;
-    font-size: 0.6rem;
-    font-weight: 800;
-    padding: 3px 4px;
-    border-radius: 6px;
-    margin-left: 8px;
-    vertical-align: middle;
-    white-space: nowrap;
   }
 
-  .field-type {
-    display: inline-block;
+  .badge-type {
     background: #e1f5fe;
     color: #0288d1;
-    font-size: 0.6rem;
-    font-weight: 600;
-    padding: 4px 6px;
-    border-radius: 20px;
-    margin-bottom: 8px;
-    white-space: nowrap;
   }
 
-  .field-constraints {
-    font-size: 0.65rem;
+  .badge-nested {
+    background: #fff3e0;
+    color: #e65100;
+    border: 1px solid #ffcc80;
+  }
+
+  .field-details {
+    padding: 0 20px 15px 20px;
     color: #636e72;
-    line-height: 1.5;
-    word-break: break-word;
+    font-size: 0.95rem;
   }
 
   .field-description {
-    font-size: 0.85rem;
-    color: #b2bec3;
     font-style: italic;
-    margin-top: 8px;
-    word-break: break-word;
+    margin-bottom: 10px;
+    color: #b2bec3;
   }
 
-  .nested-table-container {
-    background: #fcfcfd;
-    border-radius: 8px;
-    border: 1px solid #f1f3f5;
-    padding: 5px;
-    margin-top: 5px;
-    overflow-x: auto;
-    max-width: 100%;
-    container-type: inline-size;
+  .field-rules {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
   }
 
-  @container (max-width: 560px) {
-    .nested-table-container .schema-table th,
-    .nested-table-container .schema-table td {
-      width: 33.33% !important;
-    }
-  }
-
-  .section-title-custom {
-    color: white;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin: 40px 0 20px 0;
+  .rule-item {
+    background: #f1f2f6;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
     display: flex;
     align-items: center;
-    gap: 12px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 10px;
+    gap: 8px;
   }
 
-  @media (max-width: 992px) {
-    .schema-table th:nth-child(3),
-    .schema-table td:nth-child(3) {
-      display: none;
-    }
-    .schema-table td {
-      width: 50% !important;
-    }
+  .nested-content {
+    background: #fcfcfd;
+    padding: 15px 10px 15px 25px;
+    border-top: 1px dashed var(--border-color);
+    margin-left: 10px;
+    border-left: 2px dashed var(--border-color);
   }
 
-  /* Make nested tables more compact */
-  .nested-table-container .schema-table {
-    font-size: 0.85rem;
+  .collapse-icon-wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: #f1f2f6;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
   }
 
-  .nested-table-container .schema-table td {
-    padding: 12px 15px;
+  .field-card:hover .collapse-icon-wrapper {
+    background: var(--primary-color);
+    color: white;
   }
 
-  /* Loading */
-  .loader {
+  .collapse-icon {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+  }
+
+  .collapsed .collapse-icon {
+    transform: rotate(-90deg);
+  }
+
+  .hidden {
     display: none;
-    text-align: center;
-    padding: 50px;
   }
 
-  .spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top-color: white;
-    animation: spin 1s ease-in-out infinite;
-    margin: 0 auto 20px;
-  }
-
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-
+  /* Empty State & Loader */
   .empty-state {
     text-align: center;
-    padding: 100px 20px;
-    color: rgba(255, 255, 255, 0.6);
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    color: #b2bec3;
   }
 
   .empty-state i {
-    font-size: 4rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 15px;
     display: block;
   }
+
+  .loader {
+    display: none;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .rule-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 15px;
+    border-left: 5px solid var(--accent-color);
+    padding: 15px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .rule-icon {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-top: 3px;
+  }
+
+  .rule-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2d3436;
+  }
+
+  .rule-text strong {
+    color: var(--primary-color);
+    background: #f1f2f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+  }
+
+  .rule-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 5px;
+  }
+
+  .tag-if { background: #e1f5fe; color: #0288d1; }
+  .tag-then { background: #e8f5e9; color: #2e7d32; }
+  .tag-req { background: #ffeaa7; color: #d35400; }
 </style>
 {% endblock %}
 
@@ -349,50 +313,32 @@
   <!-- Header Section -->
   <div class="header-section">
     <h1>📄 Message Schema Explorer</h1>
-    <p>Upload your XML message to visualize its validation contract and structure</p>
+    <p>Understand the validation structure and business rules for port messages</p>
   </div>
 
   <!-- Input Card -->
-  <div class="main-card">
-    <div class="card-header">
-      <i class="fas fa-code"></i>
-      Paste XML Message
-    </div>
-    <div class="card-body">
-      <div class="form-group-custom">
-        <label for="xml-input">XML Content</label>
-        <div class="textarea-wrapper">
-          <textarea 
-            id="xml-input" 
-            placeholder="Paste your XML message here (e.g., MSG03501, MSG02701)..."
-          ></textarea>
-        </div>
-      </div>
-
-      <div class="button-group">
-        <button id="clear-btn" class="btn-custom btn-clear">
-          <i class="fas fa-trash-alt"></i>
-          Clear
-        </button>
-        <button id="parse-btn" class="btn-custom btn-parse">
-          <i class="fas fa-project-diagram"></i>
-          Explore Schema
-        </button>
-      </div>
+  <div class="input-card">
+    <div class="form-group-custom">
+      <label class="form-label" for="msg-type-select">Select Message Type</label>
+      <select id="msg-type-select" class="msg-type-select">
+        <option value="">-- Choose a message structure --</option>
+        <option value="MSG2701">MSG2701</option>
+        <option value="MSG3501">MSG3501</option>
+      </select>
     </div>
   </div>
 
   <!-- Loading State -->
   <div id="loader" class="loader">
     <div class="spinner"></div>
-    <p style="color: white; font-weight: 600;">Analyzing structure and retrieving schema...</p>
+    <p style="font-weight: 600; color: var(--primary-color);">Loading schema documentation...</p>
   </div>
 
   <!-- Results Section -->
   <div id="results-container">
-    <div class="empty-state" id="empty-state">
-      <i class="fas fa-terminal"></i>
-      <p>Waiting for XML input to display schema structure...</p>
+    <div class="empty-state">
+      <i class="fas fa-search"></i>
+      <p>Select a message type from the dropdown above to view its schema.</p>
     </div>
   </div>
 </div>
@@ -402,42 +348,31 @@
 <script>
   class SchemaExplorer {
     constructor() {
-      this.xmlInput = document.getElementById('xml-input');
-      this.parseBtn = document.getElementById('parse-btn');
-      this.clearBtn = document.getElementById('clear-btn');
+      this.typeSelect = document.getElementById('msg-type-select');
       this.loader = document.getElementById('loader');
       this.resultsContainer = document.getElementById('results-container');
-      this.emptyState = document.getElementById('empty-state');
 
       this.init();
     }
 
     init() {
-      this.parseBtn.addEventListener('click', () => this.exploreSchema());
-      this.clearBtn.addEventListener('click', () => this.clearForm());
-      
-      // Ctrl+Enter support
-      this.xmlInput.addEventListener('keydown', (e) => {
-        if (e.ctrlKey && e.key === 'Enter') {
+      this.typeSelect.addEventListener('change', () => {
+        if (this.typeSelect.value) {
           this.exploreSchema();
+        } else {
+          this.showEmpty();
         }
       });
     }
 
     async exploreSchema() {
-      const xml = this.xmlInput.value.trim();
-      if (!xml) {
-        frappe.show_alert({ message: __('Please paste an XML message first'), indicator: 'orange' });
-        return;
-      }
-
+      const type = this.typeSelect.value;
       this.setLoading(true);
-      this.resultsContainer.innerHTML = '';
 
       try {
         const r = await frappe.call({
-          method: 'adabia_port.msg_validator.get_message_schema_for_xml',
-          args: { xml_string: xml }
+          method: 'adabia_port.msg_validator.get_message_schema',
+          args: { message_type: type }
         });
 
         this.setLoading(false);
@@ -451,26 +386,24 @@
         }
       } catch (e) {
         this.setLoading(false);
-        this.showError('An error occurred while fetching the schema: ' + e.message);
+        this.showError('An error occurred: ' + e.message);
       }
     }
 
     setLoading(isLoading) {
       this.loader.style.display = isLoading ? 'block' : 'none';
-      if (isLoading) {
-        this.resultsContainer.innerHTML = '';
-        if (this.emptyState) this.emptyState.style.display = 'none';
-      }
+      if (isLoading) this.resultsContainer.innerHTML = '';
     }
 
     renderSchema(data) {
-      const { message_type, schema } = data;
+      const { message_type, display_type, schema } = data;
+      const typeLabel = display_type || message_type;
       
-      // Extract header and XML
       let headerProps = null;
       let headerReq = [];
       let xmlProps = null;
       let xmlReq = [];
+      let xmlAllOf = [];
 
       const message = schema.properties && schema.properties.message;
       if (message && message.properties) {
@@ -483,143 +416,210 @@
         const contents = message.properties.contents;
         if (contents && contents.properties) {
           const xml = contents.properties.XML;
-          if (xml && xml.properties) {
-            xmlProps = xml.properties;
+          if (xml) {
+            xmlProps = xml.properties || null;
             xmlReq = xml.required || [];
+            xmlAllOf = xml.allOf || [];
           }
         }
       }
 
       let html = `
-        <div class="schema-container">
-          <div class="message-type-banner">
-            <i class="fas fa-file-contract"></i>
-            <span>Detected Message Type: <strong>${message_type}</strong></span>
+        <div class="schema-section">
+          <div style="background: var(--primary-color); color: white; padding: 15px 25px; border-radius: 10px; margin-bottom: 30px; display: flex; align-items: center; gap: 15px;">
+             <i class="fas fa-file-invoice" style="font-size: 1.5rem;"></i>
+             <div>
+                <div style="font-size: 0.8rem; opacity: 0.8; text-transform: uppercase; font-weight: 700;">Documentation for</div>
+                <div style="font-size: 1.2rem; font-weight: 800;">${typeLabel}</div>
+             </div>
           </div>
           
           ${headerProps ? `
-            <div class="section-title-custom">
-              <i class="fas fa-id-card"></i> Header Schema
+            <div class="section-header">
+              <i class="fas fa-id-card"></i> Message Header
             </div>
-            <div class="schema-card">
-              <div class="schema-table-wrapper">
-                ${this.renderProperties(headerProps, headerReq)}
-              </div>
+            <div class="fields-list">
+              ${this.renderFields(headerProps, headerReq)}
             </div>
           ` : ''}
 
           ${xmlProps ? `
-            <div class="section-title-custom">
-              <i class="fas fa-file-code"></i> XML Business Data Schema
+            <div class="section-header" style="margin-top: 50px;">
+              <i class="fas fa-database"></i> Business Data (XML)
             </div>
-            <div class="schema-card">
-              <div class="schema-table-wrapper">
-                ${this.renderProperties(xmlProps, xmlReq)}
-              </div>
+            <div class="fields-list">
+              ${this.renderFields(xmlProps, xmlReq)}
             </div>
           ` : ''}
 
-          ${!headerProps && !xmlProps ? `
-            <div class="schema-card" style="padding: 30px; text-align: center; color: #95a5a6;">
-              <i class="fas fa-search"></i> Could not isolate Header or XML sections in this schema.
+          ${xmlAllOf.length > 0 ? `
+            <div class="section-header" style="margin-top: 50px;">
+              <i class="fas fa-gavel"></i> Conditional Business Rules
+            </div>
+            <div class="rules-list">
+              ${this.renderAllOf(xmlAllOf)}
             </div>
           ` : ''}
         </div>
       `;
       
       this.resultsContainer.innerHTML = html;
+      this.initCollapsibles();
     }
 
-    renderProperties(properties, required = []) {
+    renderFields(properties, required = []) {
       if (!properties || Object.keys(properties).length === 0) {
-        return '<div style="padding: 20px; color: #95a5a6;">No properties defined</div>';
+        return '<div class="field-card" style="padding: 20px; color: #95a5a6;">No fields defined</div>';
       }
 
-      let rows = '';
+      let html = '';
       for (const [key, details] of Object.entries(properties)) {
         const isRequired = required.includes(key);
         const type = Array.isArray(details.type) ? details.type.join(' | ') : (details.type || 'any');
+        const isNested = (details.type === 'object' && details.properties) || (details.type === 'array' && details.items && details.items.properties);
         
         const constraints = [];
-        if (details.maxLength) constraints.push(`Max Length: ${details.maxLength}`);
-        if (details.enum) constraints.push(`Allowed Values: ${details.enum.join(', ')}`);
-        if (details.const) constraints.push(`Constant: ${details.const}`);
-        if (details.format) constraints.push(`Format: ${details.format}`);
-        if (details.description) constraints.push(`<em>${details.description}</em>`);
+        if (details.maxLength) constraints.push({ icon: 'fas fa-arrows-alt-h', text: `Max Length: ${details.maxLength}` });
+        if (details.enum) constraints.push({ icon: 'fas fa-list-ul', text: `Enum: [${details.enum.join(', ')}]` });
+        if (details.const) constraints.push({ icon: 'fas fa-equals', text: `Fixed: ${details.const}` });
+        if (details.format) constraints.push({ icon: 'fas fa-clock', text: `Format: ${details.format}` });
+        if (details.pattern) constraints.push({ icon: 'fas fa-fingerprint', text: `Pattern: ${details.pattern}` });
 
-        let nested = '';
-        if (details.type === 'object' && details.properties) {
-          nested = `<div class="nested-table-container">${this.renderProperties(details.properties, details.required)}</div>`;
-        } else if (details.type === 'array' && details.items) {
-            if (details.items.properties) {
-                nested = `
-                    <div class="nested-table-container">
-                        <div style="margin-bottom: 10px; font-weight: 600; font-size: 0.85rem; color: #636e72;">
-                            <i class="fas fa-layer-group"></i> Array Item Structure:
-                        </div>
-                        ${this.renderProperties(details.items.properties, details.items.required)}
-                    </div>`;
-            } else if (details.items.type) {
-                nested = `<div class="field-type" style="background: #f0f0f0; color: #666;">Items: ${details.items.type}</div>`;
-            }
-        }
-
-        rows += `
-          <tr class="${details.type === 'object' || details.type === 'array' ? 'parent-row' : ''}">
-            <td>
-              <span class="field-name">${key}</span>
-              ${isRequired ? '<span class="required-badge">Required</span>' : ''}
-            </td>
-            <td>
-              <div class="field-type">${type}</div>
-              <div class="field-constraints">
-                ${constraints.map(c => `<div>${c}</div>`).join('')}
+        html += `
+          <div class="field-card ${isRequired ? 'required' : ''} ${isNested ? 'nested' : ''}">
+            <div class="field-header">
+              <div class="field-info">
+                ${isNested ? `
+                  <div class="collapse-icon-wrapper">
+                    <i class="fas fa-chevron-down collapse-icon"></i>
+                  </div>
+                ` : ''}
+                <span class="field-name">${key}</span>
+                ${isRequired ? '<span class="badge badge-required">Required</span>' : ''}
+                <span class="badge ${isNested ? 'badge-nested' : 'badge-type'}">${type}</span>
               </div>
-            </td>
-            <td>
-              ${nested ? nested : '<span style="color: #bdc3c7; font-size: 0.8rem;">—</span>'}
-            </td>
-          </tr>
+            </div>
+            <div class="field-details">
+              ${details.description ? `<div class="field-description">${details.description}</div>` : ''}
+              
+              <div class="field-rules">
+                ${constraints.map(c => `
+                  <div class="rule-item">
+                    <i class="${c.icon}"></i>
+                    <span>${c.text}</span>
+                  </div>
+                `).join('')}
+              </div>
+
+              ${isNested ? `
+                <div class="nested-content">
+                  ${details.type === 'object' 
+                    ? this.renderFields(details.properties, details.required)
+                    : this.renderFields(details.items.properties, details.items.required)
+                  }
+                </div>
+              ` : ''}
+            </div>
+          </div>
         `;
       }
+      return html;
+    }
 
-      return `
-        <table class="schema-table">
-          <thead>
-            <tr>
-              <th style="width: 15%;">Field Name</th>
-              <th style="width: 15%;">Type & Rules</th>
-              <th style="width: 70%;">Structure</th>
-            </tr>
-          </thead>
-          <tbody>${rows}</tbody>
-        </table>
-      `;
+    renderAllOf(allOf) {
+      return allOf.map(rule => {
+        if (!rule.if || !rule.then) return '';
+        
+        const condition = this.parseRulePart(rule.if);
+        const requirement = this.parseRulePart(rule.then);
+        
+        return `
+          <div class="rule-card">
+            <div class="rule-icon"><i class="fas fa-info-circle"></i></div>
+            <div class="rule-text">
+              <span class="rule-tag tag-if">IF</span> ${condition}
+              <br>
+              <span class="rule-tag tag-then">THEN</span> ${requirement}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    parseRulePart(part) {
+      if (!part) return '';
+      
+      let text = [];
+      
+      // Handle required fields
+      if (part.required) {
+        const fields = part.required.map(f => `<strong>${f}</strong>`).join(', ');
+        text.push(`the field(s) ${fields} become <span class="rule-tag tag-req">Required</span>`);
+      }
+      
+      // Handle properties constraints (if)
+      if (part.properties) {
+        for (const [key, details] of Object.entries(part.properties)) {
+          if (details.const) {
+            text.push(`<strong>${key}</strong> is equal to <code>"${details.const}"</code>`);
+          } else if (details.enum) {
+            text.push(`<strong>${key}</strong> is one of [${details.enum.map(e => `<code>"${e}"</code>`).join(', ')}]`);
+          } else if (details.contains) {
+             const subCondition = this.parseRulePart(details.contains);
+             text.push(`<strong>${key}</strong> contains an item where ${subCondition}`);
+          }
+        }
+      }
+      
+      // Handle other properties in then
+      if (part.properties && !text.length) {
+         // If it's in 'then' but not just 'required', it might be type/pattern etc.
+         for (const [key, details] of Object.entries(part.properties)) {
+            text.push(`<strong>${key}</strong> must match specific constraints`);
+         }
+      }
+
+      return text.join(' AND ');
+    }
+
+    initCollapsibles() {
+      // Default nested fields to collapsed
+      document.querySelectorAll('.field-card.nested').forEach(card => {
+        card.classList.add('collapsed');
+        const content = card.querySelector('.nested-content');
+        if (content) content.classList.add('hidden');
+      });
+
+      // Add actual toggle logic
+      document.querySelectorAll('.field-card.nested .field-header').forEach(header => {
+        header.addEventListener('click', (e) => {
+          const card = header.parentElement;
+          const content = card.querySelector('.nested-content');
+          
+          card.classList.toggle('collapsed');
+          if (content) {
+            content.classList.toggle('hidden');
+          }
+        });
+      });
     }
 
     showError(msg) {
       this.resultsContainer.innerHTML = `
-        <div class="schema-container" style="animation: none;">
-          <div class="schema-card" style="border-left: 5px solid var(--danger-color); padding: 10px; display: flex; align-items: center; gap: 15px;">
-            <i class="fas fa-exclamation-triangle" style="font-size: 2.5rem; color: var(--danger-color);"></i>
-            <div>
-              <h3 style="margin: 0 0 10px 0; color: var(--danger-color);">Parsing Error</h3>
-              <p style="margin: 0; color: #495057;">${msg}</p>
-            </div>
-          </div>
+        <div class="empty-state" style="border-left: 5px solid var(--danger-color); color: var(--danger-color);">
+          <i class="fas fa-exclamation-circle"></i>
+          <p><strong>Error Loading Schema:</strong> ${msg}</p>
         </div>
       `;
     }
 
-    clearForm() {
-      this.xmlInput.value = '';
+    showEmpty() {
       this.resultsContainer.innerHTML = `
-        <div class="empty-state" id="empty-state">
-          <i class="fas fa-terminal"></i>
-          <p>Waiting for XML input to display schema structure...</p>
+        <div class="empty-state">
+          <i class="fas fa-search"></i>
+          <p>Select a message type from the dropdown above to view its schema.</p>
         </div>
       `;
-      this.xmlInput.focus();
     }
   }
 
