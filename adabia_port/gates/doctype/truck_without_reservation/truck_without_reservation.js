@@ -16,6 +16,7 @@ frappe.ui.form.on("Truck Without Reservation", {
         set_property(frm).disable_frm('procedure')
       }
     }
+    console.log(frm.doc)
 	},
   entrance_time(frm) {
     format_time_field(frm, "entrance_time")

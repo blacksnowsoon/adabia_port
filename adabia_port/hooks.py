@@ -194,10 +194,9 @@ web_include_css = "/assets/adabia_port/css/custom.css"
 # include app icons in desk
 # app_include_icons = "adabia_port/public/icons/icons.svg"
 app_include_icons = [
-    # "adabia_port/public/icons/customer-support-icon.svg",
-    # "adabia_port/public/icons/networking-icon.svg",
-
+    "adabia_port/icons/icons.svg"
 ]
+
 
 
 website_route_rules = [
