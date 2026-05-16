@@ -20,6 +20,7 @@
   "machine",
   "column_break_rcps",
   "truck_tail",
+  "machine_type",
   "column_break_cbqh",
   "section_break_ktus",
   "entrance_date",
@@ -178,12 +179,19 @@
    "fieldname": "is_machine",
    "fieldtype": "Check",
    "label": "Is Machine?"
+  },
+  {
+   "fetch_from": "machine.description",
+   "fieldname": "machine_type",
+   "fieldtype": "Data",
+   "label": "Machine Type",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-11 09:40:12.461632",
+ "modified": "2026-05-15 21:08:04.309665",
  "modified_by": "Administrator",
  "module": "Gates",
  "name": "Truck Without Reservation",

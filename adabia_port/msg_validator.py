@@ -20,6 +20,7 @@ class UniversalMessageValidator:
     MESSAGE_TYPE_SCHEMA_MAP = {
         'msg03501': '[MSG3501]-message_schema.json',
         'msg02701': '[MSG2701]-message_schema.json',
+        'msg00101': '[MSG101]-message_schema.json',
         # Add more message types as needed
     }
     
@@ -396,6 +397,22 @@ class UniversalMessageValidator:
                                         f"Field '{path_str}': Duplicate Goods_Item_Number '{item_num}' found within the same Goods_Details list"
                                     )
                                 seen_item_numbers.add(item_num)
+                
+                # Special check for Cargo_Information BL_Number uniqueness
+                if key == 'Cargo_Information' and isinstance(value, list):
+                    seen_bl_numbers = set()
+                    for i, item in enumerate(value):
+                        if isinstance(item, dict):
+                            bl_num = item.get('BL_Number')
+                            if bl_num is not None:
+                                if bl_num in seen_bl_numbers:
+                                    item_path = current_path + [str(i), 'BL_Number']
+                                    path_str = " -> ".join(item_path)
+                                    self.error_paths.append(item_path)
+                                    self.errors['invalid_values'].append(
+                                        f"Field '{path_str}': Duplicate BL_Number '{bl_num}' found within the same message"
+                                    )
+                                seen_bl_numbers.add(bl_num)
                 
                 # Recurse
                 self._validate_business_rules(value, current_path)

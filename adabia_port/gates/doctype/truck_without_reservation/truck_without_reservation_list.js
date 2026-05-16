@@ -36,7 +36,7 @@ frappe.listview_settings['Truck Without Reservation'] = {
                 callback: function(r) {
                     if (r.message) {
                         let fetched_doc = r.message
-                        console.log("fetched Doc", fetched_doc)
+                        
                         frappe.confirm(
                             __("Register check out for {0} at {1} on {2}", [doc.truck_title || doc.machine, checkout_time, checkout_date]),
                             function() {
@@ -45,7 +45,7 @@ frappe.listview_settings['Truck Without Reservation'] = {
                                     checkout_time: checkout_time,
                                     procedure: "Check-Out"
                                 })
-                                console.log("Updated Doc", updated_doc)
+                                
                                 frappe.call({
                                     method: "frappe.client.save",
                                     args: {
@@ -53,7 +53,7 @@ frappe.listview_settings['Truck Without Reservation'] = {
                                         
                                     },
                                     callback: function(r) {
-                                        console.log(r)                    
+                                                           
                                         if (r.message) {
                                             cur_list.refresh()
                                             frappe.msgprint(__("Checked out successfully for: " + doc.truck_title || doc.machine ));

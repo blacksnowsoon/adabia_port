@@ -161,25 +161,56 @@ class MessageValidator {
         if (parsedMessage) {
           const header = parsedMessage.header;
           const contents = parsedMessage.contents;
-          const xmlData = contents && contents.XML ? contents.XML : contents;
-
-          html += `
-            <div class="data-display-container">
+          
+          let sectionsHtml = '';
+          
+          // Header section
+          if (header) {
+            sectionsHtml += `
               <div class="section-divider">
                 <span><i class="fas fa-info-circle"></i> Message Information (Header)</span>
               </div>
               <div class="data-section">
-                ${renderTable(header || {}, ['header'])}
+                ${renderTable(header, ['header'])}
               </div>
-
-              ${xmlData ? `
+            `;
+          }
+          
+          // Render all sections in contents (Transaction, XML, EDI, etc.)
+          if (contents) {
+            for (const [key, value] of Object.entries(contents)) {
+              // Skip empty or null sections
+              if (!value || (typeof value === 'object' && Object.keys(value).length === 0)) continue;
+              
+              let label = key.replace(/_/g, ' ');
+              let icon = 'fa-database';
+              
+              // Custom icons and labels for known sections
+              if (key === 'Transaction') {
+                icon = 'fa-exchange-alt';
+                label = 'Transaction Details';
+              } else if (key === 'XML') {
+                icon = 'fa-code';
+                label = 'Business Content (XML)';
+              } else if (key === 'EDI') {
+                icon = 'fa-file-alt';
+                label = 'EDI Data';
+              }
+              
+              sectionsHtml += `
                 <div class="section-divider">
-                  <span><i class="fas fa-database"></i> Business Content (XML Data)</span>
+                  <span><i class="fas ${icon}"></i> ${label}</span>
                 </div>
                 <div class="data-section">
-                  ${renderTable(xmlData, ['contents', 'XML'])}
+                  ${renderTable(value, ['contents', key])}
                 </div>
-              ` : ''}
+              `;
+            }
+          }
+
+          html += `
+            <div class="data-display-container">
+              ${sectionsHtml}
             </div>
           `;
         }

@@ -4,12 +4,14 @@
 frappe.ui.form.on("Truck Without Reservation", {
  
 	refresh:(frm) => {
-    frm.events.is_machine(frm)
+    
+    set_property(frm, 'hidden', frm.doc.is_machine || 0).apply_on(['machine'])
     if (frm.is_new()) {
       frm.set_value('ticket_event', 'EV-10')
       set_property(frm, 'read_only', 1).apply_on(['procedure'])
       frm.set_value('entrance_date', frappe.datetime.get_today())
-      frm.set_value('entrance_time', frappe.datetime.str_to_user(frappe.datetime.now_datetime()).split(" ")[1])
+      frm.set_value('entrance_time', frappe.datetime.get_time())
+        
     } else {
       set_property(frm, 'read_only', 0).apply_on(['procedure'])
       if(frm.doc.procedure === 'Check-Out'){
@@ -83,13 +85,15 @@ frappe.ui.form.on("Truck Without Reservation", {
 
   },
   is_machine: (frm) => {
+    
     const is_machine = frm.doc.is_machine
+    console.log(is_machine)
     if (is_machine) {
       frm.set_value('truck', '')
       frm.set_value('truck_tail', '')
-      set_property(frm, 'hidden', 1).apply_on(['truck', 'truck_tail'])
       set_property(frm, 'hidden', 0).apply_on(['machine'])
       set_property(frm, 'reqd', 1).apply_on(['machine'])
+      set_property(frm, 'hidden', 1).apply_on(['truck', 'truck_tail'])
     } else {
       frm.set_value('machine', '')
       set_property(frm, 'hidden', 1).apply_on(['machine'])
@@ -134,7 +138,7 @@ function frm_config(frm, procedure) {
       set_property(frm, 'hidden', 0).apply_on(fields)
       if (procedure === "Check-Out") {
         frm.set_value('checkout_date', frappe.datetime.get_today())
-        frm.set_value('checkout_time', moment(frappe.datetime.now_datetime(), 'HH:mm:ss').format('HH:mm'))
+        frm.set_value('checkout_time', frappe.datetime.get_time())
       }
       
     } else {
