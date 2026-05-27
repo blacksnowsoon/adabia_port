@@ -4,7 +4,7 @@ app_publisher = "Gharieb Khalifa"
 app_description = "Tasks Tracking in departments of the adabia port"
 app_email = "blacksnow.soon@gmail.com"
 app_license = "mit"
-app_version = "1.0.1"
+app_version = "1.0.0"
 
 # Apps
 # --------------------------------------------------------------------------
@@ -193,19 +193,14 @@ app_include_icons = [
 
 
 website_route_rules = [
-    # {"from_route": "/icons/", "to_route": "public/icons/"},
     {"from_route": "/app/customs-message-parser", "to_route": "customs_message_parser"},
-    # {"from_route": "/app/message-validator", "to_route": "message_validator"},
-    # {"from_route": "/app/msg-schema-parser", "to_route": "msg_schema_parser"},
-    
-    
 ]
 # Home Pages
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
-home_page = "/home_page/"
+home_page = "login"
+# home_page = "/home_page/"
 
 # website user home page (by Role)
 # role_home_page = {
@@ -347,11 +342,6 @@ override_whitelisted_methods = {
     "frappe.utils.update_value": "adabia_port.utils.update_value",
     "frappe.utils.get_customs_declarations_sum": "adabia_port.utils.get_customs_declarations_sum",
     "frappe.utils.parse_customs_message": "adabia_port.utils.parse_customs_message",
-    # "frappe.msg_validator.validate_message": "adabia_port.msg_validator.validate_message",
-    # "frappe.msg_validator.get_message_schema": "adabia_port.msg_validator.get_message_schema"
-    # "frappe.utils.pdf.get_pdf": "adabia_port.utils.get_pdf"
-	# "frappe.desk.doctype.event.event.get_events": "adabia_port.event.get_events"
-    # 'frappe.client.save': 'adabia_port.adabia_port.doctype.sps_operation_ticket.sps_operation_ticket.validate_duplicate_attachment'
 }
 #
 # each overriding function accepts a `data` argument;
