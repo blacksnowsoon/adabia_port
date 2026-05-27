@@ -156,14 +156,14 @@ add_to_apps_screen = [
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = ["/assets/adabia_port/css/custom.css"]
+# app_include_css = ["/assets/adabia_port/css/custom.css"]
 app_include_js = ["/assets/adabia_port/js/custom.js", "/assets/adabia_port/js/api-calls.js", "/assets/adabia_port/js/helpers.js"]
-app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
+# app_include_fonts = "/assets/adabia_port/fonts/Cairo-regular.ttf"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/adabia_port/css/adabia_port.css"
 # web_include_js = "/assets/adabia_port/js/adabia_port.js"
-web_include_css = "/assets/adabia_port/css/custom.css"
+# web_include_css = "/assets/adabia_port/css/custom.css"
 # web_include_js = "js/customs_message_parser.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -195,8 +195,8 @@ app_include_icons = [
 website_route_rules = [
     # {"from_route": "/icons/", "to_route": "public/icons/"},
     {"from_route": "/app/customs-message-parser", "to_route": "customs_message_parser"},
-    {"from_route": "/app/message-validator", "to_route": "message_validator"},
-    {"from_route": "/app/msg-schema-parser", "to_route": "msg_schema_parser"},
+    # {"from_route": "/app/message-validator", "to_route": "message_validator"},
+    # {"from_route": "/app/msg-schema-parser", "to_route": "msg_schema_parser"},
     
     
 ]
@@ -283,11 +283,11 @@ after_install = [
 # ---------------
 # Override standard doctype classes
 
-override_doctype_class = {
+# override_doctype_class = {
 # "ToDo": "custom_app.overrides.CustomToDo"
 # "User": "adabia_port.utils.CustomUser"
 #  "Customs Message": "adabia_port.overrides.customs_message.CustomsMessageController"
-}
+# }
 
 # Document Events
 # ---------------
@@ -347,8 +347,8 @@ override_whitelisted_methods = {
     "frappe.utils.update_value": "adabia_port.utils.update_value",
     "frappe.utils.get_customs_declarations_sum": "adabia_port.utils.get_customs_declarations_sum",
     "frappe.utils.parse_customs_message": "adabia_port.utils.parse_customs_message",
-    "frappe.msg_validator.validate_message": "adabia_port.msg_validator.validate_message",
-    "frappe.msg_validator.get_message_schema": "adabia_port.msg_validator.get_message_schema"
+    # "frappe.msg_validator.validate_message": "adabia_port.msg_validator.validate_message",
+    # "frappe.msg_validator.get_message_schema": "adabia_port.msg_validator.get_message_schema"
     # "frappe.utils.pdf.get_pdf": "adabia_port.utils.get_pdf"
 	# "frappe.desk.doctype.event.event.get_events": "adabia_port.event.get_events"
     # 'frappe.client.save': 'adabia_port.adabia_port.doctype.sps_operation_ticket.sps_operation_ticket.validate_duplicate_attachment'
