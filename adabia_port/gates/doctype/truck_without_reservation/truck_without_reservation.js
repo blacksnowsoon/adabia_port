@@ -4,21 +4,45 @@
 frappe.ui.form.on("Truck Without Reservation", {
  
 	refresh:(frm) => {
-    
-    set_property(frm, 'hidden', frm.doc.is_machine || 0).apply_on(['machine'])
+    toggle_machine_fields(frm);
+    frm_config(frm, frm.doc.procedure);
+
+    // Procedure is always read-only — controlled by workflow, not the user
+    set_property(frm, 'read_only', 1).apply_on(['procedure'])
+
     if (frm.is_new()) {
+      // New entry: default to Check-In, set entrance date/time
+      frm.set_value('procedure', 'Check-In')
+      frm.set_value('status', 'Open')
       frm.set_value('ticket_event', 'EV-10')
-      set_property(frm, 'read_only', 1).apply_on(['procedure'])
       frm.set_value('entrance_date', frappe.datetime.get_today())
       frm.set_value('entrance_time', frappe.datetime.get_time())
-        
-    } else {
-      set_property(frm, 'read_only', 0).apply_on(['procedure'])
-      if(frm.doc.procedure === 'Check-Out'){
-        set_property(frm).disable_frm('procedure')
-      }
+      // Hide checkout fields and duration on new entry
+      set_property(frm, 'hidden', 1).apply_on(['checkout_date', 'checkout_time', 'duration'])
+      set_property(frm, 'reqd', 0).apply_on(['checkout_date', 'checkout_time'])
+
+    } else if (frm.doc.procedure === 'Check-In') {
+      // Saved Check-In: hide checkout fields and duration, show Check-Out button
+      set_property(frm, 'hidden', 1).apply_on(['checkout_date', 'checkout_time', 'duration'])
+      set_property(frm, 'reqd', 0).apply_on(['checkout_date', 'checkout_time'])
+
+      frm.add_custom_button(__('Check-Out'), () => {
+        frm.set_value('procedure', 'Check-Out')
+        frm.set_value('checkout_date', frappe.datetime.get_today())
+        frm.set_value('checkout_time', frappe.datetime.now_time())
+        frm.save()
+      }, null, 'primary')
+
+    } else if (frm.doc.procedure === 'Check-Out') {
+      // Already checked out: compute duration, show it, then lock the form
+      const entrance = new Date(`${frm.doc.entrance_date} ${frm.doc.entrance_time}`)
+      const checkout = new Date(`${frm.doc.checkout_date} ${frm.doc.checkout_time}`)
+      const diff_seconds = Math.max(Math.floor((checkout - entrance) / 1000), 0)
+      frm.doc.duration = diff_seconds
+      frm.refresh_field('duration')
+      set_property(frm, 'hidden', 0).apply_on(['duration'])
+      set_property(frm).disable_frm('procedure')
     }
-    console.log(frm.doc)
 	},
   entrance_time(frm) {
     format_time_field(frm, "entrance_time")
@@ -85,20 +109,12 @@ frappe.ui.form.on("Truck Without Reservation", {
 
   },
   is_machine: (frm) => {
-    
-    const is_machine = frm.doc.is_machine
-    console.log(is_machine)
-    if (is_machine) {
-      frm.set_value('truck', '')
-      frm.set_value('truck_tail', '')
-      set_property(frm, 'hidden', 0).apply_on(['machine'])
-      set_property(frm, 'reqd', 1).apply_on(['machine'])
-      set_property(frm, 'hidden', 1).apply_on(['truck', 'truck_tail'])
+    toggle_machine_fields(frm);
+    if (frm.doc.is_machine) {
+      frm.set_value('truck', '');
+      frm.set_value('truck_tail', '');
     } else {
-      frm.set_value('machine', '')
-      set_property(frm, 'hidden', 1).apply_on(['machine'])
-      set_property(frm, 'hidden', 0).apply_on(['truck', 'truck_tail'])
-      set_property(frm, 'reqd', 1).apply_on(['truck'])
+      frm.set_value('machine', '');
     }
   },
   before_save: (frm) => {
@@ -137,17 +153,36 @@ function frm_config(frm, procedure) {
       set_property(frm, 'reqd', 1).apply_on(fields)
       set_property(frm, 'hidden', 0).apply_on(fields)
       if (procedure === "Check-Out") {
-        frm.set_value('checkout_date', frappe.datetime.get_today())
-        frm.set_value('checkout_time', frappe.datetime.get_time())
+        if (!frm.doc.checkout_date) frm.set_value('checkout_date', frappe.datetime.get_today())
+        if (!frm.doc.checkout_time) frm.set_value('checkout_time', frappe.datetime.get_time())
       }
       
     } else {
       set_property(frm, 'reqd', 0).apply_on(fields)
-      set_property(frm, 'hidden', 1).apply_on(fields)
+      // Only hide non-matching fields during Check-In (hide checkout fields)
+      // During Check-Out, keep entrance fields visible alongside checkout fields
       if (procedure === 'Check-In') {
-        config['Check-Out'].fields.forEach(field => frm.set_value(field, ''))
+        set_property(frm, 'hidden', 1).apply_on(fields)
+        config['Check-Out'].fields.forEach(field => {
+          if (frm.doc[field]) frm.set_value(field, '')
+        })
       }
     }
   })
 
+}
+
+function toggle_machine_fields(frm) {
+  const is_machine = frm.doc.is_machine;
+  if (is_machine) {
+    set_property(frm, 'hidden', 0).apply_on(['machine']);
+    set_property(frm, 'reqd', 1).apply_on(['machine']);
+    set_property(frm, 'hidden', 1).apply_on(['truck', 'truck_tail']);
+    set_property(frm, 'reqd', 0).apply_on(['truck']);
+  } else {
+    set_property(frm, 'hidden', 1).apply_on(['machine']);
+    set_property(frm, 'reqd', 0).apply_on(['machine']);
+    set_property(frm, 'hidden', 0).apply_on(['truck', 'truck_tail']);
+    set_property(frm, 'reqd', 1).apply_on(['truck']);
+  }
 }

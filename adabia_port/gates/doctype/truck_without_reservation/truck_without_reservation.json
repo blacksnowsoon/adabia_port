@@ -29,6 +29,7 @@
   "entrance_time",
   "checkout_time",
   "column_break_xnip",
+  "duration",
   "column_break_tjdg",
   "section_break_hxqq",
   "notes"
@@ -186,16 +187,22 @@
    "fieldtype": "Data",
    "label": "Machine Type",
    "read_only": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "is_virtual": 1,
+   "label": "Duration"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-15 21:08:04.309665",
+ "modified": "2026-05-27 22:35:35.674299",
  "modified_by": "Administrator",
  "module": "Gates",
  "name": "Truck Without Reservation",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
