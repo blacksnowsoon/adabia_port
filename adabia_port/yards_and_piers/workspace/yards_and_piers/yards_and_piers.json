@@ -1,0 +1,38 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"yu1GWfVjHI\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Yards and Piers</span>\",\"col\":12}},{\"id\":\"Zkt9X8hQHI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Visits List\",\"col\":3}}]",
+ "creation": "2026-05-28 22:27:00.196975",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "month-view",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Yards and Piers",
+ "links": [],
+ "modified": "2026-05-28 22:47:44.814441",
+ "modified_by": "Administrator",
+ "module": "Yards and Piers",
+ "name": "Yards and Piers",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 29.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Visits List",
+   "link_to": "Visits",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Yards and Piers"
+}
