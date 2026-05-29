@@ -16,7 +16,6 @@ fixtures = [
     "Packing Type",
     "Translation",
     "Print Settings",
-    "Number Card",
     "Dashboard Chart",
     "Dashboard",
     {
