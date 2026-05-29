@@ -7,6 +7,7 @@
  "field_order": [
   "section_break_mopo",
   "ship_name",
+  "assigned_group",
   "column_break_jauq",
   "visit_id",
   "column_break_rslm",
@@ -60,13 +61,20 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "assigned_group",
+   "fieldtype": "Link",
+   "label": "Assigned Group",
+   "options": "User Group",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-28 22:34:07.424445",
+ "modified": "2026-05-29 14:29:30.743931",
  "modified_by": "Administrator",
  "module": "Yards and Piers",
  "name": "Visits",
