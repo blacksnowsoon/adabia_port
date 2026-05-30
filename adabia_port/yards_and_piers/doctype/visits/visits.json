@@ -11,7 +11,9 @@
   "column_break_jauq",
   "visit_id",
   "column_break_rslm",
-  "amended_from"
+  "amended_from",
+  "section_break_hazt",
+  "users"
  ],
  "fields": [
   {
@@ -70,13 +72,24 @@
    "label": "Assigned Group",
    "options": "User Group",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_hazt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "users",
+   "fieldtype": "Table",
+   "label": "Users",
+   "options": "Names in Group",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-29 22:53:12.741858",
+ "modified": "2026-05-30 20:54:01.740952",
  "modified_by": "Administrator",
  "module": "Yards and Piers",
  "name": "Visits",
