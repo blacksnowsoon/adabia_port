@@ -1,6 +1,6 @@
 [
  {
-  "add_draft_heading": 1,
+  "add_draft_heading": 0,
   "allow_page_break_inside_tables": 1,
   "allow_print_for_cancelled": 0,
   "allow_print_for_draft": 1,
@@ -10,7 +10,7 @@
   "enable_raw_printing": 1,
   "font": "Monospace",
   "font_size": 10.0,
-  "modified": "2026-04-20 10:05:58.157183",
+  "modified": "2026-05-30 22:56:03.558663",
   "name": "Print Settings",
   "pdf_page_height": 0.0,
   "pdf_page_size": "A4",

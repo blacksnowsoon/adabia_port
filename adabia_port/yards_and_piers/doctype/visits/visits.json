@@ -67,6 +67,7 @@
   {
    "fieldname": "assigned_group",
    "fieldtype": "Link",
+   "in_filter": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Assigned Group",
@@ -89,7 +90,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-30 20:54:01.740952",
+ "modified": "2026-06-02 17:43:45.137721",
  "modified_by": "Administrator",
  "module": "Yards and Piers",
  "name": "Visits",

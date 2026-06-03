@@ -5822,5 +5822,31 @@
   "name": "a37rck706h",
   "source_text": "Section",
   "translated_text": "القسم"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2026-05-28 22:35:02.368899",
+  "name": "u7vrni5318",
+  "source_text": "Draft",
+  "translated_text": "مسودة"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "ar",
+  "modified": "2026-05-28 22:51:19.861134",
+  "name": "7peqt8jqn6",
+  "source_text": "Are you sure you want to log out?",
+  "translated_text": "تأكيد تسجيل الخروج؟"
  }
 ]

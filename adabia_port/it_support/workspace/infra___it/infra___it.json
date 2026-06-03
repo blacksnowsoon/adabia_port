@@ -1,7 +1,7 @@
 {
  "charts": [],
- "content": "[{\"id\":\"4lNhR0c5fP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"FnGnDZKnQ9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets\",\"col\":3}},{\"id\":\"Og2bHfuo6D\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"OP62ZdgzTC\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Open Tickets\",\"col\":6}},{\"id\":\"axUCA2vzSh\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Data\",\"col\":3}},{\"id\":\"j5xa-BvuaK\",\"type\":\"card\",\"data\":{\"card_name\":\"IT Data Tabels\",\"col\":3}},{\"id\":\"aNUVjBAJZm\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"yYueT5H0lA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"O-9vE91cPS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"NrRt2vjhpo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees Basic Data\",\"col\":3}},{\"id\":\"K0x_vKdp-s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices Report\",\"col\":3}},{\"id\":\"HeK3Qzu10i\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"IT Tasks Report\",\"col\":3}}]",
- "creation": "2024-11-01 20:30:10.723515",
+ "content": "[{\"id\":\"4lNhR0c5fP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Ticket\",\"col\":3}},{\"id\":\"FnGnDZKnQ9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets\",\"col\":3}},{\"id\":\"Og2bHfuo6D\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"OP62ZdgzTC\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Open Tickets\",\"col\":6}},{\"id\":\"axUCA2vzSh\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Data\",\"col\":3}},{\"id\":\"j5xa-BvuaK\",\"type\":\"card\",\"data\":{\"card_name\":\"IT Data Tabels\",\"col\":3}},{\"id\":\"yYueT5H0lA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"O-9vE91cPS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"NrRt2vjhpo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employees Basic Data\",\"col\":3}},{\"id\":\"K0x_vKdp-s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Devices Report\",\"col\":3}},{\"id\":\"HeK3Qzu10i\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"IT Tasks Report\",\"col\":3}}]",
+ "creation": "2026-05-26 23:50:46.075444",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -172,7 +172,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-06-14 18:32:53.467171",
+ "modified": "2026-05-31 22:31:04.341106",
  "modified_by": "Administrator",
  "module": "IT Support",
  "name": "Infra - IT",
@@ -213,6 +213,7 @@
    "doc_view": "List",
    "label": "Devices Report",
    "link_to": "Devices Report",
+   "report_ref_doctype": "Device",
    "type": "Report"
   },
   {
@@ -220,6 +221,7 @@
    "doc_view": "List",
    "label": "IT Tasks Report",
    "link_to": "IT Support Tasks Report",
+   "report_ref_doctype": "IT Ticket",
    "type": "Report"
   },
   {
@@ -227,6 +229,7 @@
    "doc_view": "List",
    "label": "Employees Basic Data",
    "link_to": "Employees Main Data Records",
+   "report_ref_doctype": "Employee",
    "type": "Report"
   },
   {
