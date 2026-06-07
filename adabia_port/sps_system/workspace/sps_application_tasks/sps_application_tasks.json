@@ -1,7 +1,7 @@
 {
  "charts": [],
- "content": "[{\"id\":\"ZjrpYmSDhS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Application Tasks</span>\",\"col\":12}},{\"id\":\"BOtdn2veIQ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"In-Progress Tasks\",\"col\":4}},{\"id\":\"fbNoG_6hTi\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Tasks\",\"col\":4}},{\"id\":\"U9zNOhFmIy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Closed Tasks\",\"col\":4}},{\"id\":\"7su_3tAv9J\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"asHlSqnhyG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Operation Tasks\",\"col\":3}},{\"id\":\"-Tr-jthX0z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Task\",\"col\":3}},{\"id\":\"YGNQ4RqkJk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"5uLxTOHxUP\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"E8c40LmVeG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sub Tasks List\",\"col\":3}},{\"id\":\"zoHIjt3vku\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Sub Task\",\"col\":3}}]",
- "creation": "2025-12-28 11:06:01.767933",
+ "content": "[{\"id\":\"ZjrpYmSDhS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPS Application Tasks</span>\",\"col\":12}},{\"id\":\"BOtdn2veIQ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"In-Progress Tasks\",\"col\":4}},{\"id\":\"fbNoG_6hTi\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Tasks\",\"col\":4}},{\"id\":\"U9zNOhFmIy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Closed Tasks\",\"col\":4}},{\"id\":\"7su_3tAv9J\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"asHlSqnhyG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPS Operation Tasks\",\"col\":3}},{\"id\":\"-Tr-jthX0z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Task\",\"col\":3}},{\"id\":\"YGNQ4RqkJk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"5uLxTOHxUP\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"E8c40LmVeG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sub Tasks List\",\"col\":3}},{\"id\":\"zoHIjt3vku\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Sub Task\",\"col\":3}},{\"id\":\"_LDiayCe-b\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Dla0SoG1eL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Developer Contact\",\"col\":3}}]",
+ "creation": "2026-05-26 23:50:48.403265",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "SPS Application Tasks",
  "links": [],
- "modified": "2026-02-19 08:59:48.498332",
+ "modified": "2026-06-04 09:52:45.810722",
  "modified_by": "Administrator",
  "module": "SPS System",
  "name": "SPS Application Tasks",
@@ -38,6 +38,14 @@
  "roles": [],
  "sequence_id": 23.0,
  "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Developer Contact",
+   "link_to": "Developer Contact",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
   {
    "color": "Grey",
    "doc_view": "List",
